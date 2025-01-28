@@ -83,7 +83,17 @@ Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting com
    ![Ask Later](../Media/2test1.png)
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
+
+## Support Contact
+ 
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+ 
+Learner Support Contacts:
+ 
+- Email Support: labs-support@spektrasystems.com
+- Live Chat Support: https://cloudlabs.ai/labs-support
+
+Click **Next** from the bottom right corner to embark on your Lab journey!
  
    ![Start Your Azure Journey](../Media/sc900-image(3).png)
  
