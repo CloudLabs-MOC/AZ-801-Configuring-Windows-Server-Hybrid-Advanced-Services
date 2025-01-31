@@ -35,20 +35,20 @@ After completing this lab, you'll be able to:
    * Password: <inject key="AzureAdUserPassword"></inject>
 
 
-1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Log Analytics workspaces**, and then, on the **Log Analytics workspaces** page, select **+ Create**.
+1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Log Analytics workspaces(1)**, and then, on the **Log Analytics workspaces** page, select **+ Create**.
 
       ![](../Media/lab2-t1.png)  
 
       ![](../Media/lab2-t2.png)  
 
-1. On the **Basics** tab of the **Create Log Analytics workspace** tab, enter the following settings, select **Review + Create**, and then select **Create**:
+1. On the **Basics** tab of the **Create Log Analytics workspace** tab, enter the following settings, select **Review + Create (5)**, and then select **Create (6)**:
 
    | Settings | Value |
    | --- | --- |
-   | Subscription | the name of the Azure subscription you are using in this lab |
-   | Resource group | select **AZ801-L0201-RG** from the drop-down list |
-   | Log Analytics Workspace | any unique name |
-   | Region | <inject key="Resource group Region"></inject> |
+   | Subscription | Leave the default value (1) |
+   | Resource group | select **AZ801-L0201-RG (2)** from the drop-down list |
+   | Log Analytics Workspace | any unique name (3) |
+   | Region | <inject key="Resource group Region"></inject> (4) |
 
       ![](../Media/p1.png)  
 
@@ -75,13 +75,13 @@ After completing this lab, you'll be able to:
 
 #### Task 2: Enable enhanced security of Defender for Cloud
 
-1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the **Microsoft Defender for Cloud | Overview** page, in the **Management** section of the vertical menu on the left, select **Environment settings**.
+1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the **Microsoft Defender for Cloud | Overview** page, in the **Management (1)** section of the vertical menu on the left, select **Environment settings (2)**.
 
-1. On the **Environment settings** page, select the entry representing your Azure subscription.
+1. On the **Environment settings** page, select the entry representing your **Azure subscription (3)**.
 
    ![](../Media/p4.png) 
 
-1. On the **Settings \| Defender plans** page, select **Enable all plans**. In the **Plan selection** page, select **Microsoft Defender for APIs Plan 1**, and then select **Save**.
+1. On the **Settings \| Defender plans (1)** page, select **Enable all plans (2)**. In the **Plan selection** page, select **Microsoft Defender for APIs Plan 1 (3)**, and then select **Save (4)**.
 
    ![](../Media/p5.png) 
 
