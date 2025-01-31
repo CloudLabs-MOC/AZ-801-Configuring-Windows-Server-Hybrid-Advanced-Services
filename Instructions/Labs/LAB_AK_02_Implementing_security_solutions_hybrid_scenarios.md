@@ -22,17 +22,33 @@ After completing this lab, you'll be able to:
 
 #### Task 1: Create an Azure Log Analytics workspace 
 
-1. Connect to **SEA-SVR2**, and then, if needed, sign in with the credentials provided by the instructor.
-1. On **SEA-SVR2**, start Microsoft Edge, go to the Azure portal at `https://portal.azure.com/`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. Connect to **SEA-SVR2**, and if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+
+1. On **SEA-SVR2**, click on Azure Portal shortcut to go to the Azure portal, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+
+    ![](../media/e1t1s2.png)
+
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+
+
 1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Log Analytics workspaces**, and then, on the **Log Analytics workspaces** page, select **+ Create**.
+
+      ![](../Media/lab2-t1.png)  
+
+      ![](../Media/lab2-t2.png)  
+
 1. On the **Basics** tab of the **Create Log Analytics workspace** tab, enter the following settings, select **Review + Create**, and then select **Create**:
 
    | Settings | Value |
    | --- | --- |
    | Subscription | the name of the Azure subscription you are using in this lab |
-   | Resource group | the name of a new resource group **AZ801-L0201-RG** |
+   | Resource group | select **AZ801-L0201-RG** from the drop-down list |
    | Log Analytics Workspace | any unique name |
-   | Region | choose a region near you |
+   | Region | <inject key="Resource group Region"></inject> |
 
       ![](../Media/p1.png)  
 
@@ -57,10 +73,6 @@ After completing this lab, you'll be able to:
 
    ![](../Media/p3.png)  
 
-1. On the **Microsoft Defender for Cloud \| Overview** page, select the  **Click here to upgrade >** link. In the **Getting started** page, select **Upgrade**.
-
-   >**Note:** Your subscription may already have the enhanced security of Defender for Cloud enabled, in which case there is no need to upgrade, and you can continue on to the next task.
-
 #### Task 2: Enable enhanced security of Defender for Cloud
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the **Microsoft Defender for Cloud | Overview** page, in the **Management** section of the vertical menu on the left, select **Environment settings**.
@@ -79,7 +91,7 @@ After completing this lab, you'll be able to:
 
    >**Note:**  You may encounter notifications about auto-provisioning update failures. You can safely ignore these notifications as you will only use the Servers plan in this lab. Note that you can selectively disable individual Microsoft Defender plans listed on the same page.
 
-1. Set all of the plans to **Off** except for the **Servers** and select **Save**. Confirm when asked if you are sure you want to downgrade.
+1. Set all of the plans to **Off (2)** except for the **Servers (1)** and select **Save (3)**. Confirm when asked if you are sure you want to downgrade.
 
     >**Note:**  When presented with the resource types selection for the Databases plan, toggle each entry to Off and then select Continue. For the purpose of this lab, you can safely ignore any notications about individual database resources failing to save.
 
@@ -87,14 +99,13 @@ After completing this lab, you'll be able to:
 
     ![](../Media/p8.png) 
 
+1. On the **Settings & monitoring** tab, in the list of extensions, set **Vulnerability assessment for machines** to **On (1)**, and select the **Edit configuration (3)** link.
 
-1. Select the **Settings & monitoring** tab, and in the list of extensions, set **Guest Configuration agent (preview)** to **On**.
+1. Select the **Settings & monitoring** tab, and in the list of extensions, set **Guest Configuration agent (preview)** to **On (2)**.
 
     ![](../Media/p9.png) 
 
-1. On the **Settings & monitoring** tab, in the list of extensions, set **Vulnerability assessment for machines** to **On**, and select the **Edit configuration** link.
-
-1. On the **Extension deployment configuration** page, ensure that the **Microsoft Defender vulnerability management** option is selected, and then select **Apply**.
+1. On the **Extension deployment configuration** page, ensure that the **Microsoft Defender vulnerability management (1)** option is selected, and then select **Apply (2)**.
 
    ![](../Media/p10.png) 
 
@@ -111,7 +122,7 @@ After completing this lab, you'll be able to:
 
    ![](../Media/p12.png) 
 
-1. On the **Settings \| Defender plans** page, enable the **Servers** Defender plan, and then select **Save**.
+1. On the **Settings \| Defender plans** page, enable the **Servers (1)** Defender plan, and then select **Save (2)**.
 
    ![](../Media/p13.png) 
 
@@ -119,9 +130,9 @@ After completing this lab, you'll be able to:
 
 1. On the **Settings \| Defender plans** page, in the vertical menu on the left side, in the **Settings** section, select **Data collection**.
 
-   ![](../Media/p14.png) 
+1. On the **Settings \| Data collection (1)**, select **All Events (2)**, and then select **Save (3)**.
 
-1. On the **Settings \| Data collection**, select **All Events**, and then select **Save**.
+   ![](../Media/p14.png) 
 
    >**Note:**  Selecting a data collection tier in Defender for Cloud only affects the storage of security events in your Log Analytics workspace. The Log Analytics agent will still collect and analyze the security events required for Defender for Cloud's threat protection, regardless of the level of security events you choose to store in your workspace. Choosing to store security events enables investigation, search, and auditing of those events in your workspace.
 
@@ -131,21 +142,33 @@ After completing this lab, you'll be able to:
 
 1. In the **Search resources, services, and docs text box**, on the toolbar, search for and select **Deploy a custom template**.
 
+   ![](../Media/lab2-t3.png) 
+
 1. In the **Custom deployment** page, select **Build your own template in the editor**.
 
-1. On the **Edit template** page, select **Load file**, upload the template file **L02-rg_template.json** and then select **Save**.
+   ![](../Media/lab2-t4.png) 
+
+1. On the **Edit template** page, select **Load file (1)**, upload the template file **L02-rg_template.json (2)**(Navigate to C:\Labfiles\Lab02) and then select **Save (3)**.
+
+   ![](../Media/lab2-t6.png) 
+
+   ![](../Media/lab2-t5.png) 
 
 1. On the **Custom deployment** page, specify the following settings, and leave the other settings with their default values:
 
    |Setting|Value|
    |---|---|
    |Subscription|Leave the default value|
-   |Resource group| Select **AZ801-L0202-RG**|
+   |Resource group| Select **AZ801-L0202-RG (1)** from the dropdown list |
    |Region|Leave the default region|
-   |Admin Username| Admin name of your choosing |
-   |Admin Password|Select a strong password of your choosing |
+   |Admin Username| Enter **Student (2)** |
+   |Admin Password|Enter **Pa55w.rd1234 (3)** |
 
-1. Select **Review + create**, and then select **Create**.
+1. Select **Review + create (4)**, and then select **Create (5)**.
+
+   ![](../Media/lab2-t7.png)
+
+   ![](../Media/lab2-t8.png)
 
    >**Note**: The deployment might take about 3 minutes.
 
@@ -162,25 +185,24 @@ After completing this lab, you'll be able to:
 
 #### Task 1: Install Azure Arc agents on an On-Premises Server
 
-1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, type **Arc**, then select **Azure Arc**.
+1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, type **Arc (1)**, then select **Azure Arc (2)**.
 
    ![](../Media/p15.png) 
 
-1. In the navigation pane under **Azure Arc resources**, select **Machines**.
+1. In the navigation pane under **Azure Arc resources**, select **Machines (1)**.
 
    ![](../Media/p16.png) 
 
-1. Select **+ Add/Create**, and in the dropdown, select **Add a machine**. 
+1. Select **+ Add/Create (2)**, and in the dropdown, select **Add a machine (3)**. 
 
 1. Select **Generate script** from the **Add a single server** section. 
 
    ![](../Media/p17.png) 
+1. In the **Add a server with Azure Arc** page, under **Project details**, select **AZ801-L0201-RG (1)** resource group. 
 
-1. In the **Add a server with Azure Arc** page, under **Project details**, select the Resource group you created earlier (AZ801-L0201-RG). 
+1. Under **Server details**, select **<inject key="Resource group Region"></inject> (2)** as the region. 
 
-1. Under **Server details**, select **(US) East** as the region. 
-
-1. Review the SQL Server and Connectivity options. Leave the default values and select **Next**. 
+1. Review the SQL Server and Connectivity options. Leave the default values and select **Next (3)**. 
 
    ![](../Media/p18.png) 
 
@@ -196,15 +218,25 @@ After completing this lab, you'll be able to:
 
 1. Right-click the **Windows Start** button and select **Windows PowerShell (Admin)**
 
-   > For *Username*, enter **Administrator** and for *Password* enter Passw0rd!, if you get a UAC prompt.
+1. Copy and paste the below command into PowerShell and press **Enter**
 
-1. Type **cd C:\Users\Administrator.contoso\Downloads** or navigate to the folder where you downloaded the script. 
+   ```
+    cd C:\Users\Administrator.contoso\Downloads
+   ```
  
-1. Type `Set-ExecutionPolicy -ExecutionPolicy Unrestricted` and press **Enter**. 
+1. Copy and paste the below command and press **Enter**
+
+   ```
+   Set-ExecutionPolicy -ExecutionPolicy Unrestricted 
+   ```
 
 1. Enter **A** for **Yes to All** and press **Enter**.
 
-1. Type `.\OnboardingScript.ps1` and press **Enter**. 
+1. Copy and paste the below command and press **Enter**
+
+   ```
+   .\OnboardingScript.ps1
+   ```
 
 1. Enter **R** to **Run once** and press **Enter** (this may take a couple minutes).
 
@@ -227,25 +259,25 @@ After completing this lab, you'll be able to:
 
 ### Task 2: Enable Change Tracking and Inventory on the Arc machine
 
-1. In the navigation pane under **Azure Arc- Machines- SEA-SVR2**, under **Operations** select **Inventory**.   
+1. In the navigation pane under **Azure Arc- Machines- SEA-SVR2**, under **Operations (1)** select **Inventory (2)**.   
 
    ![](../Media/p22.png) 
 
-1. On the **Change Tracking and Inventory** page, click **Enable**.
+1. On the **Change Tracking and Inventory** page, click **Enable (4)**.
 
-   >Notice that the Log Analytics workspace you created is listed under **Enable change tracking and inventory feature with AMA**.
+   >Notice that the Log Analytics workspace (3) you created is listed under **Enable change tracking and inventory feature with AMA**.
 
 1. Wait for the deployment of the Change Tracking feature to complete. This may take up to 5 minutes so proceed to the next steps.
 
 ### Task 3: Enable Monitoring using Insights
 
-1. Navigate to the **SEA-SVR2** Azure Arc machine and under **Settings**, select **Extensions**.  
+1. Navigate to the **SEA-SVR2** Azure Arc machine and under **Settings (1)**, select **Extensions (2)**.  
 
    ![](../Media/p23.png) 
 
-   >**Note:** You can view the addition of the ChangeTracking and Azure Monitor Agent extensions.
+   >**Note:** You can view the addition of the ChangeTracking and Azure Monitor Agent extensions (3).
 
-1. Under **Monitoring** select **Insights**, and select **Enable**.  
+1. Under **Monitoring (1)** select **Insights (2)**, and select **Enable (3)**.  
 
    ![](../Media/p24.png) 
 
@@ -253,13 +285,17 @@ After completing this lab, you'll be able to:
 
    ![](../Media/p25.png) 
 
-1. In the **Create new rule** page, enter **Arc** for the **Data collection rule** name.
+1. In the **Create new rule** page, enter **Arc (1)** for the **Data collection rule** name.
 
    ![](../Media/p26.png) 
-1. Under **Processes and dependencies**, select **Enable processes and dependencies (map)**.
-1. Leave the name of the Azure subscription you are using in this lab.
-1. From the **Log Analytics workspaces** drop-down menu, select the Log analytic workspace that you created earlier.
-1. Select **Create**, then **Configure**.
+
+1. Under **Processes and dependencies**, select **Enable processes and dependencies (map) (2)**.
+
+1. Leave the name of the Azure subscription(3) you are using in this lab.
+
+1. From the **Log Analytics workspaces (4)** drop-down menu, select the Log analytic workspace that you created earlier.
+
+1. Select **Create(5)**, then **Configure**.
 
    ![](../Media/p27.png) 
 
@@ -271,27 +307,33 @@ After completing this lab, you'll be able to:
 
 1. Open the Services console and select the **Windows Update** service.
 
+   ![](../Media/lab2-t9.png) 
+
+   ![](../Media/lab2-t10.png) 
+
 1. Right-click **Windows Update** and select **Properties** from the context menu. Set the startup type to **Automatic** and start the service. 
+
+   ![](../Media/lab2-t11.png) 
 
    ![](../Media/p28.png) 
 
 1. Close the Services console.
 
-1. In the Azure Portal search bar, type **Azure Update Manager**.
+1. In the Azure Portal, navigate to Azure Arc Machines, select **SEA-SVR2**.
 
-1. In the navigation pane, under **Resources**, select **Machines**. You should see **SEA-SVR2** Azure Arc-enabled server listed on the **Machines** page. Select the **SEA-SVR2** machine.
+1. In the navigation pane, under **Operations (1)**, select **Updates (2)**
 
    ![](../Media/p29.png) 
 
-1. In the **Recommended updates** tab, under **Periodic assessment**, click **Enable now**.
+1. In the **Recommended updates (3)** tab, under **Periodic assessment**, click **Enable now (4)**.
 
-1. From the drop down menu for the **SEA-SVR2** Arc-enabled server, under **Periodic assessment**, select **Enable**, and then **Save**. 
+1. From the drop down menu for the **SEA-SVR2** Arc-enabled server, under **Periodic assessment**, select **Enable (1)**, and then **Save (2)**. 
 
    ![](../Media/p30.png) 
 
-1. On the **Updates** page, select **Check for updates**. 
+1. On the **Updates** page, select **Check for updates (1)**. 
 
-1.	On the **Trigger assess now** window, select **OK**.
+1.	On the **Trigger assess now** window, select **OK (2)**.
 
    ![](../Media/p31.png) 
 
@@ -300,25 +342,25 @@ After completing this lab, you'll be able to:
 
 ### Task 5: Verify Azure Policy compliance, change tracking, Inventory, Insights monitoring, and Azure Updates
 
-1.	Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights**.
+1.	Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights (1)**.
 
-1.	Select **Analyze data**. You should be able to see the performance data.  
+1.	Select **Performance data (2)**. You should be able to see the performance data.  
 
-   ![](../Media/p32.png) 
+    ![](../Media/p32.png) 
 
 1.	Select the **Map** tab and view the dependency map.  
 
    ![](../Media/p33.png) 
 
-   >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
+    >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
 
 1.	In the navigation pane, under **Operations**, select **Inventory** to view the inventory data.   
 
-   ![](../Media/p34.png) 
+   ![](../Media/p35.png) 
 
 1.	Select **Change Tracking** to view the data that was changed.  
 
-   ![](../Media/p35.png) 
+   ![](../Media/lab2-t12.png) 
 
 ### Review
 
