@@ -21,7 +21,11 @@ In this lab, you will:
 
 ## Exercise 1: Deploying AD DS domain controllers in Azure
 
+In this exercise, you will learn how to deploy Active Directory Domain Services (AD DS) domain controllers in Azure. The tasks cover the creation of a domain controller using an Azure Resource Manager (ARM) template, the setup of Azure Bastion for secure access to your VMs, and the manual deployment of a second domain controller VM to expand your AD environment. This exercise focuses on understanding the key configurations required for AD DS in Azure, such as virtual networks, availability sets, and DNS configurations.
+
 ### Task 1: Deploy a domain controller by using an Azure Resource Manager (ARM) template
+
+In this task, you will deploy a domain controller using an ARM template. You will edit the template to adjust settings such as OS version, disk caching, and network configuration. You will also deploy the VM in an availability set and validate the deployment.
 
 1. Connect to **SEA-SVR2**, and then, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
@@ -58,17 +62,17 @@ In this lab, you will:
 
 1. On the **Edit template** page, browse to the section that provisions an availability set (starting with the line **110**) and note that the template creates an availability set and deploys the VM into it (as indicated by the **dependsOn** element on line **181**).
 
-   > **Note**: Later in this exercise, you will deploy another Azure VM into the same availability set and configure it as an additional domain controller in the same domain. The use of an availability set provides additional resiliency.
+   >**Note**: Later in this exercise, you will deploy another Azure VM into the same availability set and configure it as an additional domain controller in the same domain. The use of an availability set provides additional resiliency.
 
 1. Browse to the section that provisions the network interface of the Azure VM (starting with the line **152**) and note that the private IP address allocation method is set to **Static** (on line **164**).
 
    ![](../Media/pip.png)
 
-   > **Note**: Using the static assignment is common when deploying domain controllers, but it is essential for servers that host the DNS server role.
+   >**Note**: Using the static assignment is common when deploying domain controllers, but it is essential for servers that host the DNS server role.
 
 1. Browse to the section that deploys a nested template(starting with line **266**) and note that the template updates the DNS server address within the virtual network hosting the Azure VM operating as a domain controller with the DNS server role installed.
 
-   > **Note**: Configuring the custom DNS server virtual network setting that points to the Azure VM running the domain controller with the DNS server role ensures that any Azure VM subsequently deployed into the same virtual network will automatically use that DNS server for name resolution, effectively providing the domain join functionality.
+   >**Note**: Configuring the custom DNS server virtual network setting that points to the Azure VM running the domain controller with the DNS server role ensures that any Azure VM subsequently deployed into the same virtual network will automatically use that DNS server for name resolution, effectively providing the domain join functionality.
 
 1. On the **Edit template** page, select **Save** if changes were made to the template; otherwise, select **Discard**.
    
@@ -115,7 +119,9 @@ In this lab, you will:
 
 ### Task 2: Deploy Azure Bastion 
 
-   > **Note**: Azure Bastion allows for connection to the Azure VMs without public endpoints which you deployed in the previous task of this exercise, while providing protection against brute force exploits that target operating system-level credentials.
+In this task, you will add an AzureBastionSubnet to the virtual network. Then, you will deploy Azure Bastion to securely connect to VMs without using public IP addresses.
+
+   >**Note**: Azure Bastion allows for connection to the Azure VMs without public endpoints which you deployed in the previous task of this exercise, while providing protection against brute force exploits that target operating system-level credentials.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open the Azure Cloud Shell pane by selecting the Cloud Shell button in the Azure portal.
 
@@ -165,11 +171,13 @@ In this lab, you will:
 
 1. On the **Review + create** tab of the **Create a Bastion** page, select **Create**:
 
-   > **Note**: Wait for the deployment to complete before you proceed to the next task. The deployment might take about 5 minutes.
+   >**Note**: Wait for the deployment to complete before you proceed to the next task. The deployment might take about 5 minutes.
 
 ### Task 3: Deploy an Azure VM by using the Azure portal
 
-   > **Note**: You could fully automate the deployment of the second Azure VM and its setup as an additional domain controller in the same domain as the first one you provisioned in the first task of this exercise. However, the use of graphical interface in this case should provide additional guidance regarding differences between provisioning domain controllers in on-premises and Azure-based scenarios.
+In this task, you will deploy a second VM using the Azure portal as an additional domain controller. You will configure the VM settings, attach a data disk, and complete the deployment.
+
+   >**Note**: You could fully automate the deployment of the second Azure VM and its setup as an additional domain controller in the same domain as the first one you provisioned in the first task of this exercise. However, the use of graphical interface in this case should provide additional guidance regarding differences between provisioning domain controllers in on-premises and Azure-based scenarios.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines**. 
 1. On the **Virtual machines** page, select **+ Create**, and then, in the drop-down menu, select **Azure virtual machine**.
@@ -233,9 +241,11 @@ In this lab, you will:
 
 1. On the **Review + Create** blade, select **Create**.
 
-   > **Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
+   >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
 
 ### Task 4: Manually promote a domain controller in an Azure VM
+
+In this task, you will manually promote a virtual machine (VM) to a domain controller within an Azure environment. You will perform various configuration steps such as assigning a static IP address, installing necessary roles, initializing data disks, and running the Active Directory Domain Services Configuration Wizard to promote the server. These steps ensure the machine is correctly configured to serve as a domain controller within an existing domain.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the deployment page, select **Go to resource**.
 1. On the **az801l06a-dc2** page, on the vertical menu of the left side, in the **Networking** section, select **Network settings**.
@@ -244,9 +254,9 @@ In this lab, you will:
 1. On the **IP Configurations** page, select **ipconfig1** entry.
 1. On the **ipconfig1** page, in the **Private IP address settings** section, select **Static**, and then select **Save**.
 
-   > **Note**: Using the static assignment is common when deploying domain controllers, but it is essential for servers that host the DNS server role.
+   >**Note**: Using the static assignment is common when deploying domain controllers, but it is essential for servers that host the DNS server role.
 
-   > **Note**: Assigning static IP address to a network interface of an Azure VM will trigger a restart of its operating system.
+   >**Note**: Assigning static IP address to a network interface of an Azure VM will trigger a restart of its operating system.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, browse back to the **az801l06a-dc2** page.
 1. On the **az801l06a-dc2** page, select **Connect**, from the drop-down menu, select **Connect via Bastion**. 
@@ -327,6 +337,8 @@ In this lab, you will:
 
 ### Task 1: Install Windows Admin Center
 
+In this task, you will install Windows Admin Center on the SEA-SVR2 machine. This tool will allow you to manage Windows Server resources efficiently. You will download and install the latest version via PowerShell commands.
+
 1. On **SEA-SVR2**, select **Start**, and then select **Windows PowerShell**.
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to download the latest version of Windows Admin Center:
 	
@@ -343,6 +355,8 @@ In this lab, you will:
 
 ### Task 2: Set up file services
 
+In this task, you will set up file services on the SEA-SVR2 machine by running a PowerShell script. The script will initialize additional data disks, create NTFS volumes, assign drive letters, and configure file shares that will be used in the file migration process.
+
 1. On **SEA-SVR2**, on the taskbar, select **File Explorer**.
 1. In File Explorer, browse to the **C:\\Labfiles\\Lab06** folder.
 1. In File Explorer, in the details pane, select the file **L06_SetupFS.ps1**, display its context menu, and then, in the menu, select **Edit**.
@@ -358,6 +372,8 @@ In this lab, you will:
    >**Note:** Click on **Run Once** when the pop-up comes up.
 
 ### Task 3: Perform migration by using Storage Migration Service
+
+In this task, you will use Windows Admin Center and the Storage Migration Service to migrate files from SEA-SVR1 to SEA-SVR2. This will involve scanning the source server, transferring data, mapping volumes, and configuring the migration settings, ensuring that files and data from the old server are successfully moved to the new one.
 
 1. On **SEA-SVR2**, start Microsoft Edge, and then go to **https://SEA-SVR2.contoso.com**. 
    
@@ -455,6 +471,8 @@ In this lab, you will:
    >**Note:** The cutover will trigger two consecutive restarts of both **SEA-SVR1** and **SEA-SVR2**.
 
 ### Task 4: Validate migration outcome
+
+In this task, you will validate the migration outcome by performing a series of checks on SEA-SVR2 to ensure that the network interfaces, NetBIOS names, shares, and data are correctly configured. This process will confirm that the file migration was successful and that the system is properly set up to handle the migrated data.
 
 1. On **SEA-SVR2**, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 1. On **SEA-SVR2**, select **Start**, and then select **Windows PowerShell** and select **Run as Administrator**.
