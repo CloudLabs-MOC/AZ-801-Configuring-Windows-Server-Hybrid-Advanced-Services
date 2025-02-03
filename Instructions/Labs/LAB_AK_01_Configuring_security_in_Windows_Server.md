@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-In this Hands-on-lab, you will implement key security features in Windows Server to protect credentials, identify vulnerable accounts, and enforce secure password management. You will enable Windows Defender Credential Guard to prevent credential theft, use PowerShell to locate and secure problematic accounts, and deploy Local Administrator Password Solution (LAPS) to automate local administrator password management. These tasks will help strengthen security in an enterprise environment by reducing attack surfaces and enforcing best practices.
+In this hands-on-lab, you will implement key security features in Windows Server to protect credentials, identify vulnerable accounts, and enforce secure password management. You will enable Windows Defender Credential Guard to prevent credential theft, use PowerShell to locate and secure problematic accounts, and deploy Local Administrator Password Solution (LAPS) to automate local administrator password management. These tasks will help strengthen security in an enterprise environment by reducing attack surfaces and enforcing best practices.
 
 ## Lab Objectives
 
