@@ -1,6 +1,10 @@
 # Lab 07: Monitoring and troubleshooting Windows Server
 
-## Lab objectives
+## Lab Overview
+
+In this hands-on lab, you will learn to monitor and troubleshoot the performance of a Windows Server. You will establish a performance baseline by creating data collector sets and analyzing key system metrics. You will also simulate performance issues to identify the source of problems and use Performance Monitor to capture and analyze performance data. Lastly, you will configure centralized event logs to gather system and application events from remote servers, enabling effective monitoring and troubleshooting across your environment.
+
+## Lab Objectives
 In this lab, you will complete the following tasks:
 + Exercise 1: Establishing a performance baseline
 + Exercise 2: Identifying the source of a performance problem
@@ -13,6 +17,8 @@ In this lab, you will complete the following tasks:
 ![](../Media/lab8.1.png)
 
 ## Exercise 1: Establishing a performance baseline
+
+In this exercise, you will create and start a custom data collector set in Performance Monitor to establish a baseline for the server’s performance. You will select relevant performance counters, simulate typical server workloads, and collect data. After data collection, you will analyze the performance metrics to establish baseline values that can be used for future comparisons when troubleshooting performance issues.
 
 > **Note**: After starting the Data Collector Set, there might be a delay of 10 minutes for the results to appear.
 
@@ -147,6 +153,8 @@ In this task, you will analyze the performance data reports in Performance Monit
 
 ## Exercise 2: Identifying the source of a performance problem
 
+In this exercise, you will identify the source of a performance problem by creating additional workloads on the server. You will use the CPU Stress utility to simulate a high CPU load and capture performance data during this time. By comparing the performance data before and during the stress, you will diagnose potential performance issues and identify resource bottlenecks.
+
 ### Task 1: Create additional workload on the server
 
 In this task, you will run the CPU Stress utility (CPUStres64.exe) to simulate additional CPU load on SEA-SVR2. This increased workload will help identify performance problems that could arise under stress conditions.
@@ -208,7 +216,9 @@ In this task, after removing the CPU stress workload, you will stop the data col
 
       ![](../Media/801-17.png)
 
-### Exercise 3: Viewing and configuring centralized event logs
+## Exercise 3: Viewing and configuring centralized event logs
+
+In this exercise, you will configure centralized event log management by setting up event forwarding from one server to another. You will enable the necessary prerequisites, such as time synchronization and remote management, and create an event subscription to collect critical events from the source server. You will then verify that the event forwarding is set up correctly and that the events are being received on the target server.
 
 ### Task 1: Configure subscription prerequisites
 
