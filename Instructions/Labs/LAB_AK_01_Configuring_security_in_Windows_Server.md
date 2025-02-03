@@ -1,14 +1,16 @@
 # Lab 01 : Configuring security in Windows Server
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-801%20Lab%20Simulation%20-%20Configuring%20security%20in%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Lab Overview
 
-## Lab objectives
+In this Hands-on-lab, you will implement key security features in Windows Server to protect credentials, identify vulnerable accounts, and enforce secure password management. You will enable Windows Defender Credential Guard to prevent credential theft, use PowerShell to locate and secure problematic accounts, and deploy Local Administrator Password Solution (LAPS) to automate local administrator password management. These tasks will help strengthen security in an enterprise environment by reducing attack surfaces and enforcing best practices.
 
-After completing this lab, you'll be able to:
+## Lab Objectives
 
-- Configure Windows Defender Credential Guard.
-- Locate problematic accounts.
-- Implementing LAPS.
+In this lab, you'll be working on:
+
+- Exercise 1: Configuring Windows Defender Credential Guard.
+- Exercise 2: Locating problematic accounts.
+- Exercise 3: Implementing Local Administrator Password Solution (LAPS)
   
 ## Estimated timing: 80 minutes
 
@@ -18,9 +20,13 @@ After completing this lab, you'll be able to:
 
 ## Exercise 1: Configuring Windows Defender Credential Guard
 
-> **Note**: In the lab environment, Credential Guard will not be available on VMs because they don't meet the prerequisites. This, however, will not prevent you from stepping through the process of implementing it by using Group Policy and evaluating its readiness by using corresponding tools.
+In this exercise, you will enable and configure Windows Defender Credential Guard using Group Policy and assess hardware readiness to protect credentials from theft.
+
+>**Note**: In the lab environment, Credential Guard will not be available on VMs because they don't meet the prerequisites. This, however, will not prevent you from stepping through the process of implementing it by using Group Policy and evaluating its readiness by using corresponding tools.
 
 ### Task 1: Enable Windows Defender Credential Guard using Group Policy
+
+In this task, you will enable Windows Defender Credential Guard using Group Policy. You will create and configure a Group Policy Object (GPO) to enforce Credential Guard settings and apply them to the IT Organizational Unit (OU).
 
 1. Connect to **SEA-SVR2** and, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
@@ -65,6 +71,8 @@ After completing this lab, you'll be able to:
 
 ### Task 2: Enable Windows Defender Credential Guard using the Hypervisor-Protected Code Integrity (HVCI) and Windows Defender Credential Guard hardware readiness tool
 
+In this task, you will run the HVCI and Windows Defender Credential Guard hardware readiness tool to evaluate system compatibility and enable Credential Guard on the target system.
+
 1. On **SEA-SVR2**, select **Start**, right-click or access the **context** menu for **Windows PowerShell**, and then select **Run as administrator**.
 1. To run the HVCI and Windows Defender Credential Guard hardware readiness tool, at the Windows PowerShell command prompt, enter the following commands, enter **R** Run once at the first prompt, and then press Enter for the rest of the prompts:
 
@@ -81,7 +89,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 2: Locating problematic accounts
 
+In this exercise, you will use PowerShell to locate accounts with security risks, including non-expiring passwords and inactive accounts, and apply remediation actions.
+
 ### Task 1: Locate and reconfigure domain accounts with non-expiring passwords
+
+In this task, you will identify Active Directory domain accounts with non-expiring passwords and configure them to comply with security best practices by enforcing password expiration.
 
 1. On **SEA-SVR2**, select **Start**, right-click or access the **context** menu for **Windows PowerShell**, and then select **Run as administrator**.
 
@@ -102,7 +114,7 @@ After completing this lab, you'll be able to:
 
 ### Task 2: Locate and disable domain accounts that have not been used to sign in for at least 90 days
 
->**Note:** Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting commands inside the environment instead of right-clicking
+In this task, you will identify domain accounts that have been inactive for at least 90 days and disable them to reduce security risks associated with stale accounts.
 
 1. To identify Active Directory user accounts that have not been used to sign in for at least 90 days, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
@@ -123,9 +135,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 3: Implementing LAPS
 
+In this exercise, you will install, configure, and enforce LAPS policies to automatically manage and securely store local administrator passwords in Active Directory.
+
 ### Task 1: Prepare computer accounts for implementing LAPS (Local Administrator Password Solution)
 
->**Note:** Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting commands inside the environment instead of right-clicking
+In this task, you will create a dedicated Organizational Unit (OU) in Active Directory, move a computer account into it, and install LAPS on the management server to prepare for implementation.
 
 1. To create a designated OU and move the **SEA-SVR1** computer account to it, on **SEA-SVR2**, at the Windows PowerShell command prompt, enter the following command and press Enter: 
 
@@ -164,7 +178,7 @@ After completing this lab, you'll be able to:
 
 ### Task 2: Prepare AD DS for LAPS
 
->**Note:** Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting commands inside the environment instead of right-clicking
+In this task, you will extend the Active Directory schema for LAPS, configure permissions for managed computers, and create a Group Policy Object (GPO) to enforce LAPS policies.
 
 1. To prepare the domain for LAPS, on **SEA-SVR2**, at the Windows PowerShell command prompt, enter the following commands, and after each, press Enter:
 
@@ -210,6 +224,8 @@ After completing this lab, you'll be able to:
 
 ### Task 3: Deploy LAPS client-side extension
 
+In this task, you will install the LAPS client-side extension on a target system, apply the Group Policy settings, and force an update to ensure LAPS configurations are applied correctly.
+
 1. Switch to the console session to **SEA-SVR1** and then, if needed, sign in as **CONTOSO\\Administrator**, with the password **Pa55w.rd**.
 
    > **Note:** You will be prompted to change your password, as a result of running in the previous exercise the script that enables password expiration. Choose an arbitrary password and use it throughout the remainder of the lab. Use the *Tab* key to move between fields while updating the password.
@@ -231,6 +247,8 @@ After completing this lab, you'll be able to:
    ```
 
 ### Task 4: Verify LAPS
+
+In this task, you will verify that LAPS is correctly implemented by retrieving and reviewing the managed local administrator password for a target computer using both the LAPS UI and PowerShell commands.
 
 1. Switch to the console session to **SEA-SVR2**.
 1. Select **Start**. In the **Start** menu, select **LAPS**, and then select **LAPS UI**.
