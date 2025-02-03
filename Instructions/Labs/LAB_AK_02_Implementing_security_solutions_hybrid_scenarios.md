@@ -1,16 +1,15 @@
 # Lab 02: Implementing Security Solutions in Hybrid Scenarios 
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-801%20Lab%20Simulation%20-%20Implementing%20security%20solutions%20in%20hybrid%20scenarios)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+In this hands-on lab, you will implement security solutions in a hybrid environment by integrating on-premises and cloud-based security services. You will create and configure an Azure Log Analytics workspace, enable Microsoft Defender for Cloud, provision Azure virtual machines, onboard on-premises servers to Azure Arc, and configure monitoring and update management.
 
 ## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you'll be working on:
 
-- Create an Azure Log Analytics workspace and an Azure Automation account
-- Configure Microsoft Defender for Cloud
-- Provision Azure VMs running Windows Server.
-- Onboard on-premises Windows Server into Defender for Cloud and Azure Automation.
-- Verify the hybrid capabilities of Defender for Cloud and Azure Automation solutions.
+- Exercise 1: Creating an Azure Log Analytics workspace
+- Exercise 2: Configuring Microsoft Defender for Cloud
+- Exercise 3: Provisioning Azure VMs running Windows Server
+- Exercise 4: Onboarding on-premises Windows Server into Microsoft Defender for Cloud and Azure Update Manager
 
 ## Estimated timing: 80 minutes
 
@@ -20,7 +19,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 1: Creating an Azure Log Analytics workspace
 
-#### Task 1: Create an Azure Log Analytics workspace 
+In this exercise, you will create an Azure Log Analytics workspace to collect and analyze security and operational data from your hybrid environment.
+
+### Task 1: Create an Azure Log Analytics workspace 
+
+In this task, you will create a Log Analytics workspace in Azure, which will serve as a central location for monitoring and analyzing data collected from your on-premises and cloud resources.
 
 1. Connect to **SEA-SVR2**, and if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
@@ -65,15 +68,17 @@ After completing this lab, you'll be able to:
 
 ## Exercise 2: Configuring Microsoft Defender for Cloud
 
-#### Task 1: Enable Defender for Cloud and automatic agent installation
+In this exercise, you will enable Microsoft Defender for Cloud to enhance the security posture of your hybrid environment. You will configure Defender plans, enable automatic agent installation, and set up security data collection.
+
+### Task 1: Enable enhanced security of Defender for Cloud
+
+In this task, you will configure enhanced security settings for Microsoft Defender for Cloud, enabling specific Defender plans and monitoring features to protect your environment.
 
 1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Microsoft Defender for Cloud**.
 
 1. On the **Microsoft Defender for Cloud \| Overview** page, if you see any pop-up regarding **Enhance your security posture by enabling Defender CSPM**, select **No thanks**
 
    ![](../Media/p3.png)  
-
-#### Task 2: Enable enhanced security of Defender for Cloud
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the **Microsoft Defender for Cloud | Overview** page, in the **Management (1)** section of the vertical menu on the left, select **Environment settings (2)**.
 
@@ -138,7 +143,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 3: Provisioning Azure VMs running Windows Server
 
+In this exercise, you will deploy an Azure virtual machine using an Azure Resource Manager (ARM) template. This virtual machine will be used for monitoring, security analysis, and management.
+
 ### Task 1: Deploy an Azure VM by using an Azure Resource Manager template
+
+In this task, you will deploy an Azure virtual machine using an ARM template, specifying necessary parameters such as region, resource group, and credentials.
 
 1. In the **Search resources, services, and docs text box**, on the toolbar, search for and select **Deploy a custom template**.
 
@@ -183,7 +192,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 4: Onboarding on-premises Windows Server into Microsoft Defender for Cloud and Azure Update Manager
 
-#### Task 1: Install Azure Arc agents on an On-Premises Server
+In this exercise, you will onboard an on-premises Windows Server machine into Azure Arc to enable monitoring, security management, and update management within Azure.
+
+### Task 1: Install Azure Arc agents on an On-Premises Server
+
+In this task, you will install and configure the Azure Arc agent on an on-premises Windows Server, allowing it to be managed within the Azure portal.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, type **Arc (1)**, then select **Azure Arc (2)**.
 
@@ -214,7 +227,7 @@ After completing this lab, you'll be able to:
 
    ![](../Media/p20.png) 
 
-   >Hint: if your browser blocks the download, allow it in the Microsoft Edge browser; select the ellipsis button (…), and then select Keep.
+   >**Note**: if your browser blocks the download, allow it in the Microsoft Edge browser; select the ellipsis button (…), and then select Keep.
 
 1. Right-click the **Windows Start** button and select **Windows PowerShell (Admin)**
 
@@ -259,6 +272,8 @@ After completing this lab, you'll be able to:
 
 ### Task 2: Enable Change Tracking and Inventory on the Arc machine
 
+In this task, you will enable change tracking and inventory monitoring to ensure that modifications to the system are logged and can be reviewed.
+
 1. In the navigation pane under **Azure Arc- Machines- SEA-SVR2**, under **Operations (1)** select **Inventory (2)**.   
 
    ![](../Media/p22.png) 
@@ -270,6 +285,8 @@ After completing this lab, you'll be able to:
 1. Wait for the deployment of the Change Tracking feature to complete. This may take up to 5 minutes so proceed to the next steps.
 
 ### Task 3: Enable Monitoring using Insights
+
+In this task, you will configure Azure Monitor Insights to collect performance and dependency data for the onboarded machine.
 
 1. Navigate to the **SEA-SVR2** Azure Arc machine and under **Settings (1)**, select **Extensions (2)**.  
 
@@ -303,7 +320,9 @@ After completing this lab, you'll be able to:
 
 ### Task 4: Enable Monitoring with Windows Updates 
 
-   On **SEA-SVR2**, Windows Update is disabled by default. Make sure that on the **SEA-SVR2** server Windows Update is NOT disabled. You must enable it before you proceed to the next step.
+In this task, you will configure update management for the onboarded Windows Server to ensure that it receives necessary security patches and updates.
+
+1. On **SEA-SVR2**, Windows Update is disabled by default. Make sure that on the **SEA-SVR2** server Windows Update is NOT disabled. You must enable it before you proceed to the next step.
 
 1. Open the Services console and select the **Windows Update** service.
 
@@ -339,8 +358,9 @@ After completing this lab, you'll be able to:
 
    >**Note:** The missing updates will appear in a few minutes. You can revisit the Azure Arc machine periodically and you should see the updates reflected shortly after.
 
-
 ### Task 5: Verify Azure Policy compliance, change tracking, Inventory, Insights monitoring, and Azure Updates
+
+In this task, you will verify the successful configuration of monitoring, compliance policies, and update management by reviewing insights, inventory data, and applied security policies.
 
 1.	Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights (1)**.
 
@@ -366,10 +386,9 @@ After completing this lab, you'll be able to:
 
 In this lab, you have completed:
 
-- Created an Azure Log Analytics workspace and an Azure Automation account.
+- Created an Azure Log Analytics workspace.
 - Configured Defender for Cloud.
 - Provisioned Azure VMs running Windows Server.
-- Onboarded on-premises Windows Server into Defender for Cloud and Azure Automation.
-- Verified the hybrid capabilities of Defender for Cloud and Azure Automation solutions.
+- Onboarded on-premises Windows Server into Defender for Cloud and Azure update manager.
 
 ### You have successfully completed the lab.
