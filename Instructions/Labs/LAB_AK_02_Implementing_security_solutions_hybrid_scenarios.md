@@ -246,7 +246,7 @@ After completing this lab, you'll be able to:
 
 1. Close the **Add servers with Azure Arc** page and navigate back to the **Azure Arc Machines** page.
 
-1.	Select **Refresh** until the **SEA-SVR2** server name appears and the Status is **Connected** in the Arc console. 
+1. Select **Refresh** until the **SEA-SVR2** server name appears and the Status is **Connected** in the Arc console. 
 
    ![](../Media/p21.png) 
 
@@ -333,7 +333,7 @@ After completing this lab, you'll be able to:
 
 1. On the **Updates** page, select **Check for updates (1)**. 
 
-1.	On the **Trigger assess now** window, select **OK (2)**.
+1. On the **Trigger assess now** window, select **OK (2)**.
 
    ![](../Media/p31.png) 
 
@@ -348,17 +348,17 @@ After completing this lab, you'll be able to:
 
     ![](../Media/p32.png) 
 
-1.	Select the **Map** tab and view the dependency map.  
+1. Select the **Map (1)** tab and view the dependency map.  
 
    ![](../Media/p33.png) 
 
-    >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
+   >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
 
-1.	In the navigation pane, under **Operations**, select **Inventory** to view the inventory data.   
+1. In the navigation pane, under **Operations**, select **Inventory(1) ** to view the inventory data.   
 
    ![](../Media/p35.png) 
 
-1.	Select **Change Tracking** to view the data that was changed.  
+1. Select **Change Tracking (1)** to view the data that was changed.  
 
    ![](../Media/lab2-t12.png) 
 
