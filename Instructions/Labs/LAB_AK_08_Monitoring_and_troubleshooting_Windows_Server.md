@@ -1,7 +1,5 @@
 # Lab 07: Monitoring and troubleshooting Windows Server
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-801%20Lab%20Simulation%20-%20Monitoring%20and%20troubleshooting%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
 ## Lab objectives
 In this lab, you will complete the following tasks:
 + Exercise 1: Establishing a performance baseline
@@ -19,6 +17,8 @@ In this lab, you will complete the following tasks:
 > **Note**: After starting the Data Collector Set, there might be a delay of 10 minutes for the results to appear.
 
 ### Task 1: Create and start a data collector set
+
+In this task, you will create a custom data collector set in Performance Monitor on SEA-SVR2 to track various performance counters like processor time, memory usage, disk activity, and network traffic, providing data for establishing a performance baseline.
 
 1. Connect to **SEA-SVR2**, and then, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
@@ -78,6 +78,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 2: Create a typical workload on the server
 
+In this task, you will simulate a typical server workload by creating and copying large files using PowerShell. This will allow the Performance Monitor to capture relevant data while the server is under load.
+
 1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, search for **Windows PowerShell**, right-click on the **Windows PowerShell** and then select **Run as administrator**.
 
 1. To create a file of a specific size, at the Windows PowerShell command prompt, enter the following command and press Enter:
@@ -114,6 +116,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 3: Analyze the collected data
 
+In this task, you will analyze the performance data reports in Performance Monitor to identify key system metrics like memory usage, disk time, processor usage, and network activity.
+
 1. On **SEA-SVR2**, switch to Performance Monitor.
 
 1. In the navigation pane, right-click or access the context menu for **SEA-SVR2 Performance (1)**, and then select **Stop (2)**.
@@ -145,6 +149,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Create additional workload on the server
 
+In this task, you will run the CPU Stress utility (CPUStres64.exe) to simulate additional CPU load on SEA-SVR2. This increased workload will help identify performance problems that could arise under stress conditions.
+
 1. On **SEA-SVR2**, open File Explorer.
 
 1. In File Explorer, browse to **C:\Labfiles\Lab08**.
@@ -161,6 +167,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 2: Capture performance data by using a data collector set
 
+In this task, you will capture performance data while the server is under the added CPU stress, providing insights into how the server is performing under load and offering comparisons with baseline performance metrics.
+
 1. On **SEA-SVR2**, switch to Performance Monitor.
 
 1. In Performance Monitor, expand **Data Collector Sets**, and select **User Defined**.
@@ -172,6 +180,8 @@ In this lab, you will complete the following tasks:
    > **Note**: Wait 1 minute to allow the data capture to occur.
 
 ### Task 3: Remove the workload and review the performance data
+
+In this task, after removing the CPU stress workload, you will stop the data collector set and review the performance data to determine the impact of the additional workload on system performance.
 
 1. On **SEA-SVR2**, switch to **CPU Stress** dialog box and close it. 
 
@@ -201,6 +211,8 @@ In this lab, you will complete the following tasks:
 ### Exercise 3: Viewing and configuring centralized event logs
 
 ### Task 1: Configure subscription prerequisites
+
+In this task, you will be configuring the prerequisites for event log forwarding, including setting up Windows Remote Management (WinRM), ensuring time synchronization, and enabling the necessary firewall rules on SEA-SVR2 and SEA-DC1.
 
 1. On **SEA-SVR2**, switch to Windows PowerShell.
 
@@ -277,6 +289,8 @@ In this lab, you will complete the following tasks:
 1. In the **Event Log Readers Properties** dialog box, select **OK**.
 
 ### Task 2: Create a subscription and verify the results
+
+In this task, you will create an event subscription to collect and forward critical events from SEA-DC1 to SEA-SVR2. After setting up the subscription, you will verify that the forwarded events appear in Event Viewer, ensuring centralized logging is working correctl
 
 1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Event**, and then, in the **Best match** list, select **Event Viewer**.
 
