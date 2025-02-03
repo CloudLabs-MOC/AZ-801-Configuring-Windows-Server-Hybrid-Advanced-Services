@@ -1,13 +1,15 @@
 # Lab 03: Implementing Hyper-V Replica and Windows Server Backup
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-801%20Lab%20Simulation%20-%20Implementing%20Hyper-V%20Replica%20and%20Windows%20Server%20Backup)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Lab Overview
+
+In this hands-on-lab, you will learn how to implement Hyper-V Replica to replicate virtual machines between two servers for disaster recovery, and Windows Server Backup to back up data to a network share for protection. You will configure replication, test failover, and set up automated backups using PowerShell to ensure data availability and recovery in case of failure.
 
 ## Lab Objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will be working on:
 
-- Implement Hyper-V Replica.
-- Implement backup and restore with Windows Server Backup.
+- Exercise1: Implementing Hyper-V Replica.
+- Exercise 2: Implementing backup and restore with Windows Server Backup.
 
 ## Estimated timing: 80 minutes
 
@@ -17,7 +19,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise1: Implementing Hyper-V Replica
 
+In this exercise, you will be setting up and configuring Hyper-V Replica to replicate virtual machines between two Hyper-V servers, ensuring high availability and disaster recovery for your virtualized workloads.
+
 ### Task 1: Install and configure Hyper-V Replica
+
+In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2 and SEA-SVR1 to enable the replication of virtual machines between these two servers.
 
 1. Connect to **SEA-SVR2**, and then, if needed, sign in as **Contoso\\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-SVR2**, right click on **Start**, and then select **Windows PowerShell (Admin)**.
@@ -104,6 +110,8 @@ After completing this lab, you'll be able to:
 
 ### Task 2: Configure Hyper-V replication
 
+In this task, you will be enabling replication for a virtual machine (SEA-CORE1) from SEA-SVR2 to SEA-SVR1 and verifying that replication is functioning correctly.
+
 1. On **SEA-SVR2**, switch to the **Administrator: Windows PowerShell** window displaying the local PowerShell session.
 1. To enable replication of the virtual machine **SEA-CORE1** from **SEA-SVR2** to **SEA-SVR1**, on **SEA-SVR2**, at the Windows PowerShell prompt of the local session, enter the following command and press Enter:
 
@@ -138,6 +146,8 @@ After completing this lab, you'll be able to:
 
 ### Task 3: Validate a failover
 
+In this task, you will be testing the failover process by performing a failover of SEA-CORE1 from SEA-SVR2 to SEA-SVR1 and ensuring that replication is consistent after the failover.
+
 1. On **SEA-SVR2**, switch to the **Administrator: Windows PowerShell** window displaying the local PowerShell session.
 1. To prepare for a failover of the **SEA-CORE1** virtual machine to **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the local session, enter the following command and press Enter:
 
@@ -145,7 +155,7 @@ After completing this lab, you'll be able to:
    Start-VMFailover -Prepare -VMName SEA-CORE1 -ComputerName SEA-SVR2.contoso.com
    ```
 
-   > **Note**: When prompted, enter **Y**, and then press Enter. This command prepares for the planned failover of **SEA-CORE1** by triggering replication of any pending changes.
+   >**Note**: When prompted, enter **Y**, and then press Enter. This command prepares for the planned failover of **SEA-CORE1** by triggering replication of any pending changes.
 
 1. On **SEA-SVR2**, switch to the **Administrator: Windows PowerShell** window displaying the PowerShell Remoting session to **SEA-SVR1**.
 1. To initiate a failover of the **SEA-CORE1** virtual machine to **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
@@ -154,7 +164,7 @@ After completing this lab, you'll be able to:
    Start-VMFailover -VMName SEA-CORE1 -ComputerName SEA-SVR1.contoso.com
    ```
 
-   > **Note**: When prompted, enter **Y**, and then press Enter.
+   >**Note**: When prompted, enter **Y**, and then press Enter.
 
 1. To configure the replica VM as the primary VM, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
 
@@ -215,7 +225,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 2: Implementing backup and restore with Windows Server Backup
 
+In this exercise, you will be configuring and using Windows Server Backup to protect critical data on SEA-SVR1 by performing backups and restores to a network share.
+
 ### Task1: Configure Windows Server Backup settings
+
+In this task, you will be installing and configuring the Windows Server Backup role on SEA-SVR1 to enable backup functionality and check the backup configuration.
 
 1. On **SEA-SVR2**, open File Explorer by selecting the **File Explorer** icon on the taskbar.
 1. In File Explorer, select **Local Disk (C:)** in the **navigation** pane.
@@ -257,6 +271,8 @@ After completing this lab, you'll be able to:
    ```
 
 ### Task 2: Perform a backup to a network share
+
+In this task, you will be backing up files from SEA-SVR1 to a network share located on SEA-SVR2 using Windows Server Backup and verifying the backup's success.
 
 1. To create the folder and files to be backed up on **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShellRemoting session to **SEA-SVR1**, enter the following commands, and after entering each command, press Enter:
 
