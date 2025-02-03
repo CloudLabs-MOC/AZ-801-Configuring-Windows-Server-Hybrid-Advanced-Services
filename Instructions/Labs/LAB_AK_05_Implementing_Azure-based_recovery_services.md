@@ -1,5 +1,7 @@
 # Lab 04 : Implementing Azure-based recovery services
 
+## Lab Overview
+
 In this hands-on lab, you will configure and validate Azure Site Recovery for a Hyper-V virtual machine, review replication settings, perform a test failover, and explore failover options to ensure business continuity and disaster recovery readiness.
 
 ## Lab Objectives
