@@ -7,15 +7,15 @@ As the business of Contoso, Ltd. grows, it's becoming increasingly important tha
 
 As one of the senior network administrators at Contoso, you're responsible for implementing failover clustering on the servers that are running Windows Server to provide high availability for network services and applications. You're also responsible for planning the failover cluster configuration and deploying applications and services on the failover cluster.
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-801%20Lab%20Simulation%20-%20Implementing%20Failover%20Clustering)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 ## Lab Objectives
 
-After completing this lab, you'll be able to:
+In this lab, you'll be working on:
 
-- Configure a failover cluster.
-- Deploy and configure a highly available file server on the failover cluster.
-- Validate the deployment of the highly available file server.
+- Exercise 1: Configuring iSCSI Storage.
+- Exercise 2: Configuring a Failover Cluster.
+- Exercise 3: Deploying and Configuring a Highly Available File Server.
+- Exercise 4: Validating the Deployment of the Highly Available File Server.
 
 ## Estimated time: **80 minutes**
 
@@ -25,7 +25,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 1: Configuring iSCSI storage
 
+In this exercise, you will be configuring iSCSI storage to be used in a failover cluster environment. You will install necessary features and roles, configure virtual disks, and initiate connections from two servers.
+
 ### Task 1: Install Failover Clustering
+
+In this task, you will be installing the Failover Clustering feature and management tools on two servers (SEA-SVR1 and SEA-SVR2) and installing the iSCSI Target server role on SEA-DC1 using PowerShell commands.
 
 1. Connect to **SEA-SVR2**, and then, if needed, sign in as **Contoso\\Administrator** with a password of **Pa55w.rd**.
 
@@ -51,6 +55,8 @@ After completing this lab, you'll be able to:
 1. Minimize the Windows Powershell window.
 
 ### Task 2: Configure iSCSI virtual disks
+
+In this task, you will be creating iSCSI virtual disks on SEA-DC1. This includes establishing PowerShell Remoting sessions to SEA-DC1 and SEA-SVR1, starting the iSCSI Initiator service on both SEA-SVR1 and SEA-SVR2, and creating the iSCSI Target on SEA-DC1.
 
 >**Important:** The lab uses **SEA-DC1**, which serves as an Active Directory Domain Services (AD DS) domain controller to host shared iSCI storage for a Windows Server-based cluster. This is not meant to represent in any way a recommended configuration but rather is done to simplify the lab configuration and minimize the number of lab virtual machines. In any production environment, domain controllers should not be used to host shared storage for failover clusters. Instead, such storage should be hosted on highly available infrastructure. 
 
@@ -110,7 +116,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 2: Configuring a failover cluster
 
+In this exercise, you will be configuring a failover cluster, which will include connecting to the iSCSI targets, initializing the disks, and creating the cluster itself.
+
 ### Task 1: Connect clients to the iSCSI targets
+
+In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from both SEA-SVR1 and SEA-SVR2. This will involve adding target mappings and establishing iSCSI connections using PowerShell.
 
 1. To mount the iSCSI disks on **SEA-DC1**, from **SEA-SVR2**, in the **Windows PowerShell** window hosting PowerShell Remoting session to **SEA-DC1**, enter the following commands, and after entering each command, press Enter:
 
@@ -141,13 +151,15 @@ After completing this lab, you'll be able to:
 
 ### Task 2: Initialize the disks
 
+In this task, you will be initializing the newly connected iSCSI disks on SEA-SVR2. You will make sure the disks are online, partitioned, formatted, and assigned drive letters.
+
 1. To list the disks on **SEA-SVR2**, switch to the Windows PowerShell prompt providing access to the local session, enter the following command, and then press Enter:
 
    ```powershell
    Get-Disk
    ```
 
-   > **Note:** Ensure that the three iSCSI disks are listed with the **Offline** operational status. These should be disks with numbers 2, 3, and 4.
+   >**Note:** Ensure that the three iSCSI disks are listed with the **Offline** operational status. These should be disks with numbers 2, 3, and 4.
 
 1. To initialize the disks, at the Windows PowerShell prompt providing access to the local session, enter the following commands, and after entering each command, press Enter:
 
@@ -163,6 +175,8 @@ After completing this lab, you'll be able to:
    > **Note:** Verify the disk numbers match the previous command output before running the commands. Verify that each command completed successfully.
 
 ### Task 3: Create a failover cluster
+
+In this task, you will be creating a failover cluster on SEA-SVR2, adding SEA-SVR1 as a node to the cluster, and verifying the successful creation and addition of nodes to the cluster.
 
 1. To create a failover cluster, on **SEA-SVR2**, at the Windows PowerShell prompt providing access to the local session, enter the following command, and then press Enter:
 
@@ -182,7 +196,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 3: Deploying and configuring a highly available file server
 
+In this exercise, you will be deploying a highly available file server on the failover cluster. You will configure the file server role, add a shared folder, and adjust failover settings to ensure high availability.
+
 ### Task 1: Add the file server application to the failover cluster
+
+In this task, you will be adding the File Server role to the failover cluster (SEA-CL03). You will configure a client access point (FSCluster) and select the cluster disks for the file server.
 
 1. On **SEA-SVR2**, select **Start**, in the **Start** menu, select **Server Manager**, and then, in **Server Manager**, select **Failover Cluster Manager** in the **Tools** menu.
 
@@ -240,7 +258,9 @@ After completing this lab, you'll be able to:
 
      ![](../Media/lab03-14.png) 
 
-#### Task 2: Add a shared folder to a highly available file server
+### Task 2: Add a shared folder to a highly available file server
+
+In this task, you will be configuring a shared folder (Docs) on the newly created file server role (FSCluster). You will also define access settings for this shared folder to ensure proper user access.
 
 1. On **SEA-SVR2**, in **Failover Cluster Manager**, select **Roles**, select **FSCluster**, and then in the Actions pane, select **Add File Share**. 
 
@@ -272,6 +292,8 @@ After completing this lab, you'll be able to:
 
 ### Task 3: Configure the failover and failback settings
 
+In this task, you will be configuring the failover and failback settings for the FSCluster file server, including specifying the preferred owner of the cluster role and enabling automatic failback.
+
 1. **On SEA-SVR2**, in the **Failover Cluster Manager** console, with the **FSCluster** selected in the **Roles** node, in the Actions pane, select **Properties**.
 
    ![](../Media/lab03-21.png) 
@@ -293,7 +315,11 @@ After completing this lab, you'll be able to:
 
 ## Exercise 4: Validating the deployment of the highly available file server
 
+In this exercise, you will be validating the deployment of the highly available file server. This will include testing failover capabilities and checking the quorum configuration for the file server role.
+
 ### Task 1: Validate the highly available file server deployment
+
+In this task, you will be testing the failover and failback capability of the FSCluster file server. You will move the file server role between SEA-SVR2 and SEA-SVR1 to ensure continued access to the shared folder.
 
 1. On **SEA-SVR2**, open File Explorer and browse to the **\\\\FSCluster\\Docs** folder.
 
@@ -316,6 +342,8 @@ After completing this lab, you'll be able to:
 1. On **SEA-SVR2**, switch back to File Explorer and verify that you can still access the content of the **\\\\FSCluster\\Docs** folder.
 
 ### Task 2: Validate the failover and quorum configuration for the File Server role
+
+In this task, you will be validating the quorum configuration by testing access to the shared folder when one node is offline. You will also configure the cluster quorum settings to use a disk witness.
 
 1. On **SEA-SVR2**, switch to the **Failover Cluster Manager** console and identify the current owner of the **FSCluster** role.
 
