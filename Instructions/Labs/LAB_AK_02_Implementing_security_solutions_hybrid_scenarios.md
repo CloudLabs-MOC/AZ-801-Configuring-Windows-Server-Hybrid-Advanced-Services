@@ -1,8 +1,10 @@
 # Lab 02: Implementing Security Solutions in Hybrid Scenarios 
 
+## Lab Overview
+
 In this hands-on lab, you will implement security solutions in a hybrid environment by integrating on-premises and cloud-based security services. You will create and configure an Azure Log Analytics workspace, enable Microsoft Defender for Cloud, provision Azure virtual machines, onboard on-premises servers to Azure Arc, and configure monitoring and update management.
 
-## Lab objectives
+## Lab Objectives
 
 In this lab, you'll be working on:
 
