@@ -338,9 +338,11 @@ In this task, you will configure update management for the onboarded Windows Ser
 
 1. Close the Services console.
 
-1. In the Azure Portal, navigate to Azure Arc Machines, select **SEA-SVR2**.
+1. In the Azure Portal search bar, type **Azure Update Manager**
 
-1. In the navigation pane, under **Operations (1)**, select **Updates (2)**
+1. In the navigation pane, under Resources, select **Machines**. You should see **SEA-SVR2** Azure Arc-enabled server listed on the Machines page. Select the **SEA-SVR2** machine.
+
+1. It will redirect to the **Operations (1)** > **Updates (2)**
 
    ![](../Media/p29.png) 
 
