@@ -1,4 +1,4 @@
-# Lab 03: Implementing Hyper-V Replica and Windows Server Backup
+# Lab 04: Implementing Hyper-V Replica and Windows Server Backup
 
 ## Lab Overview
 
