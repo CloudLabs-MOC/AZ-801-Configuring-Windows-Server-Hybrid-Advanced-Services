@@ -1,4 +1,4 @@
-# Lab 04 : Implementing Azure-based recovery services
+# Lab 05 : Implementing Azure-based recovery services
 
 ## Lab Overview
 
