@@ -33,7 +33,14 @@ For convenience, you can open the lab guide in a separate window by selecting th
 2. To initiate the required VMs, manually select and launch them directly from the Lab VM's desktop.
 
       ![](../media/hyperv-vm.png)
-   
+ 
+3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
+
+    ![Manage Your Virtual Machine](../Media/login.png)
+
+4. If you face an issue while copying the content from the lab guide and pasting it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
+
+    ![Manage Your Virtual Machine](../Media/clipboard.png)  
 
 ## Lab Guide Zoom In/Zoom Out
  
