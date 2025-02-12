@@ -4,11 +4,11 @@
         "Language": "English",
         "Files": [
             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-801-Configuring-Windows-Server-Hybrid-Advanced-Services/Oct-24/Instructions/Labs/GettingStartedPage-V2.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-801-Configuring-Windows-Server-Hybrid-Advanced-Services/Feb-25/Instructions/Labs/GettingStartedPage-V2.md",
                 "Order": 1
             },
             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-801-Configuring-Windows-Server-Hybrid-Advanced-Services/Oct-24/Instructions/Labs/LAB_AK_04_Implementing_Hyper-V_Replica_and_Windows_Server_Backup.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-801-Configuring-Windows-Server-Hybrid-Advanced-Services/Feb-25/Instructions/Labs/LAB_AK_04_Implementing_Hyper-V_Replica_and_Windows_Server_Backup.md",
                 "Order": 2
             }
         ]
