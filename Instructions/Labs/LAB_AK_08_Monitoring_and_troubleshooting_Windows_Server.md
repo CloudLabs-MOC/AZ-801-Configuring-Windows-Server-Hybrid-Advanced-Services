@@ -1,4 +1,4 @@
-# Lab 07: Monitoring and troubleshooting Windows Server
+# Lab 08: Monitoring and troubleshooting Windows Server
 
 ## Lab Overview
 
