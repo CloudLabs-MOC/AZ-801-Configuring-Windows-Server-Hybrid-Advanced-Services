@@ -15,10 +15,6 @@ In this lab, you'll be working on:
 
 ## Estimated timing: 80 minutes
 
-## Architecture diagram
-
-![](../Media/lab2.1.png)
-
 ## Exercise 1: Creating an Azure Log Analytics workspace
 
 In this exercise, you will create an Azure Log Analytics workspace to collect and analyze security and operational data from your hybrid environment.
