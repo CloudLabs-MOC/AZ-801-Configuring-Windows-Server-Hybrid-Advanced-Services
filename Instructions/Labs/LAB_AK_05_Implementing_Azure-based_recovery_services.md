@@ -91,7 +91,7 @@ In this task, you will configure the vault for disaster recovery operations. You
 
 1. On the **Security settings** page, Select **Disable(1)** for Soft Delete (For workloads running in azure), and select **Save (2)**
 
-     ![](../Media/p2.png)
+     ![](../Media/p2n1.png)
 
 ## Exercise 2: Implementing Hyper-V VM protection by using Azure Site Recovery vault
 
