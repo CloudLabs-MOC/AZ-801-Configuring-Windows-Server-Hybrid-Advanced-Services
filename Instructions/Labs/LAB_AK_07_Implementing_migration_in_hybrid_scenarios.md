@@ -405,7 +405,6 @@ After completing this lab, you will be able to:
 
 1.  On the **Review  + create** tab, select **Create**.
 
-
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
