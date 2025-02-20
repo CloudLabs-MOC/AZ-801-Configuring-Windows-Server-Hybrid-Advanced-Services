@@ -160,11 +160,11 @@ After completing this lab, you will be able to:
 
 1. Before downloading the VHD file please change the download location to **F:\VHDs** folder.
 
-   >**Note**: You can change download settings location by navigating to Microsoft edge, select (...) icon at top right of the corner, select **Download** and on **Download** window click on **(...) icon and select **Downloads settings** and in location field click on change to set the location.
+    >**Note**: You can change download settings location by navigating to Microsoft edge, select (...) icon at top right of the corner, select **Download** and on **Download** window click on **(...) icon and select **Downloads settings** and in location field click on change to set the location.
    
 1. On the **Please select your windows server 2025 download** page, in English United States row, under **VHD download** select **64-bit edition**.
 
-   >**Note**: Wait for download to complete.
+    >**Note**: Wait for download to complete.
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, select **Start** menu, search and  select **Hyper-V Manager**. 
 
@@ -233,16 +233,16 @@ After completing this lab, you will be able to:
 
 1. Navigate back to Remote Desktop session to **az801l07a-hv-vm** and within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window change download location to **Downloads** and go to [https://aka.ms/migrate/script/hyperv](https://aka.ms/migrate/script/hyperv), and download the Azure Migrate configuration PowerShell script.
 
-   >**Note**: The script performs the following tasks:
+    >**Note**: The script performs the following tasks:
 
-   >- Checks that you're running the script on a supported PowerShell version
-   >- Verifies that you have administrative privileges on the Hyper-V host
-   >- Allows you to create a local user account that the Azure Migrate service uses to communicate with the Hyper-V host (This user account is added to **Remote Management Users**, **Hyper-V Administrators**, and **Performance Monitor Users** groups on the Hyper-V host.) 
-   >- Checks that the host is running a supported version of Hyper-V, and the Hyper-V role
-   >- Enables the WinRM service, and opens ports 5985 (HTTP) and 5986 (HTTPS) on the host (This is required for metadata collection.) 
-   >- Enables PowerShell remoting on the host
-   >- Checks that the Hyper-V Integration Services is enabled on all VMs managed by the host
-   >- Enables CredSSP on the host if needed
+    >- Checks that you're running the script on a supported PowerShell version
+    >- Verifies that you have administrative privileges on the Hyper-V host
+    >- Allows you to create a local user account that the Azure Migrate service uses to communicate with the Hyper-V host (This user account is added to **Remote Management Users**, **Hyper-V Administrators**, and **Performance Monitor Users** groups on the Hyper-V host.) 
+    >- Checks that the host is running a supported version of Hyper-V, and the Hyper-V role
+    >- Enables the WinRM service, and opens ports 5985 (HTTP) and 5986 (HTTPS) on the host (This is required for metadata collection.) 
+    >- Enables PowerShell remoting on the host
+    >- Checks that the Hyper-V Integration Services is enabled on all VMs managed by the host
+    >- Enables CredSSP on the host if needed
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, select **Start** and then select **Windows PowerShell ISE** and **Run as Administrator**.
 
