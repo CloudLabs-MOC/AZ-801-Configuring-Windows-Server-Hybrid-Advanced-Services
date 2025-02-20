@@ -191,15 +191,15 @@ After completing this lab, you will be able to:
 
 1. On the **Assign Memory** page of the **New Virtual Machine Wizard**, set **Startup memory** to **2048**, and then select **Next >**.
 
-   ![](../media/az801lab7img21.png)
+    ![](../media/az801lab7img21.png)
 
 1. On the **Configure Networking** page of the **New Virtual Machine Wizard**, in the **Connection** drop-down list, select **NestedSwitch**, and then select **Next >**.
 
-   ![](../media/az801lab7img22.png)
+    ![](../media/az801lab7img22.png)
 
 1. On the **Connect Virtual Hard Disk** page of the **New Virtual Machine Wizard**, select the option **Use an existing virtual hard disk**, set location to the **VHD** file you downloaded to the **F:\VHDs** folder, and then select **Next >**.
 
-   ![](../media/connect_vhd.png)
+    ![](../media/connect_vhd.png)
    
 1. On the **Summary** page of the **New Virtual Machine Wizard**, select **Finish**.
 
@@ -217,7 +217,7 @@ After completing this lab, you will be able to:
 
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, in the **Action** menu, select **Ctrl + Alt + Delete** and then, when prompted, sign in by using **Pa55w.rd** password.
 
-   ![](../Media/s11upd.png)
+    ![](../Media/s11upd.png)
 
    >**Note**: Click on **Accept** on Send diagnostic data to Microsoft page. 
 
@@ -310,6 +310,7 @@ After completing this lab, you will be able to:
 1. Click on **Next**.
 
 1. On the **IP addresses** tab of the **Create virtual network** page,
+
     - Remove the default IP Address space by clicking on **Delete the address space**
 
       ![](../Media/unit4-image2.png)   
