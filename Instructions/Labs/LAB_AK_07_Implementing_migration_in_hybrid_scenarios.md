@@ -123,7 +123,7 @@ After completing this lab, you will be able to:
      | User Name |**Student** |
      | Password |**Pa55w.rd1234** |
 
-   >**Note**: While Logging in to the VM, if an error message is shown as **Invalid Username or Password**, navigate to **More Choices** and select **Use a different account** and enter the User Name as **.\Student** and enter the above provided password.
+     >**Note**: While Logging in to the VM, if an error message is shown as **Invalid Username or Password**, navigate to **More Choices** and select **Use a different account** and enter the User Name as **.\Student** and enter the above provided password.
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the **Server Manager** window, select **Local Server (1)**, select the **On (2)** link next to the **IE Enhanced Security Configuration** label.
 
@@ -178,13 +178,13 @@ After completing this lab, you will be able to:
 
 1. On the **Specify Name and Location** page of the **New Virtual Machine Wizard**, specify the following settings and select **Next > (4)**:
 
-   | Setting | Value | 
-   | --- | --- |
-   | Name | **az801l07a-vm1 (1)** | 
-   | Store the virtual machine in a different location | selected  **(2)**| 
-   | Location | **F:\VMs** **(3)**|
+    | Setting | Value | 
+    | --- | --- |
+    | Name | **az801l07a-vm1 (1)** | 
+    | Store the virtual machine in a different location | selected  **(2)**| 
+    | Location | **F:\VMs** **(3)**|
 
-   ![](../media/az801lab7img20.png)
+    ![](../media/az801lab7img20.png)
 
 1. On the **Specify Generation** page of the **New Virtual Machine Wizard**, ensure that the **Generation 2** option is selected, and then select **Next >**.
 
@@ -206,7 +206,7 @@ After completing this lab, you will be able to:
 
 1. In the **Hyper-V Manager** console, verify that the virtual machine is running, right click and then select **Connect**. 
 
-   > **Note:** Please wait for a few minutes for the setup to begin.
+   >**Note:** Please wait for a few minutes for the setup to begin.
 
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, on the **Hi there** page, select **Next**. 
 
@@ -218,7 +218,7 @@ After completing this lab, you will be able to:
 
     ![](../Media/s11upd.png)
 
-   >**Note**: Click on **Accept** on Send diagnostic data to Microsoft page. 
+    >**Note**: Click on **Accept** on Send diagnostic data to Microsoft page. 
 
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, select **Start**. In the **Start** menu, select **Windows PowerShell** and then, in the **Administrator: Windows PowerShell** window, run the following to set the computer name. 
 
