@@ -329,13 +329,13 @@ After completing this lab, you will be able to:
 
 1. On the **Add a subnet** page, specify the following settings (leave others with their default values) and select **Add (4)**:
 
-   |Setting|Value|
-   |---|---|
-   |Name|**subnet0 (1)**|
-   |Starting Address|**10.7.0.0 (2)**|
-   |Size|**/24 (256 Addresses) (3)**|
+    |Setting|Value|
+    |---|---|
+    |Name|**subnet0 (1)**|
+    |Starting Address|**10.7.0.0 (2)**|
+    |Size|**/24 (256 Addresses) (3)**|
 
-   ![](../media/az801lab7img33.png)
+    ![](../media/az801lab7img33.png)
 
 1. Back on the **IP addresses** tab of the **Create virtual network** page, select **Review + create**.
 
