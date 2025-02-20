@@ -57,6 +57,12 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
 
    >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
 
+  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+   <validation step="d9cb7f98-600a-41b6-aceb-0f861cb042e1" />
+
 ## Exercise 2: Configuring Microsoft Defender for Cloud
 
 In this exercise, you will enable Microsoft Defender for Cloud to enhance the security posture of your hybrid environment. You will configure Defender plans, enable automatic agent installation, and set up security data collection.
@@ -174,6 +180,12 @@ In this task, you will deploy an Azure virtual machine using an ARM template, sp
 
 1. Verify that the deployment completed successfully.
 
+  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+   <validation step="c2a22c14-f2af-46cb-876c-19157953d41d" />
+
 ## Exercise 4: Onboarding on-premises Windows Server into Microsoft Defender for Cloud and Azure Update Manager
 
 In this exercise, you will onboard an on-premises Windows Server machine into Azure Arc to enable monitoring, security management, and update management within Azure.
@@ -246,6 +258,12 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 1. Select **Refresh** until the **SEA-SVR2** server name appears and the Status is **Connected** in the Arc console. 
 
    ![](../Media/p21.png) 
+
+  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+   <validation step="eb2bf593-0882-4b92-9754-57446064f992" />
 
 ### Task 2: Enable Change Tracking and Inventory on the Arc machine
 
