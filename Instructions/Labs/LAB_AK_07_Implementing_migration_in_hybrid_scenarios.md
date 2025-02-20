@@ -87,18 +87,20 @@ After completing this lab, you will be able to:
 
 1. On **Public IP addresses** page, select **+ Create** and on basics tab specify the following (Leave others with their default values.) and Select **Review + create (3)** and **create**:
    
-   | Setting | Value | 
-   | --- | --- |
-   | Resource group | Select  **AZ801-L0701-RG (1)** |
-   | Name |**az801l07a-hv-vnet-ip (2)** |
+    | Setting | Value | 
+    | --- | --- |
+    | Resource group | Select  **AZ801-L0701-RG (1)** |
+    | Name |**az801l07a-hv-vnet-ip (2)** |
 
-   ![](../media/az801lab7img10.png)
+     ![](../media/az801lab7img10.png)
 
 1. Search and select **Public IP addresses** from the portal.
-   ![](../Media/s2.png)
+   
+     ![](../Media/s2.png)
 
 1. Select **az801l07a-hv-vnet-ip** from the list.
-   ![](../Media/s3.png)
+  
+     ![](../Media/s3.png)
 
 1. From the Overview page, select **Associate** and select **Network interface** for Resource type dropdown and select **az801l07a-hv-vm-nic1** from the Network interface dropdown and select **OK**.
    ![](../Media/s4.png)   
