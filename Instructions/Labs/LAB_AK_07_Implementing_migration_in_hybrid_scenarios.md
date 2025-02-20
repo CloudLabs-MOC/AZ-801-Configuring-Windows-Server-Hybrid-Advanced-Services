@@ -222,14 +222,6 @@ After completing this lab, you will be able to:
    ```
    >**Note**: If the copy paste does not work, enter the code manually and run it.
 
-<!--
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="123bacf9-5c15-4067-8dd3-9f0a4e3be107" /> -->
-
 ## Exercise 2: Prepare for assessment and migration by using Azure Migrate
   
 ### Task 1: Configure Hyper-V environment
@@ -407,13 +399,6 @@ After completing this lab, you will be able to:
 
 1.  On the **Review  + create** tab, select **Create**.
 
-<!--
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="b3d28692-9e1e-40f8-bbad-45ad00705c3c" /> -->
 
 ## Exercise 3: Assess Hyper-V for migration by using Azure Migrate
   
@@ -744,14 +729,6 @@ After completing this lab, you will be able to:
    newly replicated virtual machine **az801l07a-vm1**.
 
    >**Note**: Migration is supposed to be a non-reversible action. If you want to see the completed information, browse back to the **Azure Migrate | Servers, databases and web apps** page, refresh the page, and then verify that the **Migrated Servers** entry in the **Migration and modernization** section has the value of **1**.
-
-<!--
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="4b1bcbea-9d56-4ff6-ae60-cc67dbff6812" /> -->
 
 ## Review
 
