@@ -30,11 +30,12 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
     ![](../media/e1t1s2.png)
 
 1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
 1. Now enter the following password and click on **Sign in**.
+   
    * Password: <inject key="AzureAdUserPassword"></inject>
-
 
 1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Log Analytics workspaces(1)**, and then, on the **Log Analytics workspaces** page, select **+ Create**.
 
