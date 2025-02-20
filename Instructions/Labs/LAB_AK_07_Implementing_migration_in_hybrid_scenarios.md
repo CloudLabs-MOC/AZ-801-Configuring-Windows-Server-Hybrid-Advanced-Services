@@ -206,7 +206,7 @@ After completing this lab, you will be able to:
 
 1. In the **Hyper-V Manager** console, verify that the virtual machine is running, right click and then select **Connect**. 
 
-   >**Note:** Please wait for a few minutes for the setup to begin.
+    >**Note:** Please wait for a few minutes for the setup to begin.
 
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, on the **Hi there** page, select **Next**. 
 
@@ -222,10 +222,10 @@ After completing this lab, you will be able to:
 
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, select **Start**. In the **Start** menu, select **Windows PowerShell** and then, in the **Administrator: Windows PowerShell** window, run the following to set the computer name. 
 
-   ```powershell
-   Rename-Computer -NewName 'az801l07a-vm1' -Restart
-   ```
-   >**Note**: If the copy paste does not work, enter the code manually and run it.
+    ```powershell
+    Rename-Computer -NewName 'az801l07a-vm1' -Restart
+    ```
+    >**Note**: If the copy paste does not work, enter the code manually and run it.
 
 ## Exercise 2: Prepare for assessment and migration by using Azure Migrate
   
@@ -248,12 +248,12 @@ After completing this lab, you will be able to:
 
 1. In the **Administrator: Windows PowerShell ISE** window, on the console pane, run the following commands to copy the script to the **C:\\Labfiles\\Lab07** folder and remove the Zone.Identifier alternate data stream, which, in this case, indicates that the file was downloaded from the Internet:
 
-   ```powershell
-   New-Item -ItemType Directory -Path C:\Labfiles\Lab07 -Force
-   Copy-Item -Path "$env:USERPROFILE\Downloads\MicrosoftAzureMigrate-Hyper-V.ps1" -Destination 'C:\Labfiles\Lab07'
-   Unblock-File -Path C:\Labfiles\Lab07\MicrosoftAzureMigrate-Hyper-V.ps1
-   Set-Location -Path C:\Labfiles\Lab07
-   ```
+    ```powershell
+    New-Item -ItemType Directory -Path C:\Labfiles\Lab07 -Force
+    Copy-Item -Path "$env:USERPROFILE\Downloads\MicrosoftAzureMigrate-Hyper-V.ps1" -Destination 'C:\Labfiles\Lab07'
+    Unblock-File -Path C:\Labfiles\Lab07\MicrosoftAzureMigrate-Hyper-V.ps1
+    Set-Location -Path C:\Labfiles\Lab07
+    ```
 
 1. In the **Administrator: Windows PowerShell ISE** window, open the **MicrosoftAzureMigrate-Hyper-V.ps1** script residing in the **C:\\Labfiles\\Lab07** folder and run it. When prompted for confirmation, enter **Y** and press Enter, with the exception of the following prompts, in which case, enter **N** and press Enter:
 
@@ -272,39 +272,39 @@ After completing this lab, you will be able to:
     
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Azure Migrate**, and then, on the **Azure Migrate \| Get Started** page, under **Migration goals** section, select **Servers, databases, and web apps**.
  
-   ![](../media/az801lab7img27.png)
+    ![](../media/az801lab7img27.png)
 
 1. On the **Azure Migrate \| Servers, databases, and web apps** page, select **Create Project**.
 
-   ![](../Media/image4.png)
+    ![](../Media/image4.png)
    
 1. On the **Create Project** page, specify the following settings (leave others with their default values) and select **Create (4)**:
 
-   | Setting | Value | 
-   | --- | --- |
-   | Subscription | the name of the Azure subscription you are using in this lab |
-   | Resource group | Select **AZ801-L0702-RG (1)** |
-   | Migrate project | **az801l07a-migrate-project (2)** |
-   | Geography | the name of your country or a geographical region **(3)** |
+    | Setting | Value | 
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Resource group | Select **AZ801-L0702-RG (1)** |
+    | Migrate project | **az801l07a-migrate-project (2)** |
+    | Geography | the name of your country or a geographical region **(3)** |
 
-   ![](../media/az801lab7img29.png)
+    ![](../media/az801lab7img29.png)
 
 ### Task 3: Implement the target Azure environment
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual networks**. On the **Virtual networks** page, select **+ Create** on the command bar. 
 
-   ![](../media/az801lab7img30.png)
+    ![](../media/az801lab7img30.png)
 
 1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and click on **Next (5)**:
 
-   | Setting | Value |
-   | --- | --- |
-   | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
-   | Resource group | Select **AZ801-L0703-RG (2)** |
-   | Name | **az801l07a-migration-vnet (3)** |
-   | Region | **<inject key="Region" enableCopy="false"/>** **(4)** |
+    | Setting | Value |
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
+    | Resource group | Select **AZ801-L0703-RG (2)** |
+    | Name | **az801l07a-migration-vnet (3)** |
+    | Region | **<inject key="Region" enableCopy="false"/>** **(4)** |
 
-   ![](../media/az801lab7img31.png)
+    ![](../media/az801lab7img31.png)
 
 1. Click on **Next**.
 
@@ -312,11 +312,11 @@ After completing this lab, you will be able to:
 
     - Remove the default IP Address space by clicking on **Delete the address space**
 
-      ![](../Media/unit4-image2.png)   
+       ![](../Media/unit4-image2.png)   
       
-   - After deleting **address space**, select **Add IPV4 Address space** specify the following settings (leave others with their default values).
+    - After deleting **address space**, select **Add IPV4 Address space** specify the following settings (leave others with their default values).
 
-      ![](../Media/unit4-image3.png)
+       ![](../Media/unit4-image3.png)
 
        |Setting|Value|
        |---|---|
@@ -325,7 +325,7 @@ After completing this lab, you will be able to:
 
 1. On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet**.
 
-   ![](../media/az801lab7img32.png)
+    ![](../media/az801lab7img32.png)
 
 1. On the **Add a subnet** page, specify the following settings (leave others with their default values) and select **Add (4)**:
 
@@ -343,41 +343,41 @@ After completing this lab, you will be able to:
 
 1. In the Azure portal, browse back to the **Virtual networks** page, and then, select **+ Create** on the command bar.
 
-   ![](../media/az801lab7img30.png)
+    ![](../media/az801lab7img30.png)
 
 1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **Next (5)**:
 
-   | Setting | Value |
-   | --- | --- |
-   | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
-   | Resource group | **AZ801-L0703-RG (2)** |
-   | Name | **az801l07a-test-vnet (3)** |
-   | Region | **<inject key="Region" enableCopy="false"/>** **(4)**|
+    | Setting | Value |
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
+    | Resource group | **AZ801-L0703-RG (2)** |
+    | Name | **az801l07a-test-vnet (3)** |
+    | Region | **<inject key="Region" enableCopy="false"/>** **(4)**|
 
 1. Click on **Next**.
 
 1. On the **IP addresses** tab of the **Create virtual network** page, remove the default IP Address space by clicking on **Delete the address space** and after deleting **address space**, select **Add IPV4 Address space**
 
-   ![](../media/az801lab7img37.png)
+    ![](../media/az801lab7img37.png)
 
 1. On the **Add IPV4 Address space** page, specify the following settings (leave others with their default values) and select **Add**:
 
-   |Setting|Value|
-   |---|---|
-   |Starting Address|**10.7.0.0**|
-   |Address space size|**/16 (65536 Addresses)**|
+    |Setting|Value|
+    |---|---|
+    |Starting Address|**10.7.0.0**|
+    |Address space size|**/16 (65536 Addresses)**|
 
 1. On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet**.
 
 1. On the **Add a subnet** page, specify the following settings (leave others with their default values) and select **Add (4)**:
 
-   |Setting|Value|
-   |---|---|
-   |Name|**subnet0 (1)**|
-   |Starting Address|**10.7.0.0 (2)**|
-   |Subnet size|**/24 (256 Addresses) (3)**|
+    |Setting|Value|
+    |---|---|
+    |Name|**subnet0 (1)**|
+    |Starting Address|**10.7.0.0 (2)**|
+    |Subnet size|**/24 (256 Addresses) (3)**|
 
-   ![](../media/az801lab7img33.png)
+    ![](../media/az801lab7img33.png)
 
 1. Back on the **IP addresses** tab of the **Create virtual network** page, select **Review + create**.
 
@@ -387,21 +387,21 @@ After completing this lab, you will be able to:
 
 1. On the **Basics** tab of the **Create a storage account** page, specify the following settings (leave others with their default values):
 
-   | Setting | Value | 
-   | --- | --- |
-   | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
-   | Resource group | **AZ801-L0703-RG (2)** |
-   | Storage account name | **str<inject key="DeploymentID" enableCopy="false"/>** **(3)** | 
-   | Region | **<inject key="Region" enableCopy="false"/>** **(4)** |
-   | Primary Service | Select Azure Blob Storage or Azure Data Lake Storage Gen 2 from the dropdown. (5)|
-   | Performance | **Standard (6)** |
-   | Redundancy | **Locally redundant storage (LRS) (7)** |
+    | Setting | Value | 
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
+    | Resource group | **AZ801-L0703-RG (2)** |
+    | Storage account name | **str<inject key="DeploymentID" enableCopy="false"/>** **(3)** | 
+    | Region | **<inject key="Region" enableCopy="false"/>** **(4)** |
+    | Primary Service | Select Azure Blob Storage or Azure Data Lake Storage Gen 2 from the dropdown. (5)|
+    | Performance | **Standard (6)** |
+    | Redundancy | **Locally redundant storage (LRS) (7)** |
 
-   ![](../media/az801lab7img34upd.png)
+    ![](../media/az801lab7img34upd.png)
 
 1. On the **Basics** tab of the **Create a storage account** page, select the **Data protection (1)** tab. On the **Data protection** tab of the **Create a storage account** page, uncheck the **Enable soft delete for blobs (2)** and **Enable soft delete for containers (3)** checkboxes, and then select **Review + create (4)**.
 
-   ![](../media/az801lab7img35.png)
+    ![](../media/az801lab7img35.png)
 
 1.  On the **Review  + create** tab, select **Create**.
 
