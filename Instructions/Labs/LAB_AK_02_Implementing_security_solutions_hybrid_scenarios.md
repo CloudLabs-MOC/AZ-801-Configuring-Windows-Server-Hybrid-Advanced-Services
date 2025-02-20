@@ -369,7 +369,7 @@ In this task, you will verify the successful configuration of monitoring, compli
 
     ![](../Media/p33.png) 
 
-   >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
+    >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
 
 1. In the navigation pane, under **Operations**, select **Inventory(1) ** to view the inventory data.   
 
