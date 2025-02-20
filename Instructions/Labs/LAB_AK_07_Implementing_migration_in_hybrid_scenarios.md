@@ -118,10 +118,10 @@ After completing this lab, you will be able to:
 
 1. Open the downloaded file and when prompted, provide the following credentials, and then select **Connect**:
 
-   | Setting | Value | 
-   | --- | --- |
-   | User Name |**Student** |
-   | Password |**Pa55w.rd1234** |
+     | Setting | Value | 
+     | --- | --- |
+     | User Name |**Student** |
+     | Password |**Pa55w.rd1234** |
 
    >**Note**: While Logging in to the VM, if an error message is shown as **Invalid Username or Password**, navigate to **More Choices** and select **Use a different account** and enter the User Name as **.\Student** and enter the above provided password.
 
@@ -143,19 +143,18 @@ After completing this lab, you will be able to:
 
 1. On the Windows Server 2025 page, under **Get started for free** select **Download the VHD**
 
-1. On **Evaluate Windows Server 2025** page provide the requested information for 
-   registration and click on **Download now (9)**.
+1. On **Evaluate Windows Server 2025** page provide the requested information for registration and click on **Download now (9)**.
 
-   | Setting        | Value      | 
-   | -------------- | ---------- |
-   | First Name     |**ODL (1)**     |
-   | Last Name      |**User (2)**    |
-   | Email          |**<inject key="AzureAdUserEmail"></inject>** **(3)** |
-   | Company name   | Contoso **(4)** |
-   | Country/region | Enter your country **(5)** |
-   | Company size   | 1 **(6)**|
-   | Job Role       | Server Administrator **(7)** |
-   | Phone          | Select your country code and enter phone number **(8)** |
+    | Setting        | Value      | 
+    | -------------- | ---------- |
+    | First Name     |**ODL (1)**     |
+    | Last Name      |**User (2)**    |
+    | Email          |**<inject key="AzureAdUserEmail"></inject>** **(3)** |
+    | Company name   | Contoso **(4)** |
+    | Country/region | Enter your country **(5)** |
+    | Company size   | 1 **(6)**|
+    | Job Role       | Server Administrator **(7)** |
+    | Phone          | Select your country code and enter phone number **(8)** |
 
     ![](../media/az801lab7img15.png)
 
