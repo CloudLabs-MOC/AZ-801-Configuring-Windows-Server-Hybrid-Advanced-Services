@@ -127,11 +127,11 @@ After completing this lab, you will be able to:
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the **Server Manager** window, select **Local Server (1)**, select the **On (2)** link next to the **IE Enhanced Security Configuration** label.
 
-   ![](../media/az801lab7img11.png)
+    ![](../media/az801lab7img11.png)
 
 1. In the **IE Enhanced Security Configuration** dialog box, select both **Off** options, and then select **OK**
 
-   ![](../media/az801lab7img12.png)
+    ![](../media/az801lab7img12.png)
 
 1. From the Remote Desktop session, open File Explorer and browse to the **F:** drive. Create two folders **F:\\VHDs** and **F:\\VMs**. 
 
@@ -139,7 +139,7 @@ After completing this lab, you will be able to:
 
 1. On start your evaluation today page, select **Windows Server 2025** as shown below
 
-   ![](../media/server-2025.png)
+    ![](../media/server-2025.png)
 
 1. On the Windows Server 2025 page, under **Get started for free** select **Download the VHD**
 
@@ -157,12 +157,11 @@ After completing this lab, you will be able to:
    | Job Role       | Server Administrator **(7)** |
    | Phone          | Select your country code and enter phone number **(8)** |
 
-   ![](../media/az801lab7img15.png)
+    ![](../media/az801lab7img15.png)
 
 1. Before downloading the VHD file please change the download location to **F:\VHDs** folder.
 
-   >**Note**: You can change download settings location by navigating to Microsoft edge, select (...) icon at top right of the corner, select **Download** and on **Download** window click on **(...) icon and select 
-   **Downloads settings** and in location field click on change to set the location.
+   >**Note**: You can change download settings location by navigating to Microsoft edge, select (...) icon at top right of the corner, select **Download** and on **Download** window click on **(...) icon and select **Downloads settings** and in location field click on change to set the location.
    
 1. On the **Please select your windows server 2025 download** page, in English United States row, under **VHD download** select **64-bit edition**.
 
@@ -170,11 +169,11 @@ After completing this lab, you will be able to:
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, select **Start** menu, search and  select **Hyper-V Manager**. 
 
-   ![](../media/az801lab7img17.png)
+    ![](../media/az801lab7img17.png)
 
 1. In the **Hyper-V Manager** console, select the **az801l07a-hv-vm (1)** node. From the right navigation pane, under **Actions** select **New** and then, in the cascading menu, select **Virtual Machine (2)**. This will start the **New Virtual Machine Wizard**. 
 
-   ![](../media/az801lab7img18.png)
+    ![](../media/az801lab7img18.png)
 
 1. On the **Before You Begin** page of the **New Virtual Machine Wizard**, select **Next >**.
 
@@ -219,6 +218,7 @@ After completing this lab, you will be able to:
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, in the **Action** menu, select **Ctrl + Alt + Delete** and then, when prompted, sign in by using **Pa55w.rd** password.
 
    ![](../Media/s11upd.png)
+
    >**Note**: Click on **Accept** on Send diagnostic data to Microsoft page. 
 
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, select **Start**. In the **Start** menu, select **Windows PowerShell** and then, in the **Administrator: Windows PowerShell** window, run the following to set the computer name. 
