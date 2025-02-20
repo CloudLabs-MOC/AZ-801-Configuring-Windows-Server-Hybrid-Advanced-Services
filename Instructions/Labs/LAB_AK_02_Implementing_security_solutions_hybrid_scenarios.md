@@ -359,15 +359,15 @@ In this task, you will configure update management for the onboarded Windows Ser
 
 In this task, you will verify the successful configuration of monitoring, compliance policies, and update management by reviewing insights, inventory data, and applied security policies.
 
-1.	Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights (1)**.
+1. Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights (1)**.
 
-1.	Select **Performance data (2)**. You should be able to see the performance data.  
+1. Select **Performance data (2)**. You should be able to see the performance data.  
 
     ![](../Media/p32.png) 
 
 1. Select the **Map (1)** tab and view the dependency map.  
 
-   ![](../Media/p33.png) 
+    ![](../Media/p33.png) 
 
    >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
 
