@@ -68,9 +68,7 @@ In this task, you will configure the vault for disaster recovery operations. You
    > **Note:** This will automatically display the **az801l05a-rsvault** page.
 
 1. On the **az801l05a-rsvault** page, on the vertical menu on the left side, in the **Settings** section, select **Properties**. 
-1. On the **az801l05a-rsvault | Properties (1)** page, select the **Update (2)** link under the **Backup Configuration** label.
-
-   ![](../media/03upd.png)
+1. On the **az801l05a-rsvault | Properties** page, select the **Update** link under the **Backup Configuration** label.
 
 1. On the **Backup Configuration** page, set **Storage replication type** to **Locally-redundant (1)**, select **Apply (2)** and close the **Backup Configuration** page.
 
