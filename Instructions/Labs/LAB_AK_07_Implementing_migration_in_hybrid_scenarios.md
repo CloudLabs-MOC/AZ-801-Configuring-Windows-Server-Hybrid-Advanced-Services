@@ -635,7 +635,7 @@ After completing this lab, you will be able to:
 
 1. On the **Azure Migrate | Servers, databases and web apps** page, in the **Migration and modernization** section, select the **Discover**. 
 
-1. On the **Discover** page, in Where do you want to migarate to?  select **Azure VM** from the drop-down and in the **Are your machines virtualized?** drop-down list, select **Yes, with Hyper-V** and select **Finalize registration**.
+1. On the **Discover** page, in Where do you want to migarate to?  select **Azure VM** from the drop-down and in the **Are your machines virtualized?** drop-down list, select **Yes, with Hyper-V** and in the **Do you want to install a new replication appliance or scale-out existing setup?** drop-down list, select **Install a replication appliance** and then select **Finalize registration**.
 
    >**Note**: It might take up to 5 minutes for the discovery of virtual machines to complete.
 
