@@ -649,7 +649,7 @@ After completing this lab, you will be able to:
 
    ![](../media/az801lab7img55.png)
 
-1. On the **Virtual machines** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next (5)**:
+1. On the **Virtual machines** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next**:
 
    | Setting | Value | 
    | --- | --- |
@@ -658,7 +658,9 @@ After completing this lab, you will be able to:
    | Select assessment | **az801l07a-assessment (3)** |
    | Virtual machines | Select **az801l07a-vm1 (4)** |
 
-   ![](../media/az801lab7img56.png)
+   ![](../media/az801lab7p1.png)
+
+    >**Note**:  Even if the Azure VM readiness status does not show as **Ready**, please proceed with the next steps.
 
 1. On the **Target settings** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next (6)**:
 
