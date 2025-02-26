@@ -633,7 +633,7 @@ After completing this lab, you will be able to:
 
 1. On the **Azure Migrate | Servers, databases and web apps** page, in the **Migration and modernization** section, select the **Discover**. 
 
-1. On the **Discover** page, in Where do you want to migarate to?  select **Azure VM** from the drop-down and in the **Are your machines virtualized?** drop-down list, select **Yes, with Hyper-V** and select **Finalize registration**.
+1. On the **Discover** page, in Where do you want to migarate to?  select **Azure VM** from the drop-down and in the **Are your machines virtualized?** drop-down list, select **Yes, with Hyper-V** and in the **Do you want to install a new replication appliance or scale-out existing setup?** drop-down list, select **Install a replication appliance** and then select **Finalize registration**.
 
    >**Note**: It might take up to 5 minutes for the discovery of virtual machines to complete.
 
@@ -647,7 +647,7 @@ After completing this lab, you will be able to:
 
    ![](../media/az801lab7img55.png)
 
-1. On the **Virtual machines** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next (5)**:
+1. On the **Virtual machines** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next**:
 
    | Setting | Value | 
    | --- | --- |
@@ -656,7 +656,9 @@ After completing this lab, you will be able to:
    | Select assessment | **az801l07a-assessment (3)** |
    | Virtual machines | Select **az801l07a-vm1 (4)** |
 
-   ![](../media/az801lab7img56.png)
+   ![](../media/az801lab7p1.png)
+
+   >**Note**: Even if the Azure VM readiness status does not show as Ready, please proceed with the next steps.
 
 1. On the **Target settings** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next (6)**:
 
