@@ -158,8 +158,8 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
       | --- | --- |
       | **Data collection rule name** | Arc |
       | **Enable processes and dependencies (Map)** | Enabled |
-      | **Subscription** | the name of the Azure subscription you are using in this lab |
-      | **Log Analytics Workspace** | the name of the Log Analytics Workspace you created in this lab |
+      | **Subscription** | Leave the default value |
+      | **Log Analytics Workspace** | **workspace<inject key="DeploymentID" enableCopy="false"/>** |
 
 1.	Select **Configure**.
 
