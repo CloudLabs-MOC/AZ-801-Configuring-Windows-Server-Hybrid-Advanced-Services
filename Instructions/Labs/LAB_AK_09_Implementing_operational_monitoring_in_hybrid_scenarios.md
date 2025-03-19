@@ -224,8 +224,8 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
       | **Subscription** | the name of the Azure subscription you are using in this lab |
       | **Resource group** | AZ801-L0901-RG |
       | **Region** | Leave the default setting |
-      | **Action group name** | **z801l09-ag1** |
-      | **Display name** | **z801l09-ag1** |
+      | **Action group name** | **az801l09-ag1** |
+      | **Display name** | **az801l09-ag1** |
 
 1. In the **Create action group** page, under **Notification type**, select **Email Azure Resource Manager Role**, and then in the **Name** field, type **Admin email**.
 1. In the **Email Azure Resource Manager Role** page, select **Owner** from the drop-down list, and click **Ok**.
