@@ -90,17 +90,24 @@ In this lab, you will complete the following tasks:
 
 #### Task 3: Create and configure an Azure Log Analytics workspace
 
-1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, in the toolbar, search for and select **Log Analytics workspaces**, and then, from the **Log Analytics workspaces** page, select **+ Create**.
+1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, in the toolbar, search for and select **Log Analytics workspaces (1)**, and then, from the **Log Analytics workspaces (2)** page, select **+ Create**.
+
+   ![](../Media/801-21.png)
+
 1. On the **Basics** tab of the **Create Log Analytics workspace** page, enter the following settings, select **Review + Create**, and then select **Create**:
 
    | Settings | Value |
    | --- | --- |
-   | Subscription | **the name of the Azure subscription you are using in this lab** |
-   | Resource group | the name of a new resource group **AZ801-L0902-RG** |
-   | Log Analytics Workspace | **any unique name** |
-   | Region | **the name of the Azure region into which you deployed the virtual machine in the previous task** |
+   | Subscription | the name of the Azure subscription you are using in this lab |
+   | Resource group | **AZ801-L0901-RG** |
+   | Name | **workspace<inject key="DeploymentID" enableCopy="false"/>** |
+   | Region | **<inject key="Region"></inject>** |
 
-   >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
+   >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
+
+   >**Note**: Wait for the deployment to complete. Then select **Go to resource**.
+
+      ![](../Media/801-22.png)
 
 ## Exercise 2: Configuring monitoring of on-premises servers
 
