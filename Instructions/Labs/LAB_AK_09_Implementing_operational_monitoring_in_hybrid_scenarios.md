@@ -101,7 +101,7 @@ In this lab, you will complete the following tasks:
    | Subscription | the name of the Azure subscription you are using in this lab |
    | Resource group | **AZ801-L0901-RG** |
    | Name | **workspace<inject key="DeploymentID" enableCopy="false"/>** |
-   | Region | **<inject key="Region"></inject>** |
+   | Region | **<inject key="Resource group Region" enableCopy="false"/>** |
 
    >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
@@ -224,8 +224,8 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
       | **Subscription** | the name of the Azure subscription you are using in this lab |
       | **Resource group** | AZ801-L0901-RG |
       | **Region** | Leave the default setting |
-      | **Action group name** | any unique name |
-      | **Display name** | any unique name (12 characters or less) |
+      | **Action group name** | **z801l09-ag1** |
+      | **Display name** | **z801l09-ag1** |
 
 1. In the **Create action group** page, under **Notification type**, select **Email Azure Resource Manager Role**, and then in the **Name** field, type **Admin email**.
 1. In the **Email Azure Resource Manager Role** page, select **Owner** from the drop-down list, and click **Ok**.
@@ -315,9 +315,9 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
       | Settings | Value |
       | --- | --- |
       | Subscription | the name of the Azure subscription you are using in this lab |
-      | Resource group | **AZ801-L0902-RG** |
-      | Action group name | **az801l09-ag1** |
-      | Display name | **az801l09-ag1** |
+      | Resource group | **AZ801-L0901-RG** |
+      | Action group name | **az801l09-ag2** |
+      | Display name | **az801l09-ag2** |
 
 1.	On the **Notifications** tab of the **Create an action group** page, in the **Notification type** drop-down list, select **Email/Azure Resource Manager Role**. In the **Name** text box, type **admin email notification**, and then select the **Edit details** (pencil) icon.
 1.	On the **Email Azure Resource Manager Role** select **Contributor**, click **OK**.
@@ -329,7 +329,7 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
 
       | Settings | Value |
       | --- | --- |
-      | Resource group | **AZ801-L0902-RG** |
+      | Resource group | **AZ801-L0901-RG** |
       | Severity | **3 - Informational** |
       | Alert rule name | **CPU Percentage above the test threshold** |
       | Description | **CPU Percentage above the test threshold** |
