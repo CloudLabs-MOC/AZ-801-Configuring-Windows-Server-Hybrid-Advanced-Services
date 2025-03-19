@@ -19,21 +19,47 @@ In this lab, you will complete the following tasks:
 
 #### Task 1: Deploy an Azure virtual machine
 
-1. Connect to **SEA-SVR2**, and if needed, sign in with the credentials provided by your instructor.
-1. On **SEA-SVR2**, start Microsoft Edge, go to the Azure portal at `https://portal.azure.com/`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
-1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open the Azure Cloud Shell pane by selecting the Cloud Shell button in the Azure portal.
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+1. Connect to **SEA-SVR2**, and if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
-   > **Note:** If this is the first time you're starting Cloud Shell and you're presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Apply**.
+1. On **SEA-SVR2**, double-click on the **Azure Portal** icon, and sign in using this credential, enter the Username: <inject key="AzureAdUserEmail"></inject> and Password: <inject key="AzureAdUserPassword"></inject>
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **C:\\Labfiles\\Lab09\\L09-rg_template.json** into the Cloud Shell home directory.
-1.	Repeat the previous step to upload the **C:\Labfiles\Lab09\L09-rg_template.parameters.json** file into the Cloud Shell home directory.
+   > **Note:** On **Action Required** page, select **Ask later**.
+
+   >**Note:** On **Stay signed in?** page, select **Yes**.
+   
+   >**Note:** Select **Cancel**, on the **Welcome to Microsoft Azure** page.
+
+1. On **SEA-SVR2/LabVM**, in the Microsoft Edge window displaying the Azure portal, open the Azure Cloud Shell pane by selecting the Cloud Shell button in the Azure portal.
+
+   ![](../Media/801-18.png)
+
+1. Selecting a ***PowerShell*** environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+
+   ![](../Media/21051.png)
+
+1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+
+   ![](../Media/21052.png)
+
+1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+
+   ![](../Media/21053.png)
+
+
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected, Please make sure you have selected your resource group **az-801** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **fs<inject key="DeploymentID" enableCopy="false"/>** For the **File share name**, and select the region to **East US**, then click on **Create**.
+
+1. Wait for PowerShell terminal to start.
+
+1. In the toolbar of the Cloud Shell pane, select the **Manage files** icon, in the drop-down menu select **Upload**, and upload the file **C:\\AllFiles\\AZ-801-Configuring-Windows-Server-Hybrid-Advanced-Services-master\\Allfiles\\Labfiles\\Lab09\\L09-rg_template.json** into the Cloud Shell home directory.
+
+1. Repeat the previous step to upload the **C:\\AllFiles\\AZ-801-Configuring-Windows-Server-Hybrid-Advanced-Services-master\\Allfiles\\Labfiles\\Lab09\\L09-rg_template.parameters.json** file into the Cloud Shell home directory.
+
 1. To create the resource group that will be hosting the lab environment, in the **PowerShell** session in the Cloud Shell pane, enter the following commands, and after entering each command, press Enter (replace the `<Azure_region>` placeholder with the name of an Azure region where you intend to deploy resources in this lab):
 
    >**Note**: You can use the **(Get-AzLocation).Location** command to list the names of available Azure regions:
 
    ```powershell 
-   $location = '<Azure_region>'
+   $location = '<inject key="Resource group Region" enableCopy="false"/>'
    $rgName = 'AZ801-L0901-RG'
    New-AzResourceGroup -ResourceGroupName $rgName -Location $location
    ```
