@@ -131,7 +131,7 @@ In this lab, you will complete the following tasks:
 
 1.	Review the SQL Server and Connectivity options. **Uncheck (3)**  Connect SQL Server, accept the remaining default values and select **Next (4)**. 
 
-   ![](../Media/lab9y1.png) 
+    ![](../Media/lab9y1.png) 
 
 1.	In the **Tags** tab, review the default available tags and Select **Next**. 
 
@@ -175,7 +175,7 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
 
 1.	In the navigation pane, under **Monitoring (1)** select **Insights (2)**, and select **Enable (3)**
 
-   ![](../Media/lab9y3.png) 
+    ![](../Media/lab9y3.png) 
 .
 1.	On the **Monitoring configuration** page, under **Data collection rule**, select **Create New**.
 
@@ -188,7 +188,7 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
       | **Subscription** | Leave the default value |
       | **Log Analytics Workspace** | **workspace<inject key="DeploymentID" enableCopy="false"/> (3)** |
 
-   ![](../Media/lab9y4.png) 
+      ![](../Media/lab9y4.png) 
 
 1.	Select **Configure**.
 
