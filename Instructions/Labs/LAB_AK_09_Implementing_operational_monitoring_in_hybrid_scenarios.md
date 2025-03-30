@@ -52,9 +52,7 @@ In this lab, you will complete the following tasks:
 
 1. Repeat the previous step to upload the **C:\\AllFiles\\AZ-801-Configuring-Windows-Server-Hybrid-Advanced-Services-master\\Allfiles\\Labfiles\\Lab09\\L09-rg_template.parameters.json** file into the Cloud Shell home directory.
 
-1. To create the resource group that will be hosting the lab environment, in the **PowerShell** session in the Cloud Shell pane, enter the following commands, and after entering each command, press Enter (replace the `<Azure_region>` placeholder with the name of an Azure region where you intend to deploy resources in this lab):
-
-   >**Note**: You can use the **(Get-AzLocation).Location** command to list the names of available Azure regions:
+1. To create the resource group that will be hosting the lab environment, in the **PowerShell** session in the Cloud Shell pane, enter the following commands, and after entering each command, press **Enter** 
 
    ```powershell 
    $location = '<inject key="Resource group Region" enableCopy="false"/>'
