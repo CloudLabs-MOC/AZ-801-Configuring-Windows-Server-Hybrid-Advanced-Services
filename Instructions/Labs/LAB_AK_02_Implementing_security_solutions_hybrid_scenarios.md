@@ -23,11 +23,17 @@ In this exercise, you will create an Azure Log Analytics workspace to collect an
 
 In this task, you will create a Log Analytics workspace in Azure, which will serve as a central location for monitoring and analyzing data collected from your on-premises and cloud resources.
 
-1. Connect to **SEA-SVR2**, and if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
 
-1. On **SEA-SVR2**, click on Azure Portal shortcut to go to the Azure portal, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+    ![](../media/azm2-1.png)
 
-    ![](../media/e1t1s2.png)
+1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+
+    ![](../media/azm2-2.png)
+
+1. On **SEA-SVR2**, click on **Azure Portal** shortcut to go to the Azure portal, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+
+    ![](../media/azm2-3.png)
 
 1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
    
@@ -37,24 +43,52 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
    
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Log Analytics workspaces(1)**, and then, on the **Log Analytics workspaces** page, select **+ Create**.
+     -  **Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible**
 
-      ![](../Media/lab2-t1.png)  
+     - At the **"More information required"** prompt, select **Next**.
+
+     - On the **"Keep your account secure"** page, select **Next** twice.
+
+     - **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
+
+     - Open **Google Play Store** (Android) or **App Store** (iOS).
+     - Search for **Microsoft Authenticator** and tap **Install**.
+     - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
+
+     - A **QR code** will be displayed on your computer screen.
+
+     - In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
+
+     - After scanning, click **Next** to proceed.
+
+     - On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
+       
+     - If prompted to stay signed in, you can click "No."
+ 
+     - If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.   
+
+1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Log Analytics workspaces(1)**.
+
+      ![](../media/azm2-4.png) 
+
+1. Then, on the **Log Analytics workspaces** page, select **+ Create**.      
 
       ![](../Media/lab2-t2.png)  
 
-1. On the **Basics** tab of the **Create Log Analytics workspace** tab, enter the following settings, select **Review + Create (5)**, and then select **Create (6)**:
+1. On the **Basics** tab of the **Create Log Analytics workspace** tab, enter the following settings, select **Review + Create (5)**.
 
    | Settings | Value |
    | --- | --- |
    | Subscription | Leave the default value (1) |
    | Resource group | select **AZ801-L0201-RG (2)** from the drop-down list |
-   | Log Analytics Workspace | any unique name (3) |
+   | Log Analytics Workspace | **loganalytics<inject key="DeploymentID" enableCopy="false"/> (3)** |
    | Region | <inject key="Resource group Region"></inject> (4) |
 
-      ![](../Media/p1.png)  
+      ![](../Media/azm2-5.png)  
 
-      ![](../Media/p2.png)  
+1. Then select **Create**:      
+
+      ![](../Media/azm2-6.png)  
 
    >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
 
@@ -72,9 +106,11 @@ In this exercise, you will enable Microsoft Defender for Cloud to enhance the se
 
 In this task, you will configure enhanced security settings for Microsoft Defender for Cloud, enabling specific Defender plans and monitoring features to protect your environment.
 
-1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Microsoft Defender for Cloud**.
+1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for **Microsoft Defender for Cloud (1)** and select **Microsoft Defender for Cloud (2)**.
 
-1. On the **Microsoft Defender for Cloud \| Overview** page, if you see any pop-up regarding **Enhance your security posture by enabling Defender CSPM**, select **No thanks**
+   ![](../Media/azm2-7.png)
+
+1. If prompted, on the **Microsoft Defender for Cloud \| Overview** page, if you see any pop-up regarding **Enhance your security posture by enabling Defender CSPM**, select **No thanks**
 
    ![](../Media/p3.png)  
 
@@ -82,7 +118,7 @@ In this task, you will configure enhanced security settings for Microsoft Defend
 
 1. On the **Environment settings** page, select the entry representing your **Azure subscription (3)**.
 
-   ![](../Media/p4.png) 
+   ![](../Media/azm2-8.png) 
 
 1. On the **Settings \| Defender plans (1)** page, select **Enable all plans (2)**. In the **Plan selection** page, select **Microsoft Defender for APIs Plan 1 (3)**, and then select **Save (4)**.
 
@@ -94,23 +130,39 @@ In this task, you will configure enhanced security settings for Microsoft Defend
 
    >**Note:**  You may encounter notifications about auto-provisioning update failures. You can safely ignore these notifications as you will only use the Servers plan in this lab. Note that you can selectively disable individual Microsoft Defender plans listed on the same page.
 
-1. Set all of the plans to **Off (2)** except for the **Servers (1)** and select **Save (3)**. Confirm when asked if you are sure you want to downgrade.
+1. Set all of the plans to **Off (2)** except for the **Servers (1)** and select **Save (3)**. 
 
-    >**Note:**  When presented with the resource types selection for the Databases plan, toggle each entry to Off and then select Continue. For the purpose of this lab, you can safely ignore any notications about individual database resources failing to save.
+    >**Note:**  When presented with the **Resource types selection** for the Databases plan, toggle each entry to **Off** and then select **Continue**. For the purpose of this lab, you can safely ignore any notications about individual database resources failing to save.
 
     ![](../Media/p7.png) 
 
+1. Select **Confirm** when asked if you are sure you want to **downgrade**.    
+
     ![](../Media/p8.png) 
 
-1. On the **Settings & monitoring** tab, in the list of extensions, set **Vulnerability assessment for machines** to **On (1)**, and select the **Edit configuration (3)** link.
+1. Navigate to **Settings & monitoring** tab from the top menu.
 
-1. Select the **Settings & monitoring** tab, and in the list of extensions, set **Guest Configuration agent (preview)** to **On (2)**.
+    ![](../Media/azm2-9.png) 
 
-    ![](../Media/p9.png) 
+1. On the **Settings & monitoring** tab, in the list of extensions, set **Vulnerability assessment for machines** to **On**.
+
+    ![](../Media/azm2-10.png) 
+
+1. On the **Extension deployment configuration** page, select **Apply**.
+
+    ![](../Media/azm2-11.png) 
+
+1. Select the **Edit configuration** link.
+
+    ![](../Media/azm2-12.png)
 
 1. On the **Extension deployment configuration** page, ensure that the **Microsoft Defender vulnerability management (1)** option is selected, and then select **Apply (2)**.
 
-   ![](../Media/p10.png) 
+   ![](../Media/p10.png)    
+
+1. On the **Settings & monitoring** tab, and in the list of extensions, set **Guest Configuration agent (preview)** to **On**.
+
+    ![](../Media/azm2-13.png) 
 
 1. On the **Settings & monitoring** page, select **Continue**.  
 
@@ -120,10 +172,15 @@ In this task, you will configure enhanced security settings for Microsoft Defend
 
    ![](../Media/p6.png) 
 
-1. Browse back to the **Microsoft Defender for Cloud | Overview** page, and then, in the **Management** section of the vertical menu on the left, select **Environment settings**.
-1. On the **Environment settings** page, expand the entry representing your **Azure subscription** and select the entry representing the **Log Analytics workspace** you created in the previous exercise.
+1. Browse back to the **Microsoft Defender for Cloud | Overview** page by clicking on **Microsoft Defender for Cloud**.
 
-   ![](../Media/p12.png) 
+    ![](../Media/azm2-14.png) 
+
+1. Then, in the **Management** section of the vertical menu on the left, select **Environment settings (1)**.
+
+1. On the **Environment settings** page, expand the entry representing your **Azure subscription (2)** and select the entry representing the **Log Analytics workspace (3)** you created in the previous exercise.
+
+    ![](../Media/azm2-15.png)
 
 1. On the **Settings \| Defender plans** page, enable the **Servers (1)** Defender plan, and then select **Save (2)**.
 
@@ -131,9 +188,7 @@ In this task, you will configure enhanced security settings for Microsoft Defend
 
    >**Note:**  To enable all Defender for Cloud features including threat protection capabilities, you must enable enhanced security features on the subscription containing the applicable workloads. Enabling it at the workspace level doesn't enable just-in-time VM access, adaptive application controls, and network detections for Azure resources. In addition, the only Microsoft Defender plans available at the workspace level are Microsoft Defender for servers and Microsoft Defender for SQL servers on machines.
 
-1. On the **Settings \| Defender plans** page, in the vertical menu on the left side, in the **Settings** section, select **Data collection**.
-
-1. On the **Settings \| Data collection (1)**, select **All Events (2)**, and then select **Save (3)**.
+1. On the **Settings \| Defender plans** page, in the vertical menu on the left side, in the **Settings** section, select **Data collection (1)** then select **All Events (2)**, and then select **Save (3)**.
 
    ![](../Media/p14.png) 
 
@@ -147,37 +202,43 @@ In this exercise, you will deploy an Azure virtual machine using an Azure Resour
 
 In this task, you will deploy an Azure virtual machine using an ARM template, specifying necessary parameters such as region, resource group, and credentials.
 
-1. In the **Search resources, services, and docs text box**, on the toolbar, search for and select **Deploy a custom template**.
+1. In the **Search resources, services, and docs text box**, on the toolbar, search for **Deploy (1)** and select **Deploy a custom template (2)**.
 
-   ![](../Media/lab2-t3.png) 
+    ![](../Media/azm2-16.png) 
 
 1. In the **Custom deployment** page, select **Build your own template in the editor**.
 
    ![](../Media/lab2-t4.png) 
 
-1. On the **Edit template** page, select **Load file (1)**, upload the template file **L02-rg_template.json (2)**(Navigate to C:\Labfiles\Lab02) and then select **Save (3)**.
+1. On the **Edit template** page, select **Load file (1)**.
 
    ![](../Media/lab2-t6.png) 
 
-   ![](../Media/lab2-t5.png) 
+1. Navigate to `C:\Labfiles\Lab02` **(1)**, upload the template file **L02-rg_template.json (2)** and then click on **Open (3)**.
 
-1. On the **Custom deployment** page, specify the following settings, and leave the other settings with their default values:
+   ![](../Media/azm2-17.png) 
+
+1. Select **Save**.   
+
+   ![](../Media/azm2-18.png) 
+
+1. On the **Custom deployment** page, specify the following settings, and leave the other settings with their default values and then click on **Review + create (4)**.
 
    |Setting|Value|
    |---|---|
    |Subscription|Leave the default value|
    |Resource group| Select **AZ801-L0202-RG (1)** from the dropdown list |
-   |Region|Leave the default region|
-   |Admin Username| Enter **Student (2)** |
-   |Admin Password|Enter **Pa55w.rd1234 (3)** |
+   |Region|Leave the default region **(2)**|
+   |Admin Username| Enter **Student (3)** |
+   |Admin Password|Enter **Pa55w.rd1234 (4)** |
 
-1. Select **Review + create (4)**, and then select **Create (5)**.
+    ![](../Media/azm2-19.png)   
 
-   ![](../Media/lab2-t7.png)
+1. Then select **Create (5)**.
 
    ![](../Media/lab2-t8.png)
 
-   >**Note**: The deployment might take about 3 minutes.
+    >**Note**: The deployment might take about 3 minutes.
 
 1. Verify that the deployment completed successfully.
 
@@ -197,24 +258,23 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, type **Arc (1)**, then select **Azure Arc (2)**.
 
-   ![](../Media/p15.png) 
+   ![](../Media/azm2-20.png) 
 
-1. In the navigation pane under **Azure Arc resources**, select **Machines (1)**.
+1. In the navigation pane under **Azure Arc resources**, select **Machines (1)** then select **+ Add/Create (2)**, and in the dropdown, select **Add a machine (3)**
 
    ![](../Media/p16.png) 
-
-1. Select **+ Add/Create (2)**, and in the dropdown, select **Add a machine (3)**. 
 
 1. Select **Generate script** from the **Add a single server** section. 
 
    ![](../Media/p17.png) 
+
 1. In the **Add a server with Azure Arc** page, under **Project details**, select **AZ801-L0201-RG (1)** resource group. 
 
-1. Under **Server details**, select **<inject key="Resource group Region"></inject> (2)** as the region. 
+   - Under **Server details**, select **<inject key="Resource group Region"></inject> (2)** as the region. 
 
-1. Review the SQL Server and Connectivity options. Leave the default values and select **Next (3)**. 
+   - Review the SQL Server and Connectivity options. Leave the default values and select **Next (3)**. 
 
-   ![](../Media/p18.png) 
+     ![](../Media/azm2-21.png) 
 
 1. In the **Tags** tab, review the default available tags and Select **Next**. 
 
@@ -224,9 +284,13 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 
    ![](../Media/p20.png) 
 
-   >**Note**: if your browser blocks the download, allow it in the Microsoft Edge browser; select the ellipsis button (…), and then select Keep.
+    >**Note**: If your browser blocks the download, allow it in the Microsoft Edge browser; select the ellipsis button (…), and then select **Keep**.
 
-1. Right-click the **Windows Start** button and select **Windows PowerShell (Admin)**
+     ![](../Media/azm2-22.png)    
+
+1. Right-click the **Windows Start (1)** button and select **Windows PowerShell (Admin) (2)**.
+
+   ![](../Media/azm2-23.png)
 
 1. Copy and paste the below command into PowerShell and press **Enter**
 
@@ -242,6 +306,8 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 
 1. Enter **A** for **Yes to All** and press **Enter**.
 
+   ![](../Media/azm2-24.png)
+
 1. Copy and paste the below command and press **Enter**
 
    ```
@@ -250,11 +316,27 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 
 1. Enter **R** to **Run once** and press **Enter** (this may take a couple minutes).
 
-   >The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message Authentication complete. Return to Windows PowerShell and wait for the installation to complete before closing the window.
+   ![](../Media/azm2-25.png)
+
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account.
+
+   ![](../Media/azm2-26.png)
+
+1. Wait for the message Authentication complete.
+
+   ![](../Media/azm2-27.png)
+
+1. Return to **Windows PowerShell** and wait for the installation to complete before closing the window.
+
+   ![](../Media/azm2-28.png)
 
 1. Return to the Azure portal page where you downloaded the script and select **Close**.
 
-1. Close the **Add servers with Azure Arc** page and navigate back to the **Azure Arc Machines** page.
+   ![](../Media/azm2-28.png)
+
+1. **Close** the **Add servers with Azure Arc** page and navigate back to the **Azure Arc Machines** page.
+
+   ![](../Media/azm2-30.png)
 
 1. Select **Refresh** until the **SEA-SVR2** server name appears and the Status is **Connected** in the Arc console. 
 
@@ -270,13 +352,13 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 
 In this task, you will enable change tracking and inventory monitoring to ensure that modifications to the system are logged and can be reviewed.
 
-1. In the navigation pane under **Azure Arc- Machines- SEA-SVR2**, under **Operations (1)** select **Inventory (2)**.   
+1. Select the **Azure Arc- Machines- SEA-SVR2**.
+
+   ![](../Media/azm2-31.png)
+
+1. In the navigation pane under **Azure Arc- Machines- SEA-SVR2**, under **Operations (1)** select **Inventory (2)**. Notice that the **Log Analytics workspace** **(3)** you created is listed under *Enable change tracking and inventory feature with AMA*. On the **Change Tracking and Inventory** page, click **Enable (4)**.  
 
    ![](../Media/p22.png) 
-
-1. On the **Change Tracking and Inventory** page, click **Enable (4)**.
-
-   >Notice that the Log Analytics workspace (3) you created is listed under **Enable change tracking and inventory feature with AMA**.
 
 1. Wait for the deployment of the Change Tracking feature to complete. This may take up to 5 minutes so proceed to the next steps.
 
@@ -288,7 +370,7 @@ In this task, you will configure Azure Monitor Insights to collect performance a
 
    ![](../Media/p23.png) 
 
-   >**Note:** You can view the addition of the ChangeTracking and Azure Monitor Agent extensions (3).
+   >**Note:** **You can view the addition of the ChangeTracking and Azure Monitor Agent extensions (3)**.
 
 1. Under **Monitoring (1)** select **Insights (2)**, and select **Enable (3)**.  
 
@@ -298,17 +380,17 @@ In this task, you will configure Azure Monitor Insights to collect performance a
 
    ![](../Media/p25.png) 
 
-1. In the **Create new rule** page, enter **Arc (1)** for the **Data collection rule** name.
+1. In the **Create new rule** page, 
 
-   ![](../Media/p26.png) 
+   - Data collection rule name: Enter **Arc (1)**
+   - Under **Processes and dependencies**, select **Enable processes and dependencies (map) (2)**
+   -  Leave the name of the Azure subscription **(3)** you are using in this lab
+   - From the **Log Analytics workspaces (4)** drop-down menu, select the Log analytic workspace that you created earlier.
+   - Click on **Create(5)**
 
-1. Under **Processes and dependencies**, select **Enable processes and dependencies (map) (2)**.
+     ![](../Media/p26.png) 
 
-1. Leave the name of the Azure subscription(3) you are using in this lab.
-
-1. From the **Log Analytics workspaces (4)** drop-down menu, select the Log analytic workspace that you created earlier.
-
-1. Select **Create(5)**, then **Configure**.
+1. Click on **Configure**.
 
    ![](../Media/p27.png) 
 
@@ -320,37 +402,39 @@ In this task, you will configure update management for the onboarded Windows Ser
 
 1. On **SEA-SVR2**, Windows Update is disabled by default. Make sure that on the **SEA-SVR2** server Windows Update is NOT disabled. You must enable it before you proceed to the next step.
 
-1. Open the Services console and select the **Windows Update** service.
-
-   ![](../Media/lab2-t9.png) 
+1. On the **SEA-SVR2** VM, search for **Services (1)** and select **Services (2)**. 
 
    ![](../Media/lab2-t10.png) 
 
-1. Right-click **Windows Update** and select **Properties** from the context menu. Set the startup type to **Automatic** and start the service. 
+1. On the Services console and locate the **Windows Update** service.   
+
+1. Right-click **Windows Update** and select **Properties** from the context menu. 
 
    ![](../Media/lab2-t11.png) 
+
+1. Set the startup type to **Automatic (1)**, then click on **OK (2)** to start the service. 
 
    ![](../Media/p28.png) 
 
 1. Close the Services console.
 
-1. In the Azure Portal search bar, type **Azure Update Manager**
+1. In the Azure Portal search bar, search for **Azure Update Manager (1)** and then select **Azure Update Manager (2)**.
 
-1. In the navigation pane, under Resources, select **Machines**. You should see **SEA-SVR2** Azure Arc-enabled server listed on the Machines page. Select the **SEA-SVR2** machine.
+   ![](../Media/azm2-32.png)
 
-1. It will redirect to the **Operations (1)** > **Updates (2)**
+1. In the navigation pane, under Resources, select **Machines (1)**. You should see **SEA-SVR2** Azure Arc-enabled server listed on the Machines page. Select the **SEA-SVR2 (2)** machine.
+
+   ![](../Media/azm2-33.png)
+
+1. It will redirect to the **Operations (1)** > **Updates (2)**. In the **Recommended updates (3)** tab, under **Periodic assessment**, click **Enable now (4)**.
 
    ![](../Media/p29.png) 
-
-1. In the **Recommended updates (3)** tab, under **Periodic assessment**, click **Enable now (4)**.
 
 1. From the drop down menu for the **SEA-SVR2** Arc-enabled server, under **Periodic assessment**, select **Enable (1)**, and then **Save (2)**. 
 
    ![](../Media/p30.png) 
 
-1. On the **Updates** page, select **Check for updates (1)**. 
-
-1. On the **Trigger assess now** window, select **OK (2)**.
+1. On the **Updates** page, select **Check for updates (1)**. On the **Trigger assess now** window, select **OK (2)**.
 
    ![](../Media/p31.png) 
 
@@ -360,25 +444,25 @@ In this task, you will configure update management for the onboarded Windows Ser
 
 In this task, you will verify the successful configuration of monitoring, compliance policies, and update management by reviewing insights, inventory data, and applied security policies.
 
-1. Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights (1)**.
-
-1. Select **Performance data (2)**. You should be able to see the performance data.  
+1. Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights (1)**. Select **Performance data (2)**. You should be able to see the performance data **(3)**.  
 
     ![](../Media/p32.png) 
 
-1. Select the **Map (1)** tab and view the dependency map.  
+1. Select the **Map (1)** tab and view the dependency map **(2)**.  
 
     ![](../Media/p33.png) 
 
-    >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
+     >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
 
-1. In the navigation pane, under **Operations**, select **Inventory(1) ** to view the inventory data.   
+1. In the navigation pane, under **Operations**, select **Inventory(1)** to view the inventory data **(2)**.   
 
    ![](../Media/p35.png) 
 
-1. Select **Change Tracking (1)** to view the data that was changed.  
+1. Select **Change Tracking (1)** to view the data that was changed **(2)**.  
 
    ![](../Media/lab2-t12.png) 
+
+    >**Note**: This might take around 5-10 mins to show up the data.
 
 ### Review
 
