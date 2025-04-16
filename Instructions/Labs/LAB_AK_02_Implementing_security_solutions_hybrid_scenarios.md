@@ -43,29 +43,7 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
    
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-     -  **Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible**
-
-     - At the **"More information required"** prompt, select **Next**.
-
-     - On the **"Keep your account secure"** page, select **Next** twice.
-
-     - **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
-
-     - Open **Google Play Store** (Android) or **App Store** (iOS).
-     - Search for **Microsoft Authenticator** and tap **Install**.
-     - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
-
-     - A **QR code** will be displayed on your computer screen.
-
-     - In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
-
-     - After scanning, click **Next** to proceed.
-
-     - On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
-       
-     - If prompted to stay signed in, you can click "No."
- 
-     - If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.   
+     >**Note**: If prompted for MFA, please refer to the steps provided on the Getting Started page.
 
 1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Log Analytics workspaces(1)**.
 
