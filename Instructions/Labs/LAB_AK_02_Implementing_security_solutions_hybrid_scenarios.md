@@ -82,7 +82,7 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
    | Subscription | Leave the default value (1) |
    | Resource group | select **AZ801-L0201-RG (2)** from the drop-down list |
    | Log Analytics Workspace | **loganalytics<inject key="DeploymentID" enableCopy="false"/> (3)** |
-   | Region | <inject key="Resource group Region"></inject> (4) |
+   | Region | **<inject key="Resource group Region"></inject> (4)** |
 
       ![](../Media/azm2-5.png)  
 
@@ -95,7 +95,7 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
    <validation step="d9cb7f98-600a-41b6-aceb-0f861cb042e1" />
 
 ## Exercise 2: Configuring Microsoft Defender for Cloud
@@ -245,7 +245,7 @@ In this task, you will deploy an Azure virtual machine using an ARM template, sp
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
    <validation step="c2a22c14-f2af-46cb-876c-19157953d41d" />
 
 ## Exercise 4: Onboarding on-premises Windows Server into Microsoft Defender for Cloud and Azure Update Manager
@@ -318,7 +318,7 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 
    ![](../Media/azm2-25.png)
 
-1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account.
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account **<inject key="AzureAdUserEmail"></inject>**.
 
    ![](../Media/azm2-26.png)
 
@@ -330,9 +330,9 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 
    ![](../Media/azm2-28.png)
 
-1. Return to the Azure portal page where you downloaded the script and select **Close**.
+1. Return to the **Azure portal** page where you downloaded the script and select **Close**.
 
-   ![](../Media/azm2-28.png)
+   ![](../Media/azm2-29.png)
 
 1. **Close** the **Add servers with Azure Arc** page and navigate back to the **Azure Arc Machines** page.
 
@@ -345,7 +345,7 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
    <validation step="eb2bf593-0882-4b92-9754-57446064f992" />
 
 ### Task 2: Enable Change Tracking and Inventory on the Arc machine
