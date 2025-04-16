@@ -34,16 +34,15 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 
 1. In the list of results, select **Group Policy Management**.
 
-1. In the **Group Policy Management** console, expand **Forest: contoso.com**, expand **Domains**, expand **contoso.com**, right-click or access the **context** menu for 
-    the **IT** Organizational Unit (OU), and then select **Create a GPO in this domain, and Link it here**.
+1. In the **Group Policy Management** console, expand **Forest: contoso.com**, expand **Domains**, expand **contoso.com**, right-click (1) or access the **context** menu for the **IT** Organizational Unit (OU), and then select **Create a GPO in this domain, and Link it here (2)**.
 
     ![](../Media/lab1-image1.png)
 
-1. In the **New GPO** dialog box, in the **Name** text box, enter **CredentialGuard_GPO**, and then select **OK**.
+1. In the **New GPO** dialog box, in the **Name** text box, enter **CredentialGuard_GPO (1)**, and then select **OK (2)**.
 
     ![](../Media/lab1-image2.png)
 
-1. In the **Group Policy Management** window, expand **IT**, right-click or access the **context** menu for **CredentialGuard_GPO**, and then select **Edit**.
+1. In the **Group Policy Management** window, expand **IT**, right-click or access the **context** menu for **CredentialGuard_GPO (1)**, and then select **Edit (2)**.
 
    ![](../Media/lab1-image3.png)
 
@@ -51,17 +50,17 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 
    ![](../Media/lab1-image4.png)
 
-1. Select **Turn On Virtualization Based Security**, and then select the **policy setting** link.
+1. Select **Turn On Virtualization Based Security (1)**, and then select the **policy setting (2)** link.
 
    ![](../Media/lab1-image5.png)
 
-1. In the **Turn On Virtualization Based Security** window, select the **Enabled** option.
+1. In the **Turn On Virtualization Based Security** window, select the **Enabled (1)** option.
 
-1. In the **Select Platform Security Level** drop-down list, ensure that the **Secure Boot and DMA Protection** entry is selected.
+1. In the **Select Platform Security Level** drop-down list, ensure that the **Secure Boot and DMA Protection (2)** entry is selected.
 
-1. In the **Credential Guard Configuration** drop-down list, select the **Enabled with UEFI lock** entry.
+1. In the **Credential Guard Configuration** drop-down list, select the **Enabled with UEFI lock (3)** entry.
 
-1. In the **Secure Launch Configuration** drop-down list, select the **Enabled** entry, and then select **OK**.
+1. In the **Secure Launch Configuration** drop-down list, select the **Enabled (4)** entry, and then select **OK (5)**.
 
     ![](../Media/lab1-image6.png)
 
@@ -196,7 +195,7 @@ In this task, you will extend the Active Directory schema for LAPS, configure pe
 
    ![](../Media/lab1-2-image1.png)
 
-1. In the **New GPO** dialog box, in the **Name** text box, enter **LAPS_GPO**, and then select **OK**.
+1. In the **New GPO** dialog box, in the **Name** text box, enter **LAPS_GPO (1)**, and then select **OK (2)**.
 
    ![](../Media/lab1-2-image2.png)
    
@@ -204,19 +203,19 @@ In this task, you will extend the Active Directory schema for LAPS, configure pe
    
 1. In the **Group Policy Management Editor** window, under **Computer Configuration**, expand the **Policies** node, expand the **Administrative Templates** node, and then select **LAPS**.
    
-1. Select the **Enable local admin password management** policy, and then select the **policy settings** link.
+1. Select the **Enable local admin password management (1)** policy, and then select the **policy settings (2)** link.
 
    ![](../Media/lab1-2-image3.png)
 
-1. In the **Enable local admin password management** window, select **Enabled**, and then select **OK**.
+1. In the **Enable local admin password management** window, select **Enabled (1)**, and then select **OK (2)**.
 
    ![](../Media/lab1-2-image4.png)
 
-1. Select the **Password Settings** policy, and then select the **policy settings** link.
+1. Select the **Password Settings (1)** policy, and then select the **policy settings (2)** link.
 
    ![](../Media/lab1-2-image5.png)
 
-1. In the **Password Settings** policy dialog box, select **Enabled**, and then configure **Password Length** to **20**, Verify that the **Password Age (Days)** is configured to **30**, and then select **OK**.
+1. In the **Password Settings** policy dialog box, select **Enabled (1)**, and then configure **Password Length** to **20 (2)**, Verify that the **Password Age (Days)** is configured to **30 (3)**, and then select **OK (4)**.
 
    ![](../Media/lab1-2-image6.png)
 
@@ -252,7 +251,7 @@ In this task, you will verify that LAPS is correctly implemented by retrieving a
 
 1. Switch to the console session to **SEA-SVR2**.
 1. Select **Start**. In the **Start** menu, select **LAPS**, and then select **LAPS UI**.
-1. In the **LAPS UI** dialog box, in the **Computer name** text box, enter **SEA-SVR1**, and then select **Search**.
+1. In the **LAPS UI** dialog box, in the **Computer name** text box, enter **SEA-SVR1 (1)**, and then select **Search (2)**.
 
    ![](../Media/lab1-2-image7.png)
 
