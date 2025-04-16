@@ -135,11 +135,13 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
      > **Note**: Leave the second **Administrator: Windows PowerShell** window open.
 
-  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
-   <validation step="a26d0d3c-0860-4779-94ef-0cc2a50a4405" />     
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="a26d0d3c-0860-4779-94ef-0cc2a50a4405" /> 
 
 ### Task 2: Configure Hyper-V replication
 
@@ -435,11 +437,13 @@ In this task, you will be backing up files from SEA-SVR1 to a network share loca
 
    ![](../Media/azm4-48.png)  
 
-  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
-   <validation step="67d2a2bc-aa20-42c0-b801-41ce35a29035" />     
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="67d2a2bc-aa20-42c0-b801-41ce35a29035" />    
 
 ### Review
 In this lab, you have completed:
