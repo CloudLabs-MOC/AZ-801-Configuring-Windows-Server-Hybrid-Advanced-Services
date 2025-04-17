@@ -105,6 +105,14 @@ In this lab, you will complete the following tasks:
 
       ![](../Media/801-22.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="aff339d6-08b7-41bd-8563-5c676e0daff7" />   
+
 ## Exercise 2: Configuring monitoring of on-premises servers
 
 #### Task 1: Install the Azure Connect Machine Agent
@@ -165,7 +173,15 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
 
 1. Select **Refresh** until the **SEA-SVR2** server name appears and the Status is  **Connected** in the Arc console.
 
-   ![](../Media/lab9y2.png) 
+   ![](../Media/lab9y2.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="229783d9-a27e-4d47-8cc8-7a05331bcfd6" />      
 
 #### Task 2: Enable Monitoring using Insights
 
@@ -297,6 +313,14 @@ The setup process opens a new Microsoft Edge browser tab to authenticate the Azu
 1.	On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open another tab, browse to the **Monitor** page, and then select **Alerts**.
 
    >**Note**: Alerts may take a while to appear on the portal. Please continue with next exercises.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="fecdc346-59cd-4878-bb5b-d21e1683fdd8" />
 
 ## Exercise 4: Configuring monitoring of Azure VMs
 
