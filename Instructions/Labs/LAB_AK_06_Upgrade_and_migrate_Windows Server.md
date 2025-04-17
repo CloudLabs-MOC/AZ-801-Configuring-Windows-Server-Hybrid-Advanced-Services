@@ -107,15 +107,7 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
 1. On the **Create an Azure VM with a new AD Forest** page, select **Review + create**, and then select **Create**.
 
-   ** Note**: Please wait for the deployment to complete before you go ahead with the next task. This might take about 15 minutes. 
-<!--
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - If you receive a success message, you can proceed to the next task.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="6f46a686-d299-4587-88f2-d9c0a9c4fd9f" /> -->
-
+   >**Note**: Please wait for the deployment to complete before you go ahead with the next task. This might take about 15 minutes. 
 
 ### Task 2: Deploy Azure Bastion 
 
