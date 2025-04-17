@@ -199,8 +199,8 @@ In this task, you will capture performance data while the server is under the ad
 
 1. In the results pane, right-click or access the context menu for **SEA-SVR2 Performance**, and then select **Start**.
 
-   ![](../Media/801-9.png)
-
+   ![](../Media/az-801-lab8-image25.png)
+   
    > **Note**: Wait 1 minute to allow the data capture to occur.
 
 ### Task 3: Remove the workload and review the performance data
@@ -213,13 +213,13 @@ In this task, after removing the CPU stress workload, you will stop the data col
 
 1. In the navigation pane, right-click on the **SEA-SVR2 Performance**, and then select **Stop**.
 
-   ![](../Media/801-10.png)
-
+   ![](../Media/az-801-lab8-image26.png)
+   
 1. In Performance Monitor, in the navigation pane, expand **Reports (1)**, expand **User Defined (2)**, expand **SEA-SVR2 Performance (3)**, select **SEA-SVR2\_*DateTime*-000002 (4)** (where *DateTime* designates the current timestamp), and then review the report data.
 
 1. On the menu bar, select **Change graph type (5)** or press Ctrl+G, and then select **Report (6)**.
 
-   ![](../Media/801-16.png)
+   ![](../Media/az-801-lab8-image27.png)
 
 1. As before, record the values that are listed in the report. Recorded values include:
 
@@ -230,8 +230,8 @@ In this task, after removing the CPU stress workload, you will stop the data col
    - **Processor\\% Processor Time**
    - **System\\Processor Queue Length**
 
-      ![](../Media/801-17.png)
-
+      ![](../Media/az-801-lab8-image28.png)
+     
 ## Exercise 3: Viewing and configuring centralized event logs
 
 In this exercise, you will configure centralized event log management by setting up event forwarding from one server to another. You will enable the necessary prerequisites, such as time synchronization and remote management, and create an event subscription to collect critical events from the source server. You will then verify that the event forwarding is set up correctly and that the events are being received on the target server.
