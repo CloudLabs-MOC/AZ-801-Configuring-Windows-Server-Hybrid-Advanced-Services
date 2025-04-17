@@ -705,7 +705,7 @@ In this task, you will configure a scheduled backup for your server, SEA-SVR2, b
 
 1. In the **Select Items** dialog box, browse to the **C:\\Windows\\System32\\drivers\\etc\\**  folder, select **hosts (1)**, and then select **OK (2)**.
 
-   ![](../media/azm5-70.png)
+   ![](../media/azm5--70.png)
 
 1. On the **Select Items to Backup** page, select **Next**.
 
