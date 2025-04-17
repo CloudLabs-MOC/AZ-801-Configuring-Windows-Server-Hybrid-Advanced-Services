@@ -274,7 +274,7 @@ In this task, you will be configuring the prerequisites for event log forwarding
 
    > **Note**: Verify that the WinRM service is already running and that it's set up for remote management.
 
-   ![](../Media/801-31.png)
+   ![](../Media/az-801-lab8-image29.png)
 
 1. To ensure that the relevant Windows Defender Firewall with Advanced Security rules are enabled on **SEA-DC1**, enter the following command and press Enter:
 
@@ -286,33 +286,37 @@ In this task, you will be configuring the prerequisites for event log forwarding
 
 1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Active**, and then, in the **Best match** list, select **Active Directory Users and Computers**.
 
-   ![](../Media/801-32.png)
+   ![](../Media/az-801-lab8-image30.png)
 
 1. In the **Active Directory Users and Computers** console, select the **Builtin** container under **contoso.com**. 
 
 1. In the **Builtin (1)** container, select the **Event Log Readers (2)** group.
 
-    ![](../Media/lab8-06.png)
+    ![](../Media/az-801-lab8-image31.png)
 
 1. Right-click on the **Event Log Readers** group, select **Properties (3)**, and then, in the **Event Log Readers Properties** dialog box, select the **Members** tab.
 
-    ![](../Media/lab8-05.png)
+    ![](../Media/az-801-lab8-image32.png)
 
 1. On the **Members** tab, select **Add**.
 
-    ![](../Media/lab8-04.png)
+    ![](../Media/az-801-lab8-image33.png)
 
 1. In the **Select Users, Contacts, Computers, Service Accounts or Groups** dialog box, select **Object Types**.
 
+   ![](../Media/az-801-lab8-image34.png)
+
 1. In the **Object Types** dialog box, select the **Computers** checkbox, and then select **OK**.
 
-   ![](../Media/lab8-03.png)
+   ![](../Media/az-801-lab8-image35.png)
 
 1. In the **Select Users, Computers, Service Accounts or Groups** dialog box, enter **SEA-SVR2** in the **Enter the object names to select** box, and then select **OK**.
 
-    ![](../Media/E3T1S15.png)
+    ![](../Media/az-801-lab8-image36.png)
 
 1. In the **Event Log Readers Properties** dialog box, select **OK**.
+
+   ![](../Media/az-801-lab8-image37.png)
 
 ### Task 2: Create a subscription and verify the results
 
@@ -320,11 +324,15 @@ In this task, you will create an event subscription to collect and forward criti
 
 1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Event**, and then, in the **Best match** list, select **Event Viewer**.
 
+     ![](../Media/az-801-lab8-image47.png)
+   
 1. In **Event Viewer**, select **Subscriptions** in the navigation pane.
 
+    ![](../Media/az-801-lab8-image38.png)
+   
 1. Right-click or access the context menu for **Subscriptions (1)**, and then select **Create Subscription (2)**.
 
-   ![](../Media/801-34.png)
+   ![](../Media/az-801-lab8-image39.png)
 
 1. In the **Subscription Properties** dialog box, enter **SEA-DC1 Events** in the **Subscription name** box.
 
@@ -332,11 +340,19 @@ In this task, you will create an event subscription to collect and forward criti
 
 1. In the **Computers** dialog box, select **Add Domain Computers**.
 
+   ![](../Media/az-801-lab8-image40.png)
+
 1. In the **Select Computer** dialog box, enter **SEA-DC1** in the **Enter the object name to select** box, and then select **OK**.
 
+     ![](../Media/az-801-lab8-image41.png)
+   
 1. In the **Computers** dialog box, select **OK**.
 
+    ![](../Media/az-801-lab8-image42.png)
+   
 1. In the **Subscription Properties – SEA-DC1 Events** dialog box, select **Select Events**.
+
+   ![](../Media/az-801-lab8-image43.png)
 
 1. In the **Logged** drop-down list, select **Last 24 hours**.
 
@@ -344,15 +360,19 @@ In this task, you will create an event subscription to collect and forward criti
 
 1. In the **Event logs** drop-down list, expand **Windows Logs**, and then select the **System** and **Application** checkboxes.
 
-    ![](../Media/lab8-01.png)
-
+    ![](../Media/az-801-lab8-image44.png)
+   
 1. In the **Query Filter** dialog box, select **OK**.
 
+    ![](../Media/az-801-lab8-image45.png)
+   
 1. Back in the **Subscription Properties – SEA-DC1 Events** dialog box, select **OK**.
 
 1. On **SEA-SVR2**, switch to the **Event Viewer** window, and then expand **Windows Logs** in the navigation pane.
 
 1. Select **Forwarded Events** and verify that the forwarded events include those generated on **SEA-DC1**.
+
+   ![](../Media/az-801-lab8-image46.png)
 
    >**Note:** You have to wait for sometime, till the results shows.
 
