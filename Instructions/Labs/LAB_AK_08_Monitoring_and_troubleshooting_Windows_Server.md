@@ -28,59 +28,71 @@ In this task, you will create a custom data collector set in Performance Monitor
 
 1. Connect to **SEA-SVR2**, and then, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
-1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Perf (1)**, and then, in the **Best match** list, select **Performance Monitor (2)**.
+1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Performance (1)**, and then, in the **Best match** list, select **Performance Monitor (2)**.
 
-   ![](../Media/801-1.png)
+   ![](../Media/az-801-lab8-image1.png)
 
 1. In Performance Monitor, expand the **Data Collector Sets** node in the navigation pane, and then select **User Defined**.
 
+    ![](../Media/az-801-lab8-image2.png)
+   
 1. Right-click on the **User Defined**, select **New**, and then select **Data Collector Set**. This will launch the **Create new Data Collector Set** wizard.
 
-1. On the **How would you like to create this new data collector set?** page of the **Create new Data Collector Set** wizard, enter **SEA-SVR2 Performance** in the **Name** box.
+     ![](../Media/az-801-lab8-image3.png)
+   
+1. On the **How would you like to create this new data collector set?** page of the **Create new Data Collector Set** wizard, enter **SEA-SVR2 Performance** in the **Name** box. Select the **Create manually (Advanced)** option, and then select **Next**.
 
-1. Select the **Create manually (Advanced)** option, and then select **Next**.
+   ![](../Media/az-801-lab8-image4.png)
 
 1. On the **What type of data do you want to include?** page, select the **Performance counter** checkbox, and then select **Next**.
 
+     ![](../Media/az-801-lab8-image5.png)
+   
 1. On the **Which performance counters would you like to log?** page, select **Add**.
 
-1. In the **Available counters (1)** list, expand **Processor (2)**, select **% Processor Time (3)**, ensure that the **_Total (4)** entry is selected in the **Instances of selected object (5)** section, and then select **Add >> (6)**.
+   ![](../Media/az-801-lab8-image6.png)
 
-   ![](../Media/801-4.png)
+1. In the **Available counters(1)** list, expand **Processor (2)**, select **% Processor Time (3)**, ensure that the **_Total (4)** entry is selected in the **Instances of selected object** section, and then select **Add >> (5)**.
 
-1. In the **Available counters (1)** list, expand **Memory**, select **Pages/sec (2)**, and then select **Add >> (3)**.
+   ![](../Media/az-801-lab8-image7.png)
 
-   ![](../Media/az801l7n.png)
+1. In the **Available counters** list, expand **Memory (1)**, select **Pages/sec (2)**, and then select **Add >> (3)**.
 
-1. In the **Available counters (1)** list, expand **PhysicalDisk (2)**, select **% Disk Time (3)**, ensure that the **_Total (4)** entry is selected in the **Instances of selected object (5)** section, and then select **Add >> (6)**.
+   ![](../Media/az-801-lab8-image8.png)
 
-   ![](../Media/801-2.png)
+   ![](../Media/az-801-lab8-image9.png)
+   
+1. In the **Available counters** list, expand **PhysicalDisk (1)**, select **% Disk Time (2)**, ensure that the **_Total (3)** entry is selected in the **Instances of selected object** section, and then select **Add >> (4)**.
+
+   ![](../Media/az-801-lab8-image10.png)
 
 1. Select **Avg. Disk Queue Length (1)**, ensure that the **_Total (2)** entry is selected in the **Instances of selected object** section, and then select **Add >> (3)**.
 
-   ![](../Media/801-3.png)
-
+   ![](../Media/az-801-lab8-image11.png)
+  
 1. In the **Available counters (1)** list, expand **System**, select **Processor Queue Length (2)**, and then select **Add >> (3)**.
 
-   ![](../Media/801-5.png)
+   ![](../Media/az-801-lab8-image12.png)
 
 1. In the **Available counters (1)** list, expand **Network Interface (2)**, select **Bytes Total/sec (3)**, ensure that the **All instances (4)** entry is selected in the **Instances of selected object (5)** section, select **Add >> (6)**, and then select **OK (7)**.
 
-   ![](../Media/801-6.png)
+   ![](../Media/az-801-lab8-image13.png)
 
 1. On the **Which performance counters would you like to log?** page, enter **1 (1)** in the **Sample interval** box, and then select **Next (2)**.
 
-   ![](../Media/801-7.png)
+   ![](../Media/az-801-lab8-image14.png)
 
 1. On the **Where would you like the data to be saved?** page, select **Next**.
 
+   ![](../Media/az-801-lab8-image15.png)
+
 1. On the **Create the data collector set?** page, ensure that the **Save and close** option is selected, and then select **Finish**.
 
-   ![](../Media/801-8.png)
+   ![](../Media/az-801-lab8-image16.png)
 
 1. In Performance Monitor, in the results pane, right-click on the **SEA-SVR2 Performance (1)**, and then select **Start (2)**.
 
-   ![](../Media/801-9.png)
+   ![](../Media/az-801-lab8-image17.png)
 
 ### Task 2: Create a typical workload on the server
 
