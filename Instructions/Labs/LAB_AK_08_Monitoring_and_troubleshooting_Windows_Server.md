@@ -140,17 +140,17 @@ In this task, you will analyze the performance data reports in Performance Monit
 
 1. In the navigation pane, right-click or access the context menu for **SEA-SVR2 Performance (1)**, and then select **Stop (2)**.
 
-   ![](../Media/801-10.png)
+   ![](../Media/az-801-lab8-image18.png)
 
-1. In Performance Monitor, in the navigation pane, expand **Reports (1)**, expand **User Defined (2)**, expand **SEA-SVR2 Performance (3)**, select **SEA-SVR2\_*DateTime*-000001 (4)** 
+1. In Performance Monitor, in the navigation pane, expand **Reports (1)**, expand **User Defined (2)**, expand **SEA-SVR2 Performance (3)**, select **SEA-SVR2\_*DateTime*-000001 (4)**.
+
+   ![](../Media/az-801-lab8-image19.png) 
 
    >**Note:** (where *DateTime* designates the current timestamp), and then review the report data.
-
-   ![](../Media/801-11.png)
-
+   
 1. On the menu bar, select **Change graph type** or press Ctrl+G, and then select **Report**.
 
-   ![](../Media/801-12.png)
+   ![](../Media/az-801-lab8-image20.png)
 
 1. Record the values that are listed in the report for later analysis. Recorded values include:
 
@@ -161,7 +161,7 @@ In this task, you will analyze the performance data reports in Performance Monit
    - **Processor\\% Processor Time**
    - **System\\Processor Queue Length**
 
-      ![](../Media/801-13.png)
+      ![](../Media/az-801-lab8-image21.png)
 
 ## Exercise 2: Identifying the source of a performance problem
 
@@ -177,13 +177,17 @@ In this task, you will run the CPU Stress utility (CPUStres64.exe) to simulate a
 
 1. Double-click on **CPUSTRES64.EXE**.
 
+   ![](../Media/az-801-lab8-image22.png)
+
    >**Note**: **CPUSTRES64.EXE** is a SysInternals utility that can be used to simulate CPU activity by running up to 64 threads in a loop.
 
 1. In the **CPUSTRES License Agreement** dialog box, select **Agree**.
 
+    ![](../Media/az-801-lab8-image23.png)
+   
 1. In the **CPU Stress** dialog box, right-click on the highlighted thread at the top of the list of running threads, select **Activity Level**, and then select **Busy (75%)**.
 
-   ![](../Media/801-15.png)
+   ![](../Media/az-801-lab8-image24.png)
 
 ### Task 2: Capture performance data by using a data collector set
 
