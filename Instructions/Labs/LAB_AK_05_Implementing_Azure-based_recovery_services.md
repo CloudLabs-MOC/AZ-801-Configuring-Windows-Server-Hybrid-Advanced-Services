@@ -256,6 +256,10 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
    ![](../media/azm5-21.png)
 
+1. Once the storage account is created, on the overview page, under the **Properties** make sure that **Blob soft delete and Container soft delete are disabled**.   
+
+   ![](../media/azm5-42.png)
+
 ### Task 2: Prepare protection of a Hyper-V virtual machine
 
 In this task, you will add a Hyper-V site to your Recovery Services vault and install the Azure Site Recovery Provider on the Hyper-V host. This will enable the replication of Hyper-V VMs to Azure.
@@ -441,12 +445,12 @@ In this task, you will be enabling replication for a selected Hyper-V virtual ma
 
    |Setting|Value|
    |---|---|
-   |**Subscription**|the name of the Azure subscription you are using in this lab (1)|
-   |**Post-failover resource group**|**AZ801-L0502-RG** (2)|
+   |**Subscription**|the name of the Azure subscription you are using in this lab **(1)**|
+   |**Post-failover resource group**|**AZ801-L0502-RG** **(2)**|
    |**Post-failover deployment model**|**Resource Manager (3)**|
-   |**Storage type**|Storage account (4)|
-   |**Storage account**|storage<inject key="DeploymentID" enableCopy="false"/> (5)|
-   |**Network**|Configure now for selected machines (6)|
+   |**Storage type**|**Storage account (4)**|
+   |**Storage account**|**storage<inject key="DeploymentID" enableCopy="false"/> (5)**|
+   |**Network**|**Configure now for selected machines (6)**|
    |**Virtual network**|**az801l05-dr-vnet (7)**|
    |**Subnet**|**subnet0 (10.5.0.0/24) (8)**|
 
@@ -699,7 +703,7 @@ In this task, you will configure a scheduled backup for your server, SEA-SVR2, b
 
    ![](../media/azm5-69.png)
 
-1. In the **Select Items** dialog box, browse to the **C:\\Windows\\System32\\drivers\\etc\\** folder, select **hosts (1)**, and then select **OK (2)**.
+1. In the **Select Items** dialog box, browse to the **C:\\Windows\\System32\\drivers\\etc\\**  folder, select **hosts (1)**, and then select **OK (2)**.
 
    ![](../media/azm5-70.png)
 
@@ -749,11 +753,11 @@ In this task, you will initiate an on-demand backup after scheduling the backup 
 
    ![](../media/azm5-76.png)
 
-1. On **SEA-SVR2**, switch to the Microsoft Edge window displaying the Azure portal, browse back to the **az801l05a-rsvault** Recovery Services vault page and select **Backup items**. 
+1. On **SEA-SVR2**, switch to the Microsoft Edge window displaying the Azure portal, browse back to the **az801l05a-rsvault** Recovery Services vault page and select **Backup items (1)**. 
 
-1. On the **az801l05a-rsvault \| Backup items** page, select the **Azure Backup Agent** entry.
+1. On the **az801l05a-rsvault \| Backup items** page, select the **Azure Backup Agent (2)** entry.
 
-   ![](../media/60.png)
+   ![](../media/azm5-88.png)
 
 1. On the **Backup Items (Azure Backup Agent)** page, verify that there is an entry referencing drive **C** of **sea-svr2.contoso.com**.
 
