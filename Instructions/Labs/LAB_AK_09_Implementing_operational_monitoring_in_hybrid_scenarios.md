@@ -270,7 +270,7 @@ In this lab, you will complete the following tasks:
 
     ![](../Media/azm9-30.png)
 
-1.	In the **Create new rule** page, enter the following settings and then select **Create (4)**:
+1. In the **Create new rule** page, enter the following settings and then select **Create (4)**:
 
       | Settings | Value |
       | --- | --- |
@@ -279,7 +279,7 @@ In this lab, you will complete the following tasks:
       | Subscription | Leave the default value |
       | Log Analytics Workspace | **workspace<inject key="DeploymentID" enableCopy="false"/> (3)** |
 
-       ![](../Media/azm9-31.png)
+      ![](../Media/azm9-31.png)
 
 1. Select **Configure**.
 
@@ -293,19 +293,19 @@ In this lab, you will complete the following tasks:
 
     ![](../Media/azm9-33.png)
 
-1.	In the **Data collection rules** page, select the **MSVM1-Arc** data collection rule you created earlier.
+1. In the **Data collection rules** page, select the **MSVM1-Arc** data collection rule you created earlier.
 
     ![](../Media/azm9-34.png)
 
-1.	Under **Configuration**, select **Data sources (1)** and select **Performance counters (2)**.
+1. Under **Configuration**, select **Data sources (1)** and select **Performance counters (2)**.
 
     ![](../Media/azm9-35.png)
 
-1.	In the **Add data source** page, in the **Basic** tab, select **all (1)** Performance counters. Change the sample rate for each counter to **10 seconds (2)** and select **Save (3)**.
+1. In the **Add data source** page, in the **Basic** tab, select **all (1)** Performance counters. Change the sample rate for each counter to **10 seconds (2)** and select **Save (3)**.
 
     ![](../Media/azm9-36.png)
 
-1.	Under **Monitoring (1)**, select **Diagnostic settings (2)** and select **+ Add Diagnostic setting (3)**.
+1. Under **Monitoring (1)**, select **Diagnostic settings (2)** and select **+ Add Diagnostic setting (3)**.
 
     ![](../Media/azm9-37.png)
 
@@ -326,19 +326,19 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Review Azure Monitor monitoring and alerting functionality
 
-1.	On **SEA-SVR2**, in the Azure portal, search for **Alerts (1)** and select **Alerts (2)** to navigate to **Monitor | Alerts** page.
+1. On **SEA-SVR2**, in the Azure portal, search for **Alerts (1)** and select **Alerts (2)** to navigate to **Monitor | Alerts** page.
 
     ![](../Media/azm9-39.png)
 
-1.	On the **Alerts (1)** page, select **+ Create (2)** and then select **Alert rule (3)**
+1. On the **Alerts (1)** page, select **+ Create (2)** and then select **Alert rule (3)**
 
     ![](../Media/azm9-40.png)
 
-1.	In the **Select a resource** page, in the **Browse** tab, expand **AZ801-L0901-RG (1)** and select the **SEA-SVR2 (2)** Azure Arc machine and then select **Apply (3)**.
+1. In the **Select a resource** page, in the **Browse** tab, expand **AZ801-L0901-RG (1)** and select the **SEA-SVR2 (2)** Azure Arc machine and then select **Apply (3)**.
 
     ![](../Media/azm9-41.png)
 
-1.	Select **Next: Condition >**
+1. Select **Next: Condition >**
 
     ![](../Media/azm9-42.png)
 
@@ -350,7 +350,7 @@ In this lab, you will complete the following tasks:
 
     ![](../Media/azm9-44.png)
 
-1.	In the query window, copy and paste the following KQL query:
+1. In the query window, copy and paste the following KQL query:
 
       ```kql
       // Chart CPU usage trends by computer
@@ -370,7 +370,7 @@ In this lab, you will complete the following tasks:
 
     ![](../Media/azm9-46.png)
 
-1.	Set the query mode to **KQL mode (1)**, select **Run (2)** and view the data in the **Results (3)**.
+1. Set the query mode to **KQL mode (1)**, select **Run (2)** and view the data in the **Results (3)**.
 
     ![](../Media/azm9-47.png)
 
@@ -378,11 +378,11 @@ In this lab, you will complete the following tasks:
 
     ![](../Media/azm9-48.png)
 
-1.	Scroll down and select **Continue Editing Alert**.
+1. Scroll down and select **Continue Editing Alert**.
 
     ![](../Media/azm9-49.png)
 
-1.	In the **Create an alert rule** page, under **Measurement**, specify the following settings, and leave the other settings with their default values:
+1. In the **Create an alert rule** page, under **Measurement**, specify the following settings, and leave the other settings with their default values:
 
       | Settings | Value |
       | --- | --- |
@@ -390,7 +390,7 @@ In this lab, you will complete the following tasks:
 
        ![](../Media/azm9-50.png)      
 
-1.	Under **Alert logic**, enter the following settings and then select **Next: Actions > (4)**.
+1. Under **Alert logic**, enter the following settings and then select **Next: Actions > (4)**.
 
       | Settings | Value |
       | --- | --- |
@@ -426,7 +426,7 @@ In this lab, you will complete the following tasks:
 
      ![](../Media/azm9-55.png)
 
-1.	In the **Create action group** page, select **Review + create**.
+1. In the **Create action group** page, select **Review + create**.
 
     ![](../Media/azm9-56.png)
 
@@ -436,11 +436,11 @@ In this lab, you will complete the following tasks:
 
       >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
 
-1.	In the **Create alert rule** page, select **Next: Details >**.
+1. In the **Create alert rule** page, select **Next: Details >**.
 
     ![](../Media/azm9-58.png)
 
-1.	Leave the default settings, but under **Alert rule details**, type **High CPU alert** for the **alert rule name (1)** and **description (2)**.
+1. Leave the default settings, but under **Alert rule details**, type **High CPU alert** for the **alert rule name (1)** and **description (2)**.
 and then select **Review + Create (3)**.
 
     ![](../Media/azm9-59.png)
@@ -449,7 +449,7 @@ and then select **Review + Create (3)**.
 
     ![](../Media/azm9-60.png)
 
-1.	Browse to the **SEA-SVR2** Azure Arc machine, Right-click the **Windows Start (1)** button and select **Windows PowerShell (Admin) (2)**.
+1. Browse to the **SEA-SVR2** Azure Arc machine, Right-click the **Windows Start (1)** button and select **Windows PowerShell (Admin) (2)**.
 
     ![](../Media/azm9-19.png)
 
@@ -469,7 +469,7 @@ and then select **Review + Create (3)**.
 
     ![](../Media/azm9-61.png)
 
-1.	On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open another tab, browse to the **Monitor** page, and then select **Alerts**.
+1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open another tab, browse to the **Monitor** page, and then select **Alerts**.
 
    >**Note**: Alerts may take a while to appear on the portal. Please continue with next exercises.
 
