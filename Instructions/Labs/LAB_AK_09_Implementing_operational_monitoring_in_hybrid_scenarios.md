@@ -254,7 +254,7 @@ In this lab, you will complete the following tasks:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
-   <validation step="229783d9-a27e-4d47-8cc8-7a05331bcfd6" />  
+   <validation step="229783d9-a27e-4d47-8cc8-7a05331bcfd6" />
 
 ### Task 2: Enable Monitoring using Insights
 
@@ -595,7 +595,7 @@ and then select **Review + Create (3)**.
       | Action group name | **az801l09-ag2 (3)** |
       | Display name | **az801l09-ag2 (4)** |
 
-       ![](../Media/azm9-78.png)      
+      ![](../Media/azm9-78.png)      
 
 1. On the **Notifications** tab of the **Create an action group** page, in the **Notification type** drop-down list, select **Email Azure Resource Manager Role (1)**. In the **Name** text box, type **admin email notification (2)**, and then select the **Edit details (3)** (pencil) icon. On the **Email Azure Resource Manager Role** select **Contributor (4)**, click **OK (5)**.
 
@@ -619,9 +619,9 @@ and then select **Review + Create (3)**.
       | Description | **CPU Percentage above the test threshold (4)** |
       | Enable upon creation | **Yes (5)** |
 
-       ![](../Media/azm9-81.png)
+      ![](../Media/azm9-81.png)
 
-       >**Note**: If you don't see the field **Enable upon creation**, expand the **Advanced options** section.
+      >**Note**: If you don't see the field **Enable upon creation**, expand the **Advanced options** section.
 
 1. Then select **Create**.
 
