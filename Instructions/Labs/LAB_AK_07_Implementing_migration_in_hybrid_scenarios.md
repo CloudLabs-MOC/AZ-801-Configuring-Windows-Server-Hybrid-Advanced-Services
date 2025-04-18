@@ -37,15 +37,17 @@ After completing this lab, you will be able to:
 
 ### Task 1: Deploy an Azure VM by using an Azure Resource Manager QuickStart template
 
-1. On **Lab-VM**, start Microsoft Edge, go to the **[301-nested-vms-in-virtual-network Azure QuickStart template](https://github.com/az140mp/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network)** and select **Deploy to Azure**. (You'll find the button **Deploy to Azure** in the `README.md` file after the list of resources created by the template.) This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** page in the Azure portal.
+1. On **Lab-VM**, start **Microsoft Edge (1)**, right click on **[301-nested-vms-in-virtual-network Azure QuickStart template](https://github.com/az140mp/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network)**, then **Copy link**, then paste it over the browser **(2)** and select **Deploy to Azure (3)**. (You'll find the button **Deploy to Azure** in the `README.md` file after the list of resources created by the template.) This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** page in the Azure portal.
 
-   ![](../Media/image3.png)
+   ![](../Media/azm7-1.png)
    
 1. If prompted, in the Azure portal, sign in by using following credentials:
    
    - Username: <inject key="AzureAdUserEmail"></inject>
   
    - Password: <inject key="AzureAdUserPassword"></inject>
+
+     >**Note**: If prompted for MFA, please refer to the steps provided on the Getting Started page.   
   
 1. On the **Hyper-V Host Virtual Machine with nested VMs** page in the Azure portal, specify the following settings (Leave others with their default values.) and click on **Review + Create (9)**:
 
@@ -65,15 +67,19 @@ After completing this lab, you will be able to:
 
    ![](../media/az801lab7img3.png)
 
-   > **Note**: Wait for the deployment to complete. The deployment might take about 10 minutes.
+1. On the **Review+create** page, click on **Create**.
 
-1. Once deployment is successfully in search bar, search for and select Virtual machine.
+   ![](../media/azm7-2.png)
 
-   ![](../media/az801lab7img2.png)
+    > **Note**: Wait for the deployment to complete. The deployment might take about 10 minutes.
+
+1. Once deployment is successfully in search bar, search for **Virtual machine (1)** and select **Virtual machines (2)**.
+
+   ![](../media/azm7-3.png)
 
 1. On virtual machine blade from the list select **az801l07a-hv-vm**.
 
-   ![](../media/az801lab7img4.png)
+   ![](../media/azm7-4.png)
 
 1. On **az801l07a-hv-vm** page, under **Networking** section select **Network settings (1)** and click on **+ create port rule (2)** and from drop down and select **inbound port rule (3)**.
 
@@ -83,9 +89,13 @@ After completing this lab, you will be able to:
 
    ![](../media/az801lab7img6.png)
 
-1. Once the rule is successfully created, in search bar search for and select **Public Ip address**.
+1. Once the rule is successfully created, in search bar search for **Public Ip address (1)** and select **Public Ip address (2)**.
 
-1. On **Public IP addresses** page, select **+ Create** and on basics tab specify the following (Leave others with their default values.) and Select **Review + create (3)** and **create**:
+   ![](../media/azm7-6.png)
+
+1. On **Public IP addresses** page, select **+ Create.
+
+1. On basics tab specify the following (Leave others with their default values.) and Select **Review + create (3)**: 
    
    | Setting | Value | 
    | --- | --- |
@@ -94,14 +104,16 @@ After completing this lab, you will be able to:
 
    ![](../media/az801lab7img10.png)
 
-1. Search and select **Public IP addresses** from the portal.
-   ![](../Media/s2.png)
+1. Then click on **Create**:   
 
-1. Select **az801l07a-hv-vnet-ip** from the list.
-   ![](../Media/s3.png)
+   ![](../media/azm7-8.png)
 
-1. From the Overview page, select **Associate** and select **Network interface** for Resource type dropdown and select **az801l07a-hv-vm-nic1** from the Network interface dropdown and select **OK**.
-   ![](../Media/s4.png)   
+1. Once the deployment is conpleted, click on **Go to resources**.
+
+   ![](../media/azm7-9.png)
+
+1. From the **Overview (1)** page, select **Associate (2)** and select **Network interface (3)** for Resource type dropdown and select **az801l07a-hv-vm-nic1 (4)** from the Network interface dropdown and select **OK (5)**.
+   ![](../Media/azm7-10.png)   
 
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
