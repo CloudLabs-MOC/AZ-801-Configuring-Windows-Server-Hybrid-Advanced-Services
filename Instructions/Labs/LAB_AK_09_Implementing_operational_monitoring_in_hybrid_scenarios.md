@@ -172,15 +172,15 @@ In this lab, you will complete the following tasks:
     ![](../Media/p17.png) 
 
 1. In the **Add a server with Azure Arc** page, under **Project details**, 
+    -
+    - Subscription: Leave the default one **(1)**
+    - Resource group: Select the **AZ801-L0901-RG (2)** resource group
 
-   - Subscription: Leave the default one **(1)**
-   - Resource group: Select the **AZ801-L0901-RG (2)** resource group
+    - Region: Select the **<inject key="Resource group Region" enableCopy="false"/> (3)** region into which you deployed the virtual machine in the previous task.
 
-   - Region: Select the **<inject key="Resource group Region" enableCopy="false"/> (3)** region into which you deployed the virtual machine in the previous task.
+    - Review the SQL Server and Connectivity options. **Uncheck (4)**  Connect SQL Server, accept the remaining default values and select **Next (5)**. 
 
-   - Review the SQL Server and Connectivity options. **Uncheck (4)**  Connect SQL Server, accept the remaining default values and select **Next (5)**. 
-
-     ![](../Media/azm9-16.png) 
+      ![](../Media/azm9-16.png) 
 
 1. In the **Tags** tab, review the default available tags and Select **Next**. 
 
@@ -200,26 +200,27 @@ In this lab, you will complete the following tasks:
  
 1. Enter the below command to navigate to the folder location where you downloaded the script. 
 
-   ```powershell 
-   cd C:\Users\Administrator.CONTOSO\Downloads
-   ```
+    ```powershell 
+    cd C:\Users\Administrator.CONTOSO\Downloads
+    ```
 
-    ![](../Media/azm9-20.png)   
+     ![](../Media/azm9-20.png)   
 
 1. Enter the following command to change the execution policy:
 
-   ```powershell 
-   Set-ExecutionPolicy -ExecutionPolicy Unrestricted
-   ```
+    ```powershell 
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+    ```
+
 1. Enter A for Yes to All and press Enter.
 
     ![](../Media/azm9-21.png)
  
 1. Enter the following command and press **Enter**. 
 
-   ```powershell 
-   .\OnboardingScript.ps1
-   ```
+    ```powershell 
+    .\OnboardingScript.ps1
+    ```
 
 1. Enter **R** to **Run once** and press **Enter** (this may take a couple minutes).
 
@@ -252,8 +253,8 @@ In this lab, you will complete the following tasks:
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
-   <validation step="229783d9-a27e-4d47-8cc8-7a05331bcfd6" />    
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+   <validation step="229783d9-a27e-4d47-8cc8-7a05331bcfd6" />  
 
 ### Task 2: Enable Monitoring using Insights
 
@@ -309,15 +310,15 @@ In this lab, you will complete the following tasks:
     ![](../Media/azm9-37.png)
 
 1. On the **Diagnostic setting** page,
+        
+    - Enter **ArcDiagSettings (1)** for the name of the **Diagnostic setting**
+    - Under **Metrics**, select **All metrics (2)**
+    - Under **Destination details**, select **Send to Log Analytics workspace (3)**
+    - Use the name of the Azure subscription you are using in this lab **(4)**
+    - Select the Log Analytics workspace you created earlier **(5)** 
+    - Select **Save (6)** 
 
-   - Enter **ArcDiagSettings (1)** for the name of the **Diagnostic setting**
-   - Under **Metrics**, select **All metrics (2)**
-   - Under **Destination details**, select **Send to Log Analytics workspace (3)**
-   - Use the name of the Azure subscription you are using in this lab **(4)**
-   - Select the Log Analytics workspace you created earlier **(5)** 
-   - Select **Save (6)** 
-
-     ![](../Media/azm9-38.png)
+      ![](../Media/azm9-38.png)
 
 1. Close the **Diagnostic settings** window.     
 
@@ -475,14 +476,14 @@ and then select **Review + Create (3)**.
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
    <validation step="fecdc346-59cd-4878-bb5b-d21e1683fdd8" />
 
 ## Exercise 4: Configuring monitoring of Azure VMs
 
 ### Task 1: Configure diagnostic settings and VM Insights
 
-1.	On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the Search bar of the Azure portal, search for **Virtual machines (1)** and select **Virtual machines (2)**.
+1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the Search bar of the Azure portal, search for **Virtual machines (1)** and select **Virtual machines (2)**.
 
     ![](../Media/azm9-62.png)
 
@@ -490,21 +491,21 @@ and then select **Review + Create (3)**.
 
     ![](../Media/azm9-63.png)
 
-1.	On the **az801l09-vm0** page, under **Monitoring**, select **Diagnostic settings (1)**.
+1. On the **az801l09-vm0** page, under **Monitoring**, select **Diagnostic settings (1)**.
 
-1.	On the **Diagnostic settings** tab, select the  diagnostics storage account from the drop-down list **(2)**, and then select **Enable guest-level monitoring (3)**.
+1. On the **Diagnostic settings** tab, select the  diagnostics storage account from the drop-down list **(2)**, and then select **Enable guest-level monitoring (3)**.
 
     ![](../Media/azm9-64.png)
 
      >**Note**: Wait for the operation to take effect. This might take about 3 minutes.
 
-1.	Switch to the **Performance counters (1)** tab of the **az801l09-vm0 | Diagnostic settings** page and review the available counters **(2)**.
+1. Switch to the **Performance counters (1)** tab of the **az801l09-vm0 | Diagnostic settings** page and review the available counters **(2)**.
 
     ![](../Media/azm9-65.png)
 
      >**Note**: By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom view** for a more detailed listing.
 
-1.	On the **az801l09-vm0 | Diagnostic settings** page, on the **Logs (1)** tab, review the available **event log** collection options **(2)**.
+1. On the **az801l09-vm0 | Diagnostic settings** page, on the **Logs (1)** tab, review the available **event log** collection options **(2)**.
 
     ![](../Media/azm9-66.png)
 
@@ -512,29 +513,29 @@ and then select **Review + Create (3)**.
 
 ### Task 2: Enable VM Insights
 
-1.	From the **Monitoring** section on the vertical menu on the left side, browse to the **az801l09-vm0 | Insights (1)** page. On the **az801l09-vm0 | Insights** page, select **Enable (2)**.
+1. From the **Monitoring** section on the vertical menu on the left side, browse to the **az801l09-vm0 | Insights (1)** page. On the **az801l09-vm0 | Insights** page, select **Enable (2)**.
 
     ![](../Media/azm9-67.png)
 
      >**Note**: This setting provides the Azure VM Insights functionality. VM Insights is an Azure Monitor solution that facilitates monitoring performance and health of both Azure VMs and on-premises computers running Windows or Linux.
 
-1.	In the **Monitoring configuration** page, under4 **Data Collection rule**, select **Create New**.
+1. In the **Monitoring configuration** page, under4 **Data Collection rule**, select **Create New**.
 
     ![](../Media/azm9-68.png)
 
 1. On the **Create rule** page, enter the following details:
+    
+    - In the name field type **AZ801vm0 (1)**
 
-   - In the name field type **AZ801vm0 (1)**
+    - Under **Processes and dependencies**, select **Enable processes and dependencies (Map) (2)**
 
-   - Under **Processes and dependencies**, select **Enable processes and dependencies (Map) (2)**
+    - Leave the name of the Azure subscription you are using in this lab **(3)**
 
-   - Leave the name of the Azure subscription you are using in this lab **(3)**
+    - From the **Log Analytics workspaces** drop-down menu, select the Log Analytics Workspace that you created earlier **(4)**
 
-   - From the **Log Analytics workspaces** drop-down menu, select the Log Analytics Workspace that you created earlier **(4)**
+    - Select **Create (5)**
 
-   - Select **Create (5)**
-
-     ![](../Media/azm9-69.png)
+      ![](../Media/azm9-69.png)
 
 1. Click on **Configure**.
 
@@ -560,7 +561,7 @@ and then select **Review + Create (3)**.
 
     ![](../Media/azm9-73.png)
 
-1.	In the **Select a resource** page, expand the **AZ801-L0901-RG (1)** resource group, select  **az801l09-vm0 (2)**, and click **Apply (3)**.
+1. In the **Select a resource** page, expand the **AZ801-L0901-RG (1)** resource group, select  **az801l09-vm0 (2)**, and click **Apply (3)**.
 
     ![](../Media/azm9-74.png)
 
@@ -581,11 +582,11 @@ and then select **Review + Create (3)**.
 
        ![](../Media/azm9-75.png)      
 
-1.	On the  **Create an alert rule** page, on the **Actions** tab, select **Use action groups (1)** select the **+ Create action group (2)** button.
+1. On the  **Create an alert rule** page, on the **Actions** tab, select **Use action groups (1)** select the **+ Create action group (2)** button.
 
     ![](../Media/azm9-77.png)
 
-1.	On the **Basics** tab of the **Create an action group** page, specify the following settings (leave others with their default values), and then select **Next: Notifications > (5)**:
+1. On the **Basics** tab of the **Create an action group** page, specify the following settings (leave others with their default values), and then select **Next: Notifications > (5)**:
 
       | Settings | Value |
       | --- | --- |
@@ -596,11 +597,11 @@ and then select **Review + Create (3)**.
 
        ![](../Media/azm9-78.png)      
 
-1.	On the **Notifications** tab of the **Create an action group** page, in the **Notification type** drop-down list, select **Email Azure Resource Manager Role (1)**. In the **Name** text box, type **admin email notification (2)**, and then select the **Edit details (3)** (pencil) icon. On the **Email Azure Resource Manager Role** select **Contributor (4)**, click **OK (5)**.
+1. On the **Notifications** tab of the **Create an action group** page, in the **Notification type** drop-down list, select **Email Azure Resource Manager Role (1)**. In the **Name** text box, type **admin email notification (2)**, and then select the **Edit details (3)** (pencil) icon. On the **Email Azure Resource Manager Role** select **Contributor (4)**, click **OK (5)**.
 
     ![](../Media/azm9-79.png)
 
-1.	In the **Create action group** page, select **Review + create**.
+1. In the **Create action group** page, select **Review + create**.
 
     ![](../Media/azm9-80.png)
 
@@ -608,7 +609,7 @@ and then select **Review + Create (3)**.
 
     >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
 
-1.	Back on the **Create an alert rule** page, select **Next: Details >**, in the **Alert rule details** section, specify the following settings (leave others with their default values) and then select **Review + Create (6)**:
+1. Back on the **Create an alert rule** page, select **Next: Details >**, in the **Alert rule details** section, specify the following settings (leave others with their default values) and then select **Review + Create (6)**:
 
       | Settings | Value |
       | --- | --- |
@@ -622,9 +623,9 @@ and then select **Review + Create (3)**.
 
        >**Note**: If you don't see the field **Enable upon creation**, expand the **Advanced options** section.
 
-1.	 Then select **Create**.
+1. Then select **Create**.
 
-1.	In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** page, select **az801l09-vm0**.
+1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** page, select **az801l09-vm0**.
 
 1. On the **az801l09-vm0** page, in the **Operations (1)** section, select **Run command (2)**, and then select **RunPowerShellScript (3)**.
 
@@ -650,13 +651,13 @@ and then select **Review + Create (3)**.
 
      >**Note**: This should increase the CPU utilization above the threshold of the newly created alert rule. This may take a few minutes.
 
-1.	On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open another tab, browse to the **az801l09-vm0** virtual machine page, and navigate to the **Monitoring | Alerts (1)** page, select the alert named **CPU Percentage above the test threshold (2)**. View the **Sev 3** alerts.
+1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open another tab, browse to the **az801l09-vm0** virtual machine page, and navigate to the **Monitoring | Alerts (1)** page, select the alert named **CPU Percentage above the test threshold (2)**. View the **Sev 3** alerts.
 
     ![](../Media/azm9-84.png)
 
      >**Note**: You might need to wait for a few minutes and select **Refresh**. If it takes longer, you can simply continue with the lab and return to the **Monitoring | Alerts** page later to view the data.
 
-1.	On the **CPU Percentage above the test threshold** page, review generated alerts. Close the page when you have finished reviewing.
+1. On the **CPU Percentage above the test threshold** page, review generated alerts. Close the page when you have finished reviewing.
 
     ![](../Media/azm9-85.png)
 
