@@ -93,7 +93,7 @@ After completing this lab, you will be able to:
 
    ![](../media/azm7-6.png)
 
-1. On **Public IP addresses** page, select **+ Create.
+1. On **Public IP addresses** page, select **+ Create**.
 
 1. On basics tab specify the following (Leave others with their default values.) and Select **Review + create (3)**: 
    
@@ -125,35 +125,100 @@ After completing this lab, you will be able to:
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, select **az801l07a-hv-vm**.
 
-1. On the **az801l07a-hv-vm** page, select Connect, under Native RDP click on Select and on Native RDP window select and Download RDP file.
-   ![](../Media/image-l7-1.png)
+   ![](../Media/azm7-11.png)
 
-1. Open the downloaded file and when prompted, provide the following credentials, and then select **Connect**:
+1. On the **az801l07a-hv-vm** page, select **Connect (1)** drop down and then select **Connect (2)**.
+
+   ![](../Media/azm7-12.png)
+
+1. Click on **Download RDP file** under Native RDP. 
+
+   ![](../Media/azm7-13.png)
+
+1. Click on **Keep**.
+
+   ![](../Media/azm7-14.png)
+
+1. Click on **Open file** to open the downloaded file.
+
+   ![](../Media/azm7-15.png)
+
+1. Select **Connect**.
+
+   ![](../Media/azm7-16.png)
+
+1. Click on **More choices**.
+
+   ![](../Media/azm7-17.png)
+
+1. Select **Use a different account**.
+
+   ![](../Media/azm7-18.png)
+
+1. When prompted, provide the following credentials, and then select **OK (3)**:
 
      | Setting | Value | 
      | --- | --- |
-     | User Name |**Student** |
-     | Password |**Pa55w.rd1234** |
+     | User Name |**Student (1)** |
+     | Password |**Pa55w.rd1234 (2)** |
 
-     >**Note**: While Logging in to the VM, if an error message is shown as **Invalid Username or Password**, navigate to **More Choices** and select **Use a different account** and enter the User Name as **.\Student** and enter the above provided password.
+     ![](../Media/azm7-19.png)
+
+1. Click on **Yes**.
+
+   ![](../Media/azm7-20.png)
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the **Server Manager** window, select **Local Server (1)**, select the **On (2)** link next to the **IE Enhanced Security Configuration** label.
 
     ![](../media/az801lab7img11.png)
 
-1. In the **IE Enhanced Security Configuration** dialog box, select both **Off** options, and then select **OK**
+1. In the **IE Enhanced Security Configuration** dialog box, select both **Off (1)(2)** options, and then select **OK (3)**
 
-    ![](../media/az801lab7img12.png)
+   ![](../media/azm7-21.png)
 
-1. From the Remote Desktop session, open File Explorer and browse to the **F:** drive. Create two folders **F:\\VHDs** and **F:\\VMs**. 
+1. From the Remote Desktop session, open **File Explorer (1)** and browse to the **F: (2)** drive. 
 
-1. Within the Remote Desktop session to **az801l07a-hv-vm**, start Microsoft Edge, and On the Welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select **Confirm and start browsing** on the next page, go to [Windows Server Evaluations](https://www.microsoft.com/en-in/EvalCenter).
+   ![](../media/azm7-22.png)
 
-1. On start your evaluation today page, select **Windows Server 2025** as shown below
+1. Right click on empty space, select **New (1)** and then **Folder (2)**.
 
-    ![](../media/server-2025.png)
+   ![](../media/azm7-23.png)
 
-1. On the Windows Server 2025 page, under **Get started for free** select **Download the VHD**
+1. Create two folders named **VHDs** and **VMs**.
+
+   ![](../media/azm7-25.png)
+
+1. Within the Remote Desktop session to **az801l07a-hv-vm**, start **Microsoft Edge (1)**, 
+
+   - On the Welcome to Microsoft Edge page, select **Start without your data (2)**
+   
+     ![](../media/azm7-26.png)   
+
+   - On the help for importing Google browsing data page, select the **Continue and continue** button
+
+     ![](../media/azm7-27.png)  
+
+   - Then, proceed to select **Confirm and start browsing**
+   
+     ![](../media/azm7-28.png)  
+
+   - Click on **Next**
+
+     ![](../media/azm7-29.png)     
+   
+   - Click on **Finish**
+
+     ![](../media/azm7-30.png)     
+   
+1. On the next page, right click on [Windows Server Evaluations](https://www.microsoft.com/en-in/EvalCenter) then select **Copy link** and then paste it over the browser tab.
+
+1. On start your evaluation today page, select **Windows server (1)** and then **Windows Server 2025 (2)** as shown below.
+
+    ![](../media/azm7-31.png)
+
+1. On the Windows Server 2025 page, under **Get started for free** select **Download the VHD**.
+
+    ![](../media/azm7-32.png)
 
 1. On **Evaluate Windows Server 2025** page provide the requested information for registration and click on **Download now (9)**.
 
@@ -170,23 +235,47 @@ After completing this lab, you will be able to:
 
     ![](../media/az801lab7img15.png)
 
-1. Before downloading the VHD file please change the download location to **F:\VHDs** folder.
+1. Before downloading the VHD file please change the download location to **F:\VHDs** folder. You can change download settings location by following the below steps,
 
-    >**Note**: You can change download settings location by navigating to Microsoft edge, select (...) icon at top right of the corner, select **Download** and on **Download** window click on **(...) icon and select **Downloads settings** and in location field click on change to set the location.
+   - Select **(...) (1)** icon at top right of the corner, select **Download (2)**
+
+     ![](../media/azm7-33.png)
+
+   - On **Download** window click on **(...) (1)** icon and select **Downloads settings (2)** 
+   
+     ![](../media/azm7-34.png)   
+   
+   - In location field click on **change** to set the location
+
+     ![](../media/azm7-35.png)   
+
+   - Enter **F:\VHDs (1)** press enter and then select **Select folder (2)** 
+
+     ![](../media/azm7-36.png)
+
+1. Make sure the location is set to **F:\VHDs**.
+
+    ![](../media/azm7-37.png)     
    
 1. On the **Please select your windows server 2025 download** page, in English United States row, under **VHD download** select **64-bit edition**.
 
-    >**Note**: Wait for download to complete.
+    ![](../media/azm7-38.png)
 
-1. Within the Remote Desktop session to **az801l07a-hv-vm**, select **Start** menu, search and  select **Hyper-V Manager**. 
+     >**Note**: Wait for download to complete.
 
-    ![](../media/az801lab7img17.png)
+      ![](../media/azm7-40.png)     
 
-1. In the **Hyper-V Manager** console, select the **az801l07a-hv-vm (1)** node. From the right navigation pane, under **Actions** select **New** and then, in the cascading menu, select **Virtual Machine (2)**. This will start the **New Virtual Machine Wizard**. 
+1. Within the Remote Desktop session to **az801l07a-hv-vm**, select **Start** menu, search for **Hyper-V Manager (1)** and  select **Hyper-V Manager (2)**. 
 
-    ![](../media/az801lab7img18.png)
+    ![](../media/azm7-39.png)
+
+1. In the **Hyper-V Manager** console, select the **az801l07a-hv-vm (1)** node. From the right navigation pane, under **Actions** select **New (2)** and then, in the cascading menu, select **Virtual Machine (3)**. This will start the **New Virtual Machine Wizard**. 
+
+    ![](../media/azm7-41.png)
 
 1. On the **Before You Begin** page of the **New Virtual Machine Wizard**, select **Next >**.
+
+    ![](../media/azm7-42.png)
 
 1. On the **Specify Name and Location** page of the **New Virtual Machine Wizard**, specify the following settings and select **Next > (4)**:
 
@@ -198,21 +287,27 @@ After completing this lab, you will be able to:
 
     ![](../media/az801lab7img20.png)
 
-1. On the **Specify Generation** page of the **New Virtual Machine Wizard**, ensure that the **Generation 2** option is selected, and then select **Next >**.
+1. On the **Specify Generation** page of the **New Virtual Machine Wizard**, ensure that the **Generation 2 (1)** option is selected, and then select **Next > (2)**.
 
-1. On the **Assign Memory** page of the **New Virtual Machine Wizard**, set **Startup memory** to **2048**, and then select **Next >**.
+    ![](../media/azm7-44.png)
+ 
+1. On the **Assign Memory** page of the **New Virtual Machine Wizard**, set **Startup memory** to **2048 (1)**, and then select **Next > (2)**.
 
-    ![](../media/az801lab7img21.png)
+    ![](../media/azm7-45.png)
 
-1. On the **Configure Networking** page of the **New Virtual Machine Wizard**, in the **Connection** drop-down list, select **NestedSwitch**, and then select **Next >**.
+1. On the **Configure Networking** page of the **New Virtual Machine Wizard**, in the **Connection** drop-down list, select **NestedSwitch (1)**, and then select **Next > (2)**.
 
-    ![](../media/az801lab7img22.png)
+    ![](../media/azm7-46.png)
 
-1. On the **Connect Virtual Hard Disk** page of the **New Virtual Machine Wizard**, select the option **Use an existing virtual hard disk**, set location to the **VHD** file you downloaded to the **F:\VHDs** folder, and then select **Next >**.
+1. Before proceeding to the next page, navigate t the File exporer    
 
-    ![](../media/connect_vhd.png)
+1. On the **Connect Virtual Hard Disk** page of the **New Virtual Machine Wizard**, select the option **Use an existing virtual hard disk (1)**, click on **Browse (2)**, navigate to **F:\VHDs** folder then select downloaded **VHD** file. After set the location **(3)**, then select **Next > (4)**.
+
+    ![](../media/azm7-49.png)
    
 1. On the **Summary** page of the **New Virtual Machine Wizard**, select **Finish**.
+
+    ![](../media/azm7-50.png)
 
 1. In the **Hyper-V Manager** console, select the newly created virtual machine, right click and then select **Start**. 
 
