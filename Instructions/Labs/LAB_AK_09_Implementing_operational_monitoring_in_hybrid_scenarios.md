@@ -149,13 +149,11 @@ In this lab, you will complete the following tasks:
 
       ![](../Media/801-22.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="aff339d6-08b7-41bd-8563-5c676e0daff7" />   
+  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+   <validation step="aff339d6-08b7-41bd-8563-5c676e0daff7" /> 
 
 ## Exercise 2: Configuring monitoring of on-premises servers
 
@@ -251,13 +249,11 @@ In this lab, you will complete the following tasks:
 
     ![](../Media/azm9-29.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="229783d9-a27e-4d47-8cc8-7a05331bcfd6" />      
+  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+   <validation step="229783d9-a27e-4d47-8cc8-7a05331bcfd6" />    
 
 ### Task 2: Enable Monitoring using Insights
 
@@ -476,12 +472,10 @@ and then select **Review + Create (3)**.
 
    >**Note**: Alerts may take a while to appear on the portal. Please continue with next exercises.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
    <validation step="fecdc346-59cd-4878-bb5b-d21e1683fdd8" />
 
 ## Exercise 4: Configuring monitoring of Azure VMs
