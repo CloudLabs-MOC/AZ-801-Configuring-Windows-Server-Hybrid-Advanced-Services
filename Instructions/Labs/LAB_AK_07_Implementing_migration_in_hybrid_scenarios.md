@@ -106,7 +106,7 @@ After completing this lab, you will be able to:
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
    <validation step="123bacf9-5c15-4067-8dd3-9f0a4e3be107" />
  
 ### Task 2: Deploy a nested VM in the Azure VM
@@ -408,7 +408,7 @@ After completing this lab, you will be able to:
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
    <validation step="b3d28692-9e1e-40f8-bbad-45ad00705c3c" />
 
 ## Exercise 3: Assess Hyper-V for migration by using Azure Migrate
@@ -746,7 +746,7 @@ After completing this lab, you will be able to:
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
    <validation step="4b1bcbea-9d56-4ff6-ae60-cc67dbff6812" />
 
 ## Review
