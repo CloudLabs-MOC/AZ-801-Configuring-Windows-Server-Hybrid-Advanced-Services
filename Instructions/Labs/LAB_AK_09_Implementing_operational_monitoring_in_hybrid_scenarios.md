@@ -364,7 +364,7 @@ In this lab, you will complete the following tasks:
       | render timechart
       ```
 
-       ![](../Media/azm9-45.png)     
+      ![](../Media/azm9-45.png)     
 
 1. Click on **View result and edit in query logs**.
 
@@ -388,7 +388,7 @@ In this lab, you will complete the following tasks:
       | --- | --- |
       | **Aggregation granularity** | 1 minute |
 
-       ![](../Media/azm9-50.png)      
+      ![](../Media/azm9-50.png)      
 
 1. Under **Alert logic**, enter the following settings and then select **Next: Actions > (4)**.
 
@@ -398,7 +398,7 @@ In this lab, you will complete the following tasks:
       | Threshold value | **10 (2)** |
       | Frequency of evaluation | **1 minute (3)** |
 
-       ![](../Media/azm9-51.png)        
+      ![](../Media/azm9-51.png)        
 
 1. In the **Action** tab of the **Create an alert rule** page, in the **select action** section, select **use action groups**.
 
@@ -676,7 +676,7 @@ and then select **Review + Create (3)**.
 
 1. On **SEA-SVR2**, in the Azure portal, search for **Monitor** and select **Monitor**.
 
-1. On the **Monitor** page, select **Logs (1)**. Set the query mode to **KQL mode (2)**. In the query window, paste the following query **(3)**, select **Run (4)**, and review the  **Results**(5)**:
+1. On the **Monitor** page, select **Logs (1)**. Set the query mode to **KQL mode (2)**. In the query window, paste the following query **(3)**, select **Run (4)**, and review the  **Results(5)**:
 
    ```kql
    // Virtual Machine available memory
