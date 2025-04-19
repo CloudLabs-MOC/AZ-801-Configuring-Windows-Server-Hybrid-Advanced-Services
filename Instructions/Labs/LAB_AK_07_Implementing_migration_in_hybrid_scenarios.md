@@ -126,35 +126,35 @@ After completing this lab, you will be able to:
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, select **az801l07a-hv-vm**.
 
-   ![](../Media/azm7-11.png)
+    ![](../Media/azm7-11.png)
 
 1. On the **az801l07a-hv-vm** page, select **Connect (1)** drop down and then select **Connect (2)**.
 
-   ![](../Media/azm7-12.png)
+    ![](../Media/azm7-12.png)
 
 1. Click on **Download RDP file** under Native RDP. 
 
-   ![](../Media/azm7-13.png)
+    ![](../Media/azm7-13.png)
 
 1. Click on **Keep**.
 
-   ![](../Media/azm7-14.png)
+    ![](../Media/azm7-14.png)
 
 1. Click on **Open file** to open the downloaded file.
 
-   ![](../Media/azm7-15.png)
+    ![](../Media/azm7-15.png)
 
 1. Select **Connect**.
 
-   ![](../Media/azm7-16.png)
+    ![](../Media/azm7-16.png)
 
 1. Click on **More choices**.
 
-   ![](../Media/azm7-17.png)
+    ![](../Media/azm7-17.png)
 
 1. Select **Use a different account**.
 
-   ![](../Media/azm7-18.png)
+    ![](../Media/azm7-18.png)
 
 1. When prompted, provide the following credentials, and then select **OK (3)**:
 
@@ -167,7 +167,7 @@ After completing this lab, you will be able to:
 
 1. Click on **Yes**.
 
-   ![](../Media/azm7-20.png)
+    ![](../Media/azm7-20.png)
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the **Server Manager** window, select **Local Server (1)**, select the **On (2)** link next to the **IE Enhanced Security Configuration** label.
 
@@ -175,19 +175,19 @@ After completing this lab, you will be able to:
 
 1. In the **IE Enhanced Security Configuration** dialog box, select both **Off (1)(2)** options, and then select **OK (3)**
 
-   ![](../media/azm7-21.png)
+    ![](../media/azm7-21.png)
 
 1. From the Remote Desktop session, open **File Explorer (1)** and browse to the **F: (2)** drive. 
 
-   ![](../media/azm7-22.png)
+    ![](../media/azm7-22.png)
 
 1. Right click on empty space, select **New (1)** and then **Folder (2)**.
 
-   ![](../media/azm7-23.png)
+    ![](../media/azm7-23.png)
 
 1. Create two folders named **VHDs** and **VMs**.
 
-   ![](../media/azm7-25.png)
+    ![](../media/azm7-25.png)
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, start **Microsoft Edge (1)**, 
 
