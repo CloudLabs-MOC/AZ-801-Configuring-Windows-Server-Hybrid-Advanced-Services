@@ -637,7 +637,7 @@ After completing this lab, you will be able to:
 
 1. On the **Choose Import Type** page of the **Import Virtual Machine** wizard, select **Register the virtual machine in-place (use the existing unique ID) (1)**, and then select **Next > (2)**.
 
-   ![](../media/azm7-86.png)
+   ![](../media/azm7--86.png)
 
 1. On the **Configure Processor** page of the **Import Virtual Machine** wizard, set **Number of virtual processors** to **4 (1)**, and then select **Next > (2)**.
 
