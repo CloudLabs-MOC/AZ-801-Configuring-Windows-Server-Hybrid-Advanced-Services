@@ -363,7 +363,7 @@ After completing this lab, you will be able to:
 
     ![](../media/azm7-59.png)
 
-     >**Note**: Refer the steps in Exercise 1-> Task 2-> Step 22 to change the location to **Downloads** folder.
+     >**Note**: Refer the steps in Exercise 1-> Task 2-> Step 21 to change the location to **Downloads** folder.
 
 1. Right click on [https://aka.ms/migrate/script/hyperv](https://aka.ms/migrate/script/hyperv), select **Copy link**, then paste it over the browser tab and download the Azure Migrate configuration PowerShell script.
 
