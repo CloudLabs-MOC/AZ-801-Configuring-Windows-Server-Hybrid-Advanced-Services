@@ -190,7 +190,7 @@ After completing this lab, you will be able to:
     ![](../media/azm7-25.png)
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, start **Microsoft Edge (1)**, 
-    
+        
     - On the Welcome to Microsoft Edge page, select **Start without your data (2)**
    
       ![](../media/azm7-26.png)   
