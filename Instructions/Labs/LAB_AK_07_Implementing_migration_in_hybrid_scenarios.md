@@ -406,11 +406,11 @@ After completing this lab, you will be able to:
     ![](../media/azm7-64.png)
 
 1. When prompted for confirmation, enter **Y** and press Enter, **with the exception of the following prompts**, in which case, enter **N** and press Enter:
+    
+    - Do you use SMB share(s) to store the VHDs?
+    - Do you want to create non-administrator local user for Azure Migrate and Hyper-V Host communication? 
 
-   - Do you use SMB share(s) to store the VHDs?
-   - Do you want to create non-administrator local user for Azure Migrate and Hyper-V Host communication? 
-
-     ![](../media/az801lab7img26.png)
+      ![](../media/az801lab7img26.png)
 
 ### Task 2: Create an Azure Migrate project
 
