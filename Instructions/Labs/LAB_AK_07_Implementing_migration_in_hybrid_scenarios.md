@@ -122,11 +122,11 @@ After completing this lab, you will be able to:
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
    <validation step="123bacf9-5c15-4067-8dd3-9f0a4e3be107" />
  
-### Task 2: Deploy a nested VM in the Azure VMs
+### Task 2: Deploy a nested VM in the Azure VM
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, select **az801l07a-hv-vm**.
 
-    ![](../Media/azm7-11.png)
+   ![](../Media/azm7-11.png)
 
 1. On the **az801l07a-hv-vm** page, select **Connect (1)** drop down and then select **Connect (2)**.
 
