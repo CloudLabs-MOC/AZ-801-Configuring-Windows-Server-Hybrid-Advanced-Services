@@ -113,19 +113,20 @@ After completing this lab, you will be able to:
    ![](../media/azm7-9.png)
 
 1. From the **Overview (1)** page, select **Associate (2)** and select **Network interface (3)** for Resource type dropdown and select **az801l07a-hv-vm-nic1 (4)** from the Network interface dropdown and select **OK (5)**.
-   ![](../Media/azm7-10.png)   
+   
+    ![](../Media/azm7-10.png)   
 
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
    <validation step="123bacf9-5c15-4067-8dd3-9f0a4e3be107" />
  
 ### Task 2: Deploy a nested VM in the Azure VM
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, select **az801l07a-hv-vm**.
 
-     ![](../Media/azm7-11.png)
+   ![](../Media/azm7-11.png)
 
 1. On the **az801l07a-hv-vm** page, select **Connect (1)** drop down and then select **Connect (2)**.
 
