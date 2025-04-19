@@ -707,9 +707,19 @@ After completing this lab, you will be able to:
 
    >**Note**: Wait until verification process completes.
 
-1. Under **Azure user Login and appliance registration status** select **Login**, and then select **Copy code & login**. This will automatically open a new browser tab prompting you to enter the copied code.
+1. Under **Azure user Login and appliance registration status** select **Login**.
 
-1. On the **Enter code** pane in the newly opened browser tab, paste the code you copied onto the Clipboard, and then select **Next**. When prompted, sign in by providing the credentials of a user account with the Owner role in the subscription you are using in this lab.
+   ![](../media/azm7-98.png)
+
+1. Then select **Copy code & login**. This will automatically open a new browser tab prompting you to enter the copied code.
+
+   ![](../media/azm7-99.png)
+
+1. On the **Enter code** pane in the newly opened browser tab, paste the code you copied onto the Clipboard, and then select **Next**. 
+
+   ![](../media/azm7-100.png)
+
+1. When prompted, sign in by providing the credentials of a user account with the Owner role in the subscription you are using in this lab.
 
     - Username: <inject key="AzureAdUserEmail"></inject>
   
@@ -723,29 +733,57 @@ After completing this lab, you will be able to:
 
 1. In the browser window, on the **Appliance Configuration Manager** page, verify that registration was successful.
 
-1. On the **Appliance Configuration Manager** page, in the **Manage credentials and discovery sources** section, select **Add credentials**. On the **Add credentials** pane, specify the following settings, and then select **Save**:
+   ![](../media/azm7-101.png)
+
+1. On the **Appliance Configuration Manager** page, in the **Manage credentials and discovery sources** section, select **Add credentials**.
+
+   ![](../media/azm7-102.png)
+
+1. On the **Add credentials** pane, specify the following settings, and then select **Save (5)**:
 
    | Setting | Value | 
    | --- | --- |
-   | Friendly Name | **az801l07ahvcred** |   
-   | User Name | **Student** |
-   | Password | **Pa55w.rd1234** |
+   | Source type | **Hyper-V Host/Cluster (1)** |    
+   | Friendly Name | **az801l07ahvcred (2)** |   
+   | User Name | **Student (3)** |
+   | Password | **Pa55w.rd1234 (4)** |
 
-   ![](../media/az801lab7img47.png)
+   ![](../media/azm7-103.png)
 
-1. Within the browser window, on the **Appliance Configuration Manager** page, in the **Provide Hyper-V host/cluster details** section, select **Add discovery source**. On the **Add discovery source** pane, select the **Add single item** option. Ensure that the **Discovery source** drop-down list is set to **Hyper-V Host/Cluster**. In the **Map credentials** drop-down list, select the **az801l07ahvcred** entry, in the **IP address /FQDN** text box, type **10.0.2.1**, and then select **Save**.
+    >**Note**: Copy the content in labguide, then select **Clipboard** at top of page in menu bar and from **Clipboard** list select **Type clipboard text** and then paste the content in required field.
 
-   >**Note**: **10.0.2.1** is the IP address of the network interface of the Hyper-V host attached to the internal switch.
+1. Within the browser window, on the **Appliance Configuration Manager** page, in the **Provide Hyper-V host/cluster details** section, select **Add discovery source**. On the **Add discovery source** pane.
 
-1. On the **Appliance Configuration Manager** page, in the **Provide Hyper-V host/cluster details** section in step 3, disable the toggle button for **Disable the slider if you don’t want to perform these features**, and then select **Start discovery** located at the bottom of the page.
+   ![](../media/azm7-104.png)
+
+1. On the Add discover source page,
+
+   - Select the **Add single item (1)** option - Ensure that the **Discovery source** drop-down list is set to **Hyper-V Host/Cluster (2)**
+   - In the **IP address /FQDN** text box, type **10.0.2.1 (3)**   
+   -  In the **Map credentials** drop-down list, select the **az801l07ahvcred (4)** entry
+   - Then select **Save (5)**.
+
+     ![](../media/azm7-105.png)
+ 
+      >**Note**: **10.0.2.1** is the IP address of the network interface of the Hyper-V host attached to the internal switch.
+
+1. On the **Appliance Configuration Manager** page, in the **Provide Hyper-V host/cluster details** section in step 3, disable the toggle button for **Disable the slider if you don’t want to perform these features**.
+
+   ![](../media/azm7-106.png)
+
+1. Then select **Start discovery** located at the bottom of the page.
+
+   ![](../media/azm7-107.png)
 
    >**Note**: Please wait as it might take about 15 minutes per host for metadata of discovered servers to appear in the Azure portal.
 
 ### Task 2: Configure, run, and view an assessment
 
-1. From the **Virtual Machine Connection** window to the virtual appliance, switch to the Remote Desktop session to **az801l07a-hv-vm**. In the browser window displaying the Azure portal, browse back to the **Azure Migrate | Servers, databases and web apps** page and select **Refresh**. In the **Azure Migrate: Discovery and assessment** section, select **Assess** and then, in the drop-down menu, select **Azure VM**.
+1. From the **Virtual Machine Connection** window to the virtual appliance, switch to the Remote Desktop session to **az801l07a-hv-vm**.
 
-   ![](../media/az801lab7img48.png)
+1. In the browser window displaying the Azure portal, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page and select **Refresh (2)**. In the **Azure Migrate: Discovery and assessment** section, select **Assess (3)** and then, in the drop-down menu, select **Azure VM (4)**.
+
+   ![](../media/azm7-108.png)
 
 1. On the **Basics** tab of the **Create assessment** page, next to the **Assessment settings** label, select **Edit**.  
 
@@ -770,19 +808,35 @@ After completing this lab, you will be able to:
 
    >**Note**: Considering the limited time inherent to the lab environment, the only viable option in this case is an **As on-premises** assessment. 
 
-1. Back on the **Basics** tab of the **Create assessment** page, select **Next** to display the **Select servers to assess** tab.
+1. Back on the **Basics** tab of the **Create assessment** page, select **Next: Select servers to assess >** to display the **Select servers to assess** tab.
 
-1. On the **Select servers to assess** tab, set **Assessment name** to **az801l07a-assessment**. Ensure that the **Create new** option of the **Select or create a group** setting is selected, set the group name to **az801l07a-assessment-group**, and then, in the list of machines to be added to the group, select **az801l07a-vm1**.
+   ![](../media/azm7-109.png)
 
-   ![](../media/az801lab7img51.png)
+1. On the **Select servers to assess** tab,
 
-1. Select **Next: Review + create assessment** and then select **Create assessment**. 
+   -  Set **Assessment name** to **az801l07a-assessment (1)**
+   - Ensure that the **Create new** option of the **Select or create a group** setting is selected
+   - Set the group name to **az801l07a-assessment-group (2)**
+   - In the list of machines to be added to the group, select **az801l07a-vm1 (3)**
+   - Select **Next: Review + create assessment (4)**
 
-1. Back on the **Azure Migrate \| Servers, databases and web apps** page, select **Refresh**. In the **Azure Migrate: Discovery and Assessment** section, verify that the **Assessments** **Total** line contains the **1** entry, and select it.
+     ![](../media/az801lab7img51.png)
+
+1. Then select **Create assessment**. 
+
+   ![](../media/azm7-110.png)
+
+1. Back on the **Azure Migrate \| Servers, databases and web apps (1)** page, select **Refresh (2)**. In the **Azure Migrate: Discovery and Assessment** section, verify that the **Assessments** **Total** line contains the **1 (3)** entry, and select it.
+
+   ![](../media/azm7-111.png)
 
 1. On the **Azure Migrate: Discovery and Assessment \| Assessments** page, select the newly created assessment **az801l07a-assessment**. 
 
+   ![](../media/azm7-112.png)
+
 1. On the **az801l07a-assessment** page, review the information indicating Azure readiness and monthly cost estimate for both compute and storage. 
+
+   ![](../media/azm7-113.png)
 
    >**Note**: In real-world scenarios, you should consider installing the Dependency agent to provide more insights into server dependencies during the assessment stage.
 
@@ -790,8 +844,10 @@ After completing this lab, you will be able to:
 
 ### Task 1: Prepare for migration of Hyper-V VMs
 
-1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window displaying the Azure portal, browse back to the **Azure Migrate | Servers, databases and web apps** page. 
-1. On the **Azure Migrate | Servers, databases and web apps** page, in the **Migration and modernization** section, select the **Discover** link. 
+1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window displaying the Azure portal, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page. 
+1. On the **Azure Migrate | Servers, databases and web apps** page, in the **Migration and modernization (2)** section, select the **Discover (3)** link. 
+
+   ![](../media/azm7-114.png)
 
 1. On the **Discover** page, specify the following settings (leave others with their default values) and select **Create resources (4)**:
 
