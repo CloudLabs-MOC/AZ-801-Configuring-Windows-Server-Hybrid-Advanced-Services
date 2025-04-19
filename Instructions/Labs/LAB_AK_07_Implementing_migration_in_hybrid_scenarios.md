@@ -849,16 +849,16 @@ After completing this lab, you will be able to:
 
    ![](../media/azm7-114.png)
 
-1. On the **Discover** page, specify the following settings (leave others with their default values) and select **Create resources (4)**:
+1. On the **Discover** page, specify the following settings (leave others with their default values) and select **Create resources (5)**:
 
    | Setting | Value | 
    | --- | --- |
    | Where do you want to migarate to? |  **Azure VM (1)** |
    | Are your machines virtualized? | **Yes, with Hyper-V (2)** |
    | Target region | **<inject key="Region" enableCopy="false"/>** **(3)** | 
-   | Confirm the target region for migration | selected | 
+   | Confirm the target region for migration | selected **(4)** | 
 
-   ![](../media/az801lab7img52.png)
+   ![](../media/azm7-115.png)
 
    >**Note**: This step automatically triggers provisioning of an Azure Site Recovery vault.
 
@@ -869,50 +869,82 @@ After completing this lab, you will be able to:
    > **Note:** If you receive a browser notification that says **AzureSiteRecoveryProvider.exe can't be downloaded securely**, display the context-sensitive menu of the **Download** link and then, in the menu, select **Copy link**. Open another tab in the same browser window, paste the link you copied, and then press Enter.
 
 1. Once the download completes, select the **Open file** link in the browser **Downloads** section. This will start the **Azure Site Recovery Provider Setup (Hyper-V server)** wizard.
+
+   ![](../media/azm7-116.png)
+
 1. On the **Microsoft Update** page of the **Azure Site Recovery Provider Setup (Hyper-V server)** wizard, select **Off**, and then select **Next**.
 
    ![](../media/az801lab7img54.png)
 
 1. On the **Provider installation** page of the **Azure Site Recovery Provider Setup (Hyper-V server)** wizard, select **Install**.
 
+   ![](../media/azm7-117.png)
+
    >**Note**: Wait until installation completes.
    >**Note**: Please don't exit **Provider installation** page after installation completes you need to page in next task.
 
 1. Switch to the Azure portal and then, on the **Discover machines** page, in step 1 of the procedure for preparing on-premises Hyper-V hosts, select the **Download** button in order to download the vault registration key.
 
-1. Switch to the **Provider installation** page of the **Azure Site Recovery Provider Setup (Hyper-V server)** wizard and select **Register**. This will start the **Microsoft Azure Site Recovery Registration Wizard**.
+   ![](../media/azm7-118.png)
 
-1. On the **Vault Settings** page of the **Microsoft Azure Site Recovery Registration Wizard**, select **Browse**, browse to the **Downloads** folder, select the vault credentials file, and then select **Open**.
+1. Switch to the **Provider installation** page of the **Azure Site Recovery Provider Setup (Hyper-V server) (1)** wizard and select **Register (2)**. This will start the **Microsoft Azure Site Recovery Registration Wizard**.
+
+   ![](../media/azm7-119.png)
+
+1. On the **Vault Settings** page of the **Microsoft Azure Site Recovery Registration Wizard**, select **Browse**.
+
+   ![](../media/azm7-121.png)
+
+1. Browse to the **Downloads (1)** folder, select the vault credentials file **(2)**, and then select **Open (3)**.
+
+   ![](../media/azm7-122.png)
 
 1. Back on the **Vault Settings** page of the **Microsoft Azure Site Recovery Registration Wizard**, select **Next**.
 
+   ![](../media/azm7-123.png)
+
 1. On the **Proxy Settings** page of the **Microsoft Azure Site Recovery Registration Wizard**, accept the default settings and select **Next**.
+
+   ![](../media/azm7-124.png)
 
     >**Note**: Registration process may take 5 minutes kindly wait to complete.
 
 1. On the **Registration** page of the **Microsoft Azure Site Recovery Registration Wizard**, select **Finish**.
 
+   ![](../media/azm7-125.png)
+
 1. Refresh the browser window displaying the **Discover** page.
 
 1. In the portal search and select **Azure migrate** and under **Migration goals** section select **Azure Migrate | Servers, databases and web apps**.
 
-1. On the **Azure Migrate | Servers, databases and web apps** page, in the **Migration and modernization** section, select the **Discover**. 
+1. On the **Azure Migrate | Servers, databases and web apps (1)** page, in the **Migration and modernization** section, select the **Discover (2)**. 
 
-1. On the **Discover** page, in Where do you want to migarate to?  select **Azure VM** from the drop-down and in the **Are your machines virtualized?** drop-down list, select **Yes, with Hyper-V** and in the **Do you want to install a new replication appliance or scale-out existing setup?** drop-down list, select **Install a replication appliance** and then select **Finalize registration**.
+   ![](../media/azm7-126.png)
 
-   >**Note**: It might take up to 5 minutes for the discovery of virtual machines to complete.
+1. On the **Discover** page, 
+
+   - Where do you want to migarate to?:  select **Azure VM (1)** from the drop-down
+   - **Are your machines virtualized?** drop-down list: Select **Yes, with Hyper-V (2)** 
+   - **Do you want to install a new replication appliance or scale-out existing setup?** drop-down list: Select **Install a replication appliance (3)**
+   - Then select **Finalize registration (4)**.
+
+     ![](../media/azm7-128.png)
+
+     >**Note**: It might take up to 5 minutes for the discovery of virtual machines to complete.
 
 ### Task 2: Configure replication of Hyper-V VMs
 
-1. Once you receive the confirmation that the registration was finalized, browse back to the **Azure Migrate | Servers, databases and web apps** page and then, in the **Migration and modernization** section, select the **Replicate** link. 
+1. Once you receive the confirmation that the registration was finalized, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page and then, in the **Migration and modernization** section, select the **Replicate (2)** link. 
 
-   >**Note**: You might have to refresh the browser page displaying the **Azure Migrate | Servers, databases and web apps** page.
+   ![](../media/azm7-129.png)
+
+    >**Note**: You might have to refresh the browser page displaying the **Azure Migrate | Servers, databases and web apps** page.
 
 1. On the **Specify intent** page, in the **Are your machines virtualized?** drop-down list, select **Yes, with Hyper-V** and then select **Continue**.
 
    ![](../media/az801lab7img55.png)
 
-1. On the **Virtual machines** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next**:
+1. On the **Virtual machines** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next (5)**:
 
    | Setting | Value | 
    | --- | --- |
@@ -921,9 +953,9 @@ After completing this lab, you will be able to:
    | Select assessment | **az801l07a-assessment (3)** |
    | Virtual machines | Select **az801l07a-vm1 (4)** |
 
-   ![](../media/az801lab7p1.png)
+   ![](../media/azm7-130.png)
 
-   >**Note**: Even if the Azure VM readiness status does not show as Ready, please proceed with the next steps.
+    >**Note**: Even if the Azure VM readiness status does not show as Ready, please proceed with the next steps.
 
 1. On the **Target settings** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next (6)**:
 
@@ -937,9 +969,11 @@ After completing this lab, you will be able to:
 
    ![](../media/az801lab7img57.png)
 
-   >**Note**: if you are unable to see the Cache Storage Account option and select **str<inject key="DeploymentID" enableCopy="false"/>** and encounter an error when selecting it please wait for 10 minutes and perform the above from step 1.
+   >**Note**: **If you are unable to see the Cache Storage Account option and select** **str<inject key="DeploymentID" enableCopy="false"/>** **and encounter an error when selecting it please wait for 10 minutes and perform the above from step 1**.
 
-1. On the **Compute** tab of the **Replicate** page, ensure that the **Standard_D2s_v3** is selected in the **Azure VM Size** drop-down list. In the **OS Type** drop-down list, select **Windows** and then select **Next**.  
+1. On the **Compute** tab of the **Replicate** page, ensure that the **Standard_D2s_v3 (1)** is selected in the **Azure VM Size** drop-down list. In the **OS Type** drop-down list, select **Windows (2)** and then select **Next (3)**.
+
+   ![](../media/azm7-131.png)
 
 1. On the **Disks** tab of the **Replicate** page, accept the default settings and select **Next**.
 
@@ -947,64 +981,95 @@ After completing this lab, you will be able to:
 
 1. On the **Review + Start replication** tab of the **Replicate** page, select **Replicate**.  
 
-1. To monitor the status of replication, back on the **Azure Migrate | Servers, databases and web apps** page, select **Refresh** and then, in the **Migration and modernization** section, select the **Overview** and on the **Azure Migrate: Migration and modernization** page, under **Migration** section select **Replications**.
+   ![](../media/azm7-132.png)
 
-   ![](../media/az801lab7img58.png)
+1. To monitor the status of replication, back on the **Azure Migrate | Servers, databases and web apps (1)** page, select **Refresh** and then, in the **Migration and modernization** section, select the **Overview (2)** and on the **Azure Migrate: Migration and modernization** page.
 
-1. On the **Migration and modernization | Replications** page, examine the **Replication Status** column in the list of the replicating machines.
+   ![](../media/azm7-136.png)
+
+1. Under **Migration** section select **Replications (1)**. Examine the **Replication Status** column in the list of the replicating machines **(2)**.
+
+   ![](../media/azm7-138.png)
 
 1. Wait until the status changes to **Protected**. This might take additional 15 minutes.
 
-   >**Note**: You will need to refresh the **Migration and modernization | Replications** to update the **Status** information.
+   ![](../media/azm7-134.png)
+
+    >**Note**: You will need to refresh the **Migration and modernization | Replications** to update the **Status** information.
 
 ### Task 3: Perform migration of Hyper-V VMs
 
 1. In the Azure portal, on the **Migration and modernization | Replications** page, select the entry representing the **az801l07a-vm1** virtual machine.
 
+   ![](../media/azm7-134.png)
+
 1. On the **az801l07a-vm1** page, select **Test migration**.
 
    ![](../media/az801lab7img59.png)
 
-1. On the **Test migration** page, in the **Virtual network** drop-down list, select **az801l07a-test-vnet** and then select **Test migration**.
+1. On the **Test migration** page, in the **Virtual network** drop-down list, select **az801l07a-test-vnet (1)** and then select **Test migration (2)**.
 
-   >**Note**: Wait for the test migration to complete. This might take about 5 - 10 minutes.
+   ![](../media/azm7-135.png)
+
+    >**Note**: Wait for the test migration to complete. This might take about 5 - 10 minutes.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, note the entry representing the newly replicated virtual machine **az801l07a-vm1-test**.
 
-   > **Note:** Initially, the virtual machine will have the name consisting of the **asr-** prefix and randomly generated suffix, but will be renamed eventually to **az801l07a-vm1-test**.
+   ![](../media/azm7--141.png)
 
-1. In the Azure portal, browse back to the **Migration and modernization | Replications** page, select **Refresh**, and then verify that the **az801l07a-vm1** virtual machine is listed with the **Cleanup test failover pending** status.
+    > **Note:** Initially, the virtual machine will have the name consisting of the **asr-** prefix and randomly generated suffix, but will be renamed eventually to **az801l07a-vm1-test**.
 
-   ![](../media/az801lab7img60.png)
+     ![](../media/azm7-139.png)   
+
+1. In the Azure portal, browse back to the **Migration and modernization | Replications (1)** page, select **Refresh (2)**, and then verify that the **az801l07a-vm1** virtual machine is listed with the **Cleanup test failover pending (3)** status.
+
+   ![](../media/azm7-142.png)
 
 1. On the **Migration and modernization | Replicating machines** page, select the entry representing the **az801l07a-vm1** virtual machine.
 
 1. On the **az801l07a-vm1** replicating machines page, select **Clean up test migration**.
 
-   ![](../media/az801lab7img61.png)
+   ![](../media/azm7-143.png)
 
-1. On the **Test migrate cleanup** page, select the checkbox **Testing is complete. Delete test virtual machine** and then select **Cleanup Test**.
+1. On the **Test migrate cleanup** page, select the checkbox **Testing is complete. Delete test virtual machine (1)** and then select **Cleanup Test (2)**.
+
+   ![](../media/azm7-144.png)
 
 1. Once the test failover cleanup job completes, refresh the browser page displaying the **az801l07a-vm1** replicating machines page and note that the **Migrate** icon in the toolbar automatically becomes available.
+
+   ![](../media/azm7-145.png)
 
 1. On the **az801l07a-vm1** replicating machines page, select the **Migrate** link. 
 
    ![](../media/az801lab7img62.png)
 
-1. On the **Migrate** page, ensure that **Yes** is selected in the **Shutdown virtual machines and perform a planned migration with no data loss?** drop-down list, and then select **Migrate**.
+1. On the **Migrate** page, ensure that **Yes (1)** is selected in the **Shutdown virtual machines and perform a planned migration with no data loss?** drop-down list, and then select **Migrate (2)**.
 
-1. To monitor the status of migration, browse back to the **Azure Migrate | Servers, databases and web apps** page. In the **Migration and modernization** section, select the **Replicating servers** entry and then, on the **Migration and modernization | Replicating machines** page, examine the **Status** column in the list of the replicating machines. Verify that the status displays the **Planned failover finished** status.
+   ![](../media/azm7-146.png)
+
+1. To monitor the status of migration, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page. In the **Migration and modernization** section, select the **Replicating servers (2)** entry.
+
+   ![](../media/azm7-147.png)
+
+1. Then, on the **Migration and modernization | Replicating machines** page, examine the **Status** column in the list of the replicating machines. Verify that the status displays the **Planned failover was initiated** status
+
+   ![](../media/azm7-148.png)
+
+1. Refresh the page, untill you get the status displays the **Planned failover finished** status.
+
+   ![](../media/azm7-149.png)
 
    >**Note**: Wait for the deployment to complete. This might take about 10 minutes.
 
    >**Note**: Migration is supposed to be a non-reversible action. If you want to see the completed information, browse back to the **Azure Migrate | Servers, databases and web apps** page, refresh the page, and then verify that the **Migrated Servers** entry in the **Migration and modernization** section has the value of **1**.
    
-1. Refresh the page and please wait until the **Replication status** indicates **Completing planned failover** before proceeding.
+1. Refresh the page and please wait until the **Replication status** indicates **Completing planned failover**. It might take more time so no need to wait, please proceed with the next step.
 
     ![](../Media/display.png)
    
-1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, note the entry representing the 
-   newly replicated virtual machine **az801l07a-vm1**.
+1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, note the entry representing the newly replicated virtual machine **az801l07a-vm1**.
+
+   ![](../media/azm7-150.png)
 
    >**Note**: Migration is supposed to be a non-reversible action. If you want to see the completed information, browse back to the **Azure Migrate | Servers, databases and web apps** page, refresh the page, and then verify that the **Migrated Servers** entry in the **Migration and modernization** section has the value of **1**.
 
