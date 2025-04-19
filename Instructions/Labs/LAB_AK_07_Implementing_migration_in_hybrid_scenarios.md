@@ -309,25 +309,45 @@ After completing this lab, you will be able to:
 
     ![](../media/azm7-50.png)
 
-1. In the **Hyper-V Manager** console, select the newly created virtual machine, right click and then select **Start**. 
+1. In the **Hyper-V Manager** console, select the newly created virtual machine, right click **(1)** and then select **Start (2)**.
 
-1. In the **Hyper-V Manager** console, verify that the virtual machine is running, right click and then select **Connect**. 
+    ![](../media/azm7-51.png)
+
+1. In the **Hyper-V Manager** console, verify that the virtual machine is running.
+
+    ![](../media/azm7-52.png)
+
+1. Right click and then select **Connect**. 
+
+    ![](../media/azm7-53.png)
 
     >**Note:** Please wait for a few minutes for the setup to begin.
 
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, on the **Hi there** page, select **Next**. 
 
+    ![](../media/azm7-54.png)
+
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, on the **License terms** page, select **Accept**. 
+
+    ![](../media/azm7-55.png)
 
 1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, on the **Customize settings** page, set the password of the built-in Administrator account to **Pa55w.rd**, and then select **Finish**. 
 
-1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, in the **Action** menu, select **Ctrl + Alt + Delete** and then, when prompted, sign in by using **Pa55w.rd** password.
+    ![](../media/azm7-56.png)
+
+1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, in the **Action (1)** menu, select **Ctrl + Alt + Delete (2)** and then, when prompted, sign in by using **Pa55w.rd (3)** password.
 
     ![](../Media/s11upd.png)
 
     >**Note**: Click on **Accept** on Send diagnostic data to Microsoft page. 
 
-1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, select **Start**. In the **Start** menu, select **Windows PowerShell** and then, in the **Administrator: Windows PowerShell** window, run the following to set the computer name. 
+     ![](../media/azm7-57.png)    
+
+1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, select **Start (1)**. In the **Start** menu, select **Windows PowerShell(Admin)**.
+
+    ![](../media/azm7-58.png)
+
+1. Then, in the **Administrator: Windows PowerShell** window, run the following to set the computer name. 
 
     ```powershell
     Rename-Computer -NewName 'az801l07a-vm1' -Restart
@@ -338,7 +358,13 @@ After completing this lab, you will be able to:
   
 ### Task 1: Configure Hyper-V environment
 
-1. Navigate back to Remote Desktop session to **az801l07a-hv-vm** and within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window change download location to **Downloads** and go to [https://aka.ms/migrate/script/hyperv](https://aka.ms/migrate/script/hyperv), and download the Azure Migrate configuration PowerShell script.
+1. Navigate back to Remote Desktop session to **az801l07a-hv-vm** and within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window change download location to **Downloads**.
+
+    ![](../media/azm7-59.png)
+
+     >**Note**: Refer the steps in Exercise 1-> Task 2-> Step 22 to change the location to **Downloads** folder.
+
+1. Right click on [https://aka.ms/migrate/script/hyperv](https://aka.ms/migrate/script/hyperv), select **Copy link**, then paste it over the browser tab and download the Azure Migrate configuration PowerShell script.
 
     >**Note**: The script performs the following tasks:
 
@@ -351,7 +377,9 @@ After completing this lab, you will be able to:
     >- Checks that the Hyper-V Integration Services is enabled on all VMs managed by the host
     >- Enables CredSSP on the host if needed
 
-1. Within the Remote Desktop session to **az801l07a-hv-vm**, select **Start** and then select **Windows PowerShell ISE** and **Run as Administrator**.
+1. Within the Remote Desktop session to **az801l07a-hv-vm**, search for **Windows PowerShell ISE (1)** then right click on **Windows PowerShell ISE** and then **Run as Administrator (2)**.
+
+    ![](../media/azm7-60.png)
 
 1. In the **Administrator: Windows PowerShell ISE** window, on the console pane, run the following commands to copy the script to the **C:\\Labfiles\\Lab07** folder and remove the Zone.Identifier alternate data stream, which, in this case, indicates that the file was downloaded from the Internet:
 
@@ -362,7 +390,21 @@ After completing this lab, you will be able to:
     Set-Location -Path C:\Labfiles\Lab07
     ```
 
-1. In the **Administrator: Windows PowerShell ISE** window, open the **MicrosoftAzureMigrate-Hyper-V.ps1** script residing in the **C:\\Labfiles\\Lab07** folder and run it. When prompted for confirmation, enter **Y** and press Enter, with the exception of the following prompts, in which case, enter **N** and press Enter:
+     ![](../media/azm7-61.png)
+
+1. In the **Administrator: Windows PowerShell ISE** window, click on **File (1)** then **Open (2)**.
+
+    ![](../media/azm7-62.png)
+
+1. Navigate to **C:\\Labfiles\\Lab07 (1)** folder, select  **MicrosoftAzureMigrate-Hyper-V.ps1 (2)** script and click on **Open (3)**.
+
+    ![](../media/azm7-63.png)
+
+1. Select **Run**. 
+
+    ![](../media/azm7-64.png)
+
+1. When prompted for confirmation, enter **Y** and press Enter, **with the exception of the following prompts**, in which case, enter **N** and press Enter:
 
    - Do you use SMB share(s) to store the VHDs?
    - Do you want to create non-administrator local user for Azure Migrate and Hyper-V Host communication? 
@@ -376,15 +418,17 @@ After completing this lab, you will be able to:
     - Username: <inject key="AzureAdUserEmail"></inject>
   
     - Password: <inject key="AzureAdUserPassword"></inject>
+
+      >**Note**: If prompted, enter the code in Authenticator app to login
     
-1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Azure Migrate**, and then, on the **Azure Migrate \| Get Started** page, under **Migration goals** section, select **Servers, databases, and web apps**.
+1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for **Azure Migrate (1)** and select **Azure Migrate (2)**.
+
+    ![](../media/azm7-65.png)
+
+1. Then, on the **Azure Migrate \| Get Started** page, under **Migration goals (1)** section, select **Servers, databases, and web apps (2)**. select **Create Project (3)**. 
  
-    ![](../media/az801lab7img27.png)
-
-1. On the **Azure Migrate \| Servers, databases, and web apps** page, select **Create Project**.
-
-    ![](../Media/image4.png)
-   
+    ![](../media/azm7-66.png)
+  
 1. On the **Create Project** page, specify the following settings (leave others with their default values) and select **Create (4)**:
 
     | Setting | Value | 
@@ -398,11 +442,15 @@ After completing this lab, you will be able to:
 
 ### Task 3: Implement the target Azure environment
 
-1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual networks**. On the **Virtual networks** page, select **+ Create** on the command bar. 
+1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for **Virtual networks (1)** and select **Virtual networks (2)**. 
 
-    ![](../media/az801lab7img30.png)
+    ![](../media/azm7-67.png)
 
-1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and click on **Next (5)**:
+1. On the **Virtual networks** page. Select **+ Create** on the command bar
+
+    ![](../media/azm7-68.png)
+
+1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and click on **IP address (5)** tab from top:
 
     | Setting | Value |
     | --- | --- |
@@ -411,9 +459,7 @@ After completing this lab, you will be able to:
     | Name | **az801l07a-migration-vnet (3)** |
     | Region | **<inject key="Region" enableCopy="false"/>** **(4)** |
 
-    ![](../media/az801lab7img31.png)
-
-1. Click on **Next**.
+    ![](../media/azm7-69.png)
 
 1. On the **IP addresses** tab of the **Create virtual network** page,
 
@@ -427,12 +473,12 @@ After completing this lab, you will be able to:
 
        |Setting|Value|
        |---|---|
-       |Starting Address|**10.7.0.0**|
-       |Address space size|**/16 (65536 Addresses)**|
+       |Starting Address|**10.7.0.0 (1)**|
+       |Address space size|**/16 (65536 Addresses) (2)**|
 
-1. On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet**.
+       - On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet (3)**.
 
-    ![](../media/az801lab7img32.png)
+         ![](../media/azm7-70.png)
 
 1. On the **Add a subnet** page, specify the following settings (leave others with their default values) and select **Add (4)**:
 
@@ -446,13 +492,17 @@ After completing this lab, you will be able to:
 
 1. Back on the **IP addresses** tab of the **Create virtual network** page, select **Review + create**.
 
+    ![](../media/azm7-71.png)
+
 1. On the **Review + create** tab of the **Create virtual network** page, select **Create**.
+
+    ![](../media/azm7-72.png)
 
 1. In the Azure portal, browse back to the **Virtual networks** page, and then, select **+ Create** on the command bar.
 
-    ![](../media/az801lab7img30.png)
+    ![](../media/azm7-73.png)
 
-1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **Next (5)**:
+1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **IP address (5)** tab:
 
     | Setting | Value |
     | --- | --- |
@@ -461,20 +511,24 @@ After completing this lab, you will be able to:
     | Name | **az801l07a-test-vnet (3)** |
     | Region | **<inject key="Region" enableCopy="false"/>** **(4)**|
 
-1. Click on **Next**.
+    ![](../media/azm7-74.png)
 
-1. On the **IP addresses** tab of the **Create virtual network** page, remove the default IP Address space by clicking on **Delete the address space** and after deleting **address space**, select **Add IPV4 Address space**
+1. On the **IP addresses** tab of the **Create virtual network** page, remove the default IP Address space by clicking on **Delete the address space** and after deleting **address space**.
 
     ![](../media/az801lab7img37.png)
 
-1. On the **Add IPV4 Address space** page, specify the following settings (leave others with their default values) and select **Add**:
+1. Select **Add IPV4 Address space**
+
+    ![](../media/azm7--75.png)
+
+1. On the **Add IPV4 Address space** page, specify the following settings (leave others with their default values) and select **Add a subnet (3)**:
 
     |Setting|Value|
     |---|---|
-    |Starting Address|**10.7.0.0**|
-    |Address space size|**/16 (65536 Addresses)**|
+    |Starting Address|**10.7.0.0 (1)**|
+    |Address space size|**/16 (65536 Addresses) (2)**|
 
-1. On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet**.
+    ![](../media/azm7-76.png)    
 
 1. On the **Add a subnet** page, specify the following settings (leave others with their default values) and select **Add (4)**:
 
@@ -488,11 +542,19 @@ After completing this lab, you will be able to:
 
 1. Back on the **IP addresses** tab of the **Create virtual network** page, select **Review + create**.
 
+    ![](../media/azm7-77.png)
+
 1. On the **Review + create** tab of the **Create virtual network** page, select **Create**.
 
-1. In the Azure portal, search for and select **Storage accounts**. Then, on the **Storage accounts** page, select **+ Create** on the command bar.
+1. In the Azure portal, search for **Storage account (1)** and select **Storage accounts (2)**.
 
-1. On the **Basics** tab of the **Create a storage account** page, specify the following settings (leave others with their default values):
+    ![](../media/azm7-78.png)
+
+1. Then, on the **Storage accounts** page, select **+ Create** on the command bar.
+
+    ![](../media/azm7-79.png)
+
+1. On the **Basics** tab of the **Create a storage account** page, specify the following settings (leave others with their default values) and then click on **Next (8)**:
 
     | Setting | Value | 
     | --- | --- |
@@ -528,13 +590,15 @@ After completing this lab, you will be able to:
 
    ![](../media/az801lab7img38.png)
 
-1. On the **Discover** page, ensure that the **Discover using appliance** option is selected and then, in the **Are your servers virtualized?** drop-down list, select **Yes, with Hyper-V**. 
+1. On the **Discover** page, ensure that the **Discover using appliance** option is selected and then, in the **Are your servers virtualized?** drop-down list, select **Yes, with Hyper-V (1)**. 
 
-1. On the **Discover** page, in the **Name your appliance** text box, type **az801l07a-vma1 (1)** and select the **Generate key (2)** button.
+1. On the **Discover** page, in the **Name your appliance** text box, type **az801l07a-vma1 (2)** and select the **Generate key (3)** button.
 
-   ![](../media/az801lab7img39.png)
+   ![](../media/azm7-80.png)
 
-   >**Note**: Wait for the key generation to complete and record its value. You will need it later in this exercise.
+1. Wait for the key generation to complete and record its value. You will need it later in this exercise.
+
+   ![](../media/azm7-81.png)
 
 1. On the **Discover** page, in the **Download Azure Migrate appliance** text box, select the **.VHD file (1)** option, select **Download (2)**.
 
@@ -542,9 +606,19 @@ After completing this lab, you will be able to:
 
    >**Note**: Wait for the download to complete. This might take about 5 minutes.
 
-1. Once the download completes, extract the content of the downloaded .ZIP file into the **F:\VMs** folder.
+1. Once the download completes, click on **Open file**.
 
-   >**Note**: As Microsoft Edge doesn't prompt by default, you may need to manually copy the .VHD file to the F:\VMs folder.
+   ![](../media/azm7-82.png)
+
+1. Right click on the downloaded file and select **Extract All**.
+
+   ![](../media/azm7-83.png)
+
+1. Set the destination folder locatio to **F:\VMs (1)** and select **Extract (2)**.
+
+   ![](../media/azm7-84.png)
+
+    >**Note**: As Microsoft Edge doesn't prompt by default, you may need to manually copy the .VHD file to the F:\VMs folder.
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, switch to the **Hyper-V Manager** console, select the **AZ801L07A-VM1** node, and then select **Import Virtual Machine** under **Actions**. This will start the **Import Virtual Machine** wizard.
 
@@ -558,7 +632,11 @@ After completing this lab, you will be able to:
 
 1. On the **Select Virtual Machine** page of the **Import Virtual Machine** wizard, select **Next >**.
 
-1. On the **Choose Import Type** page of the **Import Virtual Machine** wizard, select **Register the virtual machine in-place (use the existing unique ID)**, and then select **Next >**.
+   ![](../media/azm7-85.png)
+
+1. On the **Choose Import Type** page of the **Import Virtual Machine** wizard, select **Register the virtual machine in-place (use the existing unique ID) (1)**, and then select **Next > (2)**.
+
+   ![](../media/azm7-86.png)
 
 1. On the **Configure Processor** page of the **Import Virtual Machine** wizard, set **Number of virtual processors** to **4 (1)**, and then select **Next > (2)**.
 
@@ -566,29 +644,47 @@ After completing this lab, you will be able to:
 
    >**Note**: In a lab environment, you can ignore any error messages referring to the change of the number of virtual processors. In production scenarios, you should ensure that the virtual appliance has the sufficient number of compute resources assigned to it.
 
-1. On the **Connect Network** page of the **Import Virtual Machine** wizard, in the **Connection** drop-down list, select **NestedSwitch**, and then select **Next >**.
+1. On the **Connect Network** page of the **Import Virtual Machine** wizard, in the **Connection** drop-down list, select **NestedSwitch (1)**, and then select **Next > (2)**.
+
+   ![](../media/azm7-87.png)
 
 1. On the **Summary** page of the **Import Virtual Machine** wizard, select **Finish**.
 
-   >**Note**: Wait for the import to complete.
+   ![](../media/azm7-88.png)
 
-1. In the **Hyper-V Manager** console, select the newly imported virtual machine, select **Rename**, and then set its name to **az801l07a-vma1**.
+    >**Note**: Wait for the import to complete.
 
-1. Right click on **az801l07a-vma1** VM, select **Settings** and under **Hardware** select **Memory (1)** and under **Specify the amount of memory that the virtual machine can user** in **RAM** replace the memory size of the virtual machine to **4096 (2)** MB and click on **OK (3)**.
+1. In the **Hyper-V Manager** console, right click on the newly imported virtual machine **(1)**, select **Rename (2)**.
+
+   ![](../media/azm7-89.png)
+
+1. Then set its name to **az801l07a-vma1**.
+
+1. Right click on **az801l07a-vma1** VM, select **Settings**.
+
+   ![](../media/azm7-91.png)
+
+1. Under **Hardware** select **Memory (1)** and under **Specify the amount of memory that the virtual machine can user** in **RAM** replace the memory size of the virtual machine to **4096 (2)** MB and click on **OK (3)**.
 
    ![](../media/az801lab7img44.png)
 
 1. In the **Hyper-V Manager** console, select the newly imported virtual machine, and then select **Start**. 
 
-1. In the **Hyper-V Manager** console, verify that the virtual machine is running, and then select **Connect**. 
+   ![](../media/azm7-92.png)
+
+1. In the **Hyper-V Manager** console, verify that the virtual machine is running **(1)**, and then select **Connect (2)**.
+
+   ![](../media/azm7-93.png)
 
 1. In the **Virtual Machine Connection** window to the virtual appliance, on the **License terms** page, select **Accept**. 
 
    ![](../media/az801lab7img45.png)
 
-1. In the **Virtual Machine Connection** window to the virtual appliance, on the **Customize settings** page, set the password of the built-in Administrator account to **Pa55w.rd**, and then select **Finish**. 
+1. In the **Virtual Machine Connection** window to the virtual appliance, on the **Customize settings** page, set the password of the built-in Administrator account to **Pa55w.rd (1)**, and then select **Finish (2)**.
 
-1. In the **Virtual Machine Connection** window to the virtual appliance, in the **Action** menu, select first icon **Ctrl + Alt + Delete** and then, when prompted, sign in by using the newly set password.
+   ![](../media/azm7-94.png)
+
+1. In the **Virtual Machine Connection** window to the virtual appliance, in the **Action (1)** menu, select first icon **Ctrl + Alt + Delete (2)** and then, when prompted, sign in by using the newly set password.
 
    ![](../Media/s11.png)
 
@@ -597,13 +693,17 @@ After completing this lab, you will be able to:
 
 1. On the **Appliance Configuration Manager** page, select the **I agree** button and wait for the setup prerequisites to be successfully verified. 
 
-1. On the **Appliance Configuration Manager** page, in the **Verification of Azure Migrate project key** section, in the **Register Hyper-V appliance by pasting the key here** text box, paste the key you copied into Notepad earlier in this exercise, select **Verify** and wait for process to complete.
+   ![](../media/azm7-95.png)
+
+1. On the **Appliance Configuration Manager** page, in the **Verification of Azure Migrate project key** section, After the first two checks are completed **(1)**, in the **Register Hyper-V appliance by pasting the key here** text box, paste the key you copied into Notepad earlier in this exercise **(2)**, select **Verify (3)** and wait for process to complete. It might take around 5- 10 minutes.
+
+   ![](../media/azm7-97.png)
    
    >**Note**: You may not be able to copy and paste the content within nested VM session so kindly select **Clipboard** at top of page in menu bar and from **Clipboard** list select **Type clipboard text** to paste the content and follow the same to step to copy and paste the content
 
     ![](../Media/lab7-2.png)
    
-1. Once verification is completed, if **New update installed** window, select **Refresh** then again click on **Verify**.
+1. Once verification is completed, if **New update installed** window prompted, select **Refresh** then again click on **Verify**.
 
    >**Note**: Wait until verification process completes.
 
@@ -616,6 +716,8 @@ After completing this lab, you will be able to:
     - Password: <inject key="AzureAdUserPassword"></inject>
 
    >**Note**: You need to enter the credentials manually.
+
+   >**Note**: If prompted, enter the code in Authenticator app to login   
    
 1. When prompted **Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then **close** the newly opened browser tab.
 
