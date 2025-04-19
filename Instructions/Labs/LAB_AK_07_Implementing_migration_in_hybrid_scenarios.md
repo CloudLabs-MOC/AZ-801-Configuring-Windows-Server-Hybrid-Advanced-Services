@@ -125,7 +125,7 @@ After completing this lab, you will be able to:
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, select **az801l07a-hv-vm**.
 
-    ![](../Media/azm7-11.png)
+     ![](../Media/azm7-11.png)
 
 1. On the **az801l07a-hv-vm** page, select **Connect (1)** drop down and then select **Connect (2)**.
 
