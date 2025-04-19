@@ -190,26 +190,26 @@ After completing this lab, you will be able to:
     ![](../media/azm7-25.png)
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, start **Microsoft Edge (1)**, 
-
-   - On the Welcome to Microsoft Edge page, select **Start without your data (2)**
+    
+    - On the Welcome to Microsoft Edge page, select **Start without your data (2)**
    
-     ![](../media/azm7-26.png)   
+      ![](../media/azm7-26.png)   
 
-   - On the help for importing Google browsing data page, select the **Continue and continue** button
+    - On the help for importing Google browsing data page, select the **Continue and continue** button
 
-     ![](../media/azm7-27.png)  
+      ![](../media/azm7-27.png)  
 
-   - Then, proceed to select **Confirm and start browsing**
+    - Then, proceed to select **Confirm and start browsing**
    
-     ![](../media/azm7-28.png)  
+      ![](../media/azm7-28.png)  
 
-   - Click on **Next**
+    - Click on **Next**
 
-     ![](../media/azm7-29.png)     
+      ![](../media/azm7-29.png)     
    
-   - Click on **Finish**
+    - Click on **Finish**
 
-     ![](../media/azm7-30.png)     
+      ![](../media/azm7-30.png)     
    
 1. On the next page, right click on [Windows Server Evaluations](https://www.microsoft.com/en-in/EvalCenter) then select **Copy link** and then paste it over the browser tab.
 
@@ -237,22 +237,22 @@ After completing this lab, you will be able to:
     ![](../media/az801lab7img15.png)
 
 1. Before downloading the VHD file please change the download location to **F:\VHDs** folder. You can change download settings location by following the below steps,
+    
+    - Select **(...) (1)** icon at top right of the corner, select **Download (2)**
 
-   - Select **(...) (1)** icon at top right of the corner, select **Download (2)**
+      ![](../media/azm7-33.png)
 
-     ![](../media/azm7-33.png)
-
-   - On **Download** window click on **(...) (1)** icon and select **Downloads settings (2)** 
+    - On **Download** window click on **(...) (1)** icon and select **Downloads settings (2)** 
    
-     ![](../media/azm7-34.png)   
+      ![](../media/azm7-34.png)   
    
-   - In location field click on **change** to set the location
+    - In location field click on **change** to set the location
 
-     ![](../media/azm7-35.png)   
+      ![](../media/azm7-35.png)   
 
-   - Enter **F:\VHDs (1)** press enter and then select **Select folder (2)** 
+    - Enter **F:\VHDs (1)** press enter and then select **Select folder (2)** 
 
-     ![](../media/azm7-36.png)
+      ![](../media/azm7-36.png)
 
 1. Make sure the location is set to **F:\VHDs**.
 
