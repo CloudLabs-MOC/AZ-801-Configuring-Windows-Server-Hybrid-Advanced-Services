@@ -32,7 +32,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 2. To initiate the required VMs, use the dropdown menu located at the top of the lab environment
 
-      ![](../media/switch.png)
+      ![](../media/azm2-1.png)
  
 3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
 
