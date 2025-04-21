@@ -15,6 +15,8 @@ In this lab, you will complete the following tasks:
 
 ## Exercise 1: Preparing a monitoring environment
 
+In this exercise, you are preparing a monitoring environment by deploying a virtual machine, registering resource providers, and configuring an Azure Log Analytics workspace.
+
 ### Task 1: Deploy an Azure virtual machine
 
 In this task, you deploy an Azure VM using a pre-defined ARM template through the Azure Cloud Shell, preparing the environment for monitoring hybrid infrastructure.
@@ -162,6 +164,8 @@ In this task, you create a Log Analytics workspace to collect and analyze monito
    <validation step="aff339d6-08b7-41bd-8563-5c676e0daff7" /> 
 
 ## Exercise 2: Configuring monitoring of on-premises servers
+
+In this exercise, you will configure monitoring for on-premises servers using Azure Monitor. The tasks include installing the Azure Connected Machine Agent, enabling monitoring using Insights, and configuring diagnostic settings for your on-premises machines.
 
 ### Task 1: Install the Azure Connect Machine Agent
 
@@ -336,6 +340,8 @@ In this task, you enhance monitoring by configuring performance counter data sou
 
 ## Exercise 3: Evaluating monitoring services
 
+In this exercise, you will configure monitoring and alerting for an Azure Arc-enabled server. This involves setting up alert rules based on performance metrics, such as CPU usage, creating custom log queries, and linking action groups to notify administrators via email when specific thresholds are breached.
+
 ### Task 1: Review Azure Monitor monitoring and alerting functionality
 
 In this task, you create an alert rule based on CPU usage metrics from an Azure Arc-enabled server, configure a custom log search query, set alert thresholds, and link an action group to notify administrators via email.
@@ -495,6 +501,8 @@ and then select **Review + Create (3)**.
 
 ## Exercise 4: Configuring monitoring of Azure VMs
 
+In this exercise, you configure diagnostic settings and enable VM Insights on an Azure VM to monitor its performance, health, and dependencies by setting up a data collection rule and linking it to a Log Analytics workspace.
+
 ### Task 1: Configure diagnostic settings and VM Insights
 
 In this task, you enable guest-level diagnostics for an Azure VM, review performance and log collection settings, and activate Azure VM Insights to monitor the VM’s performance, health, and dependencies using a data collection rule.
@@ -529,6 +537,8 @@ In this task, you enable guest-level diagnostics for an Azure VM, review perform
 
 ### Task 2: Enable VM Insights
 
+In this task, you enable VM Insights on the Azure VM (az801l09-vm0) by creating a Data Collection rule, linking it to a Log Analytics workspace, and configuring process and dependency mapping for performance monitoring.
+
 1. From the **Monitoring** section on the vertical menu on the left side, browse to the **az801l09-vm0 | Insights (1)** page. On the **az801l09-vm0 | Insights** page, select **Enable (2)**.
 
     ![](../Media/azm9-67.png)
@@ -558,6 +568,8 @@ In this task, you enable guest-level diagnostics for an Azure VM, review perform
    >**Note**: This option enables monitoring and alerting capabilities using health model, which consists of a hierarchy of health monitors built using the metrics emitted by Azure Monitor for VMs.This deployment may take some time. Wait for the deployment to complete and return to the process Map before ending the lab. This will allow you to review the process Map data. 
 
 ## Exercise 5: Evaluating monitoring services
+
+In this exercise, you review and configure Azure Monitor functionalities, including setting up alert rules for high CPU usage, evaluating VM Insights for performance monitoring, and using Azure Log Analytics to analyze and query performance data.
 
 ### Task 1: Review Azure Monitor monitoring and alerting functionality
 
