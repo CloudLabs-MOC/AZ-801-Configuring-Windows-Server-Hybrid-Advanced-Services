@@ -17,6 +17,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Deploy an Azure virtual machine
 
+In this task, you deploy an Azure VM using a pre-defined ARM template through the Azure Cloud Shell, preparing the environment for monitoring hybrid infrastructure.
+
 1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
 
     ![](../media/azm2-1.png)
@@ -103,6 +105,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 
+In this task, you enable essential monitoring capabilities by registering the Microsoft.Insights and Microsoft.AlertsManagement resource providers, which are required for Azure Monitor and alerting functionalities.
+
 1. To register the Microsoft.Insights and Microsoft.AlertsManagement resource providers, on **SEA-SVR2**, from the Cloud Shell pane, enter the following commands, and after entering each command, press Enter.
 
    ```powershell
@@ -119,6 +123,8 @@ In this lab, you will complete the following tasks:
    >**Note**: Do not wait for the registration process to complete but instead proceed to the next task. The registration should take about 3 minutes.
 
 ### Task 3: Create and configure an Azure Log Analytics workspace
+
+In this task, you create a Log Analytics workspace to collect and analyze monitoring data from Azure and on-premises resources, enabling centralized log management.
 
 1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, in the toolbar, search for and select **Log Analytics workspaces (1)**, and then, from the **Log Analytics workspaces (2)** page.
 
@@ -158,6 +164,8 @@ In this lab, you will complete the following tasks:
 ## Exercise 2: Configuring monitoring of on-premises servers
 
 ### Task 1: Install the Azure Connect Machine Agent
+
+In this task, you onboard an on-premises server to Azure Arc by generating and executing a script that installs the Azure Connected Machine Agent, enabling hybrid management and monitoring from Azure.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, type **Arc (1)**, then select **Azure Arc (2)**.
 
@@ -258,6 +266,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 2: Enable Monitoring using Insights
 
+In this task, you enable monitoring for the Azure Arc–connected server by configuring Azure Monitor Insights with a new Data Collection Rule (DCR) linked to your Log Analytics workspace, allowing performance and dependency data collection.
+
 1. Navigate to Azure Arc from the Azure portal search window, select **SEA-SVR2** Azure Arc machine, and open the **SEA-SVR2** Arc machine.
 
     ![](../Media/azm9-29.png)
@@ -288,6 +298,8 @@ In this lab, you will complete the following tasks:
      >**Note**:This deployment may take several minutes. Wait until the deployment completes before continuing with the next exercise.
 
 ### Task 3: Enable monitoring and diagnostic settings
+
+In this task, you enhance monitoring by configuring performance counter data sources and setting up diagnostic settings to send metrics from the Azure Arc–enabled server to your Log Analytics workspace for detailed analysis.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the Search bar of the Azure portal, search for **Data collection rules (1)** and select **Data collection rules (2)**.
 
@@ -325,6 +337,8 @@ In this lab, you will complete the following tasks:
 ## Exercise 3: Evaluating monitoring services
 
 ### Task 1: Review Azure Monitor monitoring and alerting functionality
+
+In this task, you create an alert rule based on CPU usage metrics from an Azure Arc-enabled server, configure a custom log search query, set alert thresholds, and link an action group to notify administrators via email.
 
 1. On **SEA-SVR2**, in the Azure portal, search for **Alerts (1)** and select **Alerts (2)** to navigate to **Monitor | Alerts** page.
 
@@ -483,6 +497,8 @@ and then select **Review + Create (3)**.
 
 ### Task 1: Configure diagnostic settings and VM Insights
 
+In this task, you enable guest-level diagnostics for an Azure VM, review performance and log collection settings, and activate Azure VM Insights to monitor the VM’s performance, health, and dependencies using a data collection rule.
+
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the Search bar of the Azure portal, search for **Virtual machines (1)** and select **Virtual machines (2)**.
 
     ![](../Media/azm9-62.png)
@@ -544,6 +560,8 @@ and then select **Review + Create (3)**.
 ## Exercise 5: Evaluating monitoring services
 
 ### Task 1: Review Azure Monitor monitoring and alerting functionality
+
+In this task, you configured an alert rule for high CPU usage on the az801l09-vm0 virtual machine using Azure Monitor.
 
 1. On **SEA-SVR2**, in the Azure portal, serach for **Monitor (1)** and select **Monitor (2)**.
 
@@ -663,6 +681,8 @@ and then select **Review + Create (3)**.
 
 ### Task 2: Review Azure Monitor VM Insights functionality
 
+In this task, you are reviewing the Azure Monitor VM Insights functionality for your virtual machine (az801l09-vm0).
+
 1. On **SEA-SVR2**, in the Azure portal, browse back to the **az801l09-vm0** virtual machine page.
 1. On the **az801l09-vm0** virtual machine page, on the vertical menu on the left side, in the **Monitoring** section, select **Insights (1)**. Navigate to **Performance (2)** tab, review the default set of metrics, including **logical disk performance, CPU utilization, available memory, as well as bytes sent and received rates (3)**.
 
@@ -673,6 +693,8 @@ and then select **Review + Create (3)**.
     ![](../Media/azm9-87.png)
 
 ### Task 3: Review Azure Log Analytics functionality
+
+In this task, you are reviewing the Azure Log Analytics functionality and performing queries to analyze performance data.
 
 1. On **SEA-SVR2**, in the Azure portal, search for **Monitor** and select **Monitor**.
 
