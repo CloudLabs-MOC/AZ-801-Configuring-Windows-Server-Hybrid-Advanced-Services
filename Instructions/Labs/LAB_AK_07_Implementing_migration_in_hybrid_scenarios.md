@@ -35,7 +35,11 @@ After completing this lab, you will be able to:
 
 ## Exercise 1: Prepare the lab environment
 
+In this exercise, you'll prepare the lab environment for performing migrations using Azure Migrate. You'll deploy a Hyper-V host inside an Azure VM using a nested virtualization setup, which will serve as your source environment for migration scenarios.
+
 ### Task 1: Deploy an Azure VM by using an Azure Resource Manager QuickStart template
+
+In this task, you deploy an Azure VM using the 301-nested-vms-in-virtual-network QuickStart template, configure necessary network settings, and enable RDP access with a public IP address.
 
 1. On **Lab-VM**, start **Microsoft Edge (1)**, right click on **[301-nested-vms-in-virtual-network Azure QuickStart template](https://github.com/az140mp/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network)**, then **Copy link**, then paste it over the browser **(2)** and select **Deploy to Azure (3)**. (You'll find the button **Deploy to Azure** in the `README.md` file after the list of resources created by the template.) This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** page in the Azure portal.
 
@@ -123,6 +127,8 @@ After completing this lab, you will be able to:
    <validation step="123bacf9-5c15-4067-8dd3-9f0a4e3be107" />
  
 ### Task 2: Deploy a nested VM in the Azure VM
+
+In this task, you deploy a nested VM within an Azure VM by setting up a virtual machine inside the az801l07a-hv-vm Hyper-V host, downloading a Windows Server 2025 VHD, configuring the new VM, and starting it up within the Hyper-V Manager.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, select **az801l07a-hv-vm**.
 
@@ -356,8 +362,12 @@ After completing this lab, you will be able to:
     >**Note**: If the copy paste does not work, enter the code manually and run it.
 
 ## Exercise 2: Prepare for assessment and migration by using Azure Migrate
+
+In this exercise, you will prepare both the source Hyper-V environment and the target Azure infrastructure required for assessing and migrating on-premises virtual machines to Azure.
   
 ### Task 1: Configure Hyper-V environment
+
+In this task, you configure the Hyper-V environment on the az801l07a-hv-vm by downloading and running the Azure Migrate PowerShell script, which checks system prerequisites, enables required services, and prepares the host for communication with Azure Migrate.
 
 1. Navigate back to Remote Desktop session to **az801l07a-hv-vm** and within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window change download location to **Downloads**.
 
@@ -414,6 +424,8 @@ After completing this lab, you will be able to:
 
 ### Task 2: Create an Azure Migrate project
 
+In this task, you create an Azure Migrate project by logging into the Azure portal.
+
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window, go to the Azure portal at `https://portal.azure.com/`, and sign in by using the following credentials.
 
     - Username: <inject key="AzureAdUserEmail"></inject>
@@ -442,6 +454,8 @@ After completing this lab, you will be able to:
     ![](../media/az801lab7img29.png)
 
 ### Task 3: Implement the target Azure environment
+
+In this task, you are implementing the target Azure environment by creating virtual networks and a storage account.
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for **Virtual networks (1)** and select **Virtual networks (2)**. 
 
@@ -582,8 +596,12 @@ After completing this lab, you will be able to:
    <validation step="b3d28692-9e1e-40f8-bbad-45ad00705c3c" />
 
 ## Exercise 3: Assess Hyper-V for migration by using Azure Migrate
-  
+
+In this exercise, you will discover and assess on-premises Hyper-V virtual machines using the Azure Migrate service. This step is essential to determine compatibility, estimate costs, and plan a successful migration to Azure.
+ 
 ### Task 1: Deploy and configure the Azure Migrate appliance
+
+In this task, you will deploy and configure the Azure Migrate appliance on your Hyper-V host to enable the discovery of virtual machines for assessment. The appliance collects metadata and performance data from the on-premises Hyper-V environment and sends it securely to the Azure Migrate project for analysis.
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window, in the Azure portal, search for and select **Azure Migrate**.
 
@@ -780,6 +798,8 @@ After completing this lab, you will be able to:
 
 ### Task 2: Configure, run, and view an assessment
 
+In this task, you will configure an assessment within the Azure Migrate project to evaluate the readiness of your Hyper-V virtual machines for migration to Azure.
+
 1. From the **Virtual Machine Connection** window to the virtual appliance, switch to the Remote Desktop session to **az801l07a-hv-vm**.
 
 1. In the browser window displaying the Azure portal, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page and select **Refresh (2)**. In the **Azure Migrate: Discovery and assessment** section, select **Assess (3)** and then, in the drop-down menu, select **Azure VM (4)**.
@@ -843,7 +863,11 @@ After completing this lab, you will be able to:
 
 ## Exercise 4: Migrate Hyper-V VMs by using Azure Migrate
 
+In this exercise, you will take the steps required to migrate your on-premises Hyper-V virtual machines to Azure, using the Azure Migrate service. This process involves preparing your environment, configuring replication, and ultimately performing the migration.
+
 ### Task 1: Prepare for migration of Hyper-V VMs
+
+In this task, you will prepare your environment to begin migrating discovered Hyper-V virtual machines to Azure.
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window displaying the Azure portal, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page. 
 1. On the **Azure Migrate | Servers, databases and web apps** page, in the **Migration and modernization (2)** section, select the **Discover (3)** link. 
@@ -935,6 +959,8 @@ After completing this lab, you will be able to:
 
 ### Task 2: Configure replication of Hyper-V VMs
 
+In this task, you’ll configure replication for your Hyper-V VM to Azure using Azure Migrate. You’ll leverage the assessment data from earlier tasks and initiate the replication process.
+
 1. Once you receive the confirmation that the registration was finalized, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page and then, in the **Migration and modernization** section, select the **Replicate (2)** link. 
 
    ![](../media/azm7-129.png)
@@ -999,6 +1025,8 @@ After completing this lab, you will be able to:
     >**Note**: You will need to refresh the **Migration and modernization | Replications** to update the **Status** information.
 
 ### Task 3: Perform migration of Hyper-V VMs
+
+In this task, you will initiate and complete the migration of a Hyper-V virtual machine to Azure, using the configuration and replication you've already set up.
 
 1. In the Azure portal, on the **Migration and modernization | Replications** page, select the entry representing the **az801l07a-vm1** virtual machine.
 
