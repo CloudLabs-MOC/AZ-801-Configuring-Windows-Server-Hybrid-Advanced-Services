@@ -217,7 +217,7 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
       ![](../media/azm7-30.png)     
    
-1. On the next page, right click on [Windows Server Evaluations](https://www.microsoft.com/en-in/EvalCenter) then select **Copy link** and then paste it over the browser tab.
+1. Right click on [Windows Server Evaluations](https://www.microsoft.com/en-in/EvalCenter) then select **Copy link** and then paste it over the browser tab.
 
 1. On start your evaluation today page, select **Windows server (1)** and then **Windows Server 2025 (2)** as shown below.
 
@@ -264,11 +264,11 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
     ![](../media/azm7-37.png)     
    
-1. On the **Please select your windows server 2025 download** page, in English United States row, under **VHD download** select **64-bit edition**.
+1. Navigate back to **Windows server 2025** tab, on the **Please select your windows server 2025 download** page, in English United States row, under **VHD download** select **64-bit edition**.
 
     ![](../media/azm7-38.png)
 
-     >**Note**: Wait for download to complete.
+     >**Note**: Wait for download to complete. It might take around 20 minutes.
 
       ![](../media/azm7-40.png)     
 
@@ -306,7 +306,7 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
     ![](../media/azm7-46.png)
 
-1. Before proceeding to the next page, navigate t the File exporer    
+1. Before proceeding to the next page, navigate to the File explorer.    
 
 1. On the **Connect Virtual Hard Disk** page of the **New Virtual Machine Wizard**, select the option **Use an existing virtual hard disk (1)**, click on **Browse (2)**, navigate to **F:\VHDs** folder then select downloaded **VHD** file. After set the location **(3)**, then select **Next > (4)**.
 
@@ -338,7 +338,7 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
     ![](../media/azm7-55.png)
 
-1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, on the **Customize settings** page, set the password of the built-in Administrator account to **Pa55w.rd**, and then select **Finish**. 
+1. In the **Virtual Machine Connection** window to **az801l07a-vm1**, on the **Customize settings** page, set the password of the built-in Administrator account to `Pa55w.rd`  (type the password) **(1)(2)**, and then select **Finish (3)**. 
 
     ![](../media/azm7-56.png)
 
@@ -403,7 +403,9 @@ In this task, you configure the Hyper-V environment on the az801l07a-hv-vm by do
 
      ![](../media/azm7-61.png)
 
-1. In the **Administrator: Windows PowerShell ISE** window, click on **File (1)** then **Open (2)**.
+1. Again open the **Windows PowerShell ISE** window as an **Administrator**.
+
+1. Click on **File (1)** then **Open (2)**.
 
     ![](../media/azm7-62.png)
 
@@ -577,7 +579,7 @@ In this task, you are implementing the target Azure environment by creating virt
     | Resource group | **AZ801-L0703-RG (2)** |
     | Storage account name | **str<inject key="DeploymentID" enableCopy="false"/>** **(3)** | 
     | Region | **<inject key="Region" enableCopy="false"/>** **(4)** |
-    | Primary Service | Select Azure Blob Storage or Azure Data Lake Storage Gen 2 from the dropdown. (5)|
+    | Primary Service | Select **Azure Blob Storage or Azure Data Lake Storage Gen 2 from the dropdown** **(5)**|
     | Performance | **Standard (6)** |
     | Redundancy | **Locally redundant storage (LRS) (7)** |
 
