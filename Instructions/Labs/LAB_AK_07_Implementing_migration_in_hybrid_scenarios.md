@@ -53,19 +53,19 @@ In this task, you deploy an Azure VM using the 301-nested-vms-in-virtual-network
 
      >**Note**: If prompted for MFA, please refer to the steps provided on the Getting Started page.   
   
-1. On the **Hyper-V Host Virtual Machine with nested VMs** page in the Azure portal, specify the following settings (Leave others with their default values.) and click on **Review + Create (9)**:
+1. On the **Hyper-V Host Virtual Machine with nested VMs** page in the Azure portal, specify the following settings (Leave others with their default values.) and click on **Review + Create (10)**:
 
    | Setting | Value | 
    | --- | --- |
    | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
-   | Resource group | Select  **AZ801-L0701-RG** |
-   | Region | select **<inject key="Region" enableCopy="false"/>** **(2)** |
-   | Virtual Network Name | **az801l07a-hv-vnet (3)** |
-   | Host Network Interface1Name | **az801l07a-hv-vm-nic1 (4)** |
-   | Host Network Interface2Name | **az801l07a-hv-vm-nic2 (5)** |
-   | Host Virtual Machine Name | **az801l07a-hv-vm (6)** |
-   | Host Admin Username | **Student (7)** |
-   | Host Admin Password | **Pa55w.rd1234 (8)** |
+   | Resource group | Select  **AZ801-L0701-RG** (2) |
+   | Region | select **<inject key="Region" enableCopy="false"/>** **(3)** |
+   | Virtual Network Name | **az801l07a-hv-vnet (4)** |
+   | Host Network Interface1Name | **az801l07a-hv-vm-nic1 (5)** |
+   | Host Network Interface2Name | **az801l07a-hv-vm-nic2 (6)** |
+   | Host Virtual Machine Name | **az801l07a-hv-vm (7)** |
+   | Host Admin Username | **Student (8)** |
+   | Host Admin Password | **Pa55w.rd1234 (9)** |
 
    ![](../media/az801lab7img1.png)
 
@@ -950,12 +950,11 @@ In this task, you will prepare your environment to begin migrating discovered Hy
 
 1. On the **Discover** page, 
 
-   - Where do you want to migarate to?:  select **Azure VM (1)** from the drop-down
-   - **Are your machines virtualized?** drop-down list: Select **Yes, with Hyper-V (2)** 
-   - **Do you want to install a new replication appliance or scale-out existing setup?** drop-down list: Select **Install a replication appliance (3)**
-   - Then select **Finalize registration (4)**.
-
-     ![](../media/azm7-128.png)
+   - Where do you want to migarate to?:  select **Azure VM** from the drop-down
+   - **Are your machines virtualized?** drop-down list: Select **Yes, with Hyper-V**
+   - **Experience type**: Select **Classic experience**
+   - **Do you want to install a new replication appliance or scale-out existing setup?** drop-down list: Select **Install a replication appliance**
+   - Then select **Finalize registration**.
 
      >**Note**: It might take up to 5 minutes for the discovery of virtual machines to complete.
 
@@ -973,16 +972,15 @@ In this task, you’ll configure replication for your Hyper-V VM to Azure using 
 
    ![](../media/az801lab7img55.png)
 
-1. On the **Virtual machines** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next (5)**:
+1. On the **Virtual machines** tab of the **Replicate** page, specify the following settings (leave others with their default values) and select **Next (4)**:
 
    | Setting | Value | 
    | --- | --- |
    | Import migration settings from an Azure Migrate assessment | **Yes, apply migration settings from an Azure Migrate assessment (1)** |
-   | Select group | **az801l07a-assessment-group (2)** |
-   | Select assessment | **az801l07a-assessment (3)** |
-   | Virtual machines | Select **az801l07a-vm1 (4)** |
+   | Select assessment | **az801l07a-assessment (2)** |
+   | Virtual machines | Select **az801l07a-vm1 (3)** |
 
-   ![](../media/azm7-130.png)
+   ![](../media/az80189r.png)
 
     >**Note**: Even if the Azure VM readiness status does not show as Ready, please proceed with the next steps.
 
