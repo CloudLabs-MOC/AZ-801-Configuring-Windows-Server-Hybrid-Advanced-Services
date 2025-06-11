@@ -4,7 +4,7 @@ Welcome to your AZ-801: Configuring Windows Server Hybrid Advanced Services work
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and lab guide will be available in your web browser.
  
   ![Access Your VM and Lab Guide](../Media/labguide.png)
 
@@ -14,7 +14,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 ## Exploring Your Lab Resources
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+To better understand your lab resources and credentials, navigate to the **Environment** tab.
  
   ![Explore Lab Resources](../Media/env-1.png)
  
@@ -44,7 +44,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Lab Guide Zoom In/Zoom Out
  
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+1. To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
    ![](../Media/zoom.png)
  
@@ -60,7 +60,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
    ![Manage Your Virtual Machine](../Media/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+3. If you have not extended the duration before when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
 
 ## Pasting Commands in the PowerShell/CloudShell Environment
 
