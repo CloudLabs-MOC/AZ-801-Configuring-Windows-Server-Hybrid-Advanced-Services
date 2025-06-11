@@ -2,13 +2,13 @@
 
 ## Lab Overview
 
-In this hands-on-lab, you will learn how to implement Hyper-V Replica to replicate virtual machines between two servers for disaster recovery, and Windows Server Backup to back up data to a network share for protection. You will configure replication, test failover, and set up automated backups using PowerShell to ensure data availability and recovery in case of failure.
+In this hands-on lab, you will learn how to implement Hyper-V Replica to replicate virtual machines between two servers for disaster recovery, and Windows Server Backup to back up data to a network share for protection. You will configure replication, test failover, and set up automated backups using PowerShell to ensure data availability and recovery in case of failure.
 
 ## Lab Objectives
 
 In this lab, you will be working on:
 
-- Exercise1: Implementing Hyper-V Replica.
+- Exercise 1: Implementing Hyper-V Replica.
 - Exercise 2: Implementing backup and restore with Windows Server Backup.
 
 ## Estimated timing: 80 minutes
@@ -55,7 +55,7 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
     ![](../Media/azm4-3.png)   
 
-1. To configure **SEA-SVR2** as a Replica server for **Hyper-V Replica**, enter the following commands, and after entering each command, press Enter:
+1. To configure **SEA-SVR2** as a Replica server for **Hyper-V Replica**, enter the following commands one by one, and after entering each command, press Enter:
 
    ```powershell
    New-Item -ItemType Directory -Path C:\ReplicaStorage -Force
@@ -124,7 +124,7 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
     ![](../Media/azm4-9.png)    
 
-1. To configure **SEA-SVR1** as a Replica server for **Hyper-V Replica**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following commands, and after entering each command, press Enter:
+1. To configure **SEA-SVR1** as a Replica server for **Hyper-V Replica**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following commands one by one, and after entering each command, press Enter:
 
    ```powershell
    New-Item -ItemType Directory -Path C:\ReplicaStorage -Force
@@ -153,7 +153,7 @@ In this task, you will be enabling replication for a virtual machine (SEA-CORE1)
    ```powershell
    Start-VMInitialReplication SEA-CORE1
    ```
-1. To identify status of replication of the virtual machine **SEA-CORE1** from **SEA-SVR2** to **SEA-SVR1** was successfully started, on **SEA-SVR2**, enter the following command and press Enter:
+1. To identify the status of replication of the virtual machine **SEA-CORE1** from **SEA-SVR2** to **SEA-SVR1** was successfully started, on **SEA-SVR2**, enter the following command and press Enter:
 
    ```powershell
    Get-VMReplication
@@ -163,7 +163,7 @@ In this task, you will be enabling replication for a virtual machine (SEA-CORE1)
 
     ![](../Media/azm4-12.png)
 
-1. Wait for about 5 minutes, rerun the same command, and verify that the **State** value changed to **Replicating**. Wait until this happens before you proceed to the next steps. In addition, ensure that **Primary server** is listed as **SEA-SVR2** and **ReplicaServer** as **SEA-SVR1**.
+1. Wait for about 5 minutes, rerun the same command, and verify that the **State** value changed to **Replicating**. Wait until this happens before you proceed to the next steps. In addition, ensure that the **Primary server** is listed as **SEA-SVR2** and **ReplicaServer** as **SEA-SVR1**.
 
     ![](../Media/azm4-13.png)
 
@@ -216,15 +216,15 @@ In this task, you will be testing the failover process by performing a failover 
 
     ![](../Media/azm4-17.png)   
 
-1. Minimize the **SEA-SVR2 on HOSTVM** connection and navigate back to the LabVM desktop.
+1. Navigate to the **HostVM** by selecting the **HostVM** from the top menu drop-down. 
 
-    ![](../Media/azm4-18.png)
+    ![](../Media/select-hostvm-1206.png)
 
-1. Click on the **Hyper-V manager (1)** within the LabVM and right click on **SEA-SVR1 (2)** VM and select **Turn off (3)**.
+1. Open the **Hyper-V manager (1)** within the HostVM and right click on **SEA-SVR1 (2)** VM and select **Turn off (3)**.
 
    ![](../Media/azm4-19.png)
 
-1. Right click on **Start (1)** and select **Windows Powershell(Admin) (2)** from the LabVM.
+1. Right click on **Start (1)** and select **Windows Powershell(Admin) (2)** from the HostVM.
 
    ![](../Media/azm4-20.png)
 
@@ -236,7 +236,7 @@ In this task, you will be testing the failover process by performing a failover 
 
     ![](../Media/azm4-22.png)
 
-1. Click on the **Hyper-V manager (1)** and right click on **SEA-SVR1 (2)** VM and select **Start (3)** 
+1. From the **Hyper-V manager (1)** and right click on **SEA-SVR1 (2)** VM and select **Start (3)** 
 
    ![](../Media/azm4-23.png)
 
@@ -244,13 +244,15 @@ In this task, you will be testing the failover process by performing a failover 
 
    ![](../Media/azm4-24.png)
 
-1. To start the newly designated primary VM on **SEA-SVR1**, Switch to **SEA-SVR2**(`Click on the shortcut available with the taskbar`).
+1. To start the newly designated primary VM on **SEA-SVR1**, switch to **SEA-SVR2** by clicking on **SEA-SVR2** from the top menu drop down. .
 
-   ![](../Media/azm4-25.png)
+   ![](../media/azm2-1.png)
+
+    > **Note:** If prompted, sign in as **CONTOSO\Administrator** with the password **Pa55w.rd**
 
 1. In the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
 
-   >**Note:** It will through an error, because the connection is interrupted. After running this command please run the next command to start the connection again.
+   >**Note:** It will through an error, because the connection is interrupted. After running this command, please run the next command to start the connection again.
 
    ```powershell
    Enter-PSSession -ComputerName SEA-SVR1.contoso.com
@@ -258,7 +260,7 @@ In this task, you will be testing the failover process by performing a failover 
 
     ![](../Media/azm4-26.png)   
 
-1. Enter the below command to start the connection again. This step is required because the connection is interrupted.
+1. Enter the following command to start the connection again. This step is required because the connection is interrupted.
 
    ```powershell
    Start-VM -VMName SEA-CORE1 -ComputerName SEA-SVR1.contoso.com
@@ -266,7 +268,7 @@ In this task, you will be testing the failover process by performing a failover 
 
     ![](../Media/azm4-27.png)   
 
-1. Run the below commnad again now.   
+1. Run the below command again now.   
 
    ```powershell
    Enter-PSSession -ComputerName SEA-SVR1.contoso.com
@@ -284,7 +286,7 @@ In this task, you will be testing the failover process by performing a failover 
 
      > **Note**: In the result table, verify that **State** is listed as **Running**.
 
-1. To identify status of replication of the virtual machine **SEA-CORE1** from **SEA-SVR1** to **SEA-SVR2**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
+1. To identify the status of replication of the virtual machine **SEA-CORE1** from **SEA-SVR1** to **SEA-SVR2**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
 
    ```powershell
    Get-VMReplication
@@ -292,9 +294,9 @@ In this task, you will be testing the failover process by performing a failover 
 
     ![](../Media/azm4-31.png)     
 
-     > **Note**: In the output of the command, identify the **State** value and verify it is listed as **Replicating**. In addition, ensure that **Primary server** is listed as **SEA-SVR1** and **ReplicaServer** is listed as **SEA-SVR2**.
+     > **Note**: In the output of the command, identify the **State** value and verify it is listed as **Replicating**. In addition, ensure that **Primary server** is listed as **SEA-SVR1** and the **ReplicaServer** is listed as **SEA-SVR2**.
 
-1. To stop the replicating VM on the primary server, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
+1. To stop the replicating VM on the primary server, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and type **Y** and press Enter:
 
    ```powershell
    Stop-VM -VMName SEA-CORE1
@@ -306,7 +308,7 @@ In this task, you will be testing the failover process by performing a failover 
 
 In this exercise, you will be configuring and using Windows Server Backup to protect critical data on SEA-SVR1 by performing backups and restores to a network share.
 
-### Task1: Configure Windows Server Backup settings
+### Task 1: Configure Windows Server Backup settings
 
 In this task, you will be installing and configuring the Windows Server Backup role on SEA-SVR1 to enable backup functionality and check the backup configuration.
 
@@ -365,7 +367,7 @@ In this task, you will be installing and configuring the Windows Server Backup r
 
 In this task, you will be backing up files from SEA-SVR1 to a network share located on SEA-SVR2 using Windows Server Backup and verifying the backup's success.
 
-1. To create the folder and files to be backed up on **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShellRemoting session to **SEA-SVR1**, enter the following commands, and after entering each command, press Enter:
+1. To create the folder and files to be backed up on **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShellRemoting session to **SEA-SVR1**, execute the following commands one by one:
 
    ```powershell
    New-Item -ItemType Directory -Path 'C:\Files' -Force
@@ -377,7 +379,7 @@ In this task, you will be backing up files from SEA-SVR1 to a network share loca
 
     ![](../Media/azm4-41.png)    
 
-1. To define variables for backup policy and the file path to back up by using Windows Server Backup, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following commands, and after entering each command, press Enter:
+1. To define variables for backup policy and the file path to back up by using Windows Server Backup, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, execute the following commands one by one:
 
    ```powershell
    $policy = New-WBPolicy
@@ -392,7 +394,7 @@ In this task, you will be backing up files from SEA-SVR1 to a network share loca
    Add-WBFileSpec -Policy $policy -FileSpec $fileSpec
    ```
 
-1. To configure a backup location on **SEA-SVR2** using the network share you created in the previous task, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following commands **(1)**, and after entering each command, press Enter (when prompted to sign in, enter the **CONTOSO\\Administrator (2)** username and **Pa55w.rd (3)** password) and then click on **OK (4)**.
+1. To configure a backup location on **SEA-SVR2** using the network share you created in the previous task, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, execute the following commands **(1)** one by one, press Enter (when prompted to sign in, enter the **CONTOSO\\Administrator (2)** username and **Pa55w.rd (3)** password) and then click on **OK (4)**.
 
    ```powershell
    $cred = Get-Credential
