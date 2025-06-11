@@ -73,7 +73,7 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 In this task, you will run the HVCI and Windows Defender Credential Guard hardware readiness tool to evaluate system compatibility and enable Credential Guard on the target system.
 
 1. On **SEA-SVR2**, select **Start**, right-click or access the **context** menu for **Windows PowerShell**, and then select **Run as administrator**.
-1. To run the HVCI and Windows Defender Credential Guard hardware readiness tool, at the Windows PowerShell command prompt, enter the following commands, enter **R** Run once at the first prompt, and then press Enter for the rest of the prompts:
+1. To run the HVCI and Windows Defender Credential Guard hardware readiness tool, at the Windows PowerShell command prompt, enter the following commands, enter **R** Run once at the first prompt, and then press Enter.
 
    ```powershell
    Set-Location -Path C:\Labfiles\Lab01\
@@ -257,6 +257,8 @@ In this task, you will verify that LAPS is correctly implemented by retrieving a
 
 1. Review the **Password** and the **Password expires** values, and then select **Exit**.
 
+   ![](../Media/az801img12.png)
+
 1. Switch to the **Windows PowerShell** console and then, to verify the value of the password, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
    ```powershell
@@ -264,6 +266,8 @@ In this task, you will verify that LAPS is correctly implemented by retrieving a
    ```
 
 1. Review the password assigned to SEA-SVR1 and note that it matches the one displayed in the **LAPS UI** tool.
+
+   ![](../Media/az801img11.png)
 
    > **Note:** The value of the password is, in this case, enclosed in a pair of braces.
 
