@@ -416,7 +416,7 @@ In this task, you will configure update management for the onboarded Windows Ser
 
    ![](../Media/p31.png) 
 
-   >**Note:** The missing updates will appear in a few minutes. You can revisit the Azure Arc machine periodically and you should see the updates reflected shortly after.
+   >**Note:** The missing updates will appear in a few minutes. You can revisit the Azure Arc machine periodically, and you should see the updates reflected shortly after.
 
 ### Task 5: Verify Azure Policy compliance, change tracking, Inventory, Insights monitoring, and Azure Updates
 
