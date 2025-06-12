@@ -435,17 +435,17 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
 
 1. On the top menu, next to **Settings**, select the drop-down arrow, and then select **Server Manager**.
 
-   ![](../Media/lab6y23.png)
+    ![](../Media/lab6y23.png)
 
 1. In the **All connections** pane, select the **sea-svr2.contoso.com** link.
 
-1.  On the **sea-svr2.contoso.com** page, on the **Tools** menu, select the **Storage Migration Service (1)** entry.
+1. On the **sea-svr2.contoso.com** page, on the **Tools** menu, select the **Storage Migration Service (1)** entry.
 
-   ![](../Media/lab6y24.png)
+     ![](../Media/lab6y24.png)
 
 1. In the **Storage Migration Service** pane, select **Install (2)**.
 
-   >**Note:** This will automatically install the Storage Migration Service and its required components.
+    >**Note:** This will automatically install the Storage Migration Service and its required components.
 
 1. In the **Migrate storage in three steps** pane, select **Close**.
 
