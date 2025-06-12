@@ -109,6 +109,12 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
    >**Note**: Please wait for the deployment to complete before you go ahead with the next task. This might take about 15 minutes. 
 
+  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+   <validation step="6f46a686-d299-4587-88f2-d9c0a9c4fd9f" />
+
 ### Task 2: Deploy Azure Bastion 
 
 In this task, you will add an AzureBastionSubnet to the virtual network. Then, you will deploy Azure Bastion to securely connect to VMs without using public IP addresses.
