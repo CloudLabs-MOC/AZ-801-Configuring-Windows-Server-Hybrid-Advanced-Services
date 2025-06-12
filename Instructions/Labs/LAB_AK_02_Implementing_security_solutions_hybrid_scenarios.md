@@ -35,7 +35,7 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
 
     ![](../media/azm2-3.png)
 
-1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+1. On the **Sign in to Microsoft Azure** blade, you will see a login screen, in which you enter the following email/username and then click on **Next**. 
    
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
@@ -106,11 +106,11 @@ In this task, you will configure enhanced security settings for Microsoft Defend
 
    ![](../Media/p6.png) 
 
-   >**Note:**  You may encounter notifications about auto-provisioning update failures. You can safely ignore these notifications as you will only use the Servers plan in this lab. Note that you can selectively disable individual Microsoft Defender plans listed on the same page.
+   >**Note:**  You may encounter notifications about auto-provisioning update failures. You can safely ignore these notifications, as you will only use the Servers plan in this lab. Note that you can selectively disable individual Microsoft Defender plans listed on the same page.
 
 1. Set all of the plans to **Off (2)** except for the **Servers (1)** and select **Save (3)**. 
 
-    >**Note:**  When presented with the **Resource types selection** for the Databases plan, toggle each entry to **Off** and then select **Continue**. For the purpose of this lab, you can safely ignore any notications about individual database resources failing to save.
+    >**Note:**  When presented with the **Resource types selection** for the Databases plan, toggle each entry to **Off** and then select **Continue**. For this lab, you can safely ignore any notifications about individual database resources failing to save.
 
     ![](../Media/p7.png) 
 
@@ -164,9 +164,9 @@ In this task, you will configure enhanced security settings for Microsoft Defend
 
    ![](../Media/p13.png) 
 
-   >**Note:**  To enable all Defender for Cloud features including threat protection capabilities, you must enable enhanced security features on the subscription containing the applicable workloads. Enabling it at the workspace level doesn't enable just-in-time VM access, adaptive application controls, and network detections for Azure resources. In addition, the only Microsoft Defender plans available at the workspace level are Microsoft Defender for servers and Microsoft Defender for SQL servers on machines.
+   >**Note:**  To enable all Defender for Cloud features, including threat protection capabilities, you must enable enhanced security features on the subscription containing the applicable workloads. Enabling it at the workspace level doesn't enable just-in-time VM access, adaptive application controls, and network detections for Azure resources. In addition, the only Microsoft Defender plans available at the workspace level are Microsoft Defender for servers and Microsoft Defender for SQL servers on machines.
 
-1. On the **Settings \| Defender plans** page, in the vertical menu on the left side, in the **Settings** section, select **Data collection (1)** then select **All Events (2)**, and then select **Save (3)**.
+1. On the **Settings \| Defender plans** page, in the vertical menu on the left side, in the **Settings** section, select **Data collection (1)**, then select **All Events (2)**, and then select **Save (3)**.
 
    ![](../Media/p14.png) 
 
@@ -200,7 +200,7 @@ In this task, you will deploy an Azure virtual machine using an ARM template, sp
 
    ![](../Media/azm2-18.png) 
 
-1. On the **Custom deployment** page, specify the following settings, and leave the other settings with their default values and then click on **Review + create (4)**.
+1. On the **Custom deployment** page, specify the following settings, and leave the other settings with their default values, and then click on **Review + create (4)**.
 
    |Setting|Value|
    |---|---|
@@ -338,7 +338,7 @@ In this task, you will enable change tracking and inventory monitoring to ensure
 
    ![](../Media/p22.png) 
 
-1. Wait for the deployment of the Change Tracking feature to complete. This may take up to 5 minutes so proceed to the next steps.
+1. Wait for the deployment of the Change Tracking feature to complete. This may take up to 5 minutes, so proceed to the next steps.
 
 ### Task 3: Enable Monitoring using Insights
 
@@ -363,7 +363,7 @@ In this task, you will configure Azure Monitor Insights to collect performance a
    - Data collection rule name: Enter **Arc (1)**
    - Under **Processes and dependencies**, select **Enable processes and dependencies (map) (2)**
    -  Leave the name of the Azure subscription **(3)** you are using in this lab
-   - From the **Log Analytics workspaces (4)** drop-down menu, select the Log analytic workspace that you created earlier.
+   - From the **Log Analytics workspaces (4)** drop-down menu, select the Log Analytics workspace that you created earlier.
    - Click on **Create(5)**
 
      ![](../Media/p26.png) 
@@ -372,13 +372,13 @@ In this task, you will configure Azure Monitor Insights to collect performance a
 
    ![](../Media/p27.png) 
 
-   >**Note**: This deployment may take some time. Continue with other tasks and you can return to this later.
+   >**Note**: This deployment may take some time. Continue with other tasks, and you can return to this later.
 
 ### Task 4: Enable Monitoring with Windows Updates 
 
 In this task, you will configure update management for the onboarded Windows Server to ensure that it receives necessary security patches and updates.
 
-1. On **SEA-SVR2**, Windows Update is disabled by default. Make sure that on the **SEA-SVR2** server Windows Update is NOT disabled. You must enable it before you proceed to the next step.
+1. On **SEA-SVR2**, Windows Update is disabled by default. Make sure that on the **SEA-SVR2** server, Windows Update is NOT disabled. You must enable it before you proceed to the next step.
 
 1. On the **SEA-SVR2** VM, search for **Services (1)** and select **Services (2)**. 
 
@@ -416,7 +416,7 @@ In this task, you will configure update management for the onboarded Windows Ser
 
    ![](../Media/p31.png) 
 
-   >**Note:** The missing updates will appear in a few minutes. You can revisit the Azure Arc machine periodically and you should see the updates reflected shortly after.
+   >**Note:** The missing updates will appear in a few minutes. You can revisit the Azure Arc machine periodically, and you should see the updates reflected shortly after.
 
 ### Task 5: Verify Azure Policy compliance, change tracking, Inventory, Insights monitoring, and Azure Updates
 
@@ -440,7 +440,7 @@ In this task, you will verify the successful configuration of monitoring, compli
 
    ![](../Media/lab2-t12.png) 
 
-    >**Note**: This might take around 5-10 mins to show up the data.
+    >**Note**: This might take around 5-10 mins to show the data.
 
 ### Review
 
