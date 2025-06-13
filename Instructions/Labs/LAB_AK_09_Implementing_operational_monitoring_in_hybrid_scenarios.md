@@ -101,7 +101,7 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
 
     ![](../Media/azm9-9.png)
 
-1. When prompted, insert the credentials provided by your instructor.
+1. When prompted, provide username as **adminuser** and password as **Pa55w.rd**.
 
    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
 
@@ -130,11 +130,11 @@ In this task, you create a Log Analytics workspace to collect and analyze monito
 
 1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, in the toolbar, search for and select **Log Analytics workspaces (1)**, and then, from the **Log Analytics workspaces (2)** page.
 
-   ![](../Media/azm9-11.png)
+   ![](../Media/E1T3S1.png)
 
 1. Select **+ Create**.
 
-   ![](../Media/azm9-12.png)
+    ![](../Media/E1T3S2.png)
 
 1. On the **Basics** tab of the **Create Log Analytics workspace** page, enter the following settings, select **Review + Create (5)**:
 
@@ -145,13 +145,13 @@ In this task, you create a Log Analytics workspace to collect and analyze monito
    | Name | **workspace<inject key="DeploymentID" enableCopy="false"/> (3)** |
    | Region | **<inject key="Resource group Region" enableCopy="false"/> (4)** |
 
-    ![](../Media/azm9-13.png)   
+    ![](../Media/E1T3S3.png)   
 
      >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
 1. Then select **Create**.
 
-   ![](../Media/azm9-14.png)
+    ![](../Media/E1T3S4.png)
 
 1. Wait for the deployment to complete. Then select **Go to resource**.
 
@@ -173,11 +173,11 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, type **Arc (1)**, then select **Azure Arc (2)**.
 
-    ![](../Media/azm9-15.png)
+    ![](../Media/E2T1S1.png)
 
 1. In the navigation pane under **Azure Arc resources**, select **Machines (1)**. Select **+ Add/Create (2)**, and in the dropdown and then select **Add a machine (3)**.
 
-    ![](../Media/p16.png) 
+    ![](../Media/E2T1S2.png) 
 
 1. Select **Generate script** from the **Add a single server** section. 
 
@@ -192,13 +192,13 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
 
     - Review the SQL Server and Connectivity options. **Uncheck (4)**  Connect SQL Server, accept the remaining default values and select **Next (5)**. 
 
-      ![](../Media/azm9-16.png) 
+      ![](../Media/E2T1S4.png) 
 
 1. In the **Tags** tab, review the default available tags and Select **Next**. 
 
 1. In the **Add a server with Azure Arc** tab, scroll down and select the **Download** button.
 
-    ![](../Media/azm9-17.png) 
+    ![](../Media/E2T1S6.png) 
 
      >**Note**: if your browser blocks the download, allow it in the Microsoft Edge browser; select the ellipsis button (…), and then select **Keep**. 
 
@@ -260,7 +260,7 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
 
 1. Select **Refresh** until the **SEA-SVR2** server name appears and the Status is  **Connected** in the Arc console.
 
-    ![](../Media/azm9-29.png)
+    ![](../Media/E2T1S18.png)
 
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -274,7 +274,7 @@ In this task, you enable monitoring for the Azure Arc–connected server by conf
 
 1. Navigate to Azure Arc from the Azure portal search window, select **SEA-SVR2** Azure Arc machine, and open the **SEA-SVR2** Arc machine.
 
-    ![](../Media/azm9-29.png)
+    ![](../Media/E2T1S18.png)
 
 1. In the navigation pane, under **Monitoring (1)** select **Insights (2)**, and select **Enable (3)**
 
@@ -282,7 +282,7 @@ In this task, you enable monitoring for the Azure Arc–connected server by conf
 .
 1. On the **Monitoring configuration** page, under **Data collection rule**, select **Create New**.
 
-    ![](../Media/azm9-30.png)
+    ![](../Media/E2T2S3.png)
 
 1. In the **Create new rule** page, enter the following settings and then select **Create (4)**:
 
@@ -297,7 +297,7 @@ In this task, you enable monitoring for the Azure Arc–connected server by conf
 
 1. Select **Configure**.
 
-    ![](../Media/azm9-32.png)
+   ![](../Media/E2T2S5.png)
 
      >**Note**:This deployment may take several minutes. Wait until the deployment completes before continuing with the next exercise.
 
@@ -311,19 +311,19 @@ In this task, you enhance monitoring by configuring performance counter data sou
 
 1. In the **Data collection rules** page, select the **MSVM1-Arc** data collection rule you created earlier.
 
-    ![](../Media/azm9-34.png)
+    ![](../Media/E2T3S2.png)
 
 1. Under **Configuration**, select **Data sources (1)** and select **Performance counters (2)**.
 
-    ![](../Media/azm9-35.png)
+    ![](../Media/E2T3S3.png)
 
 1. In the **Add data source** page, in the **Basic** tab, select **all (1)** Performance counters. Change the sample rate for each counter to **10 seconds (2)** and select **Save (3)**.
 
-    ![](../Media/azm9-36.png)
+    ![](../Media/E2T3S4.png)
 
 1. Under **Monitoring (1)**, select **Diagnostic settings (2)** and select **+ Add Diagnostic setting (3)**.
 
-    ![](../Media/azm9-37.png)
+    ![](../Media/E2T3S5.png)
 
 1. On the **Diagnostic setting** page,
         
@@ -334,7 +334,7 @@ In this task, you enhance monitoring by configuring performance counter data sou
     - Select the Log Analytics workspace you created earlier **(5)** 
     - Select **Save (6)** 
 
-      ![](../Media/azm9-38.png)
+      ![](../Media/E2T3S6.png)
 
 1. Close the **Diagnostic settings** window.     
 
@@ -352,19 +352,19 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 
 1. On the **Alerts (1)** page, select **+ Create (2)** and then select **Alert rule (3)**
 
-    ![](../Media/azm9-40.png)
+    ![](../Media/E3T1S1.png)
 
 1. In the **Select a resource** page, in the **Browse** tab, expand **AZ801-L0901-RG (1)** and select the **SEA-SVR2 (2)** Azure Arc machine and then select **Apply (3)**.
 
-    ![](../Media/azm9-41.png)
+    ![](../Media/E3T1S3.png)
 
 1. Select **Next: Condition >**
 
-    ![](../Media/azm9-42.png)
+    ![](../Media/E3T1S4.png)
 
 1. In the **Create an alert rule** page, in the **Select a signal** drop-down, select **Custom log search**.
 
-    ![](../Media/azm9-43.png)
+    ![](../Media/E3T1S5.png)
 
 1. Close the query pop window.
 
@@ -384,7 +384,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
       | render timechart
       ```
 
-      ![](../Media/azm9-45.png)     
+      ![](../Media/E3T1S7.png)     
 
 1. Click on **View result and edit in query logs**.
 
@@ -392,7 +392,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 
 1. Set the query mode to **KQL mode (1)**, select **Run (2)** and view the data in the **Results (3)**.
 
-    ![](../Media/azm9-47.png)
+    ![](../Media/E3T1S9.png)
 
 1. View the data in the **Chart** tabs.
 
@@ -418,7 +418,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
       | Threshold value | **10 (2)** |
       | Frequency of evaluation | **1 minute (3)** |
 
-      ![](../Media/azm9-51.png)        
+      ![](../Media/E3T1S13.png)        
 
 1. In the **Action** tab of the **Create an alert rule** page, in the **select action** section, select **use action groups**.
 
@@ -438,7 +438,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
       | Action group name | **az801l09-ag1 (3)** |
       | Display name | **az801l09-ag1 (4)** |
 
-      ![](../Media/azm9-54.png)      
+    ![](../Media/E3T1S16.png)      
 
 1. In the **Create action group** page, under **Notification type**, select **Email Azure Resource Manager Role (1)**, and then in the **Name** field, type **Admin email (2)**.
 
@@ -448,7 +448,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 
 1. In the **Create action group** page, select **Review + create**.
 
-    ![](../Media/azm9-56.png)
+    ![](../Media/E3T1S18.png)
 
 1. Then **Create**.
 
@@ -463,7 +463,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 1. Leave the default settings, but under **Alert rule details**, type **High CPU alert** for the **alert rule name (1)** and **description (2)**.
 and then select **Review + Create (3)**.
 
-    ![](../Media/azm9-59.png)
+    ![](../Media/E3T1S21.png)
 
 1. Then select **Create**.
 
@@ -525,13 +525,13 @@ In this task, you enable guest-level diagnostics for an Azure VM, review perform
 
 1. Switch to the **Performance counters (1)** tab of the **az801l09-vm0 | Diagnostic settings** page and review the available counters **(2)**.
 
-    ![](../Media/azm9-65.png)
+    ![](../Media/E4T1S5.png)
 
      >**Note**: By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom view** for a more detailed listing.
 
 1. On the **az801l09-vm0 | Diagnostic settings** page, on the **Logs (1)** tab, review the available **event log** collection options **(2)**.
 
-    ![](../Media/azm9-66.png)
+    ![](../Media/E4T1S6.png)
 
      >**Note**: By default, log collection includes critical, error, and warning entries from the Application Log and System log, as well as Audit failure entries from the Security log. You can customize them from the **Logs** tab.
 
@@ -541,7 +541,7 @@ In this task, you enable VM Insights on the Azure VM (az801l09-vm0) by creating 
 
 1. From the **Monitoring** section on the vertical menu on the left side, browse to the **az801l09-vm0 | Insights (1)** page. On the **az801l09-vm0 | Insights** page, select **Enable (2)**.
 
-    ![](../Media/azm9-67.png)
+    ![](../Media/E4T2S1.png)
 
      >**Note**: This setting provides the Azure VM Insights functionality. VM Insights is an Azure Monitor solution that facilitates monitoring performance and health of both Azure VMs and on-premises computers running Windows or Linux.
 
@@ -585,15 +585,15 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
 1. On the **Monitor | Virtual Machines** page, select the **Performance (1)** tab and you should see the **CPU/Memory** utilization and other categories **(2)**.
 
-    ![](../Media/azm9-72.png)
+    ![](../Media/E5T1S3.png)
 
 1. Navigate to the **Monitor | Alerts (1)** page, select **+ Create (2)**, then select **Alert rule (3)**.
 
-    ![](../Media/azm9-73.png)
+    ![](../Media/E3T1S1.png)
 
 1. In the **Select a resource** page, expand the **AZ801-L0901-RG (1)** resource group, select  **az801l09-vm0 (2)**, and click **Apply (3)**.
 
-    ![](../Media/azm9-74.png)
+    ![](../Media/E5T1S5 .png)
 
 1. Select **Next: Condition >**.
 
@@ -610,11 +610,11 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
       | Check every | **1 minute (6)** |
       | Lookback period | **1 minute (7)** |
 
-       ![](../Media/azm9-75.png)      
+        ![](../Media/E5T1S7.png)      
 
 1. On the  **Create an alert rule** page, on the **Actions** tab, select **Use action groups (1)** select the **+ Create action group (2)** button.
 
-    ![](../Media/azm9-77.png)
+    ![](../Media/E5T1S8.png)
 
 1. On the **Basics** tab of the **Create an action group** page, specify the following settings (leave others with their default values), and then select **Next: Notifications > (5)**:
 
@@ -629,11 +629,11 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
 1. On the **Notifications** tab of the **Create an action group** page, in the **Notification type** drop-down list, select **Email Azure Resource Manager Role (1)**. In the **Name** text box, type **admin email notification (2)**, and then select the **Edit details (3)** (pencil) icon. On the **Email Azure Resource Manager Role** select **Contributor (4)**, click **OK (5)**.
 
-    ![](../Media/azm9-79.png)
+    ![](../Media/E5T1S10.png)
 
 1. In the **Create action group** page, select **Review + create**.
 
-    ![](../Media/azm9-80.png)
+    ![](../Media/E5T1S11.png)
 
 1. Then **Create**.
 
@@ -677,7 +677,7 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
       }
       ```
 
-    ![](../Media/azm9-83.png)
+    ![](../Media/E5T1S17.png)
 
      >**Note**: This should increase the CPU utilization above the threshold of the newly created alert rule. This may take a few minutes.
 
