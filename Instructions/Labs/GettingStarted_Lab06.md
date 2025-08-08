@@ -6,7 +6,7 @@ Welcome to your AZ-801: Configuring Windows Server Hybrid Advanced Services work
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-  ![Access Your VM and Lab Guide](../Media/labguide-1.png)
+  ![Access Your VM and Lab Guide](../Media/accessing-lab-env.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,19 +16,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-  ![Explore Lab Resources](../Media/env-1.png)
+  ![Explore Lab Resources](../Media/explore-env.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-  ![Use the Split Window Feature](../Media/spl.png)
+  ![Use the Split Window Feature](../Media/split-feature.png)
  
 ## Managing Your Virtual Machine
  
-1. Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-   ![Manage Your Virtual Machine](../Media/resources.png)
+   ![Manage Your Virtual Machine](../Media/manage-resource.png)
+
+## Track your progress
+
+To track your progress, navigate to the **Progress** tab.
+
+![TRack Progress](../Media/GSS4.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -79,7 +85,40 @@ Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting com
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
+## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
+
+1. At the **"More information required"** prompt, select **Next**.
+
+1. On the **"Keep your account secure"** page, select **Next** twice.
+
+1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
+
+   - Open **Google Play Store** (Android) or **App Store** (iOS).
+   - Search for **Microsoft Authenticator** and tap **Install**.
+   - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
+
+1. A **QR code** will be displayed on your computer screen.
+
+1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
+
+1. After scanning, click **Next** to proceed.
+
+1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
+       
+1. If prompted to stay signed in, you can click "No."
+ 
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+
+## Support Contact
+ 
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+ 
+Learner Support Contacts:
+ 
+- Email Support: labs-support@spektrasystems.com
+- Live Chat Support: https://cloudlabs.ai/labs-support
+
+Click **Next** from the bottom right corner to embark on your Lab journey!
  
    ![Start Your Azure Journey](../Media/sc900-image(3).png)
  

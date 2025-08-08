@@ -41,7 +41,7 @@ In this exercise, you'll prepare the lab environment for performing migrations u
 
 In this task, you deploy an Azure VM using the 301-nested-vms-in-virtual-network QuickStart template, configure necessary network settings, and enable RDP access with a public IP address.
 
-1. On **Lab-VM**, start **Microsoft Edge (1)**, right click on **[301-nested-vms-in-virtual-network Azure QuickStart template](https://github.com/az140mp/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network)**, then **Copy link**, then paste it over the browser **(2)** and select **Deploy to Azure (3)**. (You'll find the button **Deploy to Azure** in the `README.md` file after the list of resources created by the template.) This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** page in the Azure portal.
+1. On **Lab-VM**, start **Microsoft Edge (1)**, right click on the link **[301-nested-vms-in-virtual-network Azure QuickStart template](https://github.com/az140mp/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network)**, then **Copy link**, then paste it over the browser **(2)** and select **Deploy to Azure (3)**. (You'll find the button **Deploy to Azure** in the `README.md` file after the list of resources created by the template.) This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** page in the Azure portal.
 
    ![](../Media/azm7-1.png)
    
@@ -81,11 +81,11 @@ In this task, you deploy an Azure VM using the 301-nested-vms-in-virtual-network
 
    ![](../media/azm7-3.png)
 
-1. On virtual machine blade from the list select **az801l07a-hv-vm**.
+1. On the **Compute infrastructure | Virtual machines** blade from the list select **az801l07a-hv-vm**.
 
    ![](../media/azm7-4.png)
 
-1. On **az801l07a-hv-vm** page, under **Networking** section select **Network settings (1)** and click on **+ create port rule (2)** and from drop down and select **inbound port rule (3)**.
+1. On **az801l07a-hv-vm** page, under **Networking** section select **Network settings (1)** and click on **+ create port rule (2)** and from drop down and select **Inbound port rule (3)**.
 
    ![](../media/az801lab7img5.png)
 
@@ -118,7 +118,7 @@ In this task, you deploy an Azure VM using the 301-nested-vms-in-virtual-network
 
 1. From the **Overview (1)** page, select **Associate (2)** and select **Network interface (3)** for Resource type dropdown and select **az801l07a-hv-vm-nic1 (4)** from the Network interface dropdown and select **OK (5)**.
    
-    ![](../Media/azm7-10.png)   
+    ![](../Media/E1T1S14-0808.png)   
 
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -130,7 +130,7 @@ In this task, you deploy an Azure VM using the 301-nested-vms-in-virtual-network
 
 In this task, you deploy a nested VM within an Azure VM by setting up a virtual machine inside the az801l07a-hv-vm Hyper-V host, downloading a Windows Server 2025 VHD, configuring the new VM, and starting it up within the Hyper-V Manager.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, select **az801l07a-hv-vm**.
+1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Compute infrastructure | Virtual machines** page, select **az801l07a-hv-vm**.
 
     ![](../Media/azm7-11.png)
 
@@ -140,7 +140,7 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
 1. Click on **Download RDP file** under Native RDP. 
 
-    ![](../Media/azm7-13.png)
+    ![](../Media/E1T2S3-0808.png)
 
 1. Click on **Keep**.
 
@@ -195,7 +195,7 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
     ![](../media/azm7-25.png)
 
-1. Within the Remote Desktop session to **az801l07a-hv-vm**, start **Microsoft Edge (1)**, 
+1. Within the Remote Desktop session to **az801l07a-hv-vm**, open the **Microsoft Edge (1)**, 
         
     - On the Welcome to Microsoft Edge page, select **Start without your data (2)**
    
@@ -276,7 +276,7 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
     ![](../media/azm7-39.png)
 
-1. In the **Hyper-V Manager** console, select the **az801l07a-hv-vm (1)** node. From the right navigation pane, under **Actions** select **New (2)** and then, in the cascading menu, select **Virtual Machine (3)**. This will start the **New Virtual Machine Wizard**. 
+1. In the **Hyper-V Manager** console, select the **AZ801L07a-HV-VM (1)** node. From the right navigation pane, under **Actions** select **New (2)** and then, in the cascading menu, select **Virtual Machine (3)**. This will start the **New Virtual Machine Wizard**. 
 
     ![](../media/azm7-41.png)
 
@@ -305,8 +305,6 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 1. On the **Configure Networking** page of the **New Virtual Machine Wizard**, in the **Connection** drop-down list, select **NestedSwitch (1)**, and then select **Next > (2)**.
 
     ![](../media/azm7-46.png)
-
-1. Before proceeding to the next page, navigate to the File explorer.    
 
 1. On the **Connect Virtual Hard Disk** page of the **New Virtual Machine Wizard**, select the option **Use an existing virtual hard disk (1)**, click on **Browse (2)**, navigate to **F:\VHDs** folder then select downloaded **VHD** file. After set the location **(3)**, then select **Next > (4)**.
 
@@ -442,7 +440,7 @@ In this task, you create an Azure Migrate project by logging into the Azure port
 
 1. Then, on the **Azure Migrate \| Get Started** page, under **Migration goals (1)** section, select **Servers, databases, and web apps (2)**. select **Create Project (3)**. 
  
-    ![](../media/azm7-66.png)
+    ![](../media/E2T2S3-0808.png)
   
 1. On the **Create Project** page, specify the following settings (leave others with their default values) and select **Create (4)**:
 
