@@ -6,7 +6,7 @@ Welcome to your AZ-801: Configuring Windows Server Hybrid Advanced Services work
  
 Once you're ready to dive in, your virtual machine and lab guide will be available in your web browser.
  
-  ![Access Your VM and Lab Guide](../Media/GSS1.png)
+  ![Access Your VM and Lab Guide](../Media/nf_g_1_1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,19 +16,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To better understand your lab resources and credentials, navigate to the **Environment** tab.
  
-  ![Explore Lab Resources](../Media/GSS2.png)
+  ![Explore Lab Resources](../Media/nf_g_1_2.png)
  
 ## Track your progress
 
 To track your progress, navigate to the **Progress** tab.
 
-![TRack Progress](../Media/GSS4.png)
+![TRack Progress](../Media/nf_g_1_3.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![Use the Split Window Feature](../Media/GSS3.png)
+   ![Use the Split Window Feature](../Media/nf_g_1_4.png)
  
 ## Managing Your Virtual Machine
  
@@ -38,7 +38,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 2. To initiate the required VMs, use the dropdown menu located at the top of the lab environment
 
-      ![](../Media/GSS6.png)
+      ![](../Media/nf_g_1_6.png)
  
 3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
 
@@ -50,9 +50,9 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Lab Guide Zoom In/Zoom Out
  
-1. To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
+1. To adjust the zoom level for the environment page, click the **A↕** icon **(1)** next to the timer, and then select the desired zoom percentage **(2)** from the list.
 
-   ![](../Media/zoom.png)
+   ![](../Media/nf_g_1_7.png)
  
 ## Lab Duration Extension
 
@@ -76,7 +76,7 @@ Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting com
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
-   ![Launch Azure Portal](../Media/GSS7.png)
+   ![Launch Azure Portal](../Media/nf_g_1_8.png)
 
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
