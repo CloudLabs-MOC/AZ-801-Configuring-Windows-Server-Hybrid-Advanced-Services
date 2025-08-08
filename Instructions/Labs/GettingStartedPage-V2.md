@@ -6,7 +6,7 @@ Welcome to your AZ-801: Configuring Windows Server Hybrid Advanced Services work
  
 Once you're ready to dive in, your virtual machine and lab guide will be available in your web browser.
  
-  ![Access Your VM and Lab Guide](../Media/GSS1.png)
+  ![Access Your VM and Lab Guide](../Media/nf_g_1_1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,19 +16,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To better understand your lab resources and credentials, navigate to the **Environment** tab.
  
-  ![Explore Lab Resources](../Media/GSS2.png)
+  ![Explore Lab Resources](../Media/nf_g_1_2.png)
  
 ## Track your progress
 
 To track your progress, navigate to the **Progress** tab.
 
-![TRack Progress](../Media/GSS4.png)
+![TRack Progress](../Media/nf_g_1_3.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![Use the Split Window Feature](../Media/GSS3.png)
+   ![Use the Split Window Feature](../Media/nf_g_1_4.png)
  
 ## Managing Your Virtual Machine
  
@@ -36,37 +36,37 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
    ![Manage Your Virtual Machine](../Media/GSS5.png)
 
-2. To initiate the required VMs, use the dropdown menu located at the top of the lab environment
+1. To initiate the required VMs, use the dropdown menu located at the top of the lab environment
 
-      ![](../Media/GSS6.png)
+      ![](../Media/nf_g_1_6.png)
  
-3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
+1. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
 
     ![Manage Your Virtual Machine](../Media/login.png)
 
-4. If you face an issue while copying the content from the lab guide and pasting it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
+1. If you face an issue while copying the content from the lab guide and pasting it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
 
     ![Manage Your Virtual Machine](../Media/clipboard.png)  
 
 ## Lab Guide Zoom In/Zoom Out
  
-1. To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
+1. To adjust the zoom level for the environment page, click the **A↕** icon **(1)** next to the timer, and then select the desired zoom percentage **(2)** from the list.
 
-   ![](../Media/zoom.png)
+   ![](../Media/nf_g_1_7.png)
  
 ## Lab Duration Extension
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-    ![Manage Your Virtual Machine](../Media/gext.png)
+    ![Manage Your Virtual Machine](../media/ex1_g_fbre_30.png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
-2. Click **OK** to extend your lab duration.
+1. Click **OK** to extend your lab duration.
  
    ![Manage Your Virtual Machine](../Media/gext2.png)
 
-3. If you have not extended the duration before when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+1. If you have not extended the duration before when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
 
 ## Pasting Commands in the PowerShell/CloudShell Environment
 
@@ -76,16 +76,16 @@ Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting com
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
-   ![Launch Azure Portal](../Media/GSS7.png)
+   ![Launch Azure Portal](../Media/nf_g_1_8.png)
 
  
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
      ![Enter Your Username](../Media/sc900-image-1.png)
  
-3. Next, provide your password:
+1. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  

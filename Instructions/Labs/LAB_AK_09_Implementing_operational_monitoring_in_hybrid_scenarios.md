@@ -23,11 +23,11 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
 
 1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
 
-    ![](../media/azm2-1.png)
+    ![](../media/ex1_g_fbre_1.png)
 
-1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+1. If needed, sign in as **CONTOSO\\Administrator** by entering the password **Pa55w.rd** **(1)** and clicking the arrow button **(2)**.
 
-    ![](../media/azm2-2.png)
+    ![](../media/ex1_g_fbre_2.png)
 
 1. On **SEA-SVR2**, click on **Azure Portal** shortcut to go to the Azure portal, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 
@@ -45,19 +45,19 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
 
 1. On **SEA-SVR2/LabVM**, in the Microsoft Edge window displaying the Azure portal, open the Azure Cloud Shell pane by selecting the Cloud Shell button in the Azure portal.
 
-   ![](../Media/801-18.png)
+    ![](../media/ex1_g_fbre_3.png)
 
 1. Selecting a ***PowerShell*** environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
-   ![](../Media/azm9-1.png)
+    ![](../media/ex1_g_fbre_4.png)
 
 1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
-   ![](../Media/azm9-2.png)
+    ![](../media/ex1_g_fbre_5.png)
 
 1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
-   ![](../Media/azm9-3.png)
+    ![](../media/ex1_g_fbre_6.png)
 
 1. If you are prompted to create storage for your Cloud Shell, enter the following deatils and then click on **Create (6)**
 
@@ -67,7 +67,7 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
    - Storage account name: Enter **blob<inject key="DeploymentID" enableCopy="false"/> (4)**
    - File share name: Enter **fs<inject key="DeploymentID" enableCopy="false"/> (5)**
 
-     ![](../Media/azm9-4.png)   
+        ![](../media/ex1_g_fbre_7.png)  
 
 1. Wait for PowerShell terminal to start.
 
@@ -145,17 +145,17 @@ In this task, you create a Log Analytics workspace to collect and analyze monito
    | Name | **workspace<inject key="DeploymentID" enableCopy="false"/> (3)** |
    | Region | **<inject key="Resource group Region" enableCopy="false"/> (4)** |
 
-    ![](../Media/E1T3S3.png)   
+    ![](../media/ex1_g_fbre_8.png)
 
      >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
 1. Then select **Create**.
 
-    ![](../Media/E1T3S4.png)
+    ![](../media/ex1_g_fbre_9.png)
 
 1. Wait for the deployment to complete. Then select **Go to resource**.
 
-      ![](../Media/801-22.png)
+    ![](../media/ex1_g_fbre_10.png)
 
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -173,7 +173,7 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, type **Arc (1)**, then select **Azure Arc (2)**.
 
-    ![](../Media/E2T1S1.png)
+    ![](../media/ex1_g_fbre_11.png)
 
 1. In the navigation pane under **Azure Arc resources**, select **Machines (1)**. Select **+ Add/Create (2)**, and in the dropdown and then select **Add a machine (3)**.
 
@@ -181,7 +181,7 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
 
 1. Select **Generate script** from the **Add a single server** section. 
 
-    ![](../Media/p17.png) 
+    ![](../media/ex1_g_fbre_12.png)
 
 1. In the **Add a server with Azure Arc** page, under **Project details**, 
     -
@@ -278,7 +278,7 @@ In this task, you enable monitoring for the Azure Arc–connected server by conf
 
 1. In the navigation pane, under **Monitoring (1)** select **Insights (2)**, and select **Enable (3)**
 
-    ![](../Media/lab9y3.png) 
+    ![](../media/ex1_g_fbre_13.png)
 .
 1. On the **Monitoring configuration** page, under **Data collection rule**, select **Create New**.
 
@@ -297,7 +297,7 @@ In this task, you enable monitoring for the Azure Arc–connected server by conf
 
 1. Select **Configure**.
 
-   ![](../Media/E2T2S5.png)
+    ![](../media/ex1_g_fbre_14.png)
 
      >**Note**:This deployment may take several minutes. Wait until the deployment completes before continuing with the next exercise.
 
@@ -319,7 +319,7 @@ In this task, you enhance monitoring by configuring performance counter data sou
 
 1. In the **Add data source** page, in the **Basic** tab, select **all (1)** Performance counters. Change the sample rate for each counter to **10 seconds (2)** and select **Save (3)**.
 
-    ![](../Media/E2T3S4.png)
+    ![](../media/ex1_g_fbre_15.png)
 
 1. Under **Monitoring (1)**, select **Diagnostic settings (2)** and select **+ Add Diagnostic setting (3)**.
 
@@ -356,11 +356,11 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 
 1. In the **Select a resource** page, in the **Browse** tab, expand **AZ801-L0901-RG (1)** and select the **SEA-SVR2 (2)** Azure Arc machine and then select **Apply (3)**.
 
-    ![](../Media/E3T1S3.png)
+    ![](../media/ex1_g_fbre_16.png)
 
 1. Select **Next: Condition >**
 
-    ![](../Media/E3T1S4.png)
+    ![](../media/ex1_g_fbre_17.png)
 
 1. In the **Create an alert rule** page, in the **Select a signal** drop-down, select **Custom log search**.
 
@@ -396,7 +396,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 
 1. View the data in the **Chart** tabs.
 
-    ![](../Media/azm9-48.png)
+    ![](../media/ex1_g_fbre_20.png)
 
 1. Scroll down and select **Continue Editing Alert**.
 
@@ -408,7 +408,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
       | --- | --- |
       | **Aggregation granularity** | 1 minute |
 
-      ![](../Media/azm9-50.png)      
+      ![](../media/ex1_g_fbre_21.png)   
 
 1. Under **Alert logic**, enter the following settings and then select **Next: Actions > (4)**.
 
@@ -418,7 +418,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
       | Threshold value | **10 (2)** |
       | Frequency of evaluation | **1 minute (3)** |
 
-      ![](../Media/E3T1S13.png)        
+    ![](../media/ex1_g_fbre_22.png)      
 
 1. In the **Action** tab of the **Create an alert rule** page, in the **select action** section, select **use action groups**.
 
@@ -593,7 +593,7 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
 1. In the **Select a resource** page, expand the **AZ801-L0901-RG (1)** resource group, select  **az801l09-vm0 (2)**, and click **Apply (3)**.
 
-    ![](../Media/E5T1S5 .png)
+    ![](../Media/E5T1S5.png)
 
 1. Select **Next: Condition >**.
 
