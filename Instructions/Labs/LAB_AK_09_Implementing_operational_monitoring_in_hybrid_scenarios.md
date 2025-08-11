@@ -130,9 +130,9 @@ In this task, you create a Log Analytics workspace to collect and analyze monito
 
 1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, in the toolbar, search for and select **Log Analytics workspaces (1)**, and then, from the **Log Analytics workspaces (2)** page.
 
-   ![](../Media/E1T3S1.png)
+   ![](../media/cor_g_ez_10.png)
 
-1. Select **+ Create**.
+1. On the **Log Analytics workspaces** page, click **+ Create** to start creating a new Log Analytics workspace.
 
     ![](../Media/E1T3S2.png)
 
@@ -149,7 +149,7 @@ In this task, you create a Log Analytics workspace to collect and analyze monito
 
      >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-1. Then select **Create**.
+1. On the **Review + Create** tab, verify the configuration details, then click **Create** to create the Log Analytics workspace.
 
     ![](../media/ex1_g_fbre_9.png)
 
@@ -192,13 +192,13 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
 
     - Review the SQL Server and Connectivity options. **Uncheck (4)**  Connect SQL Server, accept the remaining default values and select **Next (5)**. 
 
-      ![](../Media/E2T1S4.png) 
+      ![](../media/cor_g_ez_1.png) 
 
 1. In the **Tags** tab, review the default available tags and Select **Next**. 
 
 1. In the **Add a server with Azure Arc** tab, scroll down and select the **Download** button.
 
-    ![](../Media/E2T1S6.png) 
+    ![](../media/cor_g_ez_11.png) 
 
      >**Note**: if your browser blocks the download, allow it in the Microsoft Edge browser; select the ellipsis button (…), and then select **Keep**. 
 
