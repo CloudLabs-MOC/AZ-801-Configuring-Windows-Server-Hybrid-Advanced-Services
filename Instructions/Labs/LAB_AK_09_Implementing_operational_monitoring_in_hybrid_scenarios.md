@@ -33,7 +33,7 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
 
     ![](../media/azm2-3.png)
 
-1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+1. On the **Sign in to Microsoft Azure** blade, you will see a login screen, in which you enter the following email/username and then click on **Next**. 
    
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
@@ -41,7 +41,7 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
    
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-     >**Note**: If prompted for MFA, please refer to the steps provided on the Getting Started page.
+     >**Note:** If prompted for MFA, please refer to the steps provided on the Getting Started page.
 
 1. On **SEA-SVR2/LabVM**, in the Microsoft Edge window displaying the Azure portal, open the Azure Cloud Shell pane by selecting the Cloud Shell button in the Azure portal.
 
@@ -59,7 +59,7 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
 
     ![](../media/ex1_g_fbre_6.png)
 
-1. If you are prompted to create storage for your Cloud Shell, enter the following deatils and then click on **Create (6)**
+1. If you are prompted to create storage for your Cloud Shell, enter the following details and then click on **Create (6)**
 
    - Subscription: Ensure your subscription is selected **(1)** 
    - Resource group: Please make sure you have selected your resource group **az-801 (2)**
@@ -69,7 +69,7 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
 
         ![](../media/ex1_g_fbre_7.png)  
 
-1. Wait for PowerShell terminal to start.
+1. Wait for the PowerShell terminal to start.
 
 1. In the toolbar of the Cloud Shell pane, select the **Manage files (1)** icon, in the drop-down menu select **Upload (2)**.
 
@@ -103,11 +103,11 @@ In this task, you deploy an Azure VM using a pre-defined ARM template through th
 
 1. When prompted, provide username as **adminuser** and password as **Pa55w.rd**.
 
-   >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
+   >**Note:** Do not wait for the deployment to complete, but instead proceed to the next task. The deployment should take about 3 minutes.
 
 ### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 
-In this task, you enable essential monitoring capabilities by registering the Microsoft.Insights and Microsoft.AlertsManagement resource providers, which are required for Azure Monitor and alerting functionalities.
+In this task, you enable essential monitoring capabilities by registering the Microsoft.Insights and Microsoft.AlertsManagement resource providers are required for Azure Monitor and alerting functionalities.
 
 1. To register the Microsoft.Insights and Microsoft.AlertsManagement resource providers, on **SEA-SVR2**, from the Cloud Shell pane, enter the following commands, and after entering each command, press Enter.
 
@@ -118,7 +118,7 @@ In this task, you enable essential monitoring capabilities by registering the Mi
 
     ![](../Media/azm9-10.png)   
 
-     >**Note**: To verify the registration status, you can use the **Get-AzResourceProvider** cmdlet.
+     >**Note:** To verify the registration status, you can use the **Get-AzResourceProvider** cmdlet.
 
 1. Close Cloud Shell.
 
@@ -147,7 +147,7 @@ In this task, you create a Log Analytics workspace to collect and analyze monito
 
     ![](../media/ex1_g_fbre_8.png)
 
-     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
+     >**Note:** Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
 1. On the **Review + Create** tab, verify the configuration details, then click **Create** to create the Log Analytics workspace.
 
@@ -190,7 +190,7 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
 
     - Region: Select the **<inject key="Resource group Region" enableCopy="false"/> (3)** region into which you deployed the virtual machine in the previous task.
 
-    - Review the SQL Server and Connectivity options. **Uncheck (4)**  Connect SQL Server, accept the remaining default values and select **Next (5)**. 
+    - Review the SQL Server and Connectivity options. **Uncheck (4)**  Connect SQL Server, accept the remaining default values, and select **Next (5)**. 
 
       ![](../media/cor_g_ez_1.png) 
 
@@ -200,7 +200,7 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
 
     ![](../media/cor_g_ez_11.png) 
 
-     >**Note**: if your browser blocks the download, allow it in the Microsoft Edge browser; select the ellipsis button (…), and then select **Keep**. 
+     >**Note:** if your browser blocks the download, allow it in the Microsoft Edge browser; select the ellipsis button (…), and then select **Keep**. 
 
       ![](../Media/azm9-18.png)
 
@@ -299,7 +299,7 @@ In this task, you enable monitoring for the Azure Arc–connected server by conf
 
     ![](../media/ex1_g_fbre_14.png)
 
-     >**Note**:This deployment may take several minutes. Wait until the deployment completes before continuing with the next exercise.
+     >**Note:** This deployment may take several minutes. Wait until the deployment completes before continuing with the next exercise.
 
 ### Task 3: Enable monitoring and diagnostic settings
 
@@ -366,7 +366,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 
     ![](../Media/E3T1S5.png)
 
-1. Close the query pop window.
+1. Close the query pop-up window.
 
     ![](../Media/azm9-44.png)
 
@@ -454,7 +454,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 
     ![](../Media/azm9-57.png)
 
-      >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
+      >**Note:** It can take up to 10 minutes for a metric alert rule to become active.
 
 1. In the **Create alert rule** page, select **Next: Details >**.
 
@@ -491,7 +491,7 @@ and then select **Review + Create (3)**.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open another tab, browse to the **Monitor** page, and then select **Alerts**.
 
-   >**Note**: Alerts may take a while to appear on the portal. Please continue with next exercises.
+   >**Note:** Alerts may take a while to appear on the portal. Please continue with next exercises.
 
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -521,19 +521,19 @@ In this task, you enable guest-level diagnostics for an Azure VM, review perform
 
     ![](../Media/azm9-64.png)
 
-     >**Note**: Wait for the operation to take effect. This might take about 3 minutes.
+     >**Note:** Wait for the operation to take effect. This might take about 3 minutes.
 
 1. Switch to the **Performance counters (1)** tab of the **az801l09-vm0 | Diagnostic settings** page and review the available counters **(2)**.
 
     ![](../Media/E4T1S5.png)
 
-     >**Note**: By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom view** for a more detailed listing.
+     >**Note:** By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom view** for a more detailed listing.
 
 1. On the **az801l09-vm0 | Diagnostic settings** page, on the **Logs (1)** tab, review the available **event log** collection options **(2)**.
 
     ![](../Media/E4T1S6.png)
 
-     >**Note**: By default, log collection includes critical, error, and warning entries from the Application Log and System log, as well as Audit failure entries from the Security log. You can customize them from the **Logs** tab.
+     >**Note:** By default, log collection includes critical, error, and warning entries from the Application Log and System log, as well as Audit failure entries from the Security log. You can customize them from the **Logs** tab.
 
 ### Task 2: Enable VM Insights
 
@@ -543,7 +543,7 @@ In this task, you enable VM Insights on the Azure VM (az801l09-vm0) by creating 
 
     ![](../media/cor_g_ez_7.png)
 
-     >**Note**: This setting provides the Azure VM Insights functionality. VM Insights is an Azure Monitor solution that facilitates monitoring performance and health of both Azure VMs and on-premises computers running Windows or Linux.
+     >**Note:** This setting provides the Azure VM Insights functionality. VM Insights is an Azure Monitor solution that facilitates monitoring the performance and health of both Azure VMs and on-premises computers running Windows or Linux.
 
 1. In the **Monitoring configuration** page, under4 **Data Collection rule**, select **Create New**.
 
@@ -565,7 +565,7 @@ In this task, you enable VM Insights on the Azure VM (az801l09-vm0) by creating 
 
 1. Click on **Configure**.
 
-   >**Note**: This option enables monitoring and alerting capabilities using health model, which consists of a hierarchy of health monitors built using the metrics emitted by Azure Monitor for VMs.This deployment may take some time. Wait for the deployment to complete and return to the process Map before ending the lab. This will allow you to review the process Map data. 
+   >**Note:** This option enables monitoring and alerting capabilities using a health model, which consists of a hierarchy of health monitors built using the metrics emitted by Azure Monitor for VMs.This deployment may take some time. Wait for the deployment to complete and return to the process Map before ending the lab. This will allow you to review the process Map data. 
 
 ## Exercise 5: Evaluating monitoring services
 
@@ -637,7 +637,7 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
 1. Then **Create**.
 
-    >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
+    >**Note:** It can take up to 10 minutes for a metric alert rule to become active.
 
 1. Back on the **Create an alert rule** page, select **Next: Details >**, in the **Alert rule details** section, specify the following settings (leave others with their default values) and then select **Review + Create (6)**:
 
@@ -651,7 +651,7 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
       ![](../Media/azm9-81.png)
 
-      >**Note**: If you don't see the field **Enable upon creation**, expand the **Advanced options** section.
+      >**Note:** If you don't see the field **Enable upon creation**, expand the **Advanced options** section.
 
 1. Then select **Create**.
 
@@ -663,7 +663,7 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
 1. On the **Run Command Script** page, enter the following commands **(1)** and select **Run (2)** to increase the **CPU utilization** within the target operating system.
 
-   >**Note**: Copy the script to Notepad first and then paste it into the script window before executing the script.
+   >**Note:** Copy the script to Notepad first and then paste it into the script window before executing the script.
 
       ```powershell 
       $vCpuCount = Get-WmiObject Win32_Processor | Select-Object -ExpandProperty NumberOfLogicalProcessors
@@ -679,13 +679,13 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
     ![](../Media/E5T1S17.png)
 
-     >**Note**: This should increase the CPU utilization above the threshold of the newly created alert rule. This may take a few minutes.
+     >**Note:** This should increase the CPU utilization above the threshold of the newly created alert rule. This may take a few minutes.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open another tab, browse to the **az801l09-vm0** virtual machine page, and navigate to the **Monitoring | Alerts (1)** page, select the alert named **CPU Percentage above the test threshold (2)**. View the **Sev 3** alerts.
 
     ![](../Media/azm9-84.png)
 
-     >**Note**: You might need to wait for a few minutes and select **Refresh**. If it takes longer, you can simply continue with the lab and return to the **Monitoring | Alerts** page later to view the data.
+     >**Note:** You might need to wait for a few minutes and select **Refresh**. If it takes longer, you can simply continue with the lab and return to the **Monitoring | Alerts** page later to view the data.
 
 1. On the **CPU Percentage above the test threshold** page, review generated alerts. Close the page when you have finished reviewing.
 
@@ -736,13 +736,13 @@ In this task, you are reviewing the Azure Log Analytics functionality and perfor
 
     ![](../Media/azm9-93.png)
 
-   >**Note**: The names of several tables correspond to the solutions you installed earlier in this lab. In particular, **InsightMetrics** is used by Azure VM Insights to store performance metrics.
+   >**Note:** The names of several tables correspond to the solutions you installed earlier in this lab. In particular, **InsightMetrics** is used by Azure VM Insights to store performance metrics.
 
 1. Make sure query mode is set to **KQL mode(1)**, click on **Run** and then review the results **(3)**.
 
     ![](../Media/azm9-92.png)
 
-     >**Note**: You might need to wait a few minutes before the update data becomes available.
+     >**Note:** You might need to wait a few minutes before the updated data becomes available.
 
 ### Review
 In this lab, you have completed:
