@@ -392,7 +392,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 
 1. Set the query mode to **KQL mode (1)**, select **Run (2)** and view the data in the **Results (3)**.
 
-    ![](../Media/E3T1S9.png)
+    ![](../media/cor_g_ez_3.png)
 
 1. View the data in the **Chart** tabs.
 
@@ -438,7 +438,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
       | Action group name | **az801l09-ag1 (3)** |
       | Display name | **az801l09-ag1 (4)** |
 
-    ![](../Media/E3T1S16.png)      
+    ![](../media/cor_g_ez_4.png)      
 
 1. In the **Create action group** page, under **Notification type**, select **Email Azure Resource Manager Role (1)**, and then in the **Name** field, type **Admin email (2)**.
 
@@ -463,7 +463,7 @@ In this task, you create an alert rule based on CPU usage metrics from an Azure 
 1. Leave the default settings, but under **Alert rule details**, type **High CPU alert** for the **alert rule name (1)** and **description (2)**.
 and then select **Review + Create (3)**.
 
-    ![](../Media/E3T1S21.png)
+    ![](../media/cor_g_ez_5.png)
 
 1. Then select **Create**.
 
@@ -509,7 +509,7 @@ In this task, you enable guest-level diagnostics for an Azure VM, review perform
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the Search bar of the Azure portal, search for **Virtual machines (1)** and select **Virtual machines (2)**.
 
-    ![](../Media/azm9-62.png)
+    ![](../media/cor_g_ez_6.png)
 
 1. Select **az801l09-vm0**.
 
@@ -539,9 +539,9 @@ In this task, you enable guest-level diagnostics for an Azure VM, review perform
 
 In this task, you enable VM Insights on the Azure VM (az801l09-vm0) by creating a Data Collection rule, linking it to a Log Analytics workspace, and configuring process and dependency mapping for performance monitoring.
 
-1. From the **Monitoring** section on the vertical menu on the left side, browse to the **az801l09-vm0 | Insights (1)** page. On the **az801l09-vm0 | Insights** page, select **Enable (2)**.
+1. From the **Monitoring(1)** section on the vertical menu on the left side, browse to the **az801l09-vm0 | Insights (2)** page. On the **az801l09-vm0 | Insights** page, select **Enable (3)**.
 
-    ![](../Media/E4T2S1.png)
+    ![](../media/cor_g_ez_7.png)
 
      >**Note**: This setting provides the Azure VM Insights functionality. VM Insights is an Azure Monitor solution that facilitates monitoring performance and health of both Azure VMs and on-premises computers running Windows or Linux.
 
@@ -593,7 +593,7 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
 1. In the **Select a resource** page, expand the **AZ801-L0901-RG (1)** resource group, select  **az801l09-vm0 (2)**, and click **Apply (3)**.
 
-    ![](../Media/E5T1S5.png)
+    ![](../media/cor_g_ez_8.png)
 
 1. Select **Next: Condition >**.
 
@@ -633,7 +633,7 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
 1. In the **Create action group** page, select **Review + create**.
 
-    ![](../Media/E5T1S11.png)
+    ![](../media/cor_g_ez_9.png)
 
 1. Then **Create**.
 
