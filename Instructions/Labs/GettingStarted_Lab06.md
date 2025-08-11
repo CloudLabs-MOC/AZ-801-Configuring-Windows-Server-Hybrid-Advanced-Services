@@ -30,12 +30,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    ![Manage Your Virtual Machine](../Media/manage-resource.png)
 
-## Track your progress
-
-To track your progress, navigate to the **Progress** tab.
-
-![TRack Progress](../Media/GSS4.png)
-
 ## Lab Guide Zoom In/Zoom Out
  
 1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
