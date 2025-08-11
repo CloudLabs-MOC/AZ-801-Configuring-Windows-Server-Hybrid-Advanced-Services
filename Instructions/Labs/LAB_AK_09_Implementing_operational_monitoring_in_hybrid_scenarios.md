@@ -279,7 +279,7 @@ In this task, you enable monitoring for the Azure Arc–connected server by conf
 1. In the navigation pane, under **Monitoring (1)** select **Insights (2)**, and select **Enable (3)**
 
     ![](../media/ex1_g_fbre_13.png)
-.
+   
 1. On the **Monitoring configuration** page, under **Data collection rule**, select **Create New**.
 
     ![](../Media/E2T2S3.png)
@@ -545,7 +545,7 @@ In this task, you enable VM Insights on the Azure VM (az801l09-vm0) by creating 
 
      >**Note:** This setting provides the Azure VM Insights functionality. VM Insights is an Azure Monitor solution that facilitates monitoring the performance and health of both Azure VMs and on-premises computers running Windows or Linux.
 
-1. In the **Monitoring configuration** page, under4 **Data Collection rule**, select **Create New**.
+1. In the **Monitoring configuration** page, under **Data Collection rule**, select **Create New**.
 
     ![](../Media/azm9-68.png)
 
@@ -565,7 +565,7 @@ In this task, you enable VM Insights on the Azure VM (az801l09-vm0) by creating 
 
 1. Click on **Configure**.
 
-   >**Note:** This option enables monitoring and alerting capabilities using a health model, which consists of a hierarchy of health monitors built using the metrics emitted by Azure Monitor for VMs.This deployment may take some time. Wait for the deployment to complete and return to the process Map before ending the lab. This will allow you to review the process Map data. 
+   >**Note:** This option enables monitoring and alerting capabilities using a health model, which consists of a hierarchy of health monitors built using the metrics emitted by Azure Monitor for VMs. This deployment may take some time. Wait for the deployment to complete and return to the process Map before ending the lab. This will allow you to review the process Map data. 
 
 ## Exercise 5: Evaluating monitoring services
 
@@ -575,7 +575,7 @@ In this exercise, you review and configure Azure Monitor functionalities, includ
 
 In this task, you configured an alert rule for high CPU usage on the az801l09-vm0 virtual machine using Azure Monitor.
 
-1. On **SEA-SVR2**, in the Azure portal, serach for **Monitor (1)** and select **Monitor (2)**.
+1. On **SEA-SVR2**, in the Azure portal, search for **Monitor (1)** and select **Monitor (2)**.
 
     ![](../Media/azm9-70.png)
 
