@@ -18,12 +18,6 @@ To better understand your lab resources and credentials, navigate to the **Envir
  
   ![Explore Lab Resources](../Media/nf_g_1_2.png)
  
-## Track your progress
-
-To track your progress, navigate to the **Progress** tab.
-
-![TRack Progress](../Media/nf_g_1_3.png)
-
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
