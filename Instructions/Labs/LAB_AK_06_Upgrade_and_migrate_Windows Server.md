@@ -51,14 +51,14 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
    > **Note**: To review the script, you can use the following steps:
 
-	1. On **SEA-SVR2**, open another tab in the Microsoft Edge window, and again access the customized version of QuickStart 
+	- On **SEA-SVR2**, open another tab in the Microsoft Edge window, and again access the customized version of QuickStart 
         template at **[Create a new Windows VM and create a new AD Forest, Domain and DC](https://github.com/az140mp/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain)**.
 
-	1. On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, in the listing of the repository content, 	select the **DSC** folder, and then select **CreateADPDC.ps1** file.
+	- On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, in the listing of the repository content, 	select the **DSC** folder, and then select **CreateADPDC.ps1** file.
     
-	1. On the **azure-quickstart-templates/application-workloads/active-directory/active-directory-new-domain/DSC/CreateADPDC.ps1** 	page, review the content of the script and note that it installs a number of server roles, including Active Directory Domain 		Services and DNS, placing the NTDS database and logs, as well as the SYSOVL share on drive **F**.
+	- On the **azure-quickstart-templates/application-workloads/active-directory/active-directory-new-domain/DSC/CreateADPDC.ps1** 	page, review the content of the script and note that it installs a number of server roles, including Active Directory Domain 		Services and DNS, placing the NTDS database and logs, as well as the SYSOVL share on drive **F**.
      
-	1. Close the Microsoft Edge tab and switch back to the one displaying the **Edit template** page in the Azure portal.
+	- Close the Microsoft Edge tab and switch back to the one displaying the **Edit template** page in the Azure portal.
 
 1. On the **Edit template** page, browse to the section that provisions an availability set (starting with the line **110**) and note that the template creates an availability set and deploys the VM into it (as indicated by the **dependsOn** element on line **181**).
 
@@ -253,11 +253,11 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 
 1.  On the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Then select **Next: Monitoring > (2)**.
 
-   | Setting | Value |
-   | --- | --- |
-   | Patch orchestration options | **Manual updates (1)** |
+      | Setting | Value |
+      | --- | --- |
+      | Patch orchestration options | **Manual updates (1)** |
 
-   ![](../Media/L6E1T3S8.png)
+      ![](../Media/L6E1T3S8.png)
 
 1. On the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values).
 
@@ -282,19 +282,18 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 In this task, you will manually promote a virtual machine (VM) to a domain controller within an Azure environment. You will perform various configuration steps such as assigning a static IP address, installing necessary roles, initializing data disks, and running the Active Directory Domain Services Configuration Wizard to promote the server. These steps ensure the machine is correctly configured to serve as a domain controller within an existing domain.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the deployment page, select **Go to resource**.
-1. On the **az801l06a-dc2** page, on the vertical menu of the left side, in the **Networking (1)** section, select **Network settings (2)**.
 
-   ![](../Media/lab6y13.png)
+1. On the **az801l06a-dc2** page, on the vertical menu of the left side, in the **Networking (1)** section, select **Network settings (2)**. **Clcik the link (3)** to the network interface of the **az801l06a-dc2** virtual machine.
 
-1. On the **az801l06a-dc2 \| Networking** page, **select the link (3)** to the network interface of the **az801l06a-dc2** virtual machine.
+   ![](../Media/L6E1T4S2.png)
 
 1. On the network interface page, on the vertical menu of the left side, in the **Settings** section, select **IP Configurations (1)**.
 
-1. On the **IP Configurations** page, select **ipconfig1 (2)** entry.
+   ![](../Media/L6E1T4S3.png)
 
-   ![](../Media/lab6y14.png)
+1. On the **IP Configurations** page, select **ipconfig1 (1)** entry. In the **Edit IP configuration** section, select **Static (2)**, and then select **Save (3)**.
 
-1. On the **ipconfig1** page, in the **Private IP address settings** section, select **Static (3)**, and then select **Save (4)**.
+   ![](../Media/L6E1T4S4.png)
 
    >**Note**: Using the static assignment is common when deploying domain controllers, but it is essential for servers that host the DNS server role.
 
@@ -304,7 +303,7 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
 1. On the **az801l06a-dc2** page, select **Connect (1)**, from the drop-down menu, select **Connect via Bastion (2)**. 
 
-   ![](../Media/lab6y15.png)
+   ![](../Media/L6E1T4S6.png)
 
 1. On the Bastion page, provide the following credentials, and then select **Connect (3)**:
 
@@ -313,7 +312,7 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
    | User Name |**Student** (1) |
    | Password |**Pa55w.rd1234** (2) |
 
-   ![](../Media/lab6y16.png)
+   ![](../Media/L6E1T4S7.png)
 
    > **Note**: **Edge** by default will block popups. To allow popups for **Bastion** go to **Settings** in **Edge**, select **Cookies 
     and site permissions** on the left, **Pop-ups and redirects** under **All permissions** and finally toggle **Block (recommended)** 
@@ -321,55 +320,64 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
 1. Within the Remote Desktop session to **az801l06a-dc2**, select **Start**, and then select **Windows PowerShell** and select **Run as Administrator**.
    
-1. To install the AD DS and DNS server roles, at the Windows PowerShell command prompt, enter the following command, and then press Enter:
-	
-   ```powershell
-   Install-WindowsFeature -Name AD-Domain-Services,DNS -IncludeManagementTools
-   ```
-   > **Note**: To copy the command from the lab guide to the bastion, follow the below steps:
+1. To install the AD DS and DNS server roles, at the Windows PowerShell command prompt, follow the below steps to copy the command from the lab guide to the bastion.
+
+
+	**Step 1:** Copy the below command.
+
+      ```powershell
+      Install-WindowsFeature -Name AD-Domain-Services,DNS -IncludeManagementTools
+      ```
    
-   Step: 1- Click on the **>>** button on the left pane of the bastion.
+      **Step 2:** Click on the **>>** button on the left pane of the bastion.
    
-   ![](../Media/arrow.png)
+      ![](../Media/L6E1T4S11-1.png)
    
-   Step: 2- Paste the command in clipboard and hit **Enter**
+      **Step 3:** Paste the command in clipboard and hit **Enter**
    
-   ![](../Media/lab6y17.png)
+      ![](../Media/L6E1T4S9-3.png)
    
-   Step: 3- On the bastion, press **Ctrl+V**.
+      **Step 4:** On the **Windows PowerShell**, press **Ctrl+V**.
    
-   > **Note**: Wait for the installation to complete. This might take about 3 minutes.
+      > **Note**: Wait for the installation to complete. This might take about 3 minutes.
+
+      ![](../Media/L6E1T4S9-4.png)
 
 1. To configure the data disk, at the Windows PowerShell prompt, enter the following commands, and after entering each command, press Enter:
 
    ```powershell
    Get-Disk | Where PartitionStyle -eq 'RAW' |  Initialize-Disk -PartitionStyle MBR
    New-Partition -DiskNumber 2 -UseMaximumSize -AssignDriveLetter
-   Format-Volume -DriveLetter F -FileSystem NTFS
+   Format-Volume -DriveLetter E -FileSystem NTFS
    ```
 
+   ![](../Media/L6E1T4S10.png)
+
 1. Within the Remote Desktop session to **az801l06a-dc2**, switch to the **Server Manager** window.
-1. In **Server Manager**, select the **Notifications** flag symbol, and then, in the **Post-deployment Configuration** section, select the **Promote this server to a domain controller** link. This will start **Active Directory Domain Services Configuration Wizard**.
+
+1. In **Server Manager**, select the **Notifications (1)** flag symbol, and then, in the **Post-deployment Configuration** section, select the **Promote this server to a domain controller (2)** link. This will start **Active Directory Domain Services Configuration Wizard**.
+
+   ![](../Media/L6E1T4S12.png)
+
 1. On the **Deployment Configuration** page of **Active Directory Domain Services Configuration Wizard**, under **Select the deployment operation**, verify that **Add a domain controller to an existing domain** is selected.
-1. In the **Domain** text box, enter **contoso.com (1)** domain.
 
-   ![](../Media/lab6y18.png)
+1. In the **Domain** text box, enter **contoso.com (1)** domain. In the **Supply the credentials to perform this operation** section, select **Change (2)**.
 
-1. In the **Supply the credentials to perform this operation** section, select **Change (2)**.
+   ![](../Media/L6E1T4S14.png)
+
 
 1. In the **Credentials for deployment operation** dialog box, in the **User name** box, enter **Student@contoso.com (1)**, in the **Password** box, enter **Pa55w.rd1234** (2), and then select **OK (3)**. 
 
-   ![](../Media/lab6y19.png)
+   ![](../Media/L6E1T4S15.png)
 
 1. Back on the **Deployment Configuration** page of **Active Directory Domain Services Configuration Wizard**, select **Next**.
 
    >**Note:** If you are unable to see the **Next** option, try adjusting **zoom in/zoom out** from the browser settings.
 
-1. On the **Domain Controller Options** page, ensure that the **Domain Name System (DNS) server (1)** and **Global Catalog (GC) (2)** checkboxes are selected. Ensure that the **Read-only domain controller (RODC) (3)** checkbox is cleared.
+1. On the **Domain Controller Options** page, ensure that the **Domain Name System (DNS) server**, **Global Catalog (GC)** checkboxes are selected and **Read-only domain controller (RODC)** checkbox is cleared **(1).** In the **Type the Directory Services Restore Mode (DSRM) password** section, enter and confirm the password **Pa55w.rd1234 (2)**, and then select **Next (3)**.
 
-   ![](../Media/lab6y20.png)
+   ![](../Media/L6E1T4S17.png)
 
-1. In the **Type the Directory Services Restore Mode (DSRM) password** section, enter and confirm the password **Pa55w.rd1234** (4), and then select **Next (5)**.
 
 1. On the **DNS Options** page of **Active Directory Domain Services Configuration Wizard**, select **Next**.
 
@@ -377,10 +385,13 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
 1. On the **Paths** page, change the drive of the path settings from **C:** to **F: (1)** for the **Database** folder, **Log files** folder, and **SYSVOL** folder, and then select **Next (2)**.
 
-   ![](../Media/lab6y21.png)
+   ![](../Media/L6E1T4S20.png)
 
 1. On the **Review Options** page, select **Next**.
+
 1. On the **Prerequisite Check** page, note the warnings regarding network adapter not having static IP address, and then select **Install**.
+
+   ![](../Media/L6E1T4S22.png)
 
    > **Note**: The warning is expected because the static IP address is assigned on the platform level, rather than within the operating system.
 
@@ -403,8 +414,10 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 In this task, you will set up file services on the SEA-SVR2 machine by running a PowerShell script. The script will initialize additional data disks, create NTFS volumes, assign drive letters, and configure file shares that will be used in the file migration process.
 
 1. On **SEA-SVR2**, on the taskbar, select **File Explorer**.
+
 1. In File Explorer, browse to the **C:\\Labfiles\\Lab06** folder.
-1. In File Explorer, in the details pane, select the file **L06_SetupFS.ps1**, display its context menu, and then, in the menu, select **Edit**.
+
+1. In File Explorer, in the details pane, select the file **L06_SetupFS.ps1**, right click on it to display its context menu, and then, in the menu, select **Edit**.
 
    >**Note:** This will automatically open the file **L06_SetupFS.ps1** in the script pane of Windows PowerShell ISE.
 
@@ -415,6 +428,13 @@ In this task, you will set up file services on the SEA-SVR2 machine by running a
    >**Note:** The script initializes an extra data disk on **SEA-SVR1** and **SEA-SVR2**, creates an NTFS volume on each, assigns the **S:** drive letter to each volume, creates a share named **Data** using the **S:\Data** folder on **SEA-SVR1**, and adds to it sample files with a total size of about 1 GB.
 
    >**Note:** Click on **Run Once** when the pop-up comes up.
+
+
+> **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+   <validation step="cb93febc-2d5a-4be7-9104-a0ba14a68ae6" />   
 
 ### Task 2: Perform migration by using Storage Migration Service
 
@@ -431,15 +451,18 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
    - Username: **CONTOSO\\Administrator**
    - Password: **Pa55w.rd**
 
+
 1. Review the **New in this release** pop-up window and select **Close** in its upper-right corner.
-1. In the **All connections** pane of Windows Admin Center, in the upper-right corner, select the **Settings (1)** icon (the cog wheel).
 
-   ![](../Media/lab6y22.png)
+1. In the **All connections** pane of Windows Admin Center, in the upper-right corner, select the **Settings** icon (the cog wheel).
 
-1. In the left pane, select **Extensions (2)**. Review the available extensions.
-1. In the details pane, select **Installed extensions (3)** and verify that the list includes the **Storage Migration Service (4)** extension.
+   ![](../Media/L6E2T2S4.png)
 
-   >**Note:** If there is an update available, select the **Storage Migration Service** extension entry and select **Update (5)**.
+1. In the left pane, select **Extensions (1)**. Review the available extensions. Under the details pane, select **Installed extensions (2)** and verify that the list includes the **Storage Migration Service (3)** extension.
+
+   ![](../Media/L6E2T2S6.png)
+
+      >**Note:** If there is an update available, select the **Storage Migration Service** extension entry and select **Update**.
 
 1. On the top menu, next to **Settings**, select the drop-down arrow, and then select **Server Manager**.
 
@@ -447,11 +470,9 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
 
 1. In the **All connections** pane, select the **sea-svr2.contoso.com** link.
 
-1. On the **sea-svr2.contoso.com** page, on the **Tools** menu, select the **Storage Migration Service (1)** entry.
+1. On the **sea-svr2.contoso.com** page, on the **Tools** menu, select the **Storage Migration Service (1)** entry. Under the **Storage Migration Service** pane, select **Install (2)**.
 
-     ![](../Media/lab6y24.png)
-
-1. In the **Storage Migration Service** pane, select **Install (2)**.
+     ![](../Media/L6E2T2S9.png)
 
     >**Note:** This will automatically install the Storage Migration Service and its required components.
 
@@ -459,14 +480,16 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
 
    ![](../Media/lab6y25.png)
 
-1. In the **Storage Migration Service** pane, scroll down to the bottom of the page and select **+ New job (1)**.
+1. In the **Storage Migration Service** pane, scroll down to the bottom of the page and select **+ New job (1)**. Under the **New job** pane provide below details and click on **OK (4)**.
 
-   ![](../Media/lab6y26.png)
+   | Job Name | **SVR1toSVR2 (2)** |
 
-1. In the **New job** pane, in the **Job name** text box, enter **SVR1toSVR2 (2)**, ensure that the **Windows servers and clusters (3)** is selected for **Source devices** option, and select **OK (4)**.
+   | Source devices | **Windows servers and clusters (3)** |
+
+   ![](../Media/L6E2T2S12.png)
 
 1. In the **Storage Migration Service > SVR1toSVR2** pane, on the **Inventory servers** tab, review the **Check the prerequisites** pane and select **Next**.
-1. On the **Inventory servers** tab, in the **Enter credentials** pane, if necessary, enter the credentials of the **CONTOSO\\Administrator (1)** user account and Password as **Pa55w.rd (2)**, clear the **Migrate from failover clusters (3)** checkbox, and then select **Next (4)**.
+1. On the **Inventory servers** tab, in the **Enter credentials** pane, if necessary, enter the credentials of the **CONTOSO\\Administrator (1)** user account and Password as **Pa55w.rd (2)**, uncheck the **Migrate from failover clusters (3)** checkbox, and then select **Next (4)**.
 
    ![](../Media/lab6y27.png)
 
@@ -547,12 +570,15 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
    ![](../Media/lab6y36.png)
 
 1. On the **Cut over to the new servers** tab, in the **Configure cutover from sea-svr1.contoso.com to sea-svr2.contoso.com** pane, in the **Destination network adapters** drop-down list, select **Ethernet (5)**.
-1. On the **Cut over to the new servers** tab, in the **Configure cutover from sea-svr1.contoso.com to sea-svr2.contoso.com** pane, in the **Rename the source device after cutover** section, select the **Choose a new name (6)** option, in the **New source computer name** enter **SEA-SVR1-OLD (7)**, and then select **Next (8)**.
-1. On the **Cut over to the new servers** tab, in the **Adjust cutover settings** pane, in the **Cutover timeout (minutes)** text box, enter **30**, in the **Enter AD credentials** section, leave the **Stored credentials** option enabled, and then select **Next**.
-1. On the **Cut over to the new servers** tab, in the **Validate source and destination device** pane, select **Validate**, and after the validation successfully completes, select **Next**.
-1. On the **Cut over to the new servers** tab, in the **Cut over to the new servers** pane, select **Start cutover**.
 
-   >**Note:** The cutover will trigger two consecutive restarts of both **SEA-SVR1** and **SEA-SVR2**.
+1. On the **Cut over to the new servers** tab, in the **Configure cutover from sea-svr1.contoso.com to sea-svr2.contoso.com** pane, in the **Rename the source device after cutover** section, select the **Choose a new name (6)** option, in the **New source computer name** enter **SEA-SVR1-OLD (7)**, and then select **Next (8)**.
+
+
+1. On the **Cut over to the new servers** tab, in the **Adjust cutover settings** pane, in the **Cutover timeout (minutes)** text box, enter **30**, in the **Enter AD credentials** section, leave the **Stored credentials** option enabled, and then select **Next**.
+
+1. On the **Cut over to the new servers** tab, in the **Validate source and destination device** pane, select **Validate**, and after the validation successfully completes, select **Next**.
+
+1. On the **Cut over to the new servers** tab, in the **Cut over to the new servers** pane, select **Start cutover**. The cutover will trigger two consecutive restarts of both **SEA-SVR1** and **SEA-SVR2**.
 
 ### Task 3: Validate migration outcome
 

@@ -51,9 +51,13 @@ The main tasks for this exercise are to:
 #### Task 1: Deploy a domain controller by using an Azure Resource Manager (ARM) template
 
 1. On **SEA-SVR2**, start Microsoft Edge, go to the Azure portal at `https://portal.azure.com/`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+
 1. On **SEA-SVR2**, start Microsoft Edge, and go to a customized version of the QuickStart template at **[Create a new Windows VM and create a new AD Forest, Domain and DC](https://github.com/az140mp/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain)**. 
+
 1. From the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, initiate a deployment to Azure. 
+
 1. On the **Create an Azure VM with a new AD Forest** page, select **Edit template**.
+
 1. On the **Edit template** page, browse to the **storageProfile** section (starting with the line **195**) and verify that the **sku** (on line **199**) is set to **2022-Datacenter** and that **dataDisks** **caching** (on line **213**) is set to **None**.
 
    > **Note**: Caching on the disks hosting AD DS database and log files should be set to **None**.
@@ -62,10 +66,13 @@ The main tasks for this exercise are to:
 
    > **Note**: To review the script, you can use the following steps:
 
-   1. On **SEA-SVR2**, open another tab in the Microsoft Edge window, and go to the customized version of the QuickStart template at **[Create a new Windows VM and create a new AD Forest, Domain and DC](https://github.com/az140mp/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain)**.
-   1. On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, in the listing of the repository content, select the **DSC** folder, and then select the **CreateADPDC.ps1** file.
-   1. On the **azure-quickstart-templates/application-workloads/active-directory/active-directory-new-domain/DSC/CreateADPDC.ps1** page, review the content of the script and note that it installs a number of server roles, including Active Directory Domain Services and DNS, placing the NTDS database and logs, as well as the SYSOVL share on drive **F**. 
-   1. Close the Microsoft Edge tab and switch back to the one displaying the **Edit template** page in the Azure portal.
+   - On **SEA-SVR2**, open another tab in the Microsoft Edge window, and go to the customized version of the QuickStart template at **[Create a new Windows VM and create a new AD Forest, Domain and DC](https://github.com/az140mp/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain)**.
+
+   - On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, in the listing of the repository content, select the **DSC** folder, and then select the **CreateADPDC.ps1** file.
+
+   - On the **azure-quickstart-templates/application-workloads/active-directory/active-directory-new-domain/DSC/CreateADPDC.ps1** page, review the content of the script and note that it installs a number of server roles, including Active Directory Domain Services and DNS, placing the NTDS database and logs, as well as the SYSOVL share on drive **F**. 
+
+   - Close the Microsoft Edge tab and switch back to the one displaying the **Edit template** page in the Azure portal.
 
 1. On the **Edit template** page, browse to the section that provisions an availability set (starting with the line **110**) and note that the template creates an availability set and deploys the VM into it (as indicated by the **dependsOn** element on line **181**).
 
