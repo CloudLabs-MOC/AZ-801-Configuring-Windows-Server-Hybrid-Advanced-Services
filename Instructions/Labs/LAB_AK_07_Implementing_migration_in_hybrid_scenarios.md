@@ -818,7 +818,7 @@ In this task, you will configure an assessment within the Azure Migrate project 
    | Storage type | **Premium managed disks** **(2)** |
    | Savings options  | **None** **(3)** |
    | Sizing criteria | **As on premises (4)** |
-   | VM series | **Dsv3_series (5)** |
+   | VM series | **Dsv5_series (5)** |
    | Comfort factor | **1 (6)** |
    | Offer | **Pay-As-You-Go (7)** |
    | Currency | US Dollar ($) **(8)** | 
@@ -872,7 +872,7 @@ In this task, you will prepare your environment to begin migrating discovered Hy
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window displaying the Azure portal, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page. 
 1. On the **Azure Migrate | Servers, databases and web apps** page, in the **Migration and modernization (2)** section, select the **Discover (3)** link. 
 
-   ![](../media/azm7-114.png)
+   ![](../media/azm7-114-1.png)
 
 1. On the **Discover** page, specify the following settings (leave others with their default values) and select **Create resources (5)**:
 
@@ -996,7 +996,7 @@ In this task, you’ll configure replication for your Hyper-V VM to Azure using 
 
    >**Note**: **If you are unable to see the Cache Storage Account option and select** **str<inject key="DeploymentID" enableCopy="false"/>** **and encounter an error when selecting it please wait for 10 minutes and perform the above from step 1**.
 
-1. On the **Compute** tab of the **Replicate** page, ensure that the **Standard_D2s_v3 (1)** is selected in the **Azure VM Size** drop-down list. In the **OS Type** drop-down list, select **Windows (2)** and then select **Next (3)**.
+1. On the **Compute** tab of the **Replicate** page, ensure that the **Standard_D2s_v5 (1)** is selected in the **Azure VM Size** drop-down list. In the **OS Type** drop-down list, select **Windows (2)** and then select **Next (3)**.
 
    ![](../media/azm7-131.png)
 
