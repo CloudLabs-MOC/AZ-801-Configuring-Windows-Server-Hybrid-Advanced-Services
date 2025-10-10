@@ -170,6 +170,8 @@ In this task, you will configure enhanced security settings for Microsoft Defend
 
    ![](../Media/p14.png) 
 
+   >**Note**: Make sure **Servers** Defender plan is enabled in the previous step, else you wont be able to select **All Events**.    
+
    >**Note:**  Selecting a data collection tier in Defender for Cloud only affects the storage of security events in your Log Analytics workspace. The Log Analytics agent will still collect and analyze the security events required for Defender for Cloud's threat protection, regardless of the level of security events you choose to store in your workspace. Choosing to store security events enables investigation, search, and auditing of those events in your workspace.
 
 ## Exercise 3: Provisioning Azure VMs running Windows Server
