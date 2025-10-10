@@ -115,24 +115,38 @@ In this task, you will be creating iSCSI virtual disks on SEA-DC1. This includes
     ![](../Media/az3l5.png)    
 
      >**Note:** **At this point, you should have `three`** **Windows PowerShell** **windows opened**.
-     
+
      >**Note**: You will use the first one to run commands locally on **SEA-SVR2**, while using the other two to interact with **SEA-DC1** and **SEA-SVR1**. You can easily recognize each of them by identifying the PowerShell prompt (for the second and third one, the prompt will contain **[SEA-DC1.contoso.com]** and **[SEA-SVR1.contoso.com]** prefix, respectively).
 
-1. To start the Microsoft iSCSI Initiator service on **SEA-SVR2**, at the **Windows PowerShell** prompt providing access to the local session, enter the following commands, and after entering each command, press Enter:
+1. To start the Microsoft iSCSI Initiator service on **SEA-SVR2**, at the **Windows PowerShell** prompt providing access to the local session, select the first Powershell window.
+
+    ![](../Media/az3l6.png)
+
+1. Enter the following commands, and after entering each command, press Enter:
 
    ```powershell
    Start-Service -ServiceName MSiSCSI
    Set-Service -ServiceName MSiSCSI -StartupType Automatic
    ```
 
-1. To start the Microsoft iSCSI Initiator service on **SEA-SVR1**, switch to the **Windows PowerShell** window hosting PowerShell Remoting session to **SEA-SVR1**, enter the following commands, and after entering each command, press Enter:
+    ![](../Media/az3l7.png)   
+
+1. To start the Microsoft iSCSI Initiator service on **SEA-SVR1**, switch to the **Windows PowerShell** window hosting PowerShell Remoting session to **SEA-SVR1**.
+
+    ![](../Media/az3l9.png)
+
+1. Enter the following commands, and after entering each command, press Enter:
 
    ```powershell
    Start-Service -ServiceName MSiSCSI
    Set-Service -ServiceName MSiSCSI -StartupType Automatic
    ```
 
-1. To create the Microsoft iSCSI Target on **SEA-DC1**, switch to the **Windows PowerShell** window hosting PowerShell Remoting session to **SEA-DC1**, enter the following command, and then press Enter:
+1. To create the Microsoft iSCSI Target on **SEA-DC1**, switch to the **Windows PowerShell** window hosting PowerShell Remoting session to **SEA-DC1**.
+
+    ![](../Media/az3l8.png)
+
+1. Enter the following command, and then press Enter:
 
    ```powershell
    New-IscsiServerTarget -TargetName iSCSI-L03 -InitiatorIds IQN:iqn.1991-05.com.microsoft:sea-svr1.contoso.com,IQN:iqn.1991-05.com.microsoft:sea-svr2.contoso.com
