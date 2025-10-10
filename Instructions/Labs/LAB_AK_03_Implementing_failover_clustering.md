@@ -31,7 +31,13 @@ In this exercise, you will be configuring iSCSI storage to be used in a failover
 
 In this task, you will be installing the Failover Clustering feature and management tools on two servers (SEA-SVR1 and SEA-SVR2) and installing the iSCSI Target server role on SEA-DC1 using PowerShell commands.
 
-1. Connect to **SEA-SVR2**, and then, if needed, sign in as **Contoso\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
+
+    ![](../media/azm2-1.png)
+
+1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+
+    ![](../media/azm2-2.png)
 
 1. On **SEA-SVR2**, select **Start**, and right-click on **Windows PowerShell**, and select **Run as administrator**.
 
