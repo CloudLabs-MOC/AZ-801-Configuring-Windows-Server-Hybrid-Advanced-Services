@@ -178,7 +178,7 @@ In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from 
 
     ![](../Media/az3l10.png)   
 
-1. To connect to the iSCSI Target hosted on **SEA-DC1** from **SEA-SVR2**, switch to the **Windows PowerShell** prompt providing access to the local session.
+1. To connect to the iSCSI Target hosted on **SEA-DC1** from **SEA-SVR2**, switch to the **Windows PowerShell** prompt providing access to the **local session (SEA-SVR2)**.
 
     ![](../Media/az3l6.png)  
 
@@ -271,7 +271,11 @@ In this exercise, you will be deploying a highly available file server on the fa
 
 In this task, you will be adding the File Server role to the failover cluster (SEA-CL03). You will configure a client access point (FSCluster) and select the cluster disks for the file server.
 
-1. On **SEA-SVR2**, select **Start**, in the **Start** menu, select **Server Manager**, and then, in **Server Manager**, select **Failover Cluster Manager (2)** in the **Tools (1)** menu.
+1. On **SEA-SVR2**, search for **Server Manager (1)** and select **Server Manager (2)**.
+
+   ![](../Media/az3l15.png)
+
+1. Then, in **Server Manager**, select **Failover Cluster Manager (2)** in the **Tools (1)** menu.
 
    ![](../Media/lab3z1.png)  
 
@@ -390,9 +394,11 @@ In this exercise, you will be validating the deployment of the highly available 
 
 In this task, you will be testing the failover and failback capability of the FSCluster file server. You will move the file server role between SEA-SVR2 and SEA-SVR1 to ensure continued access to the shared folder.
 
-1. On **SEA-SVR2**, open File Explorer and browse to the **\\\\FSCluster\\Docs** folder.
+1. On **SEA-SVR2**, open **File Explorer** and browse to the **\\\\FSCluster\\Docs** folder **(2)**.
 
-   >**Note:** In File Explorer, ensure that you are in **Quick access**. Select the **Quick access** path, replace it with **\\\FSCluster\Docs**, and press **Enter**.
+   ![](../Media/az3l16.png)
+
+    >**Note:** In File Explorer, ensure that you are in **Quick access**. Select the **Quick access** path, replace it with **\\\FSCluster\Docs**, and press **Enter**.
 
 1. Inside the **Docs** folder, right-click or access the context menu in an empty area of the folder, select **New (1)**, and then select **Text Document (2)**.
 
