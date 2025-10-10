@@ -450,13 +450,13 @@ In this task, you will be enabling replication for a selected Hyper-V virtual ma
    |**Subscription**|the name of the Azure subscription you are using in this lab **(1)**|
    |**Post-failover resource group**|**AZ801-L0502-RG** **(2)**|
    |**Post-failover deployment model**|**Resource Manager (3)**|
-   |**Storage type**|**Storage account (4)**|
+   |**Replica Storage type**|**Storage account (4)**|
    |**Storage account**|**storage<inject key="DeploymentID" enableCopy="false"/> (5)**|
    |**Network**|**Configure now for selected machines (6)**|
    |**Virtual network**|**az801l05-dr-vnet (7)**|
    |**Subnet**|**subnet0 (10.5.0.0/24) (8)**|
 
-   ![](../media/azm5-38.png)
+   ![](../Media/az5l1.png)
    ![](../media/azm5-39.png)
 
 1. On the **Virtual machine selection** tab of the **Enable replication** page, select the **SEA-CORE1 (1)** checkbox and select **Next (2)**.
