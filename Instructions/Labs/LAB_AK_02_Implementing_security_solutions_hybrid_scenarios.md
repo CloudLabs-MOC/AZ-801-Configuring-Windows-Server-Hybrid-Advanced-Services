@@ -338,7 +338,7 @@ In this task, you will enable change tracking and inventory monitoring to ensure
 
 1. In the navigation pane under **Azure Arc- Machines- SEA-SVR2**, under **Operations (1)** select **Inventory (2)**. Notice that the **Log Analytics workspace** **(3)** you created is listed under *Enable change tracking and inventory feature with AMA*. On the **Change Tracking and Inventory** page, click **Enable (4)**.  
 
-   ![](../Media/p22.png) 
+   ![](../Media/az2l2.png) 
 
 1. Wait for the deployment of the Change Tracking feature to complete. This may take up to `5` minutes, so proceed to the next steps.
 
@@ -372,7 +372,7 @@ In this task, you will configure Azure Monitor Insights to collect performance a
    - From the **Log Analytics workspaces (4)** drop-down menu, select the Log Analytics workspace that you created earlier.
    - Click on **Create(5)**
 
-     ![](../Media/p26.png) 
+     ![](../Media/az2l3.png) 
 
 1. Click on **Configure**.
 
