@@ -447,7 +447,7 @@ In this task, you will be backing up files from SEA-SVR1 to a network share loca
 
      > **Note**: Wait until the backup completes. This should take about 1 minute.
 
-1. On **SEA-SVR2**, switch to File Explorer, browse to **C:\\BackupShare (1)**, and verify that the folder includes the newly created backup in the **WindowsImageBackup (2)** subfolder.
+1. On **SEA-SVR2**, switch to **File Explorer**, browse to **C:\\BackupShare (1)**, and verify that the folder includes the newly created backup in the **WindowsImageBackup (2)** subfolder.
 
    ![](../Media/azm4-48.png)  
 
