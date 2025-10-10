@@ -272,7 +272,7 @@ In this task, you will install and configure the Azure Arc agent on an on-premis
 
    ![](../Media/azm2-23.png)
 
-1. Copy and paste the below command into PowerShell and press **Enter**
+1. Copy and paste the below command into PowerShell and press **Enter**. (Use `Shift+Insert` to paste the code in to the powershell)
 
    ```
     cd C:\Users\Administrator.contoso\Downloads
@@ -340,7 +340,11 @@ In this task, you will enable change tracking and inventory monitoring to ensure
 
    ![](../Media/p22.png) 
 
-1. Wait for the deployment of the Change Tracking feature to complete. This may take up to 5 minutes, so proceed to the next steps.
+1. Wait for the deployment of the Change Tracking feature to complete. This may take up to `5` minutes, so proceed to the next steps.
+
+1. Once the deployment is complete, you can see the status as **Onboarded**.
+
+   ![](../Media/az2l1.png) 
 
 ### Task 3: Enable Monitoring using Insights
 
@@ -427,6 +431,8 @@ In this task, you will verify the successful configuration of monitoring, compli
 1. Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights (1)**. Select **Performance data (2)**. You should be able to see the performance data **(3)**.  
 
     ![](../Media/p32.png) 
+
+     >**Note**: Please **refresh** the page, if you do not see the **Performance data** tab.
 
 1. Select the **Map (1)** tab and view the dependency map **(2)**.  
 
