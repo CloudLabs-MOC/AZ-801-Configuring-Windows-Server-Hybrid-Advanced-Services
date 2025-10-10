@@ -39,7 +39,7 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
    ![](../Media/azm4-1.png)
 
-1. To identify the status of the Windows Defender Firewall with Advanced Security **Hyper-V Replica HTTP Listener (TCP-In)** rule on **SEA-SVR2**, at the Windows PowerShell prompt, enter the following command and press Enter:
+1. To identify the status of the Windows Defender Firewall with Advanced Security **Hyper-V Replica HTTP Listener (TCP-In)** rule on **SEA-SVR2**, at the Windows PowerShell prompt, enter the following command and press **Enter**: (Use `Shift+Insert` to paste the code in to the Powershell)
 
    ```powershell
    Get-NetFirewallRule -DisplayName 'Hyper-V Replica HTTP Listener (TCP-In)'
@@ -92,6 +92,8 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
      > **Note**: Leave the **Administrator: Windows PowerShell** window open.
 
+1. **Minimize the Windows Powershell window**.     
+
 1. To open another **Administrator: Windows PowerShell** window, on **SEA-SVR2**, right click on **Start** and select **Windows PowerShell (Admin)**.
 
    ![](../Media/lab4.2.png)
@@ -135,11 +137,16 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
      > **Note**: Leave the second **Administrator: Windows PowerShell** window open.
 
+1. **Minimize the Windows Powershell window**.     
+
 ### Task 2: Configure Hyper-V replication
 
 In this task, you will be enabling replication for a virtual machine (SEA-CORE1) from SEA-SVR2 to SEA-SVR1 and verifying that replication is functioning correctly.
 
 1. On **SEA-SVR2**, switch to the **Administrator: Windows PowerShell** window displaying the local PowerShell session.
+
+    ![](../Media/az4l1.png) 
+
 1. To enable replication of the virtual machine **SEA-CORE1** from **SEA-SVR2** to **SEA-SVR1**, on **SEA-SVR2**, at the Windows PowerShell prompt of the local session, enter the following command and press Enter:
 
    ```powershell
@@ -169,6 +176,8 @@ In this task, you will be enabling replication for a virtual machine (SEA-CORE1)
 
 1. On **SEA-SVR2**, switch to the **Administrator: Windows PowerShell** window displaying the PowerShell Remoting session to **SEA-SVR1**.
 
+    ![](../Media/az4l2.png) 
+
 1. To verify that a replica of **SEA-CORE1** is present on **SEA-SVR1**, in the Windows PowerShell window hosting the PowerShellRemoting session to **SEA-SVR1**, enter the following command and press Enter:
 
    ```powershell
@@ -186,6 +195,9 @@ In this task, you will be enabling replication for a virtual machine (SEA-CORE1)
 In this task, you will be testing the failover process by performing a failover of SEA-CORE1 from SEA-SVR2 to SEA-SVR1 and ensuring that replication is consistent after the failover.
 
 1. On **SEA-SVR2**, switch to the **Administrator: Windows PowerShell** window displaying the local PowerShell session.
+
+    ![](../Media/az4l1.png) 
+
 1. To prepare for a failover of the **SEA-CORE1** virtual machine to **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the local session, enter the following command and press Enter:
 
    ```powershell
@@ -197,6 +209,8 @@ In this task, you will be testing the failover process by performing a failover 
      >**Note**: When prompted, enter **Y**, and then press Enter. This command prepares for the planned failover of **SEA-CORE1** by triggering replication of any pending changes.
 
 1. On **SEA-SVR2**, switch to the **Administrator: Windows PowerShell** window displaying the PowerShell Remoting session to **SEA-SVR1**.
+
+    ![](../Media/az4l2.png) 
 
 1. To initiate a failover of the **SEA-CORE1** virtual machine to **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
 
@@ -252,7 +266,9 @@ In this task, you will be testing the failover process by performing a failover 
 
 1. In the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
 
-   >**Note:** It will through an error, because the connection is interrupted. After running this command, please run the next command to start the connection again.
+    ![](../Media/az4l2.png) 
+
+     >**Note:** It will through an error, because the connection is interrupted. After running this command, please run the next command to start the connection again.
 
    ```powershell
    Enter-PSSession -ComputerName SEA-SVR1.contoso.com
@@ -337,7 +353,11 @@ In this task, you will be installing and configuring the Windows Server Backup r
    ![](../Media/azm4-37.png)
 
 1. On **SEA-SVR2**, switch to the **Administrator: Windows PowerShell** window hosting the PowerShellRemoting session to **SEA-SVR1**. 
-1. To install the **Windows Server Backup** role on **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**, enter the following command and press Enter:
+1. To install the **Windows Server Backup** role on **SEA-SVR1**, on **SEA-SVR2**, in the Windows PowerShell window hosting the PowerShell Remoting session to **SEA-SVR1**.
+
+    ![](../Media/az4l2.png)
+
+1. Enter the following command and press Enter:
 
    ```powershell
    Install-WindowsFeature Windows-Server-Backup
