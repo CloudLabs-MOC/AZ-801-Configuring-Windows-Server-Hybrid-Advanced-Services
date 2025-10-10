@@ -251,7 +251,9 @@ In this task, you will be creating a failover cluster on SEA-SVR2, adding SEA-SV
    New-Cluster -Name SEA-CL03 -Node SEA-SVR2.contoso.com -StaticAddress 172.16.10.125
    ```
 
-   > **Note:** The command should return the name of the newly created cluster (**SEA-CL03**). 
+    ![](../Media/az3l14.png)    
+
+     >**Note:** The command should return the name of the newly created cluster (**SEA-CL03**). 
 
 1. To add **SEA-SVR1** as another node to the newly created cluster, on **SEA-SVR2**, at the Windows PowerShell prompt providing access to the local session, enter the following command, and then press Enter:
 
