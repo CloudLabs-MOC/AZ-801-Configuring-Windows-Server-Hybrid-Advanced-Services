@@ -214,13 +214,19 @@ In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from 
 
 In this task, you will be initializing the newly connected iSCSI disks on SEA-SVR2. You will make sure the disks are online, partitioned, formatted, and assigned drive letters.
 
-1. To list the disks on **SEA-SVR2**, switch to the Windows PowerShell prompt providing access to the local session, enter the following command, and then press Enter:
+1. To list the disks on **SEA-SVR2**, switch to the Windows PowerShell prompt providing access to the local session.
+
+    ![](../Media/az3l6.png)
+
+1. Enter the following command, and then press Enter:
 
    ```powershell
    Get-Disk
    ```
 
-   >**Note:** Ensure that the three iSCSI disks are listed with the **Offline** operational status. These should be disks with numbers 2, 3, and 4.
+    ![](../Media/az3l13.png)   
+
+     >**Note:** Ensure that the three iSCSI disks are listed with the **Offline** operational status. These should be disks with numbers 2, 3, and 4.
 
 1. To initialize the disks, at the Windows PowerShell prompt providing access to the local session, enter the following commands, and after entering each command, press Enter:
 
