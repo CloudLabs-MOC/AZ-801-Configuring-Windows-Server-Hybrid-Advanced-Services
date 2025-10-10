@@ -432,7 +432,7 @@ In this task, you will verify the successful configuration of monitoring, compli
 
     ![](../Media/p32.png) 
 
-     >**Note**: Please **refresh** the page, if you do not see the **Performance data** tab.
+     >**Note**: Please **refresh** the page, if you do not see the **Performance** tab.
 
 1. Select the **Map (1)** tab and view the dependency map **(2)**.  
 
