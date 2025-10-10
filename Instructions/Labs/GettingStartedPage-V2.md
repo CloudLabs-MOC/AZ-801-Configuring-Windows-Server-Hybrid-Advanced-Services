@@ -6,7 +6,7 @@ Welcome to your AZ-801: Configuring Windows Server Hybrid Advanced Services work
  
 Once you're ready to dive in, your virtual machine and lab guide will be available in your web browser.
  
-  ![Access Your VM and Lab Guide](../Media/nf_g_1_1.png)
+  ![Access Your VM and Lab Guide](../Media/az2l4.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -22,7 +22,7 @@ To better understand your lab resources and credentials, navigate to the **Envir
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![Use the Split Window Feature](../Media/nf_g_1_4.png)
+   ![Use the Split Window Feature](../Media/az2l5.png)
  
 ## Managing Your Virtual Machine
  
