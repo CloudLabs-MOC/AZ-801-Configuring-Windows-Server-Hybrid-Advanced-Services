@@ -39,16 +39,20 @@ In this task, you will be installing the Failover Clustering feature and managem
 
     ![](../media/azm2-2.png)
 
-1. On **SEA-SVR2**, select **Start**, and right-click on **Windows PowerShell**, and select **Run as administrator**.
+1. On **SEA-SVR2**, right-click on **Start (1)** and then select **Windows PowerShell (Admin) (2)**.
 
-1. To install the Failover Clustering server feature including the management tools on **SEA-SVR1** and **SEA-SVR2**, at the Windows PowerShell command prompt, enter the following commands, and after entering each command, press Enter:
+    ![](../Media/az3l1.png)
+
+1. To install the Failover Clustering server feature including the management tools on **SEA-SVR1** and **SEA-SVR2**, at the Windows PowerShell command prompt, enter the following commands, and after entering each command, press Enter: (Use `Shift+Insert` to paste the code in to the Powershell.)
 
    ```powershell
    Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
    Install-WindowsFeature -ComputerName 'SEA-SVR1.contoso.com' -Name Failover-Clustering -IncludeManagementTools
    ```
 
-   > **Note**: Wait for the installation process to complete. The installation should take about 1 minute.
+    ![](../Media/az3l2.png)   
+
+     >**Note**: Wait for the installation process to complete. The installation should take about 5 minutes.
 
 1. To install iSCSI Target server role service on **SEA-DC1**, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
@@ -56,9 +60,11 @@ In this task, you will be installing the Failover Clustering feature and managem
    Install-WindowsFeature -ComputerName 'SEA-DC1.contoso.com' -Name FS-iSCSITarget-Server -IncludeManagementTools
    ```
 
-   > **Note**: Wait for the installation process to complete. The installation should take about 1 minute.
+    ![](../Media/az3l3.png)    
 
-1. Minimize the Windows Powershell window.
+     > **Note**: Wait for the installation process to complete. The installation should take about 1 minute.
+
+1. **Minimize the Windows Powershell window**.
 
 ### Task 2: Configure iSCSI virtual disks
 
@@ -66,13 +72,19 @@ In this task, you will be creating iSCSI virtual disks on SEA-DC1. This includes
 
 >**Important:** The lab uses **SEA-DC1**, which serves as an Active Directory Domain Services (AD DS) domain controller to host shared iSCI storage for a Windows Server-based cluster. This is not meant to represent in any way a recommended configuration but rather is done to simplify the lab configuration and minimize the number of lab virtual machines. In any production environment, domain controllers should not be used to host shared storage for failover clusters. Instead, such storage should be hosted on highly available infrastructure. 
 
-1. On **SEA-SVR2**, select **Start**, and right-click on **Windows PowerShell**, and select **Run as administrator** to start a new session.
+1. On **SEA-SVR2**, right-click on **Start (1)** and then select **Windows PowerShell (Admin) (2)**.
+
+    ![](../Media/az3l1.png)
+
+     >**Note**: This is the second **Windows Poweshell** Window your opening.
 
 1. To establish a PowerShell Remoting session to **SEA-DC1**, in the newly opened **Windows PowerShell** window, enter the following command and press Enter:
 
    ```powershell
    Enter-PSSession -ComputerName SEA-DC1.contoso.com
    ```
+
+    ![](../Media/az3l4.png)    
 
 1. To create iSCSI virtual disks on **SEA-DC1**, on **SEA-SVR2**, in the PowerShell Remoting session to **SEA-DC1**, enter the following commands, and after entering each command, press Enter:
 
@@ -88,9 +100,11 @@ In this task, you will be creating iSCSI virtual disks on SEA-DC1. This includes
    ```powershell
    New-IscsiVirtualDisk C:\Storage\disk3.VHDX -size 10GB
    ```
-1. Minimize the Windows Powershell window.
+1. **Minimize the Windows Powershell window**.
 
-1. On **SEA-SVR2**, select **Start**, and right-click on **Windows PowerShell**, and select **Run as administrator** to start a new session.
+1. On **SEA-SVR2**, right-click on **Start (1)** and then select **Windows PowerShell (Admin) (2)**.
+
+    ![](../Media/az3l1.png)
 
 1. To establish a PowerShell Remoting session to **SEA-SVR1**, in the newly opened **Windows PowerShell** window, enter the following command, and then press Enter:
 
@@ -98,7 +112,11 @@ In this task, you will be creating iSCSI virtual disks on SEA-DC1. This includes
    Enter-PSSession -ComputerName SEA-SVR1.contoso.com
    ```
 
-   > **Note:** At this point, you should have three **Windows PowerShell** windows opened. You will use the first one to run commands locally on **SEA-SVR2**, while using the other two to interact with **SEA-DC1** and **SEA-SVR1**. You can easily recognize each of them by identifying the PowerShell prompt (for the second and third one, the prompt will contain **[SEA-DC1.contoso.com]** and **[SEA-SVR1.contoso.com]** prefix, respectively).
+    ![](../Media/az3l5.png)    
+
+     >**Note:** **At this point, you should have `three`** **Windows PowerShell** **windows opened**.
+     
+     >**Note**: You will use the first one to run commands locally on **SEA-SVR2**, while using the other two to interact with **SEA-DC1** and **SEA-SVR1**. You can easily recognize each of them by identifying the PowerShell prompt (for the second and third one, the prompt will contain **[SEA-DC1.contoso.com]** and **[SEA-SVR1.contoso.com]** prefix, respectively).
 
 1. To start the Microsoft iSCSI Initiator service on **SEA-SVR2**, at the **Windows PowerShell** prompt providing access to the local session, enter the following commands, and after entering each command, press Enter:
 
