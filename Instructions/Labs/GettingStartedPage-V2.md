@@ -64,7 +64,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Pasting Commands in the PowerShell/CloudShell Environment
 
-Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting commands inside the PowerShell/CloudShell environment instead of right-clicking
+Please make sure to use the **Shift+Insert** or **CTRL+SHIFT+V** or **CTRL+V** keys when pasting commands inside the PowerShell/CloudShell environment instead of right-clicking
 
 ## Let's Get Started with Azure Portal
  
