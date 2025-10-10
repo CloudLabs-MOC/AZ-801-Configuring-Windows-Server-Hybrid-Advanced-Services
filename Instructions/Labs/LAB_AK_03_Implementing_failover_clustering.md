@@ -160,7 +160,11 @@ In this exercise, you will be configuring a failover cluster, which will include
 
 In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from both SEA-SVR1 and SEA-SVR2. This will involve adding target mappings and establishing iSCSI connections using PowerShell.
 
-1. To mount the iSCSI disks on **SEA-DC1**, from **SEA-SVR2**, in the **Windows PowerShell** window hosting PowerShell Remoting session to **SEA-DC1**, enter the following commands, and after entering each command, press Enter:
+1. To mount the iSCSI disks on **SEA-DC1**, from **SEA-SVR2**, in the **Windows PowerShell** window hosting PowerShell Remoting session to **SEA-DC1**.
+
+    ![](../Media/az3l8.png)
+
+1. Enter the following commands, and after entering each command, press Enter:
 
    ```powershell
    Add-IscsiVirtualDiskTargetMapping -TargetName “iSCSI-L03” -DevicePath “C:\Storage\Disk1.VHDX”
@@ -172,14 +176,23 @@ In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from 
    Add-IscsiVirtualDiskTargetMapping -TargetName “iSCSI-L03” -DevicePath “C:\Storage\Disk3.VHDX”
    ```
 
-1. To connect to the iSCSI Target hosted on **SEA-DC1** from **SEA-SVR2**, switch to the **Windows PowerShell** prompt providing access to the local session, enter the following commands, and after entering each command, press Enter:
+    ![](../Media/az3l10.png)   
+
+1. To connect to the iSCSI Target hosted on **SEA-DC1** from **SEA-SVR2**, switch to the **Windows PowerShell** prompt providing access to the local session.
+
+    ![](../Media/az3l6.png)  
+
+1. Enter the following commands, and after entering each command, press Enter:
 
    ```powershell
    New-iSCSITargetPortal -TargetPortalAddress SEA-DC1.contoso.com  
    Connect-iSCSITarget -NodeAddress iqn.1991-05.com.microsoft:sea-dc1-iSCSI-L03-target
    Get-iSCSITarget | fl
    ```
-   > **Note:** Verify that after you run the last command, the value for the *IsConnected* variable is True.
+
+    ![](../Media/az3l11.png)  
+
+     >**Note:** Verify that after you run the last command, the value for the **IsConnected** variable is `True`.
 
 1. To connect to the iSCSI Target hosted on **SEA-DC1** from **SEA-SVR1**, switch to the Windows PowerShell window hosting PowerShell Remoting session to **SEA-SVR1**, enter the following commands, and after entering each command, press Enter:
 
