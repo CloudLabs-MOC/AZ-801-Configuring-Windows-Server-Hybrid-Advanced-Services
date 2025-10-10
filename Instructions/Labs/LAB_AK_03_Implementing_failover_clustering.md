@@ -194,7 +194,11 @@ In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from 
 
      >**Note:** Verify that after you run the last command, the value for the **IsConnected** variable is `True`.
 
-1. To connect to the iSCSI Target hosted on **SEA-DC1** from **SEA-SVR1**, switch to the Windows PowerShell window hosting PowerShell Remoting session to **SEA-SVR1**, enter the following commands, and after entering each command, press Enter:
+1. To connect to the iSCSI Target hosted on **SEA-DC1** from **SEA-SVR1**, switch to the Windows PowerShell window hosting PowerShell Remoting session to **SEA-SVR1**.
+
+    ![](../Media/az3l9.png) 
+
+1. Enter the following commands, and after entering each command, press Enter:
 
    ```powershell
    New-iSCSITargetPortal -TargetPortalAddress SEA-DC1.contoso.com 
@@ -202,7 +206,9 @@ In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from 
    Get-iSCSITarget | fl
    ```
 
-   > **Note:** Verify that after you run the last command, the value for the *IsConnected* variable is True.
+    ![](../Media/az3l12.png)   
+
+     >**Note:** Verify that after you run the last command, the value for the *IsConnected* variable is True.
 
 ### Task 2: Initialize the disks
 
