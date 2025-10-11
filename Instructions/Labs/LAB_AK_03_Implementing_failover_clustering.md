@@ -17,7 +17,7 @@ In this lab, you'll be working on:
 - Exercise 3: Deploying and Configuring a Highly Available File Server.
 - Exercise 4: Validating the Deployment of the Highly Available File Server.
 
-## Estimated time: **80 minutes**
+## Estimated time: 1 hr 45 minutes
 
 ## Architecture diagram
 
