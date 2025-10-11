@@ -11,7 +11,7 @@ In this lab, you will be working on:
 - Exercise 1: Implementing Hyper-V Replica.
 - Exercise 2: Implementing backup and restore with Windows Server Backup.
 
-## Estimated timing: 80 minutes
+## Estimated timing: 1 hr 45 minutes
 
 ## Architecture diagram
 
