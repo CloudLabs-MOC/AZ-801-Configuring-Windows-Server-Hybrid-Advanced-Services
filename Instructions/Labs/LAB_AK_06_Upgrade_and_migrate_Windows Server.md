@@ -13,7 +13,7 @@ In this lab, you will:
 - Deploy AD DS domain controllers in Azure.
 - Migrate file servers by using Storage Migration Service.
 
-## Estimated time: 60 minutes
+## Estimated time: 2 hr 45 minutes
 
 ## Architecture diagram
 
