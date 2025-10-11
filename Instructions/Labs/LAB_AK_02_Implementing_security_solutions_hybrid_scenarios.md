@@ -13,7 +13,7 @@ In this lab, you'll be working on:
 - Exercise 3: Provisioning Azure VMs running Windows Server
 - Exercise 4: Onboarding on-premises Windows Server into Microsoft Defender for Cloud and Azure Update Manager
 
-## Estimated timing: 80 minutes
+## Estimated timing: 1 hr 45 minutes
 
 ## Exercise 1: Creating an Azure Log Analytics workspace
 
