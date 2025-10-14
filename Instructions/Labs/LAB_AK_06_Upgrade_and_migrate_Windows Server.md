@@ -137,19 +137,21 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
 
    >**Note**: Azure Bastion allows for connection to the Azure VMs without public endpoints which you deployed in the previous task of this exercise, while providing protection against brute force exploits that target operating system-level credentials.
 
-1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open the Azure Cloud Shell pane by selecting the Cloud Shell button in the Azure portal.
+1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, open the Azure Cloud Shell pane by selecting the **Cloud Shell** button in the Azure portal.
+
+   ![](../Media/az6l5.png)
 
 1. Selecting a ***PowerShell*** environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
-   ![](../Media/21051.png)
+   ![](../Media/az6l6.png)
 
-1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
-   ![](../Media/21052.png)
+   ![](../Media/az6l7.png)
 
-1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
-   ![](../Media/21053.png)
+   ![](../Media/az6l8.png)
 
 1. Enter the following values to create the Cloud Shell storage account, and then click on **Create (5)**
 
@@ -161,11 +163,11 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
    | Storage account name | **cloudstore<inject key="DeploymentID" enableCopy="false"/>** (3) |
    | File share name | **fileshare<inject key="DeploymentID" enableCopy="false"/>** (4) |
 
-   ![](../Media/lab6y2.png)
+   ![](../Media/az6l9.png)
 
 1. Wait for PowerShell terminal to start.
 
-1. From the PowerShell session in the Cloud Shell pane, run the following commands to add a subnet named **AzureBastionSubnet** to the virtual network **az801l06a-vnet** you created earlier in this exercise:
+1. From the PowerShell session in the Cloud Shell pane, run the following commands to add a subnet named **AzureBastionSubnet** to the virtual network **az801l06a-vnet** you created earlier in this exercise: (Make sure to press `Enter` after the last commandd)
 
    ```powershell
    $resourceGroupName = 'AZ801-L0601-RG'
@@ -177,9 +179,15 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
    $vnet | Set-AzVirtualNetwork
    ```
 
+    ![](../Media/az6l10.png)   
+
 1. Close the Cloud Shell pane.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Bastions**, and then, on the **Bastions** page, select **+ Create**.
+1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Bastions (1)**, and then, on the **Bastions (2)** page.
+
+   ![](../Media/az6l11.png)
+
+1. Select **+ Create**.
 
 1. On the **Basic** tab of the **Create a Bastion** page, specify the following settings, and then select **Review + create**:
 
