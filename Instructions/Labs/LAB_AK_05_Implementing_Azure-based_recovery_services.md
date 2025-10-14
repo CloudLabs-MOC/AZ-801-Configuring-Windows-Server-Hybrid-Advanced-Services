@@ -433,6 +433,10 @@ Verify that the **Hyper-V site** and **Hyper-V servers** settings are set correc
 
    ![](../media/azm5-35.png)
 
+    >**Note**: If you see any error, please reselect the Replication policy name from the drop-down menu.
+
+     ![](../media/l9.png)    
+
 1. On the **Review** tab of the **Prepare infrastructure** page, select **Prepare**.
 
    ![](../media/33.png)
