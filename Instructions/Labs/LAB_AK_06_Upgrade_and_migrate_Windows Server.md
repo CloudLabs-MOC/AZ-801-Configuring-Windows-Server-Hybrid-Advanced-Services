@@ -194,7 +194,7 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
    | Virtual network | **az801l06a-vnet (4)** |
    | Subnet | **AzureBastionSubnet (10.6.255.0/24) (5)** |
    | Public IP address | **Create new (6)** |
-   | Public IP name | **az801l06a-vnet-ip (7)** |
+   | Public IP address name | **az801l06a-vnet-ip (7)** |
 
 1. On the **Review + create (8)** tab of the **Create a Bastion** page, select **Create**.
 
