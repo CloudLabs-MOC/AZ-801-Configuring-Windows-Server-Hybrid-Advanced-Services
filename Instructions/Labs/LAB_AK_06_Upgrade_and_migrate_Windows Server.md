@@ -210,7 +210,7 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
 
    ![](../Media/L6E1T2S11.png)
 
-   >**Note**: Wait for the deployment to complete before you proceed to the next task. The deployment might take about 5 minutes.
+   >**Note**: Wait for the deployment to complete before you proceed to the next task. The deployment might take about `5 - 10` minutes.
 
 ### Task 3: Deploy an Azure VM by using the Azure portal
 
@@ -219,7 +219,11 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
    >**Note**: You could fully automate the deployment of the second Azure VM and its setup as an additional domain controller in the same domain as the first one you provisioned in the first task of this exercise. However, the use of graphical interface in this case should provide additional guidance regarding differences between provisioning domain controllers in on-premises and Azure-based scenarios.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines**. 
-1. On the **Virtual machines** page, select **+ Create**, and then, in the drop-down menu, select **Azure virtual machine**.
+
+1. On the **Virtual machines** page, select **+ Create (1)**, and then, in the drop-down menu, select **Azure virtual machine (2)**.
+
+   ![](../Media/az6l12.png)
+
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Then, select **Next: Disks > (12)**
 
    | Setting | Value |
@@ -248,9 +252,11 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 
    | Setting | Value |
    | --- | --- |
-   | OS disk type | **Standard SSD** |
+   | OS disk type | **Standard SSD (1)** |
 
-1. On the **Disks** tab of the **Create a virtual machine** blade, in the **Data disks** section, select **Create and attach a new disk**.
+1. On the **Disks** tab of the **Create a virtual machine** blade, in the **Data disks** section, select **Create and attach a new disk (2)**.
+
+   ![](../Media/az6l13.png)
 
 1. On the **Create a new disk** page, specify the following settings (leave others with their default values), and then select **OK (4)**.
 
@@ -258,7 +264,7 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
    | --- | --- |
    | Name | **az801l06a-dc2_DataDisk_0** (1) |
    | Source type | **None (empty disk) (2)** |
-   | Size | **32 GiB** **Premium SSD (3)** |
+   | Size | Click on **Change Size** and select **32 GiB** **Premium SSD (3)** |
 
    ![](../Media/L6T1T3S6.png)
 
