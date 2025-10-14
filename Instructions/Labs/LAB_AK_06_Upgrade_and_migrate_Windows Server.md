@@ -353,25 +353,25 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 1. To install the AD DS and DNS server roles, at the Windows PowerShell command prompt, follow the below steps to copy the command from the lab guide to the bastion.
 
 
-	**Step 1:** Copy the below command.
+   - **Step 1:** Copy the below command.
 
       ```powershell
       Install-WindowsFeature -Name AD-Domain-Services,DNS -IncludeManagementTools
       ```
    
-      **Step 2:** Click on the **>>** button on the left pane of the bastion.
+   - **Step 2:** Click on the **>>** button on the left pane of the bastion.
    
-      ![](../Media/L6E1T4S11-1.png)
+     ![](../Media/L6E1T4S11-1.png)
    
-      **Step 3:** Paste the command in clipboard and hit **Enter**
+   - **Step 3:** Paste the command in clipboard and hit **Enter**
    
-      ![](../Media/L6E1T4S9-3.png)
+     ![](../Media/L6E1T4S9-3.png)
    
-      **Step 4:** On the **Windows PowerShell**, press **Ctrl+V**.
+   - **Step 4:** On the **Windows PowerShell**, press **Ctrl+V**.
    
-      > **Note**: Wait for the installation to complete. This might take about 3 minutes.
+      >**Note**: Wait for the installation to complete. This might take about 3 minutes.
 
-      ![](../Media/L6E1T4S9-4.png)
+       ![](../Media/L6E1T4S9-4.png)
 
 1. To configure the data disk, at the Windows PowerShell prompt, enter the following commands, and after entering each command, press Enter:
 
