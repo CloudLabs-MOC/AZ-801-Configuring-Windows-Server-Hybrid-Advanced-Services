@@ -236,11 +236,11 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
    |Resource group|**AZ801-L0502-RG (2)** |
    |Storage account name|**storage<inject key="DeploymentID" enableCopy="false"/> (3)**|
    |Region|**<inject key="Resource group Region"></inject> (4)** |
-   |Primary Serice|**Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**|   
+   |Preferred storage type|**Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**|   
    |Performance|**Standard (6)**|
    |Redundancy|**Locally redundant storage (LRS) (7)**|
 
-    ![](../media/azm5-18.png)
+    ![](../media/l6.png)
 
 1. On the **Basics** tab of the **Create a storage account** page, select the **Data protection** tab.
 
@@ -259,6 +259,16 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 1. Once the storage account is created, on the overview page, under the **Properties** make sure that **Blob soft delete and Container soft delete are disabled**.   
 
    ![](../media/azm5-42.png)
+
+    >**Note**: If the **Blob soft delete** is still Enabled, please follow the below steps:
+
+    - Select **Enabled** corresponding to **Blob soft delete**.
+
+      ![](../media/l7.png)  
+
+    - Uncheck **Enable Soft delete for containers (1)** and then **Save (2)**.
+
+      ![](../media/l8.png)       
 
 ### Task 2: Prepare protection of a Hyper-V virtual machine
 
