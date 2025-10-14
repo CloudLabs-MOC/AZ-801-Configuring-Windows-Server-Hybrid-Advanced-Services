@@ -27,11 +27,21 @@ In this exercise, you will learn how to deploy Active Directory Domain Services 
 
 In this task, you will deploy a domain controller using an ARM template. You will edit the template to adjust settings such as OS version, disk caching, and network configuration. You will also deploy the VM in an availability set and validate the deployment.
 
-1. Connect to **SEA-SVR2**, and then, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+1. Select the **SEA-SVR2** from the top menu drop down.
 
-1. On **SEA-SVR2**, start Microsoft Edge, and access a customized version of the QuickStart template at **[Create a new Windows VM and create a new AD Forest, Domain and DC](https://github.com/az140mp/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain)**. 
+    ![](../media/azm2-1.png)
 
-1. On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, select **Deploy to Azure**. This will automatically redirect the browser to the **Create an Azure VM with a new AD Forest** page in the Azure portal.
+1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+
+    ![](../media/azm2-2.png)
+
+1. On **SEA-SVR2**, start **Microsoft Edge** from the task bar, right click on the following link [Create a new Windows VM and create a new AD Forest, Domain and DC](https://github.com/az140mp/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain), then select **Copy link** and then paste it on the browser to access a customized version of the QuickStart template
+
+1. On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, select **Deploy to Azure**.
+
+    ![](../Media/az6l1.png)
+
+1. This will automatically redirect the browser to the **Create an Azure VM with a new AD Forest** page in the Azure portal.
 
 1. When prompted, in the Azure portal, sign in by using following credentials:
    
@@ -75,10 +85,16 @@ In this task, you will deploy a domain controller using an ARM template. You wil
    >**Note**: Configuring the custom DNS server virtual network setting that points to the Azure VM running the domain controller with the DNS server role ensures that any Azure VM subsequently deployed into the same virtual network will automatically use that DNS server for name resolution, effectively providing the domain join functionality.
 
 1. On the **Edit template** page, select **Save** if changes were made to the template; otherwise, select **Discard**.
+
+    ![](../Media/az6l2.png)
    
 1. Back on the **Create an Azure VM with a new AD Forest** page, select **Edit parameters**.
+
+    ![](../Media/az6l3.png)
    
-1. On the **Edit parameters** page, select **Load file**, in the **File Upload** dialog box, browse to the **C:\\Labfiles\\Lab06** folder, select the **L06-rg_template.parameters.json** file, and then select **Open**.
+1. On the **Edit parameters** page, select **Load file (1)**, in the **File Upload** dialog box, browse to the **C:\\Labfiles\\Lab06 (2)** folder, select the **L06-rg_template.parameters.json (3)** file, and then select **Open (4)**.
+
+    ![](../Media/az6l4.png)
    
 1. On the **Edit parameters** page, select **Save**.
 
