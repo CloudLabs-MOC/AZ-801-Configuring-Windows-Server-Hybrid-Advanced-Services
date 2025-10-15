@@ -98,7 +98,7 @@ In this task, you will deploy a domain controller using an ARM template. You wil
    
 1. On the **Edit parameters** page, select **Save**.
 
-    ![](../Media/az-l6-1.png)
+    ![](../media/az-l6-1.png)
 
 1. Back on the **Create an Azure VM with a new AD Forest** page, below the **Resource group** drop-down list, select **AZ801-L0601-RG**.
    
@@ -125,7 +125,7 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
 1. On the **Create an Azure VM with a new AD Forest** page, select **Review + create**, and then select **Create**.
 
-    ![](../Media/az-l6-2.png)
+    ![](../media/az-l6-2.png)
 
     >**Note:** Please wait for the deployment to complete before you go ahead with the next task. This might take about 15 minutes. 
 
@@ -145,15 +145,15 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
 
 1. Selecting a **PowerShell (2)** environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
-    ![](../Media/azl6-1.png)
+    ![](../media/azl6-1.png)
 
 1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
-    ![](../Media/azl6-2.png)
+    ![](../media/azl6-2.png)
 
 1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
-    ![](../Media/azl6-3.png)
+    ![](../media/azl6-3.png)
 
 1. Enter the following values to create the Cloud Shell storage account, and then click on **Create (6)**
 
@@ -289,11 +289,11 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 
 1.  On the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Then select **Next: Monitoring > (2)**.
 
-      | Setting | Value |
-      | --- | --- |
-      | Patch orchestration options | **Manual updates (1)** |
+    | Setting | Value |
+    | --- | --- |
+    | Patch orchestration options | **Manual updates (1)** |
 
-       ![](../Media/L6E1T3S8.png)
+     ![](../Media/L6E1T3S8.png)
 
 1. On the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values).
 
@@ -321,7 +321,7 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
     ![](../media/az-l6-6.png)
 
-1. On the **az801l06a-dc2** page, on the vertical menu of the left side, in the **Networking (1)** section, select **Network settings (2)**. **Clcik the link (3)** to the network interface of the **az801l06a-dc2** virtual machine.
+1. On the **az801l06a-dc2** page, on the vertical menu of the left side, in the **Networking (1)** section, select **Network settings (2)**. **Click the link (3)** to the network interface of the **az801l06a-dc2** virtual machine.
 
     ![](../media/az-l6-7.png)
 
@@ -475,183 +475,176 @@ In this task, you will set up file services on the SEA-SVR2 machine by running a
 
    >**Note:** Click on **Run Once** when the pop-up comes up.
 
-
-> **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
-   <validation step="cb93febc-2d5a-4be7-9104-a0ba14a68ae6" />   
-
 ### Task 2: Perform migration by using Storage Migration Service
 
 In this task, you will use Windows Admin Center and the Storage Migration Service to migrate files from SEA-SVR1 to SEA-SVR2. This will involve scanning the source server, transferring data, mapping volumes, and configuring the migration settings, ensuring that files and data from the old server are successfully moved to the new one.
 
 1. On **SEA-SVR2**, start Microsoft Edge, and then go to **https://SEA-SVR2.contoso.com**. 
    
-   >**Note:** If the link does not work, on **SEA-SVR2**, open File Explorer, select Downloads folder, in the Downloads folder select **WindowsAdminCenter.msi** file and install manually. After the install completes, refresh Microsoft Edge.
+     >**Note:** If the link does not work, on **SEA-SVR2**, open File Explorer, select Downloads folder, in the Downloads folder select **WindowsAdminCenter.msi** file and install manually. After the install completes, refresh Microsoft Edge.
 
-   >**Note:** If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-svr2-contoso.com (unsafe)**.
+     >**Note:** If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-svr2-contoso.com (unsafe)**.
 
 1. When prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK (3)**:
 
-   - Username: **CONTOSO\\Administrator (1)**
-   - Password: **Pa55w.rd (2)**
+     - Username: **CONTOSO\\Administrator (1)**
+     - Password: **Pa55w.rd (2)**
 
-      ![](../media/az-l6-18.png)
+       ![](../media/az-l6-18.png)
 
 1. Review the **New in this release** pop-up window and select **Close** in its upper-right corner.
 
 1. In the **All connections** pane of Windows Admin Center, in the upper-right corner, select the **Settings** icon (the cog wheel).
 
-    ![](../media/az-l6-19.png)
+     ![](../media/az-l6-19.png)
 
 1. In the left pane, select **Extensions (1)**. Review the available extensions. Under the details pane, select **Installed extensions (2)** and verify that the list includes the **Storage Migration Service (3)** extension.
 
-   ![](../Media/L6E2T2S6.png)
+     ![](../Media/L6E2T2S6.png)
 
       >**Note:** If there is an update available, select the **Storage Migration Service** extension entry and select **Update**.
 
 1. On the top menu, next to **Settings (1)**, select the drop-down arrow, and then select **Server Manager (2)**.
 
-    ![](../media/az-l6-20.png)
+     ![](../media/az-l6-20.png)
 
 1. In the **All connections** pane, select the **sea-svr2.contoso.com** link.
 
-    ![](../media/az-l6-21.png)
+     ![](../media/az-l6-21.png)
 
 1. On the **sea-svr2.contoso.com** page, on the **Tools** menu, select the **Storage Migration Service (1)** entry. Under the **Storage Migration Service** pane, select **Install (2)**.
 
-    ![](../media/az-l6-22.png)
+     ![](../media/az-l6-22.png)
 
-    >**Note:** This will automatically install the Storage Migration Service and its required components.
+     >**Note:** This will automatically install the Storage Migration Service and its required components.
 
 1. In the **Migrate storage in three steps** pane, select **Close**.
 
-    ![](../media/az-l6-23.png)
+     ![](../media/az-l6-23.png)
 
 1. In the **Storage Migration Service** pane, scroll down to the bottom of the page and select **+ New job (1)**. Under the **New job** pane provide below details and click on **OK (4)**.
 
-   | Job Name | **SVR1toSVR2 (2)** |
+     | Job Name | **SVR1toSVR2 (2)** |
+ 
+     | Source devices | **Windows servers and clusters (3)** |
 
-   | Source devices | **Windows servers and clusters (3)** |
-
-    ![](../media/az-l6-24.png)
+     ![](../media/az-l6-24.png)
 
 1. In the **Storage Migration Service > SVR1toSVR2** pane, on the **Inventory servers** tab, review the **Check the prerequisites** pane and select **Next**.
-
-    ![](../media/az-l6-25.png)
+ 
+     ![](../media/az-l6-25.png)
 
 1. On the **Inventory servers** tab, in the **Enter credentials** pane, if necessary, enter the credentials of the **CONTOSO\\Administrator (1)** user account and Password as **Pa55w.rd (2)**, uncheck the **Migrate from failover clusters (3)** checkbox, and then select **Next (4)**.
 
-    ![](../media/az-l6-26.png)
+     ![](../media/az-l6-26.png)
 
 1. On the **Inventory servers** tab, in the **Install required features** pane, select **Next**.
 
-    ![](../media/az-l6-27.png)
+     ![](../media/az-l6-27.png)
 
 1. On the **Inventory servers** tab, in the **Add and scan devices** pane, select **+ Add a device (1)**.
 
 1. On the **Add source device**, ensure that the **Device name (2)** option is selected, in the **Name** text box, enter **SEA-SVR1.contoso.com (3)**, and then select **Add (4)**.
 
-    ![](../media/az-l6-28.png)
+     ![](../media/az-l6-28.png)
   
 1. On the list of devices, select the newly added **SEA-SVR1.contoso.com (1)** entry, in the **Add and scan devices** pane, in the toolbar, select the ellipsis (**... (2)**) symbol, and then, in the drop-down menu, select **Start scan (3)**.
 
-    ![](../media/az-l6-29.png)
+     ![](../media/az-l6-29.png)
 
-    >**Note:** If the ellipses (...) or any other options are not visible, please try zooming out the screen in the LabVM and check again.
+     >**Note:** If the ellipses (...) or any other options are not visible, please try zooming out the screen in the LabVM and check again.
 
-    >**Note:** Wait until the scan completes successfully. This should take about 1 minute.
+     >**Note:** Wait until the scan completes successfully. This should take about 1 minute.
 
 1. On the **Inventory servers** tab, in the **Add and scan devices** pane, select **Next**. 
 
-    ![](../media/az-l6-30.png)
+     ![](../media/az-l6-30.png)
 
-    >**Note:** This will transition to the second stage of the migration job accessible via the **Transfer data** tab in the **Storage Migration Service > SVR1toSVR2** pane.
+     >**Note:** This will transition to the second stage of the migration job accessible via the **Transfer data** tab in the **Storage Migration Service > SVR1toSVR2** pane.
 
 1. On the **Transfer data** tab, in the **Enter credentials for the destination device** pane, verify that the **CONTOSO\\Administrator (1)** user account and password as **Pa55w.rd (2)** is being used and select **Next (3)**.
 
-    ![](../media/az-l6-31.png)
+     ![](../media/az-l6-31.png)
 
 1. In the **Specify the destination for: sea-svr1.contoso.com** pane, ensure that the **Destination** option is set to **Use an existing server or VM (1)**, in the **Destination device** text box, enter **SEA-SVR2.contoso.com (2)** and select **Scan (3)**.
 
-    ![](../media/az-l6-32.png)
+     ![](../media/az-l6-32.png)
 
-    >**Note:** In case if you do not see the Scan button, please zoom out a little in the browser settings.
+     >**Note:** In case if you do not see the Scan button, please zoom out a little in the browser settings.
    
-    >**Note:** Wait until the scan completes successfully. This should take about 1 minute.
+     >**Note:** Wait until the scan completes successfully. This should take about 1 minute.
 
-    >**Note:** In hybrid scenarios, you also have the option of automatically creating an Azure VM serving as the destination of the migration job.
+     >**Note:** In hybrid scenarios, you also have the option of automatically creating an Azure VM serving as the destination of the migration job.
 
 1. After the scan completes, in the **Specify the destination for: sea-svr1.contoso.com** pane, review the **Map each source volume to a destination volume** section and ensure that the **S:** source volume is mapped to the **S:** destination volume.
 
-    ![](../Media/lab6y31.png)
+     ![](../Media/lab6y31.png)
 
 1. In the **Specify the destination for: sea-svr1.contoso.com** pane, review the **Select the shares to transfer** section, ensure that the **Data** source share is included in the transfer, and then select **Next**.
 
-    ![](../Media/lab6y32.png)
+     ![](../Media/lab6y32.png)
 
 1. On the **Transfer data** tab, in the **Adjust transfer settings** pane, specify the following settings (leave others with their default values), and then select **Next (7)**:
 
-   | Setting | Value | 
-   | --- | --- |
-   | Back up folders that would be overwritten (Azure File Sync-enabled shares aren't backed up) | enabled **(1)** |
-   | Validation method | **CRC 64 (2)** |
-   | Max duration (minutes) | **60 (3)** |
-   | Migrate users and groups | **Reuse accounts with the same name (4)** |
-   | Max retries | **3 (5)** |
-   | Delay between retries (seconds) | **60 (6)** |
+     | Setting | Value | 
+     | --- | --- |
+     | Back up folders that would be overwritten (Azure File Sync-enabled shares aren't backed up) | enabled **(1)** |
+     | Validation method | **CRC 64 (2)** |
+     | Max duration (minutes) | **60 (3)** |
+     | Migrate users and groups | **Reuse accounts with the same name (4)** |
+     | Max retries | **3 (5)** |
+     | Delay between retries (seconds) | **60 (6)** |
 
-    ![](../media/az-l6-34.png)
+     ![](../media/az-l6-34.png)
 
 1. On the **Transfer data** tab, in the **Install required features** pane, wait for the installation of **SMS-Proxy** on **SEA-SVR2.contoso.com** to complete **(1)**, and then select **Next (2)**.
 
-    ![](../media/az-l6-35.png)
+     ![](../media/az-l6-35.png)
 
 1. On the **Transfer data** tab, in the **Validate source and destination devices** pane, select **Validate (1)**, and after the validation **successfully completes (2)**, select **Next (3)**.
 
-    ![](../media/az-l6-36.png)
+     ![](../media/az-l6-36.png)
 
 1. On the **Transfer data** tab, in the **Start the transfer** pane, select **Start transfer**, wait until it completes, and then select **Next**.
 
-    ![](../media/az-l6-37.png)
+     ![](../media/az-l6-37.png)
 
-    ![](../media/az-l6-38.png)
+     ![](../media/az-l6-38.png)
 
-    >**Note:** Wait until the transfer completes successfully. This should take less than 1 minute.
+     >**Note:** Wait until the transfer completes successfully. This should take less than 1 minute.
 
-    >**Note:** This will transition to the third stage of the migration job accessible via the **Cut over to the new servers** tab on the **Storage Migration Service > SVR1toSVR2** pane.
+     >**Note:** This will transition to the third stage of the migration job accessible via the **Cut over to the new servers** tab on the **Storage Migration Service > SVR1toSVR2** pane.
 
 1. On the **Cut over to the new servers** tab, in the **Enter credentials for the source devices** and the **Enter credentials for the destination devices** sections, accept the stored credentials of the **CONTOSO\\Administrator** user account and select **Next**.
 
-    ![](../media/az-l6-39.png)
+     ![](../media/az-l6-39.png)
 
 1. On the **Cut over to the new servers** tab, in the **Configure cutover from sea-svr1.contoso.com to sea-svr2.contoso.com** pane, in the **Source network adapters** section, specify the following settings:
 
-   | Setting | Value | 
-   | --- | --- |
-   | Use DHCP | disabled **(1)** |
-   | IP address | **172.16.10.111 (2)**|
-   | Subnet | **255.255.0.0 (3)** |
-   | Gateway | **172.16.10.1 (4)** |
+     | Setting | Value | 
+     | --- | --- |
+     | Use DHCP | disabled **(1)** |
+     | IP address | **172.16.10.111 (2)**|
+     | Subnet | **255.255.0.0 (3)** |
+     | Gateway | **172.16.10.1 (4)** |
 
 1. On the **Cut over to the new servers** tab, in the **Configure cutover from sea-svr1.contoso.com to sea-svr2.contoso.com** pane, in the **Destination network adapters** drop-down list, select **Ethernet (5)**.
 
 1. On the **Cut over to the new servers** tab, in the **Configure cutover from sea-svr1.contoso.com to sea-svr2.contoso.com** pane, in the **Rename the source device after cutover** section, select the **Choose a new name (6)** option, in the **New source computer name** enter **SEA-SVR1-OLD (7)**, and then select **Next (8)**.
 
-    ![](../media/az-l6-40.png)
+     ![](../media/az-l6-40.png)
 
 1. On the **Cut over to the new servers** tab, in the **Adjust cutover settings** pane, in the **Cutover timeout (minutes)** text box, enter **30 (!)**, in the **Enter AD credentials** section, leave the **Stored credentials (2)** option enabled, and then select **Next (3)**.
 
-    ![](../media/az-l6-41.png)
+     ![](../media/az-l6-41.png)
 
 1. On the **Cut over to the new servers** tab, in the **Validate source and destination device** pane, select **Validate (1)**, and after the validation successfully completes **(2)**, select **Next (3)**.
 
-    ![](../media/az-l6-42.png)
+     ![](../media/az-l6-42.png)
 
 1. On the **Cut over to the new servers** tab, in the **Cut over to the new servers** pane, select **Start cutover**. The cutover will trigger two consecutive restarts of both **SEA-SVR1** and **SEA-SVR2**.
  
-    ![](../media/az-l6-43.png)
+     ![](../media/az-l6-43.png)
 
 
 ### Task 3: Validate migration outcome
@@ -661,47 +654,48 @@ In this task, you will validate the migration outcome by performing a series of 
 1. On **SEA-SVR2**, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
 1. On **SEA-SVR2**, select **Start (1)**.  
+
 1. Right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.  
 
-    ![](../media/az-l6-9.png)
+     ![](../media/az-l6-9.png)
 
 1. To identify the IPv4 addresses assigned to the network interface of **SEA-SVR2**, in the **Windows PowerShell** console, enter the following command, and then press Enter:
 	
-   ```powershell
-   Get-NetIPAddress | Where-Object AddressFamily -eq 'IPv4' | Select-Object IPAddress
+    ```powershell
+     Get-NetIPAddress | Where-Object AddressFamily -eq 'IPv4' | Select-Object IPAddress
    ```
 
-    ![](../media/az-l6-44.png)
+     ![](../media/az-l6-44.png)
 
-    >**Note:** Verify that the output includes both **172.16.10.11** and **172.16.10.12**.
+     >**Note:** Verify that the output includes both **172.16.10.11** and **172.16.10.12**.
 
 1. To identify the NetBIOS name assigned to **SEA-SVR2**, in the **Windows PowerShell** console, enter the following command, and then press Enter:
 	
    ```powershell
-   nbtstat -n
+     nbtstat -n
    ```
     
-    ![](../media/az-l6-45.png)
+     ![](../media/az-l6-45.png)
 
-    >**Note:** Verify that the output includes both **SEA-SVR1** and **SEA-SVR2**.
+     >**Note:** Verify that the output includes both **SEA-SVR1** and **SEA-SVR2**.
 
 1. To identify the local shares on **SEA-SVR2**, in the **Windows PowerShell** console, enter the following command, and then press Enter:
 	
    ```powershell
-   Get-SMBShare
+     Get-SMBShare
    ```
    
-    ![](../media/az-l6-46.png)
+     ![](../media/az-l6-46.png)
 
-    >**Note:** Verify that the output includes the **Data** share hosted in the **S:\Data** folder.
+     >**Note:** Verify that the output includes the **Data** share hosted in the **S:\Data** folder.
 
 1. To identify the content of the **Data** share on **SEA-SVR2**, in the **Windows PowerShell** console, enter the following command, and then press Enter:
 	
    ```powershell
-   Get-ChildItem -Path 'S:\Data'
+     Get-ChildItem -Path 'S:\Data'
    ```
 
-    ![](../media/az-l6-47.png)
+     ![](../media/az-l6-47.png)
 
 ## Review
 
