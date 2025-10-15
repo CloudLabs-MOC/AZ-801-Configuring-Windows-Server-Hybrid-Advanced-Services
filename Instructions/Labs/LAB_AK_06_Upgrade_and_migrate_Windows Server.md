@@ -353,21 +353,21 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 1. To install the AD DS and DNS server roles, at the Windows PowerShell command prompt, follow the below steps to copy the command from the lab guide to the bastion.
 
 
-   - **Step 1:** Copy the below command.
+    - **Step 1:** Copy the below command.
 
       ```powershell
       Install-WindowsFeature -Name AD-Domain-Services,DNS -IncludeManagementTools
       ```
    
-   - **Step 2:** Click on the **>>** button on the left pane of the bastion.
+    - **Step 2:** Click on the **>>** button on the left pane of the bastion.
    
-     ![](../Media/L6E1T4S11-1.png)
+      ![](../Media/L6E1T4S11-1.png)
    
-   - **Step 3:** Paste the command in clipboard and hit **Enter**
+    - **Step 3:** Paste the command in clipboard and hit **Enter**
    
-     ![](../Media/L6E1T4S9-3.png)
+      ![](../Media/L6E1T4S9-3.png)
    
-   - **Step 4:** On the **Windows PowerShell**, press **Ctrl+V**.
+    - **Step 4:** On the **Windows PowerShell**, press **Ctrl+V**.
    
       >**Note**: Wait for the installation to complete. This might take about 3 minutes.
 
@@ -395,7 +395,6 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
    ![](../Media/L6E1T4S14.png)
 
-
 1. In the **Credentials for deployment operation** dialog box, in the **User name** box, enter **Student@contoso.com (1)**, in the **Password** box, enter **Pa55w.rd1234** (2), and then select **OK (3)**. 
 
    ![](../Media/L6E1T4S15.png)
@@ -407,7 +406,6 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 1. On the **Domain Controller Options** page, ensure that the **Domain Name System (DNS) server**, **Global Catalog (GC)** checkboxes are selected and **Read-only domain controller (RODC)** checkbox is cleared **(1).** In the **Type the Directory Services Restore Mode (DSRM) password** section, enter and confirm the password **Pa55w.rd1234 (2)**, and then select **Next (3)**.
 
    ![](../Media/L6E1T4S17.png)
-
 
 1. On the **DNS Options** page of **Active Directory Domain Services Configuration Wizard**, select **Next**.
 
@@ -480,7 +478,6 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
 
    - Username: **CONTOSO\\Administrator**
    - Password: **Pa55w.rd**
-
 
 1. Review the **New in this release** pop-up window and select **Close** in its upper-right corner.
 
@@ -602,7 +599,6 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
 1. On the **Cut over to the new servers** tab, in the **Configure cutover from sea-svr1.contoso.com to sea-svr2.contoso.com** pane, in the **Destination network adapters** drop-down list, select **Ethernet (5)**.
 
 1. On the **Cut over to the new servers** tab, in the **Configure cutover from sea-svr1.contoso.com to sea-svr2.contoso.com** pane, in the **Rename the source device after cutover** section, select the **Choose a new name (6)** option, in the **New source computer name** enter **SEA-SVR1-OLD (7)**, and then select **Next (8)**.
-
 
 1. On the **Cut over to the new servers** tab, in the **Adjust cutover settings** pane, in the **Cutover timeout (minutes)** text box, enter **30**, in the **Enter AD credentials** section, leave the **Stored credentials** option enabled, and then select **Next**.
 
