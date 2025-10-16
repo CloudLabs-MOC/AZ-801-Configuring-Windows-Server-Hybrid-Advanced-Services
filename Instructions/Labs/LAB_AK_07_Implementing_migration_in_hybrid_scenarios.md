@@ -225,9 +225,9 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
    
 1. Right click on [Windows Server Evaluations](https://www.microsoft.com/en-in/EvalCenter) then select **Copy link** and then paste it over the browser tab.
 
-- On the **Start your evaluation today** page, select **Windows Server (1)**, then **Windows Server (2)**, and finally choose **Windows Server 2025 (3)**.
+    - On the **Start your evaluation today** page, select **Windows Server (1)**, then **Windows Server (2)**, and finally choose **Windows Server 2025 (3)**.
 
-    ![](../media/az-7-9.png)
+       ![](../media/az-7-9.png)
 
 1. On the Windows Server 2025 page, under **Get started for free** select **Download the VHD**.
 
@@ -319,7 +319,7 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
    
 1. On the **Summary** page of the **New Virtual Machine Wizard**, select **Finish**.
 
-    ![](../media/az-7-18.png)
+    ![](../media/az-7-18n.png)
 
 1. In the **Hyper-V Manager** console, select the newly created virtual machine, right click **(1)** and then select **Start (2)**.
 
@@ -596,7 +596,7 @@ In this task, you are implementing the target Azure environment by creating virt
 
     ![](../media/az-7-35.png)
 
-1.  On the **Review  + create** tab, select **Create**.
+1. On the **Review  + create** tab, select **Create**.
 
     ![](../media/az-7-36.png)
 
@@ -768,7 +768,7 @@ In this task, you will deploy and configure the Azure Migrate appliance on your 
    
 1. When prompted **Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then **close** the newly opened browser tab.
 
-    ![](../media/az-7-46.1.png)
+    ![](../media/az-7-2.46.1.png)
 
 1. In the browser window, on the **Appliance Configuration Manager** page, verify that registration was successful.
 
@@ -913,7 +913,7 @@ In this task, you will prepare your environment to begin migrating discovered Hy
 
 1. On the **Discover** page, in step **1. Prepare Hyper-V host servers**, select the first **Download** link (not the **Download** button), in order to download the Hyper-V replication provider software installer.
 
-    ![](../media/az-7-55.png)
+    ![](../media/az-7-55n.png)
 
     > **Note:** If you receive a browser notification that says **AzureSiteRecoveryProvider.exe can't be downloaded securely**, display the context-sensitive menu of the **Download** link and then, in the menu, select **Copy link**. Open another tab in the same browser window, paste the link you copied, and then press Enter.
 
@@ -1025,7 +1025,7 @@ In this task, you’ll configure replication for your Hyper-V VM to Azure using 
 
     >**Note:** **If you are unable to see the Cache Storage Account option and select** **str<inject key="DeploymentID" enableCopy="false"/>** **and encounter an error when selecting it please wait for 10 minutes and perform the above from step 1**.
 
-1. On the **Compute** tab of the **Replicate** page, ensure that the **Standard_D2s_v3 (1)** is selected in the **Azure VM Size** drop-down list. In the **OS Type** drop-down list, select **Windows (2)**, select Operating **System Windows Server 2025 (3)** and then select **Next (4)**.
+1. On the **Compute** tab of the **Replicate** page, ensure that the **Standard_D2s_v3 (1)** is selected in the **Azure VM Size** drop-down list. In the **OS Type** drop-down list, select **Windows (2)**, select **Operating System** **Windows Server 2025 (3)** and then select **Next (4)**.
 
    ![](../media/az-7-62.png)
 
