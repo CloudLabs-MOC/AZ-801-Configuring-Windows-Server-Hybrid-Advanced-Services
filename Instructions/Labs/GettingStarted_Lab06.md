@@ -6,7 +6,7 @@ Welcome to your AZ-801: Configuring Windows Server Hybrid Advanced Services work
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-  ![Access Your VM and Lab Guide](../Media/accessing-lab-env.png)
+  ![Access Your VM and Lab Guide](../media/az-7-1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -26,9 +26,9 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-   ![Manage Your Virtual Machine](../Media/manage-resource.png)
+   ![Manage Your Virtual Machine](../media/az-7-2.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -109,7 +109,7 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
  
 Learner Support Contacts:
  
-- Email Support: labs-support@spektrasystems.com
+- Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Click **Next** from the bottom right corner to embark on your Lab journey!

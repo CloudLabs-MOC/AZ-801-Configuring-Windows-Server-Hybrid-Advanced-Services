@@ -10,7 +10,7 @@ In this lab, you will complete the following tasks:
 + Exercise 2: Identifying the source of a performance problem
 + Exercise 3: Viewing and configuring centralized event logs
   
-## Estimated timing: 75 minutes
+## Estimated timing: 75 Minutes
 
 ## Architecture diagram
 
@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this exercise, you will create and start a custom data collector set in Performance Monitor to establish a baseline for the server’s performance. You will select relevant performance counters, simulate typical server workloads, and collect data. After data collection, you will analyze the performance metrics to establish baseline values that can be used for future comparisons when troubleshooting performance issues.
 
-> **Note**: After starting the Data Collector Set, there might be a delay of 10 minutes for the results to appear.
+> **Note:** After starting the Data Collector Set, there might be a delay of 10 minutes for the results to appear.
 
 ### Task 1: Create and start a data collector set
 
@@ -32,9 +32,9 @@ In this task, you will create a custom data collector set in Performance Monitor
 
    ![](../Media/az-801-lab8-image1.png)
 
-1. In Performance Monitor, expand the **Data Collector Sets** node in the navigation pane, and then select **User Defined**.
+1. In Performance Monitor, expand the **Data Collector Sets (1)** node in the navigation pane, and then select **User Defined (2)**.
 
-    ![](../Media/az-801-lab8-image2.png)
+    ![](../media/az-8-0.png)
    
 1. Right-click on the **User Defined (1)**, select **New (2)**, and then select **Data Collector Set (3)**. This will launch the **Create new Data Collector Set** wizard.
 
@@ -46,7 +46,7 @@ In this task, you will create a custom data collector set in Performance Monitor
 
 1. On the **What type of data do you want to include?** page, select the **Performance counter (1)** checkbox, and then select **Next (2)**.
 
-     ![](../Media/az-801-lab8-image5.png)
+     ![](../media/az-8-3.png)
    
 1. On the **Which performance counters would you like to log?** page, select **Add**.
 
@@ -60,17 +60,19 @@ In this task, you will create a custom data collector set in Performance Monitor
 
    ![](../Media/az-801-lab8-image8.png)
 
-   ![](../Media/az-801-lab8-image9.png)
+   ![](../media/az-8-4n.png)
    
 1. In the **Available counters** list, expand **PhysicalDisk (1)**, select **% Disk Time (2)**, ensure that the **_Total (3)** entry is selected in the **Instances of selected object** section, and then select **Add >> (4)**.
 
-   ![](../Media/az-801-lab8-image10.png)
+   ![](../media/az-8-5.png)
 
 1. Select **Avg. Disk Queue Length (1)**, ensure that the **_Total (2)** entry is selected in the **Instances of selected object** section, and then select **Add >> (3)**.
 
    ![](../Media/az-801-lab8-image11.png)
   
 1. In the **Available counters** list, expand **System**, select **Processor Queue Length (1)**, and then select **Add >> (2)**.
+   
+   ![](../media/az-8-6.png)
 
    ![](../Media/az-801-lab8-image12.png)
 
@@ -98,7 +100,9 @@ In this task, you will create a custom data collector set in Performance Monitor
 
 In this task, you will simulate a typical server workload by creating and copying large files using PowerShell. This will allow the Performance Monitor to capture relevant data while the server is under load.
 
-1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, search for **Windows PowerShell**, right-click on the **Windows PowerShell** and then select **Run as administrator**.
+1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, search for **Windows PowerShell (1)**, right-click on the **Windows PowerShell (2)** and then select **Run as administrator (3)**.
+
+     ![](../media/az-8-7.png)
 
 1. To create a file of a specific size, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
@@ -144,7 +148,7 @@ In this task, you will analyze the performance data reports in Performance Monit
 
 1. In Performance Monitor, in the navigation pane, expand **Reports (1)**, expand **User Defined (2)**, expand **SEA-SVR2 Performance (3)**, select **SEA-SVR2\_*DateTime*-000001 (4)**.
 
-   ![](../Media/az-801-lab8-image19.png) 
+   ![](../media/az-8-8.png) 
 
    >**Note:** (where *DateTime* designates the current timestamp), and then review the report data.
    
@@ -161,7 +165,7 @@ In this task, you will analyze the performance data reports in Performance Monit
    - **Processor\\% Processor Time**
    - **System\\Processor Queue Length**
 
-      ![](../Media/az-801-lab8-image21.png)
+      ![](../media/az-8-9.png)
 
 ## Exercise 2: Identifying the source of a performance problem
 
@@ -173,13 +177,13 @@ In this task, you will run the CPU Stress utility (CPUStres64.exe) to simulate a
 
 1. On **SEA-SVR2**, open File Explorer.
 
-1. In File Explorer, browse to **C:\Labfiles\Lab08**.
+1. In File Explorer, browse to **C:\Labfiles\Lab08 (1)**.
 
-1. Double-click on **CPUSTRES64.EXE**.
+1. Double-click on **CPUSTRES64.EXE (2)**.
 
-   ![](../Media/az-801-lab8-image22.png)
+    ![](../media/az-8-10.png)
 
-   >**Note**: **CPUSTRES64.EXE** is a SysInternals utility that can be used to simulate CPU activity by running up to 64 threads in a loop.
+    >**Note:** **CPUSTRES64.EXE** is a SysInternals utility that can be used to simulate CPU activity by running up to 64 threads in a loop.
 
 1. In the **CPUSTRES License Agreement** dialog box, select **Agree**.
 
@@ -201,7 +205,7 @@ In this task, you will capture performance data while the server is under the ad
 
    ![](../Media/az-801-lab8-image25.png)
    
-   > **Note**: Wait 1 minute to allow the data capture to occur.
+   > **Note:** Wait 1 minute to allow the data capture to occur.
 
 ### Task 3: Remove the workload and review the performance data
 
@@ -230,7 +234,7 @@ In this task, after removing the CPU stress workload, you will stop the data col
    - **Processor\\% Processor Time**
    - **System\\Processor Queue Length**
 
-      ![](../Media/az-801-lab8-image28.png)
+      ![](../media/az-8-12.png)
      
 ## Exercise 3: Viewing and configuring centralized event logs
 
@@ -272,9 +276,9 @@ In this task, you will be configuring the prerequisites for event log forwarding
    winrm qc
    ```
 
-   > **Note**: Verify that the WinRM service is already running and that it's set up for remote management.
+   > **Note:** Verify that the WinRM service is already running and that it's set up for remote management.
 
-   ![](../Media/az-801-lab8-image29.png)
+    ![](../media/az-8-13.png)
 
 1. To ensure that the relevant Windows Defender Firewall with Advanced Security rules are enabled on **SEA-DC1**, enter the following command and press Enter:
 
@@ -282,7 +286,7 @@ In this task, you will be configuring the prerequisites for event log forwarding
    Set-NetFirewallRule -DisplayGroup 'Remote Event Log Management' -Enabled True -Profile Domain -PassThru
    ```
 
-   > **Note**: Leave the Windows PowerShell window open.
+   > **Note:** Leave the Windows PowerShell window open.
 
 1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Active (1)**, and then, in the **Best match** list, select **Active Directory Users and Computers (2)**.
 
@@ -294,9 +298,9 @@ In this task, you will be configuring the prerequisites for event log forwarding
 
     ![](../Media/az-801-lab8-image31.png)
 
-1. Right-click on the **Event Log Readers** group, select **Properties (3)**, and then, in the **Event Log Readers Properties** dialog box, select the **Members** tab.
+1. Right-click on the **Event Log Readers (1)** group, select **Properties (2)**, and then, in the **Event Log Readers Properties** dialog box, select the **Members** tab.
 
-    ![](../Media/az-801-lab8-image32.png)
+    ![](../media/az-8-14.1.png)
 
 1. On the **Members (1)** tab, select **Add (2)**.
 
@@ -322,9 +326,9 @@ In this task, you will be configuring the prerequisites for event log forwarding
 
 In this task, you will create an event subscription to collect and forward critical events from SEA-DC1 to SEA-SVR2. After setting up the subscription, you will verify that the forwarded events appear in Event Viewer, ensuring centralized logging is working correctl
 
-1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Event (1)**, and then, in the **Best match** list, select **Event Viewer (2)**.
+1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Event Viewer (1)**, and then, in the **Best match** list, select **Event Viewer (2)**.
 
-     ![](../Media/az-801-lab8-image47.png)
+     ![](../media/az-8-14.png)
    
 1. In **Event Viewer**, select **Subscriptions** in the navigation pane.
 
@@ -332,11 +336,13 @@ In this task, you will create an event subscription to collect and forward criti
    
 1. Right-click or access the context menu for **Subscriptions (1)**, and then select **Create Subscription (2)**.
 
-   ![](../Media/az-801-lab8-image39.png)
+    ![](../media/az-8-15.png)
 
-1. In the **Subscription Properties** dialog box, enter **SEA-DC1 Events** in the **Subscription name** box.
+1. In the **Subscription Properties** dialog box, enter **SEA-DC1 Events (1)** in the **Subscription name** box.
 
-1. Ensure that the **Collector initiated** option is selected, and then select **Select Computers**.
+1. Ensure that the **Collector initiated (2)** option is selected, and then select **Select Computers (3)**.
+
+    ![](../media/az-8-16.png)
 
 1. In the **Computers** dialog box, select **Add Domain Computers**.
 
@@ -344,7 +350,7 @@ In this task, you will create an event subscription to collect and forward criti
 
 1. In the **Select Computer** dialog box, enter **SEA-DC1 (1)** in the **Enter the object name to select** box, and then select **OK (2)**.
 
-     ![](../Media/az-801-lab8-image41.png)
+     ![](../media/az-8-17.png)
    
 1. In the **Computers** dialog box, select **OK**.
 
@@ -354,9 +360,11 @@ In this task, you will create an event subscription to collect and forward criti
 
    ![](../Media/az-801-lab8-image43.png)
 
-1. In the **Logged** drop-down list, select **Last 24 hours**.
+1. In the **Logged** drop-down list, select **Last 24 hours (1)**.
 
-1. In the **Event level** dialog box, select the **Critical**, **Error**, **Warning**, and **Information** checkboxes.
+1. In the **Event level** dialog box, select the **Critical**, **Error**, **Warning**, and **Information** checkboxes **(2)**.
+
+    ![](../media/az-8-18.png)
 
 1. In the **Event logs** drop-down list, expand **Windows Logs (1)**, and then select the **Application (2)** and **System (3)** checkboxes.
 
@@ -367,6 +375,8 @@ In this task, you will create an event subscription to collect and forward criti
     ![](../Media/az-801-lab8-image45.png)
    
 1. Back in the **Subscription Properties – SEA-DC1 Events** dialog box, select **OK**.
+
+    ![](../media/az-8-19.png)
 
 1. On **SEA-SVR2**, switch to the **Event Viewer** window, and then expand **Windows Logs** in the navigation pane.
 
