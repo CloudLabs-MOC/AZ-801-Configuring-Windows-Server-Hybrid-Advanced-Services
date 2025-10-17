@@ -21,7 +21,7 @@ In this exercise, you are preparing a monitoring environment by deploying a virt
 
 In this task, you deploy an Azure VM using a pre-defined ARM template through the Azure Cloud Shell, preparing the environment for monitoring hybrid infrastructure.
 
-1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
+1. From the top menu dropdown, select **SEA-SVR2 (2)** under the **HOSTVM** list **(1)** to connect to the **SEA-SVR2** virtual machine.
 
     ![](../media/17-10-lab9-1.png)
 
@@ -184,7 +184,7 @@ In this task, you onboard an on-premises server to Azure Arc by generating and e
     ![](../media/17-10-lab9-7.png)
 
 1. In the **Add a server with Azure Arc** page, under **Project details**, 
-    -
+    
     - Subscription: Leave the default one **(1)**
     - Resource group: Select the **AZ801-L0901-RG (2)** resource group
 
@@ -311,7 +311,7 @@ In this task, you enhance monitoring by configuring performance counter data sou
 
 1. In the **Data collection rules** page, select the **MSVM1-Arc** data collection rule you created earlier.
 
-    ![](../media/17-10-lab9-19.png)
+    ![](../media/17-10-lab9-19n.png)
 
 1. Under **Configuration**, select **Data sources (1)** and select **Performance counters (2)**.
 
@@ -608,7 +608,7 @@ In this task, you configured an alert rule for high CPU usage on the az801l09-vm
 
         ![](../Media/E5T1S7.png)      
 
-1. On the  **Create an alert rule** page, on the **Actions** tab, select the **+ Create action group (2)** button.
+1. On the  **Create an alert rule** page, on the **Actions** tab, select the **+ Create action group** button.
 
      ![](../media/17-10-lab9-37.png)
 
@@ -722,7 +722,7 @@ In this task, you are reviewing the Azure Log Analytics functionality and perfor
    | render timechart
    ```
 
-     ![](../media/17-10-lab9-44.png)
+     ![](../media/17-10-lab9-44n.png)
 
 1. Navigate to **Chart** to review the resulting chart.
 
