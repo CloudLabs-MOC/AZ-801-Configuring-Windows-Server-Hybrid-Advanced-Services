@@ -160,9 +160,9 @@ In this task, you will configure enhanced security settings for Microsoft Defend
 
     ![](../Media/azm2-15.png)
 
-1. On the **Settings \| Defender plans** page, enable the **Servers (1)** Defender plan, and then select **Save (2)**.
+1. On the **Settings \| Defender plans** page, select **Enable all plans (1)**, and then select **Save (2)**.
 
-   ![](../Media/p13.png) 
+   ![](../Media/8016.png) 
 
    >**Note:**  To enable all Defender for Cloud features, including threat protection capabilities, you must enable enhanced security features on the subscription containing the applicable workloads. Enabling it at the workspace level doesn't enable just-in-time VM access, adaptive application controls, and network detections for Azure resources. In addition, the only Microsoft Defender plans available at the workspace level are Microsoft Defender for servers and Microsoft Defender for SQL servers on machines.
 
@@ -356,27 +356,17 @@ In this task, you will configure Azure Monitor Insights to collect performance a
 
    >**Note:** **You can view the addition of the ChangeTracking and Azure Monitor Agent extensions (3)**.
 
-1. Under **Monitoring (1)** select **Insights (2)**, and select **Enable (3)**.  
+1. Under **Monitoring**, select **Insights**, and select **configure**.  
 
-   ![](../Media/p24.png) 
+   ![](../Media/8012.png) 
 
-1. On the **Monitoring configuration** page under **Data collection rule**, select **Create New**.
+1. On the **Configure Monitor** page, select **Review + enable**.
 
-   ![](../Media/p25.png) 
+   ![](../Media/8013.png) 
 
-1. In the **Create new rule** page, 
+1. Click on **Enable**.
 
-   - Data collection rule name: Enter **Arc (1)**
-   - Under **Processes and dependencies**, select **Enable processes and dependencies (map) (2)**
-   -  Leave the name of the Azure subscription **(3)** you are using in this lab
-   - From the **Log Analytics workspaces (4)** drop-down menu, select the Log Analytics workspace that you created earlier.
-   - Click on **Create(5)**
-
-     ![](../Media/az2l3.png) 
-
-1. Click on **Configure**.
-
-   ![](../Media/p27.png) 
+   ![](../Media/8014.png) 
 
    >**Note**: This deployment may take some time. Continue with other tasks, and you can return to this later.
 
@@ -428,17 +418,11 @@ In this task, you will configure update management for the onboarded Windows Ser
 
 In this task, you will verify the successful configuration of monitoring, compliance policies, and update management by reviewing insights, inventory data, and applied security policies.
 
-1. Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights (1)**. Select **Performance data (2)**. You should be able to see the performance data **(3)**.  
+1. Navigate to the **SEA-SVR2** Azure Arc machine, and in the navigation pane under **Monitoring**, select **Insights**. Select **Log based visualizations (1)** from the drop-down. You should be able to see the performance data **(2)**.  
 
-    ![](../Media/p32.png) 
+    ![](../Media/8015.png) 
 
      >**Note**: Please **refresh** the page, if you do not see the **Performance** tab.
-
-1. Select the **Map (1)** tab and view the dependency map **(2)**.  
-
-    ![](../Media/p33.png) 
-
-     >**Note**: If you don’t see any data, return to the **Performance** tab and refresh. Then refresh the **Map** section. You should see the data and process dependency information for **SEA-SVR2**.
 
 1. In the navigation pane, under **Operations**, select **Inventory(1)** to view the inventory data **(2)**.   
 
