@@ -241,7 +241,7 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
    | Availability options | **Availability set (3)** |
    | Availability set | **adAvailabilitySet (4)** |
    | Security type | **Standard (5)** |
-   | Image | **Windows Server 2022 Datacenter: Azure Edition -x64 Gen2 (6)** |
+   | Image | **Windows Server 2022 Datacenter: Azure Edition -x64 Gen2 (6)** Please proceed to the next step, which includes the necessary screenshots for selecting the image. |
    | Run with Azure Spot discount | **No** |
    | Size | **Standard D2s v3 (7)** |
    | Username | **Student (8)** |
@@ -251,6 +251,14 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
    | Would you like to use an existing Windows Server license? | **No** |
 
    ![](../Media/L6E1T3S3.png)
+
+1. To choose the **Windows Server 2022 Datacenter: Azure Edition - x64 Gen2** image, click **See all images** below. On the Select an image page, open the **Select dropdown** under Windows Server and choose the **specified image** from the list.
+
+   ![](../Media/winvm36.png)
+
+   ![](../Media/winvm34.png)
+
+   ![](../Media/winvm35.png)
 
    ![](../Media/L6E1T3S3-1.png)
 
