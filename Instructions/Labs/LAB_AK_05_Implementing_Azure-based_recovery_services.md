@@ -267,7 +267,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. On the **az801l05a-rsvault** page, on the right side under **Overview (1)**, in the **Site Recovery** section, select **Getting started (2)** .
 
-   ![](../Media/az-801-11.png)
+   ![](../Media/l5-12-26.1.png)
 
 1. On the **az801l05a-rsvault \| Site Recovery** page, in the **Hyper-V machines to Azure** section, select **1. Prepare infrastructure**. 
 
@@ -456,8 +456,8 @@ In this task, you will be enabling replication for a selected Hyper-V virtual ma
    |**Virtual network**|**az801l05-dr-vnet (7)**|
    |**Subnet**|**subnet0 (10.5.0.0/24) (8)**|
 
+   ![](../media/l5-12-51n.png)
    ![](../media/l5-12-51.png)
-   ![](../media/l5-12-52.png)
 
 1. On the **Virtual machine selection** tab of the **Enable replication** page, select the **SEA-CORE1 (1)** checkbox and select **Next (2)**.
 
@@ -484,7 +484,7 @@ In this task, you will review the replication settings for the SEA-CORE1 virtual
 
 1. On the **az801l05a-rsvault \| Replicated items** page, ensure that there is an entry representing the **SEA-CORE1 (2)** virtual machine and verify that its **Replication Health** is listed as **Healthy** and that its **Status** is listed as either **Enabling protection** or displaying a current percentage of synchronization progress.
 
-   ![](../media/38.png)
+   ![](../media/l5-12-54.1.png)
 
    > **Note:** You might need to wait a few minutes until the **SEA-CORE1** entry appears on the **az801l05a-rsvault \| Replicated items** page.
 
