@@ -120,7 +120,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
        ![](../media/l5-12-9.png)   
       
-   - After deleting **address space**, select **Add IPV4 address space** specify the following settings (leave others with their default values).
+    - After deleting **address space**, select **Add IPV4 address space** specify the following settings (leave others with their default values).
 
        ![](../media/l5-12-10.png)
 
@@ -171,7 +171,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
        ![](../media/l5-12-9.png)   
       
-   - After deleting **address space**, select **Add IPV4 address space** specify the following settings (leave others with their default values).
+    - After deleting **address space**, select **Add IPV4 address space** specify the following settings (leave others with their default values).
 
        ![](../media/l5-12-10.png)
 
@@ -234,7 +234,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
      ![](../media/l5-12-23.png)
 
-    > **Note:** These settings must be disabled when using the storage account for Azure Site Recovery.
+     > **Note:** These settings must be disabled when using the storage account for Azure Site Recovery.
 
 1. On the **Review + create** tab of the **Create storage account** page, select **Create**.
 
@@ -280,9 +280,9 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. On the **Source settings** tab of the **Prepare infrastructure** page, 
 
-   - Next to the **Are you Using System Center VMM to manage Hyper-V hosts** label, select the **No (1)** option.
-   - On the **Source settings** tab of the **Prepare infrastructure** page, select the **Add Hyper-V site (2)** link. 
-   - On the **Create Hyper-V Site** page, in the **Name** text box, enter **az801l05-site(3)** and select **OK (4)**.
+    - Next to the **Are you Using System Center VMM to manage Hyper-V hosts** label, select the **No (1)** option.
+    - On the **Source settings** tab of the **Prepare infrastructure** page, select the **Add Hyper-V site (2)** link. 
+    - On the **Create Hyper-V Site** page, in the **Name** text box, enter **az801l05-site(3)** and select **OK (4)**.
 
       ![](../media/l5-12-35.png)
 
@@ -314,17 +314,17 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. Run the following commands to update Group Policy and update Windows Update services: 
 
-   ```powershell
-   Invoke-GPUpdate -Force
-   Get-Service wuauserv | Set-Service -StartupType Manual
-   Get-Service wuauserv | Start-Service
-   ```
+    ```powershell
+    Invoke-GPUpdate -Force
+    Get-Service wuauserv | Set-Service -StartupType Manual
+    Get-Service wuauserv | Start-Service
+    ```
 
      ![](../media/l5-12-31.png)
 
 1. Switch back to the Microsoft Edge window displaying the Azure portal, on the **Source settings** tab of the **Prepare infrastructure** page, select the **Add Hyper-V server (1)** link. 
 
-   - On the **Add Server** page, select the **Download (2)** link in **step 3** of the procedure for adding on-premises Hyper-V hosts in order to download the installer for Microsoft Azure Site Recovery Provider.
+    - On the **Add Server** page, select the **Download (2)** link in **step 3** of the procedure for adding on-premises Hyper-V hosts in order to download the installer for Microsoft Azure Site Recovery Provider.
 
       ![](../media/az-801-22.png)
 
