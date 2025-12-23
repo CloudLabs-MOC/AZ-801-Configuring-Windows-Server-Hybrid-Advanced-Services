@@ -73,7 +73,7 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
 
 1. On the **Review + create** tab of the **Create Recovery Services vault** page, select **Create**.
  
-   ![](../media/l5-12-5.png)
+    ![](../media/l5-12-5.png)
 
     > **Note:** Wait until the Recovery Services vault is provisioned. This should take about 2 minutes.
 
@@ -81,12 +81,12 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
 
     > **Note:** Storage replication type cannot be changed after you implement protection.
 
-> **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
-
-<validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
+    > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+    >
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+    <validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
 
 ## Exercise 2: Implementing Hyper-V VM protection by using Azure Site Recovery vault
 
