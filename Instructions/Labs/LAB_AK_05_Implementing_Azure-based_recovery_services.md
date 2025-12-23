@@ -1,4 +1,4 @@
-# Lab 05 : Implementing Azure-based recovery services
+# Lab 05: Implementing Azure-based recovery services
 
 ## Lab Overview
 
@@ -85,6 +85,7 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+
 <validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
 
 ## Exercise 2: Implementing Hyper-V VM protection by using Azure Site Recovery vault
@@ -97,7 +98,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for **Virtual networks (1)** and select **Virtual networks (2)**.
 
-    ![](../media/l5-12-6.png)
+     ![](../media/l5-12-6.png)
 
 1. On the **Network foundation | Virtual networks** page, select **+ Create**.
 
