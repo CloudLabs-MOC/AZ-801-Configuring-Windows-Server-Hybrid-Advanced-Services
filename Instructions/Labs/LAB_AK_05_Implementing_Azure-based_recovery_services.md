@@ -75,17 +75,17 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
  
    ![](../media/l5-12-5.png)
 
-   > **Note:** Wait until the Recovery Services vault is provisioned. This should take about 2 minutes.
+    > **Note:** Wait until the Recovery Services vault is provisioned. This should take about 2 minutes.
 
-   > **Note:** By default, the Storage Replication type of the vault is set to Geo-redundant (GRS). For the lab, you changed it to Locally-redundant. For increased redundancy in production environments, leave the storage type as GRS.
+    > **Note:** By default, the Storage Replication type of the vault is set to Geo-redundant (GRS). For the lab, you changed it to Locally-redundant. For increased redundancy in production environments, leave the storage type as GRS.
 
-   > **Note:** Storage replication type cannot be changed after you implement protection.
+    > **Note:** Storage replication type cannot be changed after you implement protection.
 
-  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
-   <validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
+   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+    <validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
 
 ## Exercise 2: Implementing Hyper-V VM protection by using Azure Site Recovery vault
 
@@ -267,7 +267,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. On the **az801l05a-rsvault** page, on the right side under **Overview (1)**, in the **Site Recovery** section, select **Getting started (2)** .
 
-    ![](../Media/l5-12-26.1.png)
+    ![](../media/l5-12-26.1.png)
 
 1. On the **az801l05a-rsvault \| Site Recovery** page, in the **Hyper-V machines to Azure** section, select **1. Prepare infrastructure**. 
 
