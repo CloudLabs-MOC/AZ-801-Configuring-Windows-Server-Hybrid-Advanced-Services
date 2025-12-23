@@ -79,14 +79,14 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
 
     > **Note:** By default, the Storage Replication type of the vault is set to Geo-redundant (GRS). For the lab, you changed it to Locally-redundant. For increased redundancy in production environments, leave the storage type as GRS.
 
-1. Storage replication type cannot be changed after you implement protection-v1.
+1. Storage replication type cannot be changed after you implement protection.
     
-> **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+    > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
     
-<validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
+    <validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" /> 
 
 ## Exercise 2: Implementing Hyper-V VM protection by using Azure Site Recovery vault
 
