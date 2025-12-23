@@ -12,7 +12,7 @@ In this lab, you will be working on:
 - Exercise 2: Implementing Hyper-V VM protection by using Azure Site Recovery vault.
 - Exercise 3: Implementing Azure Backup
 
-## Estimated timing: 2 hr 15 minutes
+## Estimated timing: 2 hr 15 Minutes
 
 ## Architecture diagram
 
@@ -50,13 +50,13 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
    
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for **Recovery Services vaults (1)** and select **Recovery Services vaults (2)**.
 
-   ![](../media/azm5-1.png)
+   ![](../media/l5-12-1.png)
 
 1. On the **Recovery Services vaults** page, select **+ Create**.
 
-   ![](../media/azm5-2.png)
+   ![](../media/l5-12-2.png)
 
-1. On the **Basics** tab of the **Create Recovery Services vault** page, specify the following settings (leave others with their default values) and select **Review + create (5)**:
+1. On the **Basics** tab of the **Create Recovery Services vault** page, specify the following settings (leave others with their default values) and select **Next: Redundancy (5)**:
 
    |Setting|Value|
    |---|---|
@@ -65,46 +65,27 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
    |**Vault name**|**az801l05a-rsvault (3)** |
    |**Location**|**<inject key="Resource group Region"></inject> (4)** |
 
-    ![](../media/azm5-3.png)
+    ![](../media/l5-12-3.png)
+
+1. On the **Redundancy** tab of the **Create Recovery Services vault** page, set the **Backup Storage Redundancy** to **Locally-redundant (1)** and select **Review + create (2)**.
+
+    ![](../media/l5-12-4.png)
 
 1. On the **Review + create** tab of the **Create Recovery Services vault** page, select **Create**.
  
-   ![](../media/azm5-4.png)
+   ![](../media/l5-12-5.png)
 
    > **Note:** Wait until the Recovery Services vault is provisioned. This should take about 2 minutes.
 
-   > **Note:** By default, the Storage Replication type of the vault is set to Geo-redundant (GRS), as well as Soft Delete and Security Features are enabled. You will change these settings in the lab to simplify deprovisioning, but you should ensure they are enabled in your production environments.
-
-
-### Task 2: Configure the Azure Site Recovery vault
-
-In this task, you will configure the vault for disaster recovery operations. You will set up replication settings such as the storage replication type (Locally-Redundant) and implement security features like disabling soft delete.
-
-1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the deployment page, select **Go to resource**. 
-
-   ![](../media/azm5-5.png)
-
-    > **Note:** This will automatically display the **az801l05a-rsvault** page.
-
-1. On the **az801l05a-rsvault** page, on the vertical menu on the left side, in the **Settings** section, select **Properties (1)**.
-
-1. On the **az801l05a-rsvault | Properties** page, select the **Update (2)** link under the **Backup Configuration** label.
-
-   ![](../media/azm5-6.png)
-
-1. On the **Backup Configuration** page, set **Storage replication type** to **Locally-redundant (1)**, select **Apply (2)** and **close (3)** the **Backup Configuration** page.
-
-   ![](../media/azm5-7.png)
+   > **Note:** By default, the Storage Replication type of the vault is set to Geo-redundant (GRS). For the lab, you changed it to Locally-redundant. For increased redundancy in production environments, leave the storage type as GRS.
 
    > **Note:** Storage replication type cannot be changed after you implement protection.
 
-1. On the **az801l05a-rsvault | Properties** page, select the **Update** link under the **Soft Delete  and security Settings** label.
-
-    ![](../media/ex1t2s3.png)
-
-1. On the **Security settings** page, Select **Disable(1)** for Soft Delete (For workloads running in azure), and select **Save (2)**
-
-     ![](../Media/p2n1.png)
+  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+   <validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
 
 ## Exercise 2: Implementing Hyper-V VM protection by using Azure Site Recovery vault
 
@@ -116,11 +97,11 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for **Virtual networks (1)** and select **Virtual networks (2)**.
 
-   ![](../media/azm5-8.png)
+   ![](../media/l5-12-6.png)
 
-1. On the **Virtual networks** page, select **+ Create**.
+1. On the **Network foundation | Virtual networks** page, select **+ Create**.
 
-   ![](../media/azm5-9.png)
+   ![](../media/l5-12-7.png)
 
 1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **IP Addresses (5)**:
 
@@ -131,16 +112,16 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
    |**Virtual network Name**|**az801l05-dr-vnet** **(3)**|
    |**Region**|**<inject key="Resource group Region"></inject> (4)**|
 
-    ![](../media/azm5-10.png)
+    ![](../media/l5-12-8.png)
 
 1. On the **IP addresses** tab of the **Create virtual network** page,
     - Remove the default IP Address space by clicking on **Delete address space**
 
-      ![](../Media/unit4-image2.png)   
+      ![](../media/l5-12-9.png)   
       
    - After deleting **address space**, select **Add IPV4 address space** specify the following settings (leave others with their default values).
 
-      ![](../Media/unit4-image3.png)
+      ![](../media/l5-12-10.png)
 
        |Setting|Value|
        |---|---|
@@ -149,7 +130,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
        - On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet  (3)**.
 
-         ![](../Media/ex2t1s3.png)
+         ![](../media/l5-12-11.png)
 
 1. On the **Add a subnet** page, specify the following settings (leave others with their default values) and select **Add (4)**:
 
@@ -159,19 +140,19 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
    |Starting Address|**10.5.0.0 (2)**|
    |Subnet size|**/24 (256 Addresses) (3)**|
 
-      ![](../Media/p3upd.png)
+      ![](../media/l5-12-12.png)
    
 1. Back on the **IP addresses** tab of the **Create virtual network** page, select **Review + create**.
 
-   ![](../media/azm5-11.png)
+   ![](../media/l5-12-13.png)
 
 1. On the **Review + create** tab of the **Create virtual network** page, select **Create**.
 
-   ![](../media/azm5-12.png)
+   ![](../media/l5-12-14.png)
 
-1. On **SEA-SVR2**, in the Azure portal, browse back to the **Virtual networks** page and select **+ Create**.
+1. On **SEA-SVR2**, in the Azure portal, browse back to the **Network foundation | Virtual networks** page and select **+ Create**.
 
-   ![](../media/azm5-13.png)
+   ![](../media/l5-12-15.png)
 
 1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **IP Addresses (5)**:
 
@@ -182,16 +163,16 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
    |**Virtual network Name**|**az801l05-test-vnet** **(3)**|
    |**Region**|**<inject key="Resource group Region"></inject> (4)**|
 
-   ![](../media/azm5-14.png)
+   ![](../media/l5-12-16.png)
    
 1. On the **IP addresses** tab of the **Create virtual network** page,
     - Remove the default IP Address space by clicking on **Delete address space**
 
-      ![](../Media/unit4-image2.png)   
+      ![](../media/l5-12-9.png)   
       
    - After deleting **address space**, select **Add IPV4 address space** specify the following settings (leave others with their default values).
 
-      ![](../Media/unit4-image3.png)
+      ![](../media/l5-12-10.png)
 
        |Setting|Value|
        |---|---|
@@ -200,7 +181,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
        - On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet (3)**.
 
-         ![](../Media/ex2t1s10.png)
+         ![](../media/l5-12-17.png)
 
    > **Note:** Ignore the warning regarding the overlapping IP address space. This is intentional, so the IP address space of the test environment matches the IP address space of the disaster recovery environment.
 
@@ -212,21 +193,23 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
    |Starting Address|**10.5.0.0 (2)** |
    |Subnet size|**/24 (256 Addresses)** **(3)**|
 
-      ![](../Media/p3upd.png)
+      ![](../media/l5-12-18.png)
 
 1. Back on the **IP addresses** tab of the **Create virtual network** page, select **Review + create**.
 
-   ![](../media/azm5-15.png)
+   ![](../media/l5-12-19.png)
 
 1. On the **Review + create** tab of the **Create virtual network** page, select **Create**.
 
-   ![](../media/azm5-16.png)
+   ![](../media/l5-12-20.png)
 
 1. On **SEA-SVR2**, in the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for **Storage accounts (1)** and select **Storage accounts (2)**.
 
    ![](../media/azm5-17.png)
 
-1. On the **Storage accounts** page, select **+ Create**.
+1. On the **Storage center | Blob Storage** page, select **+ Create**.
+
+    ![](../media/l5-12-21.png)
 
 1. On the **Basics** tab of the **Create storage account** page, specify the following settings (leave others with their default values):
 
@@ -240,35 +223,35 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
    |Performance|**Standard (6)**|
    |Redundancy|**Locally redundant storage (LRS) (7)**|
 
-    ![](../media/l6.png)
+    ![](../media/l5-12-22.png)
 
 1. On the **Basics** tab of the **Create a storage account** page, select the **Data protection** tab.
 
    ![](../media/azm5-19.png)
 
-1. On the **Data protection** tab of the **Create a storage account** page, **Uncheck** the **Enable soft delete for blobs (1)** and **Enable soft delete for containers (2)** checkboxes and select **Review + create(3)**.
+1. On the **Data protection** tab of the **Create a storage account** page, **Uncheck** the **Enable soft delete for blobs (1)**, **Enable soft delete for containers (2)** and **Enable soft delete for file shares (3)** checkboxes and select **Review + create(4)**.
 
-   ![](../media/azm5-20.png)
+   ![](../media/l5-12-23.png)
 
     > **Note:** These settings must be disabled when using the storage account for Azure Site Recovery.
 
 1. On the **Review + create** tab of the **Create storage account** page, select **Create**.
 
-   ![](../media/azm5-21.png)
+   ![](../media/l5-12-24.png)
 
 1. Once the storage account is created, on the overview page, under the **Properties** make sure that **Blob soft delete and Container soft delete are disabled**.   
 
-   ![](../media/azm5-42.png)
+   ![](../media/l5-12-27.png)
 
-    >**Note**: If the **Blob soft delete** is still Enabled, please follow the below steps:
+    >**Note:** If the **Blob soft delete** is still Enabled, please follow the below steps:
 
     - Select **Enabled** corresponding to **Blob soft delete**.
 
-      ![](../media/l7.png)  
+      ![](../media/l5-12-25.png)  
 
-    - Uncheck **Enable Soft delete for containers (1)** and then **Save (2)**.
+    - Uncheck **Enable Soft delete for blobs (1)** and then **Save (2)**.
 
-      ![](../media/l8.png)       
+       ![](../media/l5-12-26.png)       
 
 ### Task 2: Prepare protection of a Hyper-V virtual machine
 
@@ -280,7 +263,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. On the **Recovery Services vaults** page, select the **az801l05a-rsvault** entry.
 
-   ![](../media/azm5-22.png)
+   ![](../media/l5-12-32.png)
 
 1. On the **az801l05a-rsvault** page, on the right side under **Overview (1)**, in the **Site Recovery** section, select **Getting started (2)** .
 
@@ -288,11 +271,11 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. On the **az801l05a-rsvault \| Site Recovery** page, in the **Hyper-V machines to Azure** section, select **1. Prepare infrastructure**. 
 
-   ![](../media/az-801-12.png)
+   ![](../media/l5-12-33.png)
 
 1. On the **Deployment planning** tab of the **Prepare infrastructure** page, in the **Deployment planning completed?** drop-down list, select **Yes, I have done it (1)** and select **Next (2)**.
 
-   ![](../media/18.png)
+   ![](../media/l5-12-34.png)
 
 1. On the **Source settings** tab of the **Prepare infrastructure** page, 
 
@@ -300,7 +283,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
    - On the **Source settings** tab of the **Prepare infrastructure** page, select the **Add Hyper-V site (2)** link. 
    - On the **Create Hyper-V Site** page, in the **Name** text box, enter **az801l05-site(3)** and select **OK (4)**.
 
-     ![](../media/az-801-13.png)
+     ![](../media/l5-12-35.png)
 
       > **Note:** Do not close the browser window as we will be using it for further tasks.
 
@@ -314,15 +297,15 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. Select **Computer Configuration (1) > Policies (2) > Administrative Templates (3) > Windows Components (4)**.
 
-   ![](../media/azm5-24.png)
+   ![](../media/l5-12-28.png)
 
 1. Scroll down and select **Windows Update (1)**. Select the policy **Configure Automatic Updates (2)** and click on **policy setting (3)**.
 
-   ![](../media/azm5-25.png)
+   ![](../media/l5-12-29.png)
 
 1. In the Computer Updates page, select **Enabled (1)**, and then click **OK (2)**.
 
-   ![](../media/21.png)
+   ![](../media/l5-12-30.png)
 
 1. In Windows Start, search for **Powershell (1)**, right click on **Windows Powershell (2)** and select **Run as administrator (3)**.   
 
@@ -336,7 +319,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
    Get-Service wuauserv | Start-Service
    ```
 
-    ![](../media/ex2t2s11.png)
+    ![](../media/l5-12-31.png)
 
 1. Switch back to the Microsoft Edge window displaying the Azure portal, on the **Source settings** tab of the **Prepare infrastructure** page, select the **Add Hyper-V server (1)** link. 
 
@@ -348,7 +331,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. In the download notification, select **Open file**. This will start the **Azure Site Recovery Provider Setup (Hyper-V server)** wizard.
 
-   ![](../media/ex2t2s14.png)
+   ![](../media/l5-12-36.png)
 
 1. On the **Microsoft Update** page, select **Off (1)** and select **Next (2)**.
 
@@ -356,7 +339,8 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. On the **Provider installation** page, select **Install**.
 
-    ![](../media/24.png)
+    ![](../media/l5-12-37.png)
+    
     > **Note:** Please donot close the Microsoft Azure Site Recovery Registration Wizard
 
 1. Switch to the Microsoft Edge window displaying the Azure portal, and in the **Add Server** page, select the **Download** button in **step 4** of the procedure for registering on-premises Hyper-V hosts in order to download the vault registration key.
@@ -365,7 +349,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. Switch to the **Provider installation** wizard and select **Register**. This will start the **Microsoft Azure Site Recovery Registration Wizard**.
 
-    ![](../media/25.png)
+    ![](../media/l5-12-38.png)
 
 1. On the **Vault Settings** page of the **Microsoft Azure Site Recovery Registration Wizard**, select **Browse**. 
 
@@ -377,15 +361,15 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. Back on the **Vault Settings** page of the **Microsoft Azure Site Recovery Registration Wizard**, select **Next**.
 
-   ![](../media/27.png)
+   ![](../media/l5-12-39.png)
 
 1. On the **Proxy Settings** page of the **Microsoft Azure Site Recovery Registration Wizard**, accept the default settings and select **Next**.
 
-   ![](../media/28.png)
+   ![](../media/l5-12-40.png)
 
 1. On the **Registration** page of the **Microsoft Azure Site Recovery Registration Wizard**, select **Finish**.
 
-   ![](../media/29.png)
+   ![](../media/l5-12-41.png)
 
    > **Note:** Sometimes finishing might take around 5 - 10 mins. Please wait untill it finishes.
 
@@ -393,11 +377,11 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. Switch back to the Microsoft Edge window displaying the Azure portal, **close** the **Add Server** page.
 
-    ![](../media/azm5-30.png)
+    ![](../media/l5-12-42.png)
 
 1. **Refresh** the page. 
  
-    ![](../media/azm5-31.png)
+    ![](../media/l5-12-43.png)
 
 1. When prompted, select **Reload**. 
 
@@ -410,28 +394,28 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 1. On the **Source settings** tab of the **Prepare infrastructure** page, next to the **Are you Using System Center VMM to manage Hyper-V hosts** label, select the **No (1)** option.
 Verify that the **Hyper-V site** and **Hyper-V servers** settings are set correctly **(2)** and select **Next (3)**. 
 
-    ![](../media/azm5-32.png)
+    ![](../media/l5-12-45.png)
 
-    >**Note:** If it shows **No available items**, select **Add Hyper-V site**. On the Create Hyper-V Site page, in the Name text box, enter **az801l05-site** and select **OK**.
+    > **Note:** If it shows **No available items**, select **Add Hyper-V site**. On the Create Hyper-V Site page, in the Name text box, enter **az801l05-site** and select **OK**.
 
 1. On the **Target settings** tab of the **Prepare infrastructure** page, accept the default settings and select **Next**.
 
 1. On the **Replication policy** tab of the **Prepare infrastructure** page, select **Create new policy and associate**. 
 
-    ![](../media/azm5-33.png)
+    ![](../media/l5-12-46.png)
 
 1. On the **Create and associate policy** page, specify the following settings (leave others with their default values) and select **OK (3)**:
 
    |Setting|Value|
    |---|---|
-   |Name|**az801l05-replication-policy** (1)|
-   |Copy frequency|**30 seconds** (2)|
+   |Name|**az801l05-replication-policy (1)**|
+   |Copy frequency|**30 seconds (2)**|
 
    ![](../media/az-801-32.png)
 
 1. Back on the **Replication policy** tab of the **Prepare infrastructure** page, wait until the site has been associated with the policy **(1)** and select **Next (2)**.
 
-   ![](../media/azm5-35.png)
+   ![](../media/l5-12-47.png)
 
     >**Note**: If you see any error, please reselect the Replication policy name from the drop-down menu.
 
@@ -439,7 +423,9 @@ Verify that the **Hyper-V site** and **Hyper-V servers** settings are set correc
 
 1. On the **Review** tab of the **Prepare infrastructure** page, select **Prepare**.
 
-   ![](../media/33.png)
+   ![](../media/l5-12-48.png)
+
+   > **Note:** The screen may refresh and return you to the Azure portal home page without a confirmation message about the **Prepare** task being complete. If this happens, continue to the next task.
 
 ### Task 3: Enable replication of a Hyper-V virtual machine
 
@@ -449,13 +435,13 @@ In this task, you will be enabling replication for a selected Hyper-V virtual ma
 
    ![](../media/azm5-36.png)
 
-1. On the **az801l05a-rsvault**, navigate to **Site Recovery (1)** page under Getting Started, in the **Hyper-V machines to Azure** section, select **2. Enable replication (2)**. 
+1. On the **az801l05a-rsvault**, navigate to **Site Recovery (2)** page under **Getting Started (1)**, in the **Hyper-V machines to Azure** section, select **2. Enable replication (3)**. 
 
-   ![](../media/34upd.png)
+   ![](../media/l5-12-49.png)
 
 1. On the **Source environment** tab of the **Enable replication** page, in the **Source location** drop-down list, select **az801l05-site (1)** if not selected and click on **Next (2)**.
 
-   ![](../media/azm5-34.png)
+   ![](../media/l5-12-50.png)
 
 1. On the **Target environment** tab of the **Enable replication** page, specify the following settings (leave others with their default values) and select **Next (9)**:
 
@@ -470,8 +456,8 @@ In this task, you will be enabling replication for a selected Hyper-V virtual ma
    |**Virtual network**|**az801l05-dr-vnet (7)**|
    |**Subnet**|**subnet0 (10.5.0.0/24) (8)**|
 
-   ![](../Media/az5l1.png)
-   ![](../media/azm5-39.png)
+   ![](../media/l5-12-51.png)
+   ![](../media/l5-12-52.png)
 
 1. On the **Virtual machine selection** tab of the **Enable replication** page, select the **SEA-CORE1 (1)** checkbox and select **Next (2)**.
 
@@ -484,7 +470,7 @@ In this task, you will be enabling replication for a selected Hyper-V virtual ma
 1. On the **Replication policy** tab of the **Enable replication** page, accept the default settings and select **Next**.
 1. On the **Review** tab of the **Enable replication** page, select **Enable replication**.
 
-   ![](../media/37.png)
+   ![](../media/l5-12-54.png)
 
    >**Note:** If you receive an error stating that replication could not be enabled, please verify that s**oft delete for blob and container is disabled in the storage account**. Then, restart the replication job by going to the vertical menu on the left side, selecting **Replicated items** under **Protected items**. Locate the entry representing **SEA-CORE1**, select it, and restart the replication.
 
@@ -512,13 +498,13 @@ In this task, you will review the replication settings for the SEA-CORE1 virtual
 
 1. Wait until the status changes to **Protected**. On the **SEA-CORE1** replicated items page, review the **Health and status**, **Failover readiness**, **Latest recovery points**, and **Infrastructure view** sections. Note the **Planned Failover**, **Failover** and **Test Failover** toolbar icons.
 
-   ![](../media/azm5-45.png)
+   ![](../media/l5-12-53.png)
 
     > **Note:** The time required for this to take place depends on the available bandwidth of the connection between the lab environment and the Azure region hosting the Recovery Services vault. You will need to refresh the browser page for the status to be updated (**This process might take about 15-20 minutes**). 
 
 1. On the **SEA-CORE1** replicated items page, select **Latest recovery points** and review **Latest crash-consistent** and **Latest app-consistent** recovery points. 
 
-    ![](../media/azm5-47.png)
+    ![](../media/l5-12-55.png)
 
    > **Note:** It might take few minutes to load.
 
@@ -530,11 +516,11 @@ In this task, you will perform a failover of the Hyper-V virtual machine.
 
 1. On **SEA-SVR2**, in the browser window displaying the Azure portal, on the **SEA-CORE1** replicated items blade go to the **Compute and Network setting (1)** under General and review the virtual machine size. Validate that the size is set to A1_v2, if not **edit** the size to be **A1_v2 (2)** and click on **Save (3)**.
 
-    ![](../media/ex2t5s1.png)
+    ![](../media/l5-12-56.png)
 
 1. Go back to the **Overview (1)** and select **Test failover (2)**.
 
-    ![](../media/azm5-48.png)
+    ![](../media/l5-12-57.png)
 
 1. Initiate **Test failover** with the following settings (leave others with their default values) and select **OK (2)**:
 
@@ -542,41 +528,43 @@ In this task, you will perform a failover of the Hyper-V virtual machine.
    |---|---|
    |Azure virtual network|**az801l05-test-vnet (1)** |
 
-    ![](../media/42.png)
+    ![](../media/l5-12-58.png)
 
-1. In the Azure portal, browse back to the **az801l05a-rsvault** page, and on the vertical menu on the left side, in the **Monitoring** section, select **Site Recovery jobs (1)**. Initially the status of the **Test failover** job is listed as **In progress (2)**.
+1. In the Azure portal, browse back to the **az801l05a-rsvault** page, and on the vertical menu on the left side, in the **Monitoring (1)** section, select **Site Recovery jobs (2)**. Initially the status of the **Test failover** job is listed as **In progress (3)**.
 
-    ![](../media/azm5-49.png)
+    ![](../media/l5-12-59.png)
 
 1. Wait until the status of the **Test failover** job is listed as **Successful** before proceeding to the next step.
 
-    ![](../media/azm5-50.png)
+    ![](../media/l5-12-61.png)
 
      > **Note:** The time required for the test failover to complete depends on the available bandwidth of the connection between the lab environment and the Azure region hosting the Recovery Services vault. You will need to refresh the browser page for the status to be updated (**this process might take about 15-20 minutes**). 
 
-1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Virtual machines** and, on the **Virtual machines** page, note the entry representing the newly provisioned virtual machine.
+1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Virtual machines** and, on the **Compute infrastructure | Virtual machines** page, note the entry representing the newly provisioned virtual machine.
 
-   ![](../media/43.png)
+   ![](../media/l5-12-62.png)
 
    > **Note:** Initially, the virtual machine will have the name consisting of the **asr-** prefix and randomly generated suffix, but will be renamed eventually to **SEA-CORE1-test**. Please wait it may take around 5 mins.
 
+   ![](../media/l5-12-60.png)
+
 1. In the Azure portal, browse back to the **SEA-CORE1** replicated item page and select **Cleanup test failover**.
 
-   ![](../media/46.png)
+   ![](../media/l5-12-63.png)
 
 1. On the **Test failover cleanup** page, select the **Testing is complete. Delete test failover virtual machine(s) (1)** checkbox and select **OK (2)**.
 
-   ![](../media/47.png)
+   ![](../media/l5-12-64.png)
 
 1. After the test failover cleanup job completes, refresh the browser page displaying the **SEA-CORE1** replicated items page and note that you have the option to perform **planned and unplanned failover** (the latter is labeled as **Failover**).
 
-    ![](../media/azm5-51.png)
+    ![](../media/l5-12-65.png)
 
    > **Note:** The unplanned failover option is labeled as **Failover**.
 
 1. On the **SEA-CORE1** replicated items page, select **Planned failover**. 
 
-    ![](../media/azm5-52.png)
+    ![](../media/l5-12-66.png)
 
 1. On the **Planned failover** page, note that the failover direction settings are already set and not modifiable. 
 
@@ -584,11 +572,11 @@ In this task, you will perform a failover of the Hyper-V virtual machine.
 
 1. Close the **Planned failover** page without initiating a failover, and on the **SEA-CORE1** replicated items page, select **Failover**. 
 
-    ![](../media/azm5-54.png)
+    ![](../media/l5-12-67.png)
 
 1. On the **Failover** page, note that you have the option to choose a recovery point. 
 
-    ![](../media/azm5-55.png)
+    ![](../media/l5-12-68.png)
 
 1. Close the **Failover** page without initiating a failover.
 
@@ -637,7 +625,7 @@ In this task, you will uninstall any existing Azure Recovery Services agent on t
 
    - On the **az801l05a-rsvault \|Backup** page, select **Prepare Infrastructure (4)**.
 
-     ![](../media/azm5-61.png)
+     ![](../media/l5-12-69.png)
 
 1. On the **Prepare infrastructure** page, select the **Download Agent for Windows Server or Windows Client** link.
 
@@ -645,7 +633,7 @@ In this task, you will uninstall any existing Azure Recovery Services agent on t
 
 1. After the download completes, in the **Downloads** notification of Microsoft Edge, select the **Open file** link. 
 
-   ![](../media/azm5-62.png)
+   ![](../media/l5-12-70.png)
 
     > **Note:** This will start the **Microsoft Azure Recovery Services Agent Setup Wizard**, which, in this case, will launch automatically the **Register Server Wizard**.
 
@@ -671,7 +659,7 @@ In this task, you will uninstall any existing Azure Recovery Services agent on t
 
 1. Switch to the Microsoft Edge window displaying the Azure portal, on the **Prepare infrastructure** page, select the **Already downloaded or using the latest Recovery Server Agent (1)** checkbox , and select **Download (2)**.
 
-     ![](../media/52.png)
+     ![](../media/l5-12-71.png)
 
 1. If prompted, whether to open or save the vault credentials file, select **Save**. This will save the vault credentials file to the local Downloads folder.
 
@@ -713,7 +701,7 @@ In this task, you will configure a scheduled backup for your server, SEA-SVR2, b
 
 1. On **SEA-SVR2**, in the **Microsoft Azure Backup** console, in the Actions pane, select **Schedule Backup**.
 
-   ![](../media/58.png)
+   ![](../media/l5-12-72.png)
 
 1. In the **Schedule Backup Wizard**, on the **Getting started** page, select **Next**.
 1. On the **Select Items to Backup** page, select **Add Items (1)**.
@@ -760,11 +748,11 @@ In this task, you will initiate an on-demand backup after scheduling the backup 
 
 1. On the **Retain Backup Till** page, accept the default setting and select **Next**.
 
-   ![](../media/75.png)
+   ![](../media/l5-12-73.png)
 
 1. On the **Confirmation** page, select **Back Up**.
 
-   ![](../media/72upd.png)
+   ![](../media/l5-12-74.png)
 
 1. When the backup is complete, select **Close**.
 
@@ -774,11 +762,11 @@ In this task, you will initiate an on-demand backup after scheduling the backup 
 
 1. On the **az801l05a-rsvault \| Backup items** page, select the **Azure Backup Agent (2)** entry.
 
-   ![](../media/azm5-88.png)
+   ![](../media/l5-12-75.png)
 
 1. On the **Backup Items (Azure Backup Agent)** page, verify that there is an entry referencing drive **C** of **sea-svr2.contoso.com**.
 
-   ![](../media/backup88.png)
+   ![](../media/l5-12-76.png)
 
 ### Task 4: Perform file recovery by using Azure Recovery Services agent
 
@@ -788,7 +776,7 @@ In this task, you will simulate a data loss by deleting a critical file (the hos
 
    ![](../media/azm5-77.png)
 
-1. Switch to the **Microsoft Azure Backup** window and select **Recover data**. This will start the **Recover Data Wizard**.
+1. Switch to the **Microsoft Azure Backup** window and select **Recover data** from the **Actions** menu. This will start the **Recover Data Wizard**.
 
      ![](../media/az801-lab5-data.png)
 
@@ -832,7 +820,7 @@ In this task, you will simulate a data loss by deleting a critical file (the hos
    dir C:\Windows\system32\drivers\etc\hosts
    ```
 
-    ![](../media/azm5-85.png)
+    ![](../media/l5-12-78.png)
 
 1. Switch back to the **Recover Data Wizard**, and on the **Browse and Recover Files** page, select **Unmount (1)**, and when prompted to confirm, select **Yes (2)**. 
 
