@@ -80,12 +80,13 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
     > **Note:** By default, the Storage Replication type of the vault is set to Geo-redundant (GRS). For the lab, you changed it to Locally-redundant. For increased redundancy in production environments, leave the storage type as GRS.
 
 1. Storage replication type cannot be changed after you implement protection.
-> **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
- 
-<validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
+    
+    > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+    
+    <validation step="05f38766-49b2-458d-8e23-ae87ebf611d3" />   
 
 ## Exercise 2: Implementing Hyper-V VM protection by using Azure Site Recovery vault
 
@@ -97,7 +98,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for **Virtual networks (1)** and select **Virtual networks (2)**.
 
-     ![](../media/l5-12-6.png)
+    ![](../media/l5-12-6.png)
 
 1. On the **Network foundation | Virtual networks** page, select **+ Create**.
 
