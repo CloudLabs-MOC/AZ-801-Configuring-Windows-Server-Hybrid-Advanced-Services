@@ -1,4 +1,4 @@
-# Lab 01 : Configuring security in Windows Server
+# Lab: Configuring security in Windows Server
 
 ## Lab Overview
 

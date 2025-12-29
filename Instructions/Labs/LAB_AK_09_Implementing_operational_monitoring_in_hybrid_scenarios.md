@@ -1,4 +1,4 @@
-# Lab 09: Implementing operational monitoring in hybrid scenarios
+# Lab: Implementing operational monitoring in hybrid scenarios
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:

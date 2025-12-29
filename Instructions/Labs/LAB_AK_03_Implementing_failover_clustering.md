@@ -1,5 +1,5 @@
 
-# Lab 03: Implementing failover clustering
+# Lab: Implementing failover clustering
 
 ## Lab Scenario
 

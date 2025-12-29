@@ -1,4 +1,4 @@
-# Lab 02: Implementing Security Solutions in Hybrid Scenarios 
+# Lab: Implementing Security Solutions in Hybrid Scenarios 
 
 ## Lab Overview
 
