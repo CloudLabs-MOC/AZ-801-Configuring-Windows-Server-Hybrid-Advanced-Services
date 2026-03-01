@@ -29,11 +29,13 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
     ![](../media/azm2-1.png)
 
-1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**
+
+   > **NOTE:** Type the password **Pa55w.rd** manually.
 
     ![](../media/azm2-2.png)
 
-1. On **SEA-SVR2**, start **Microsoft Edge** from the task bar, right click on the following link [Create a new Windows VM and create a new AD Forest, Domain and DC](https://github.com/az140mp/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain), then select **Copy link** and then paste it on the browser to access a customized version of the QuickStart template
+1. On **SEA-SVR2**, start **Microsoft Edge** from the task bar. Now, right click on the following link [Create a new Windows VM and create a new AD Forest, Domain and DC](https://github.com/az140mp/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain), then select **Copy link** and then paste it on the browser to access a customized version of the QuickStart template
 
 1. On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, select **Deploy to Azure**.
 
@@ -43,11 +45,13 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
 1. When prompted, in the Azure portal, sign in by using following credentials:
    
-   - Username: <inject key="AzureAdUserEmail"></inject>
+   - **Username:** **<inject key="AzureAdUserEmail"></inject>**
   
-   - Password: <inject key="AzureAdUserPassword"></inject>
+   - **Password:** **<inject key="AzureAdUserPassword"></inject>**
 
 1. On the **Create an Azure VM with a new AD Forest** page, select **Edit template**.
+
+     ![](../Media/edit-template.png)
 
 1. On the **Edit template** page, browse to the **storageProfile** section (starting with the line **195**) and verify that the **sku** (on line **199**) is set to **2022-Datacenter (1)**, if not then change it to 2022-Datacenter, and the **version** (on line **200**) is set to **latest (2)** and that **dataDisks** **caching** (on line **213**) is set to **None (3)**.
 
@@ -55,7 +59,7 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
     ![](../Media/L6E1T1S6.png)
 
-1. On the **Edit template** page, browse to the **extension** section (starting with the line **233**) and note that the template uses PowerShell Desired State Configuration to run the **CreateADPDC.ps1** script within the deployed Azure virtual machine (VM).
+1. On the **Edit template** page, browse to the **extension** section (starting with the line **247**) and note that the template uses PowerShell Desired State Configuration to run the **CreateADPDC.ps1** script within the deployed Azure virtual machine (VM).
 
    > **Note:** To review the script, you can use the following steps:
 
@@ -64,7 +68,9 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
 	- On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, in the listing of the repository content, 	select the **DSC** folder, and then select **CreateADPDC.ps1** file.
     
-	- On the **azure-quickstart-templates/application-workloads/active-directory/active-directory-new-domain/DSC/CreateADPDC.ps1** 	page, review the content of the script and note that it installs a number of server roles, including Active Directory Domain 		Services and DNS, placing the NTDS database and logs, as well as the SYSOVL share on drive **F**.
+	- On the **azure-quickstart-templates/application-workloads/active-directory/active-directory-new-domain/DSC/CreateADPDC.ps1** page, review the content of the script and note that it installs a number of server roles, including Active Directory Domain Services and DNS, placing the NTDS database and logs, as well as the SYSOVL share on drive **F**.
+
+      ![](../Media/createADPDC.png)
      
 	- Close the Microsoft Edge tab and switch back to the one displaying the **Edit template** page in the Azure portal.
 
@@ -92,7 +98,7 @@ In this task, you will deploy a domain controller using an ARM template. You wil
    
 1. On the **Edit parameters** page, select **Load file (1)**, in the **File Upload** dialog box, browse to the **C:\\Labfiles\\Lab06 (2)** folder, select the **L06-rg_template.parameters.json (3)** file, and then select **Open (4)**.
 
-    ![](../Media/az6l4.png)
+    ![](../Media/az614-1.png)
    
 1. On the **Edit parameters** page, select **Save**.
 
@@ -201,14 +207,14 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
    | Region | Leave the default region |
    | Availabilty zone | **None (2)** |
    | Tier | **Basic (3)** |
-   | Virtual network | **az801l06a-vnet (4)** |
-   | Subnet | **AzureBastionSubnet (10.6.255.0/24) (5)** |
+   | Virtual network | **az801l06a-vnet (AZ801-L0601-RG) (4)** |
+   | Subnet | **AzureBastionSubnet (5)** |
    | Public IP address | **Create new (6)** |
    | Public IP address name | **az801l06a-vnet-ip (7)** |
 
 1. On the **Review + create (8)** tab of the **Create a Bastion** page, select **Create**.
 
-   ![](../Media/L5E1T2S11-1.png)
+   ![](../Media/L5E1T2S11-2.png)
 
    ![](../Media/L6E1T2S11.png)
 
@@ -358,9 +364,9 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
     ![](../Media/L6E1T4S7.png)
 
-    > **Note:** **Edge** by default will block popups. To allow popups for **Bastion** go to **Settings** in **Edge**, select **Cookies 
-    and site permissions** on the left, **Pop-ups and redirects** under **All permissions** and finally toggle **Block (recommended)** 
-    off.
+    > **Note:** **Edge** by default will block popups. To allow popups for **Bastion**, click on **Pop-up icon (1)** at the top right corner located at end of url, click on **Always allow pop-ups and redirects from https://portal.azure.com (2)** and select **Done (3)**.
+    >
+    > ![](../Media/pop-up-blocked.png)
 
 1. Within the Remote Desktop session to **az801l06a-dc2**, select **Start (1)**.  
 
@@ -395,10 +401,10 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
    ```powershell
    Get-Disk | Where PartitionStyle -eq 'RAW' |  Initialize-Disk -PartitionStyle MBR
    New-Partition -DiskNumber 2 -UseMaximumSize -AssignDriveLetter
-   Format-Volume -DriveLetter E -FileSystem NTFS
+   Format-Volume -DriveLetter F -FileSystem NTFS
    ```
 
-    ![](../Media/L6E1T4S10.png)
+    ![](../Media/L6E1T4S10-1.png)
 
 1. Within the Remote Desktop session to **az801l06a-dc2**, switch to the **Server Manager** window.
 
@@ -426,9 +432,15 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
 1. On the **DNS Options** page of **Active Directory Domain Services Configuration Wizard**, select **Next**.
 
+     ![](../Media/dns-options.png)
+
 1. On the **Additional Options** page, select **Next**.
 
+     ![](../Media/additional-options.png)
+
 1. On the **Paths** page, change the drive of the path settings from **C:** to **F: (1)** for the **Database** folder, **Log files** folder, and **SYSVOL** folder, and then select **Next (2)**.
+
+     > **NOTE:** If **NDTS** and **SYSVOL** is not present inside **Windows** folder, and **Windows** folder is not present in F:\ drive, create those folders and perform this step.
 
     ![](../media/az-l6-13.png)
 
@@ -457,7 +469,30 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
 ## Exercise 2: Migrating file servers by using Storage Migration Service
 
-### Task 1: Set up file services
+### Task 1: Install Windows Admin Center
+
+1. On **SEA-SVR2**, select **Start**, and then select **Windows PowerShell**.
+
+1. Right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.
+
+     ![](../media/az-l6-9.png)
+
+1. In the **Windows PowerShell** console, enter the following command, and then press Enter to download the latest version of Windows Admin Center:
+	
+   ```powershell
+   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
+   ```
+1. Enter the following command, and then press Enter to install Windows Admin Center:
+	
+   ```powershell
+   Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
+   ```
+
+   > **Note**: Wait until the installation completes. This should take about 1 minutes.
+
+   ![](../Media/ex2-task1.png)
+
+### Task 2: Set up file services
 
 In this task, you will set up file services on the SEA-SVR2 machine by running a PowerShell script. The script will initialize additional data disks, create NTFS volumes, assign drive letters, and configure file shares that will be used in the file migration process.
 
@@ -668,8 +703,8 @@ In this task, you will validate the migration outcome by performing a series of 
 1. To identify the IPv4 addresses assigned to the network interface of **SEA-SVR2**, in the **Windows PowerShell** console, enter the following command, and then press Enter:
 	
     ```powershell
-     Get-NetIPAddress | Where-Object AddressFamily -eq 'IPv4' | Select-Object IPAddress
-   ```
+    Get-NetIPAddress | Where-Object AddressFamily -eq 'IPv4' | Select-Object IPAddress
+    ```
 
      ![](../media/az-l6-44.png)
 
@@ -678,7 +713,7 @@ In this task, you will validate the migration outcome by performing a series of 
 1. To identify the NetBIOS name assigned to **SEA-SVR2**, in the **Windows PowerShell** console, enter the following command, and then press Enter:
 	
    ```powershell
-     nbtstat -n
+   nbtstat -n
    ```
     
      ![](../media/az-l6-45.png)
@@ -688,7 +723,7 @@ In this task, you will validate the migration outcome by performing a series of 
 1. To identify the local shares on **SEA-SVR2**, in the **Windows PowerShell** console, enter the following command, and then press Enter:
 	
    ```powershell
-     Get-SMBShare
+   Get-SMBShare
    ```
    
      ![](../media/az-l6-46.png)
@@ -698,7 +733,7 @@ In this task, you will validate the migration outcome by performing a series of 
 1. To identify the content of the **Data** share on **SEA-SVR2**, in the **Windows PowerShell** console, enter the following command, and then press Enter:
 	
    ```powershell
-     Get-ChildItem -Path 'S:\Data'
+   Get-ChildItem -Path 'S:\Data'
    ```
 
      ![](../media/az-l6-47.png)
