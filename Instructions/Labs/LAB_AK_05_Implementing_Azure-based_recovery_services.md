@@ -412,7 +412,7 @@ Verify that the **Hyper-V site** and **Hyper-V servers** settings are set correc
     |Name|**az801l05-replication-policy (1)**|
     |Copy frequency|**30 seconds (2)**|
 
-     ![](../media/az-801-32.png)
+     ![](../media/lab4-p2t2p1.png)
 
 1. Back on the **Replication policy** tab of the **Prepare infrastructure** page, wait until the site has been associated with the policy **(1)** and select **Next (2)**.
 
@@ -458,15 +458,16 @@ In this task, you will be enabling replication for a selected Hyper-V virtual ma
     |**Subnet**|**subnet0 (10.5.0.0/24) (8)**|
 
      ![](../media/l5-12-51n.png)
+
      ![](../media/l5-12-51.png)
 
 1. On the **Virtual machine selection** tab of the **Enable replication** page, select the **SEA-CORE1 (1)** checkbox and select **Next (2)**.
 
-     ![](../media/azm5-40.png)
+     ![](../media/lab4-p2t3p1.png)
 
 1. On the **Replication settings** tab of the **Enable replication** page, in the **Defaults** row and **OS type** column, select **Windows (1)** from the drop-down list and select **Next (2)**.
 
-     ![](../media/azm5-41.png)
+     ![](../media/lab4-p2t3p2.png)
 
 1. On the **Replication policy** tab of the **Enable replication** page, accept the default settings and select **Next**.
 1. On the **Review** tab of the **Enable replication** page, select **Enable replication**.
@@ -515,9 +516,11 @@ In this task, you will perform a test failover for the SEA-CORE1 virtual machine
 
 In this task, you will perform a failover of the Hyper-V virtual machine.
 
-1. On **SEA-SVR2**, in the browser window displaying the Azure portal, on the **SEA-CORE1** replicated items blade go to the **Compute and Network setting (1)** under General and review the virtual machine size. Validate that the size is set to A1_v2, if not **edit** the size to be **A1_v2 (2)** and click on **Save (3)**.
+1. On **SEA-SVR2**, in the browser window displaying the Azure portal, on the **SEA-CORE1** replicated items blade go to the **Compute and Network setting (1)** under **General** section and review the virtual machine size. Validate that the size is set to A1_v2, if not, click on **Edit (3)** and change the size to be **A1_v2 (4)** and click on **Save (5)**.
 
-     ![](../media/l5-12-56.png)
+     ![](../media/lab4-p2t3p3.png)
+
+     ![](../media/lab4-p2t3p4.png)
 
 1. Go back to the **Overview (1)** and select **Test failover (2)**.
 
@@ -617,6 +620,8 @@ In this task, you will uninstall any existing Azure Recovery Services agent on t
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the **az801l05a-rsvault** Recovery Services vault page, on the vertical menu on the left side, in the **Getting started** section, select **Backup (1)**.
 
+     ![](../media/lab4-p2t3p5.png)
+
 1. On the **az801l05a-rsvault \|Backup (1)** page, specify the following settings:
 
     |Settings| Value|
@@ -694,7 +699,7 @@ In this task, you will uninstall any existing Azure Recovery Services agent on t
 
 1. On the **Server Registration** page of the **Register Server Wizard**, review the warning regarding the location of the passphrase file, ensure that the **Launch Microsoft Azure Recovery Services Agent (1)** checkbox is selected, and then select **Close (2)**. This will automatically open the **Microsoft Azure Backup** console.
 
-     ![](../media/57.png)
+     ![](../media/lab4-p2t3p6.png)
 
 ### Task 2: Schedule Azure Backup
 
