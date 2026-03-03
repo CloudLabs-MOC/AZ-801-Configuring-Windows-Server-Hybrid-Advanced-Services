@@ -895,13 +895,13 @@ In this task, you will prepare your environment to begin migrating discovered Hy
 
 In this task, you’ll configure replication for your Hyper-V VM to Azure using Azure Migrate. You’ll leverage the assessment data from earlier tasks and initiate the replication process.
 
-1. Once you receive the confirmation that the registration was finalized, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page and then, in the **Migration and modernization** section, select the **Replicate (2)** link. 
+1. Within the Remote Desktop session to **az801l07a-hv-vm**, in the browser window displaying the Azure portal, browse back to the **Azure Migrate | az801l07a-migrate-project** page. 
 
-   ![](../media/azm7-129.png)
+1. On the **Azure Migrate | az801l07a-migrate-project** page, under **Execute** on the left menu tab, select **Migrations**.
 
-    >**Note:** You might have to refresh the browser page displaying the **Azure Migrate | Servers, databases and web apps** page.
+1. Select the **Replicate** button on the top of the page.
 
-1. On the **Specify intent** page, in the **Are your machines virtualized?** drop-down list, select **Yes, with Hyper-V** and then select **Continue**.
+1. On the **Specify intent | Replicate** page, in the **Are your machines virtualized?** drop-down list, select **Yes, with Hyper-V** and then select **Continue**.
 
    ![](../media/az801lab7img55.png)
 
