@@ -946,25 +946,16 @@ In this task, you’ll configure replication for your Hyper-V VM to Azure using 
 
    ![](../media/az-7-63.png)
 
-1. To monitor the status of replication, back on the **Azure Migrate | Servers, databases and web apps (1)** page, select **Refresh** and then, in the **Migration and modernization** section, select the **Overview (2)** and on the **Azure Migrate: Migration and modernization** page.
+1. To monitor the status of replication, back on the **az801l07a-migrate-project | Migrations** page, select **Replications summary** and then, in the **Migration** section, select the **Replications** entry. On the **Azure Migrate: Server Migration | Replications** page, examine the **Replication status** column in the list of the replicating machines.
+1. Wait until the status changes to **Protected**. This might take additional 15 minutes.
 
-   ![](../media/azm7-136.png)
-
-1. Under **Migration** section select **Replications (1)**. Examine the **Replication Status** column in the list of the replicating machines **(2)**.
-
-    ![](../media/az-7-65.png)
-
-1. Wait until the status changes to **Protected**. This might take additional 15 - 20 minutes.
-
-    ![](../media/az-7-66.png)
-
-    >**Note:** You will need to refresh the **Migration and modernization | Replications** to update the **Status** information.
-
+   >**Note**: You will need to to refresh the **Azure Migrate: Server Migration | Replications** to update the **Status** information.
+   
 ### Task 3: Perform migration of Hyper-V VMs
 
 In this task, you will initiate and complete the migration of a Hyper-V virtual machine to Azure, using the configuration and replication you've already set up.
 
-1. In the Azure portal, on the **Migration and modernization | Replications** page, select the entry representing the **az801l07a-vm1** virtual machine.
+1. In the Azure portal, on the **Azure Migrate: Server Migration | Replications** page, select the entry representing the **az801l07a-vm1** virtual machine.
 
    ![](../media/az-7-66.png)
 
@@ -1012,31 +1003,9 @@ In this task, you will initiate and complete the migration of a Hyper-V virtual 
 
     ![](../media/az-7-70.png)
 
-1. To monitor the status of migration, browse back to the **Azure Migrate | Servers, databases and web apps (1)** page. In the **Migration and modernization** section, select the **Replicating servers (2)** entry.
+1. To monitor the status of migration, browse back to the **az801l07a-migrate-project | Migrations** page. Select **Replications summary**, select the **Replications** entry and then, on the **Azure Migrate: Server Migration | Replications** page, examine the **Replication Status** column in the list of the replicating machines. Verify that the status displays the **Planned failover finished** status.
 
-    ![](../media/az-7-71.png)
-
-1. Then, on the **Migration and modernization | Replicating machines** page, examine the **Status** column in the list of the replicating machines. Verify that the status displays the **Planned failover was initiated** status
-
-    ![](../media/az-7-72.png)
-
-1. Refresh the page, untill you get the status displays the **Planned failover finished** status.
-
-    ![](../media/az-7-73.png)
-
-    >**Note:** Wait for the deployment to complete. This might take about 10 minutes.
-
-    >**Note**: Migration is supposed to be a non-reversible action. If you want to see the completed information, browse back to the **Azure Migrate | Servers, databases and web apps** page, refresh the page, and then verify that the **Migrated Servers** entry in the **Migration and modernization** section has the value of **1**.
-   
-1. Refresh the page and please wait until the **Replication status** indicates **Completing planned failover**. It might take more time so no need to wait, please proceed with the next step.
-
-    ![](../Media/display.png)
-   
-1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines** and then, on the **Virtual machines** page, note the entry representing the newly replicated virtual machine **az801l07a-vm1**.
-
-   ![](../media/az-7-74.png)
-
-   >**Note:** Migration is supposed to be a non-reversible action. If you want to see the completed information, browse back to the **Azure Migrate | Servers, databases and web apps** page, refresh the page, and then verify that the **Migrated Servers** entry in the **Migration and modernization** section has the value of **1**.
+   >**Note**: Migration is supposed to be a non-reversible action. If you want to see the completed information, browse back to the **Azure Migrate: Server Migration** page, refresh the page, and then verify that the **Migrated Servers** entry in the **Migrate** section has the value of **1**.
 
   > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
