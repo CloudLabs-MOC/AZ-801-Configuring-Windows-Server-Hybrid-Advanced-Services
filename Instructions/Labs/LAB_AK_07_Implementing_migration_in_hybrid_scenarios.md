@@ -351,7 +351,11 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
     ![](../media/az-7-21.png)
 
-    >**Note:** Click on **Accept** on Send diagnostic data to Microsoft page. 
+   >**Note** : Please click the Restore Down button to access the Action menu, if needed.
+
+   ![](../media/az801n7y.png)
+
+1. Click on **Accept** on Send diagnostic data to Microsoft page. 
 
      ![](../media/az-7-22.png)    
 
