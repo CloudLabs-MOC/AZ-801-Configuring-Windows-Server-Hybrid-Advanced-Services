@@ -33,9 +33,11 @@ In this task, you will be installing the Failover Clustering feature and managem
 
 1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
 
-    ![](../media/azm2-1.png)
+   ![](../media/az801-lab3-01.png)
 
 1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+
+   >**NOTE:** Type the password manually.
 
     ![](../media/azm2-2.png)
 
@@ -65,6 +67,8 @@ In this task, you will be installing the Failover Clustering feature and managem
      > **Note**: Wait for the installation process to complete. The installation should take about 1 minute.
 
 1. **Minimize the Windows Powershell window**.
+
+   ![](../media/az801-lab3-02.png)
 
 ### Task 2: Configure iSCSI virtual disks
 
@@ -100,7 +104,10 @@ In this task, you will be creating iSCSI virtual disks on SEA-DC1. This includes
    ```powershell
    New-IscsiVirtualDisk C:\Storage\disk3.VHDX -size 10GB
    ```
+
 1. **Minimize the Windows Powershell window**.
+
+   ![](../media/az801-lab3-03.png)
 
 1. On **SEA-SVR2**, right-click on **Start (1)** and then select **Windows PowerShell (Admin) (2)**.
 
@@ -129,7 +136,7 @@ In this task, you will be creating iSCSI virtual disks on SEA-DC1. This includes
    Set-Service -ServiceName MSiSCSI -StartupType Automatic
    ```
 
-    ![](../Media/az3l7.png)   
+    ![](../media/az801-lab3-04.png)
 
 1. To start the Microsoft iSCSI Initiator service on **SEA-SVR1**, switch to the **Windows PowerShell** window hosting PowerShell Remoting session to **SEA-SVR1**.
 
@@ -208,7 +215,7 @@ In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from 
 
     ![](../Media/az3l12.png)   
 
-     >**Note:** Verify that after you run the last command, the value for the *IsConnected* variable is True.
+     >**Note:** Verify that after you run the last command, the value for the **IsConnected** variable is `True`.
 
 ### Task 2: Initialize the disks
 
@@ -299,6 +306,8 @@ In this task, you will be adding the File Server role to the failover cluster (S
 
 1. On the **Before You Begin** page of **High Availability Wizard**, select **Next**.
 
+   ![](../media/az801-lab3-05.png)
+
 1. On the **Select Role** page of **High Availability Wizard**, select **File Server (1)**, and then select **Next (2)**.
 
    ![](../Media/lab3z6.png) 
@@ -308,6 +317,8 @@ In this task, you will be adding the File Server role to the failover cluster (S
    ![](../Media/lab3z7.png) 
 
 1. On the **Client Access Point** page of **High Availability Wizard**, in the **Name** box, enter **FSCluster (1)**.
+
+   ![](../media/az801-lab3-06.png)
 
 1. In the **Address** box, enter **172.16.10.130 (2)**, and then select **Next (3)**.
 
@@ -459,6 +470,8 @@ In this task, you will be validating the quorum configuration by testing access 
    ![](../Media/lab3z31.png)  
 
 1. When prompted for confirmation, select **Yes**.
+
+   ![](../media/az801-lab3-07.png)
 
 1. Switch to File Explorer and verify that you can still access the content of the **\\\\FSCluster\\Docs** folder.
 
