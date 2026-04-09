@@ -254,8 +254,10 @@ In this task, you will install the LAPS client-side extension on a target system
 
 In this task, you will verify that LAPS is correctly implemented by retrieving and reviewing the managed local administrator password for a target computer using both the LAPS UI and PowerShell commands.
 
-1. Switch to the console session to **SEA-SVR2**.
+1. Switch to the console session to **SEA-SVR2**, and, if prompted, sign in using the password you updated in the previous step.
+
 1. Select **Start**. In the **Start** menu, select **LAPS**, and then select **LAPS UI**.
+
 1. In the **LAPS UI** dialog box, in the **Computer name** text box, enter **SEA-SVR1 (1)**, and then select **Search (2)**.
 
    ![](../Media/lab1-2-image7.png)
