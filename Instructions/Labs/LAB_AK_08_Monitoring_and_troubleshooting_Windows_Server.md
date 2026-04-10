@@ -6,6 +6,7 @@ In this hands-on lab, you will learn to monitor and troubleshoot the performance
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
+
 + Exercise 1: Establishing a performance baseline
 + Exercise 2: Identifying the source of a performance problem
 + Exercise 3: Viewing and configuring centralized event logs
@@ -26,7 +27,15 @@ In this exercise, you will create and start a custom data collector set in Perfo
 
 In this task, you will create a custom data collector set in Performance Monitor on SEA-SVR2 to track various performance counters like processor time, memory usage, disk activity, and network traffic, providing data for establishing a performance baseline.
 
-1. Connect to **SEA-SVR2**, and then, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
+
+   ![](../media/az801-lab3-01.png)
+
+1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+
+   >**NOTE:** Type the password manually.
+
+    ![](../media/azm2-2.png)
 
 1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Performance (1)**, and then, in the **Best match** list, select **Performance Monitor (2)**.
 
@@ -93,6 +102,8 @@ In this task, you will create a custom data collector set in Performance Monitor
    ![](../Media/az-801-lab8-image16.png)
 
 1. In Performance Monitor, in the results pane, right-click on the **SEA-SVR2 Performance (1)**, and then select **Start (2)**.
+
+   > **Note:** Do not close the performance monitor as it will be used in next task.
 
    ![](../Media/az-801-lab8-image17.png)
 
