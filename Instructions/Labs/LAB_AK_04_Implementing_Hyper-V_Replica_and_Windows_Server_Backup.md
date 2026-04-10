@@ -27,9 +27,11 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
 1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
 
-    ![](../media/azm2-1.png)
+    ![](../media/az801-lab3-01.png)
 
 1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+
+   >**NOTE:** Type the password manually.
 
     ![](../media/azm2-2.png)
 
@@ -92,7 +94,9 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
      > **Note**: Leave the **Administrator: Windows PowerShell** window open.
 
-1. **Minimize the Windows Powershell window**.     
+1. **Minimize the Windows Powershell window**.  
+
+   ![](../media/az801-lab4-01.png)
 
 1. To open another **Administrator: Windows PowerShell** window, on **SEA-SVR2**, right click on **Start** and select **Windows PowerShell (Admin)**.
 
@@ -138,6 +142,8 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
      > **Note**: Leave the second **Administrator: Windows PowerShell** window open.
 
 1. **Minimize the Windows Powershell window**.     
+
+   ![](../media/az801-lab4-02.png)
 
 ### Task 2: Configure Hyper-V replication
 
