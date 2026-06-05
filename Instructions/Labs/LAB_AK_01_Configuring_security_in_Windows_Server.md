@@ -30,11 +30,11 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 
 1. Connect to **SEA-SVR2** and, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
-1. In the **Type here to search** text box next to the **Start** button, enter **Group Policy Management**.
+1. In the **Type here to search** text box next to the **Start** button, enter **Group Policy Management (1)** in the list of results, select **Group Policy Management (2)**..
 
-1. In the list of results, select **Group Policy Management**.
+   ![](../Media/lab1-image15.png)
 
-1. In the **Group Policy Management** console, expand **Forest: contoso.com**, expand **Domains**, expand **contoso.com**, right-click (1) or access the **context** menu for the **IT** Organizational Unit (OU), and then select **Create a GPO in this domain, and Link it here (2)**.
+1. In the **Group Policy Management** console, expand **Forest: contoso.com**, expand **Domains**, expand **contoso.com**, right-click or access the **context** menu for the **IT (1)** Organizational Unit (OU), and then select **Create a GPO in this domain, and Link it here (2)**.
 
     ![](../Media/lab1-image1.png)
 
@@ -72,13 +72,17 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 
 In this task, you will run the HVCI and Windows Defender Credential Guard hardware readiness tool to evaluate system compatibility and enable Credential Guard on the target system.
 
-1. On **SEA-SVR2**, select **Start**, right-click or access the **context** menu for **Windows PowerShell**, and then select **Run as administrator**.
+1. On **SEA-SVR2**, select **Windows (1)** button, right-click or access the **context** menu for **Windows PowerShell (2)**, and then select **Run as administrator (3)**.
+
+   ![](../Media/lab1-image16.png)
+
 1. To run the HVCI and Windows Defender Credential Guard hardware readiness tool, at the Windows PowerShell command prompt, enter the following commands, enter **R** Run once at the first prompt, and then press Enter.
 
    ```powershell
    Set-Location -Path C:\Labfiles\Lab01\
    .\DG_Readiness_Tool.ps1 -Enable -AutoReboot
    ```
+   ![](../Media/lab1-image17.png)
 
 1. Wait until the tool completes its run and, when prompted, in the **You're about to be signed out** dialog box, select **Close**.
 
@@ -94,13 +98,16 @@ In this exercise, you will use PowerShell to locate accounts with security risks
 
 In this task, you will identify Active Directory domain accounts with non-expiring passwords and configure them to comply with security best practices by enforcing password expiration.
 
-1. On **SEA-SVR2**, select **Start**, right-click or access the **context** menu for **Windows PowerShell**, and then select **Run as administrator**.
+1. On **SEA-SVR2**, select **Windows** button , right-click or access the **context** menu for **Windows PowerShell**, and then select **Run as administrator**.
+
+   ![](../Media/lab1-image16.png)
 
 1. To list Active Directory-enabled user accounts with a non-expiring password, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
    ```powershell
    Get-ADUser -Filter {Enabled -eq $true -and PasswordNeverExpires -eq $true}
    ```
+   ![](../Media/lab1-image18.png)
 
 1. Review the list of user accounts returned.
 1. To enable password expiration for all user accounts in the result set, at the Windows PowerShell command prompt, enter the following command and press Enter:
@@ -108,7 +115,7 @@ In this task, you will identify Active Directory domain accounts with non-expiri
    ```powershell
    Get-ADUser -Filter {Enabled -eq $true -and PasswordNeverExpires -eq $true} | Set-ADUser -PasswordNeverExpires $false
    ```
-
+    ![](../Media/lab1-image19.png)
 1. To verify the outcome, rerun the command from step 2 and notice that no results are returned.
 
 ### Task 2: Locate and disable domain accounts that have not been used to sign in for at least 90 days
@@ -121,6 +128,7 @@ In this task, you will identify domain accounts that have been inactive for at l
    $days = (Get-Date).AddDays(-90)
    Get-ADUser -Filter {LastLogonTimeStamp -lt $days -and enabled -eq $true} -Properties LastLogonTimeStamp
    ```
+   ![](../Media/lab1-image20.png)
 
    > **Note**: In the lab environment, no results will be returned.
 
@@ -129,6 +137,8 @@ In this task, you will identify domain accounts that have been inactive for at l
    ```powershell
    Get-ADUser -Filter {LastLogonTimeStamp -lt $days -and enabled -eq $true} -Properties LastLogonTimeStamp | Disable-ADAccount
    ```
+
+   ![](../Media/lab1-image21.png)
 
    > **Note**: In the lab environment, no results will be returned.
 
@@ -152,23 +162,34 @@ In this task, you will create a dedicated Organizational Unit (OU) in Active Dir
    Move-ADObject -Identity $computer -TargetPath "OU=Seattle_Servers,DC=Contoso,DC=com"
    ```
 
+   ![](../Media/lab1-image22.png)
+
 1. To install LAPS, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
    ```powershell
    Msiexec /i C:\Labfiles\Lab01\LAPS.x64.msi
    ```
+   ![](../Media/lab1-image23.png)
 
 1. On the **Welcome to the Local Administrator Password Solution Setup Wizard** page of the **Local Administrator Password Solution Setup** wizard, select **Next**.
 
-1. On the **End-User License Agreement** page of the **Local Administrator Password Solution Setup** wizard, select **I accept the terms in the License Agreement**, and then select **Next**.
+   ![](../Media/lab1-image24.png)
+
+1. On the **End-User License Agreement** page of the **Microsoft Local Administrator Password Solution Setup** wizard, select **I accept the terms in the License Agreement (1)**, and then select **Next (2)**.
+
+   ![](../Media/lab1-image25.png)
 
 1. On the **Custom Setup** page of the **Local Administrator Password Solution Setup** wizard, in the drop-down menu next to **Management Tools**, select **Entire feature will be installed on the local hard drive**, and then select **Next**.
  
    ![](../Media/intall.png)
 
-1. On the **Ready to install Local Administrator Password Solution** page of the **Local Administrator Password Solution Setup** wizard, select **Install**. 
+1. On the **Ready to install Local Administrator Password Solution** page of the **Local Administrator Password Solution Setup** wizard, select **Install**.
+
+   ![](../Media/lab1-image26.png)
 
 1. Once the installation completes, on the final page of the **Local Administrator Password Solution Setup** wizard, select **Finish**.
+
+   ![](../Media/lab1-image27.png)
 
 1. To enable the Windows Defender Firewall with Advanced Security rule that allows incoming Server Message Block (SMB) connections from other domain-joined servers, at the Windows PowerShell command prompt, enter the following commands and, after each, press Enter:
 
@@ -177,6 +198,7 @@ In this task, you will create a dedicated Organizational Unit (OU) in Active Dir
    $rule | Set-NetFirewallRule -Profile Domain
    $rule | Enable-NetFirewallRule
    ```
+   ![](../Media/lab1-image29.png)
 
    > **Note**: This is required to connect to **SEA-SVR2** from **SEA-SVR1** later in this lab.
 
@@ -191,6 +213,7 @@ In this task, you will extend the Active Directory schema for LAPS, configure pe
    Update-AdmPwdADSchema
    Set-AdmPwdComputerSelfPermission -Identity "Seattle_Servers"
    ```
+   ![](../Media/lab1-image28.png)
 
 1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Group Policy Management**.
    
@@ -204,9 +227,13 @@ In this task, you will extend the Active Directory schema for LAPS, configure pe
 
    ![](../Media/lab1-2-image2.png)
    
-1. In the **Group Policy Management** window, under **Seattle_Servers**, right-click or access the **context** menu for **LAPS_GPO**, and then select **Edit**.
+1. In the **Group Policy Management** window, under **Seattle_Servers**, right-click or access the **context** menu for **LAPS_GPO (1)**, and then select **Edit (2)**.
+
+   ![](../Media/lab1-image30.png)
    
-1. In the **Group Policy Management Editor** window, under **Computer Configuration**, expand the **Policies** node, expand the **Administrative Templates** node, and then select **LAPS**.
+1. In the **Group Policy Management Editor** window, under **Computer Configuration (1)**, expand the **Policies (2)** node, expand the **Administrative Templates (3)** node, and then select **LAPS (4)**.
+
+   ![](../Media/lab1-image31.png)
    
 1. Select the **Enable local admin password management (1)** policy, and then select the **policy settings (2)** link.
 
@@ -243,12 +270,12 @@ In this task, you will install the LAPS client-side extension on a target system
    ```powershell
    Start-Process msiexec.exe -Wait -ArgumentList '/i \\SEA-SVR2.contoso.com\c$\Labfiles\Lab01\LAPS.x64.msi /quiet'
    ```
-
 1. To trigger the processing of Group Policy that will apply **LAPS** settings locally, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
    ```powershell
    gpupdate /force
    ```
+    ![](../Media/lab1-image32.png)
 
 ### Task 4: Verify LAPS
 
@@ -256,7 +283,9 @@ In this task, you will verify that LAPS is correctly implemented by retrieving a
 
 1. Switch to the console session to **SEA-SVR2**, and, if prompted, sign in using the password you updated in the previous step.
 
-1. Select **Start**. In the **Start** menu, select **LAPS**, and then select **LAPS UI**.
+1. Select the **Windows (1)** button, select **LAPS (2)** folder, and then select **LAPS UI (3)**.
+
+    ![](../Media/lab1-image33.png)
 
 1. In the **LAPS UI** dialog box, in the **Computer name** text box, enter **SEA-SVR1 (1)**, and then select **Search (2)**.
 
@@ -284,3 +313,6 @@ In this lab, you have completed:
 - Implemented LAPS.
 
 ### You have successfully completed the lab
+
+
+[def]: ../Media/lab1-image19.png
