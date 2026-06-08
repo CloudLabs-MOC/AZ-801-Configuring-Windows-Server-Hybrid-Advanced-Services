@@ -11,7 +11,7 @@ In this lab, you will be working on:
 - Exercise 1: Implementing Hyper-V Replica.
 - Exercise 2: Implementing backup and restore with Windows Server Backup.
 
-## Estimated timing: 1 hr 45 minutes
+## Estimated timing: 1 hr 45 Minutes
 
 ## Architecture diagram
 
@@ -33,9 +33,7 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
    >**NOTE:** Type the password manually.
 
-    ![](../media/azm2-2.png)
-
-     >**Note**: If prompted for MFA, please refer to the steps provided on the Getting Started page.    
+    ![](../media/azm2-2.png)    
 
 1. On **SEA-SVR2**, right click on **Start (1)**, and then select **Windows PowerShell (Admin) (2)**.
 
@@ -166,6 +164,8 @@ In this task, you will be enabling replication for a virtual machine (SEA-CORE1)
    ```powershell
    Start-VMInitialReplication SEA-CORE1
    ```
+   ![](../Media/azm4--80.png)
+
 1. To identify the status of replication of the virtual machine **SEA-CORE1** from **SEA-SVR2** to **SEA-SVR1** was successfully started, on **SEA-SVR2**, enter the following command and press Enter:
 
    ```powershell
@@ -246,7 +246,7 @@ In this task, you will be testing the failover process by performing a failover 
 
 1. Right click on **Start (1)** and select **Windows Powershell(Admin) (2)** from the HostVM.
 
-   ![](../Media/azm4-20.png)
+   ![](../Media/azm4-1.png)
 
 1. Enter the following command and press Enter:
 
@@ -323,6 +323,7 @@ In this task, you will be testing the failover process by performing a failover 
    ```powershell
    Stop-VM -VMName SEA-CORE1
    ```
+   ![](../Media/azm4--81.png)
 
 1. Leave both Windows PowerShell windows open.
 
