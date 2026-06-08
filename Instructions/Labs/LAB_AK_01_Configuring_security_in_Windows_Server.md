@@ -12,7 +12,7 @@ In this lab, you'll be working on:
 - Exercise 2: Locating problematic accounts.
 - Exercise 3: Implementing Local Administrator Password Solution (LAPS)
   
-## Estimated timing: 1 hr 45 minutes
+## Estimated timing: 1 hr 45 Minutes
 
 ## Architecture diagram
 

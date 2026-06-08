@@ -3,7 +3,7 @@
 
 ## Lab Scenario
 
-As the business of Contoso, Ltd. grows, it's becoming increasingly important that many of the applications and services on its network are always available. Contoso has many services and applications that must be available to internal and external users who work in different time zones around the world. Many of these applications can't be made highly available by using Network Load Balancing (NLB). Therefore, you should use a different technology to make these applications highly available.
+As the business of Contoso Ltd. grows, it's becoming increasingly important that many of the applications and services on its network are always available. Contoso has many services and applications that must be available to internal and external users who work in different time zones around the world. Many of these applications can't be made highly available by using Network Load Balancing (NLB). Therefore, you should use a different technology to make these applications highly available.
 
 As one of the senior network administrators at Contoso, you're responsible for implementing failover clustering on the servers that are running Windows Server to provide high availability for network services and applications. You're also responsible for planning the failover cluster configuration and deploying applications and services on the failover cluster.
 
@@ -17,7 +17,7 @@ In this lab, you'll be working on:
 - Exercise 3: Deploying and Configuring a Highly Available File Server.
 - Exercise 4: Validating the Deployment of the Highly Available File Server.
 
-## Estimated time: 1 hr 45 minutes
+## Estimated time: 1 hr 45 Minutes
 
 ## Architecture diagram
 
@@ -267,6 +267,7 @@ In this task, you will be creating a failover cluster on SEA-SVR2, adding SEA-SV
    ```powershell
    Add-ClusterNode -Cluster SEA-CL03 -Name SEA-SVR1.contoso.com
    ```
+   ![](../Media/az3l145.png) 
 
    > **Note:** Verify that the command is completed successfully.
 
