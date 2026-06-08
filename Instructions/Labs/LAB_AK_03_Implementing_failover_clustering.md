@@ -317,17 +317,11 @@ In this task, you will be adding the File Server role to the failover cluster (S
 
    ![](../Media/lab3z7.png) 
 
-1. On the **Client Access Point** page of **High Availability Wizard**, in the **Name** box, enter **FSCluster (1)**.
-
-   ![](../media/az801-lab3-06.png)
-
-1. In the **Address** box, enter **172.16.10.130 (2)**, and then select **Next (3)**.
+1. On the **Client Access Point** page of **High Availability Wizard**, in the **Name** box, enter **FSCluster (1)**, in the **Address** box, enter **172.16.10.130 (2)**, and then select **Next (3)**.
 
     ![](../Media/lab3z8.png) 
 
-1. On the **Select Storage** page of **High Availability Wizard**, select **Cluster Disk 1** and **Cluster Disk 2**, and then select **Next (2)**.
-
-   ![](../Media/lab3z9.png) 
+1. On the **Select Storage** page of **High Availability Wizard**, select **Cluster Disk 1** and **Cluster Disk 2**, and then select **Next (2)**
 
 1. On the **Confirmation** page of **High Availability Wizard**, select **Next**.
 
