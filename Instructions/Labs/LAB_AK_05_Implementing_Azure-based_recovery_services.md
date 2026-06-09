@@ -46,7 +46,7 @@ In this task, you will be creating a new Recovery Services vault in the Azure po
    
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-     >**Note**: If prompted for MFA, please refer to the steps provided on the Getting Started page.
+     >**Note**: On the Stay Signed in? pop, click **Yes**.
    
 1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for **Recovery Services vaults (1)** and select **Recovery Services vaults (2)**.
 
@@ -104,7 +104,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
      ![](../media/l5-12-7.png)
 
-1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **IP Addresses (5)**:
+1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **Address Space (5)**:
 
     |Setting|Value|
     |---|---|
@@ -115,7 +115,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
      ![](../media/l5-12-8.png)
 
-1. On the **IP addresses** tab of the **Create virtual network** page,
+1. On the **Address Space** tab of the **Create virtual network** page,
     - Remove the default IP Address space by clicking on **Delete address space**
 
        ![](../media/l5-12-9.png)   
@@ -129,7 +129,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
        |Starting Address|**10.5.0.0 (1)**|
        |Address space size|**/22 (1024 Addresses) (2)**|
 
-       - On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet  (3)**.
+       - On the **Address Space** tab of the **Create virtual network** page, select **+ Add a subnet  (3)**.
 
           ![](../media/l5-12-11.png)
 
@@ -143,7 +143,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
      ![](../media/l5-12-12.png)
    
-1. Back on the **IP addresses** tab of the **Create virtual network** page, select **Review + create**.
+1. Back on the **Address Space** tab of the **Create virtual network** page, select **Review + create**.
 
      ![](../media/l5-12-13.png)
 
@@ -155,7 +155,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
      ![](../media/l5-12-15.png)
 
-1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **IP Addresses (5)**:
+1. On the **Basics** tab of the **Create virtual network** page, specify the following settings (leave others with their default values) and select **Address Space (5)**:
 
     |Setting|Value|
     |---|---|
@@ -166,7 +166,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
      ![](../media/l5-12-16.png)
    
-1. On the **IP addresses** tab of the **Create virtual network** page,
+1. On the **Address Space** tab of the **Create virtual network** page,
     - Remove the default IP Address space by clicking on **Delete address space**
 
        ![](../media/l5-12-9.png)   
@@ -180,7 +180,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
        |Starting Address|**10.5.0.0** **(1**)|
        |Address space size|**/22 (1024 Addresses)** **(2)**|
 
-       - On the **IP addresses** tab of the **Create virtual network** page, select **+ Add a subnet (3)**.
+       - On the **Address Space** tab of the **Create virtual network** page, select **+ Add a subnet (3)**.
 
           ![](../media/l5-12-17.png)
 
@@ -196,13 +196,18 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
 
      ![](../media/l5-12-18.png)
 
-1. Back on the **IP addresses** tab of the **Create virtual network** page, select **Review + create**.
+1. Back on the **Address Space** tab of the **Create virtual network** page, select **Review + create**.
 
      ![](../media/l5-12-19.png)
 
 1. On the **Review + create** tab of the **Create virtual network** page, select **Create**.
 
      ![](../media/l5-12-20.png)
+      
+     > **Note:** Ignore the warning regarding the overlapping IP address space. This is intentional, so the IP address space of the test environment matches the IP address space of the disaster recovery environment.
+     
+     > **Note:** If the Virtual network deployment failed, then try to create it again.
+
 
 1. On **SEA-SVR2**, in the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for **Storage accounts (1)** and select **Storage accounts (2)**.
 
@@ -260,7 +265,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for **Recovery Services vaults (1)** and select **Recovery Services vaults (2)**.
 
-     ![](../media/azm5-1.png)
+     ![](../media/l5-12-1.png)
 
 1. On the **Recovery Services vaults** page, select the **az801l05a-rsvault** entry.
 
@@ -488,7 +493,7 @@ In this task, you will review the replication settings for the SEA-CORE1 virtual
 
      ![](../media/l5-12-54.1.png)
 
-    > **Note:** You might need to wait a few minutes until the **SEA-CORE1** entry appears on the **az801l05a-rsvault \| Replicated items** page.
+    > **Note:** You might need to wait a **10-15** minutes until the **SEA-CORE1** entry appears on the **az801l05a-rsvault \| Replicated items** page.
 
 1. On the **az801l05a-rsvault \| Replicated items** page, select the **SEA-CORE1** entry.
 
