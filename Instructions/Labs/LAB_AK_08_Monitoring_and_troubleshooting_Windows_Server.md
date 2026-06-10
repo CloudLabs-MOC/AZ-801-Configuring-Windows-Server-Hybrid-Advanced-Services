@@ -120,30 +120,35 @@ In this task, you will simulate a typical server workload by creating and copyin
    ```powershell
    fsutil file createnew bigfile 104857600
    ```
+   ![](../media/azm8-1.png)
 
 1. To copy the newly created file to the root of drive **C** of **SEA-DC1**, enter the following command and press Enter:
 
    ```powershell
    Copy-Item -Path .\bigfile -Destination \\SEA-DC1.contoso.com\c$\ -Force
    ```
+   ![](../media/azm8-2.png)
 
 1. To copy the file from the root of drive **C** of **SEA-DC1** to the current working directory, enter the following command and press Enter:
 
    ```powershell
    Copy-Item -Path \\SEA-DC1.contoso.com\c$\bigfile -Destination .\bigfile2 -Force
    ```
+   ![](../media/azm8-3.png)
 
 1. To delete both files in the current working directory, enter the following command and press Enter:
 
    ```powershell
    Remove-Item -Path .\bigfile* -Force
    ```
+   ![](../media/azm8-4.png)
 
 1. To delete the file in the root of drive **C** of **SEA-DC1**, enter the following command and press Enter:
 
    ```powershell
    Remove-Item -Path \\SEA-DC1.contoso.com\c$\bigfile -Force
    ```
+   ![](../media/azm8-5.png)
 
 1. Leave the Windows PowerShell window open.
 
@@ -262,24 +267,28 @@ In this task, you will be configuring the prerequisites for event log forwarding
    ```powershell
    WECUtil qc /q
    ```
+   ![](../media/azm8-6.png)
 
 1. To ensure that the event source and collector have their local date and time synchronized, enter the following command and press Enter:
 
    ```powershell
    w32tm /resync /computer:SEA-DC1.contoso.com
    ```
+   ![](../media/azm8-7.png)
 
 1. To allow WinRM connectivity in case of Kerberos authentication issues, enter the following command and press Enter:
 
    ```powershell
    Set-Item WSMan:localhost\client\trustedhosts -Value *.contoso.com -Force
    ```
+   ![](../media/azm8-8.png)
 
 1. To establish a PowerShell Remoting session to **SEA-DC1**, enter the following command and press Enter:
 
    ```powershell
    Enter-PSSession -ComputerName SEA-DC1.contoso.com
    ```
+   ![](../media/azm8-9.png)
 
 1. To ensure that Windows Remote Management (WinRM) is enabled on **SEA-DC1**, enter the following command and press Enter:
 
@@ -289,7 +298,7 @@ In this task, you will be configuring the prerequisites for event log forwarding
 
    > **Note:** Verify that the WinRM service is already running and that it's set up for remote management.
 
-    ![](../media/az-8-13.png)
+    ![](../media/azm8-10.png)
 
 1. To ensure that the relevant Windows Defender Firewall with Advanced Security rules are enabled on **SEA-DC1**, enter the following command and press Enter:
 
