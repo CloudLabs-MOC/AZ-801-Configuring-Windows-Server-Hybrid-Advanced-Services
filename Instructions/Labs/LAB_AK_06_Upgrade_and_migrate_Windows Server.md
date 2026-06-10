@@ -2,8 +2,6 @@
 
 ## Lab scenario
 
-Contoso is exploring the hybrid model for its infrastructure services that would facilitate migration of its on-premises Windows servers to Azure virtual machines (VMs). To assist with this initiative, and you were tasked with evaluating the process of deploying Active Directory Domain Services (AD DS) domain controllers in Azure VMs. Your intention is to identify differences between the manual process currently used for on-premises deployments and the deployment methods available in Azure. In addition, you want to test and document the Storage Migration Services functionality to validate its usage for migrations of on-premises file servers. 
-
 ## Lab Objectives
 
 In this lab, you will:
@@ -48,6 +46,8 @@ In this task, you will deploy a domain controller using an ARM template. You wil
    - **Username:** **<inject key="AzureAdUserEmail"></inject>**
   
    - **Password:** **<inject key="AzureAdUserPassword"></inject>**
+
+   >**Note**: On the Stay Signed in? pop, click **Yes**.
 
 1. On the **Create an Azure VM with a new AD Forest** page, select **Edit template**.
 
@@ -106,28 +106,32 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
 1. Back on the **Create an Azure VM with a new AD Forest** page, below the **Resource group** drop-down list, select **AZ801-L0601-RG**.
    
-1. On the **Create an Azure VM with a new AD Forest** page, if needed, adjust the deployment settings so they have the following values (leave others with their default values):
+1. On the **Create an Azure VM with a new AD Forest** page, if needed, adjust the deployment settings so they have the following values (leave others with their default values), the select **Review + create (17)**,
 
    | Setting | Value | 
    | --- | --- |
-   | Subscription | Leave the default subscription |
-   | Resource group | select the existing resource group **AZ801-L0601-RG** |
-   | Region | **<inject key="Resource group Region" enableCopy="false"/>** |
-   | Admin Username | **Student** |
-   | Admin Password | **Pa55w.rd1234** |
-   | Domain name | **contoso.com** |
-   | Vm Size | **Standard_D2s_v3** |
-   | _artifacts Location | **`https://raw.githubusercontent.com/az140mp/azure-quickstart-templates/master/application-workloads/active-directory/active-directory-new-domain/`** |
-   | Virtual Machine Name | **az801l06a-dc1** |
-   | Virtual Network Name | **az801l06a-vnet** |
-   | Virtual Network Address Range | **10.6.0.0/16** |
-   | Network Interface Name | **az801l06a-dc1-nic1** |
-   | Private IP Address | **10.6.0.4** |
-   | Subnet Name | **adSubnet** |
-   | Subnet Range | **10.6.0.0/24** |
-   | Availability Set Name | **adAvailabilitySet** |
+   | Subscription | Leave the default subscription **(1)** |
+   | Resource group | select the existing resource group **AZ801-L0601-RG (2)** |
+   | Region | **<inject key="Resource group Region" enableCopy="false"/> (3)** |
+   | Admin Username | **Student (4)** |
+   | Admin Password | **Pa55w.rd1234 (5)** |
+   | Domain name | **contoso.com (6)** |
+   | Vm Size | **Standard_D2s_v3 (7)** |
+   | _artifacts Location | **`https://raw.githubusercontent.com/az140mp/azure-quickstart-templates/master/application-workloads/active-directory/active-directory-new-domain/`** **(8)** |
+   | Virtual Machine Name | **az801l06a-dc1 (9)** |
+   | Virtual Network Name | **az801l06a-vnet (10)** |
+   | Virtual Network Address Range | **10.6.0.0/16 (11)** |
+   | Network Interface Name | **az801l06a-dc1-nic1 (12)** |
+   | Private IP Address | **10.6.0.4 (13)** |
+   | Subnet Name | **adSubnet (14)** |
+   | Subnet Range | **10.6.0.0/24 (15)** |
+   | Availability Set Name | **adAvailabilitySet (16)** |
 
-1. On the **Create an Azure VM with a new AD Forest** page, select **Review + create**, and then select **Create**.
+   ![](../media/azl6h1.png)
+
+   ![](../media/azl6h2.png)
+
+1. On the **Create an Azure VM with a new AD Forest** page, and then select **Create**.
 
     ![](../media/az-l6-2.png)
 
@@ -212,9 +216,9 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
    | Public IP address | **Create new (6)** |
    | Public IP address name | **az801l06a-vnet-ip (7)** |
 
-1. On the **Review + create (8)** tab of the **Create a Bastion** page, select **Create**.
+      ![](../Media/L5E1T2S11-2.png)
 
-   ![](../Media/L5E1T2S11-2.png)
+1. On the **Review + create (8)** tab of the **Create a Bastion** page, select **Create**.
 
    ![](../Media/L6E1T2S11.png)
 
@@ -286,7 +290,7 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 
    ![](../Media/L6T1T3S6.png)
 
-1. Back on the **Disks** tab of the **Create a virtual machine** blade, select **Next: Networking >**, and then, on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Select **Next: Management > (6)**.
+1. Back on the **Disks** tab of the **Create a virtual machine** blade, select **Next: Networking >**, and then, on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Select **Next: Management > (7)**.
 
    | Setting | Value |
    | --- | --- |
