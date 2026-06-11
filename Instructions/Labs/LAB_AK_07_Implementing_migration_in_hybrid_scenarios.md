@@ -893,7 +893,7 @@ In this task, you will prepare your environment to begin migrating discovered Hy
    | --- | --- |
    | Where do you want to migrate to? | **Azure VM (1)** | 
    | Are your machines virtualized? | **Yes, with Hyper-V (2)** | 
-   | Target region | the name of the Azure region you are using in this lab **(3)** | 
+   | Target region | **<inject key="Region" enableCopy="false"/>** **(3)** | 
    | Confirm that the target region for migration is | Check **(4)**|
 
     ![](../media/lab6-june26-t1p33.png)
