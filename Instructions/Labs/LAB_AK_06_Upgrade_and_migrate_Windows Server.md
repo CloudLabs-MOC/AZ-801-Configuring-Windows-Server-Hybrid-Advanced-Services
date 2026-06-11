@@ -374,6 +374,8 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
 1. Within the Remote Desktop session to **az801l06a-dc2**, select **Start (1)**.  
 
+     > **Note:** On the Network Pane, select **No**.
+
 1. Right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.  
    
     ![](../media/az-l6-9.png)
@@ -475,9 +477,9 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
 ### Task 1: Install Windows Admin Center
 
-1. On **SEA-SVR2**, select **Start**, and then select **Windows PowerShell**.
+1. On **SEA-SVR2**, select **Start (1)**, and then select **Windows PowerShell**.
 
-1. Right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.
+1. Right-click **Windows PowerShell (2)**, and then choose **Run as administrator (3)**.
 
      ![](../media/az-l6-9.png)
 
@@ -700,7 +702,7 @@ In this task, you will validate the migration outcome by performing a series of 
 
 1. On **SEA-SVR2**, select **Start (1)**.  
 
-1. Right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.  
+1. Right-click **Windows PowerShell (2)** and then choose **Run as administrator (3)**.  
 
      ![](../media/az-l6-9.png)
 
