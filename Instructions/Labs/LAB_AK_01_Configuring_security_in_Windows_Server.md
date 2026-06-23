@@ -46,7 +46,7 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 
    ![](../Media/lab1-image3.png)
 
-1. In the **Group Policy Management Editor**, expand **Computer Configuration\\Policies\\Administrative Templates\\System\\Device Guard** and select Device Guard.
+1. In the **Group Policy Management Editor**, expand **Computer Configuration (1)\\Policies (2)\\Administrative Templates (3)\\System (4)\\Device Guard (5)** and select **Device Guard**.
 
    ![](../Media/lab1-image4.png)
 
@@ -98,7 +98,7 @@ In this exercise, you will use PowerShell to locate accounts with security risks
 
 In this task, you will identify Active Directory domain accounts with non-expiring passwords and configure them to comply with security best practices by enforcing password expiration.
 
-1. On **SEA-SVR2**, select **Windows** button , right-click or access the **context** menu for **Windows PowerShell**, and then select **Run as administrator**.
+1. On **SEA-SVR2**, select **Windows (1)** button , right-click or access the **context** menu for **Windows PowerShell (2)**, and then select **Run as administrator (3)**.
 
    ![](../Media/lab1-image16.png)
 
@@ -128,7 +128,7 @@ In this task, you will identify domain accounts that have been inactive for at l
    $days = (Get-Date).AddDays(-90)
    Get-ADUser -Filter {LastLogonTimeStamp -lt $days -and enabled -eq $true} -Properties LastLogonTimeStamp
    ```
-   ![](../Media/lab1-image20.png)
+   ![](../Media/lab1-image21.png)
 
    > **Note**: In the lab environment, no results will be returned.
 
@@ -138,7 +138,7 @@ In this task, you will identify domain accounts that have been inactive for at l
    Get-ADUser -Filter {LastLogonTimeStamp -lt $days -and enabled -eq $true} -Properties LastLogonTimeStamp | Disable-ADAccount
    ```
 
-   ![](../Media/lab1-image21.png)
+   ![](../Media/lab1-image20.png)
 
    > **Note**: In the lab environment, no results will be returned.
 
@@ -219,7 +219,7 @@ In this task, you will extend the Active Directory schema for LAPS, configure pe
    
 1. In the list of results, select **Group Policy Management**.
    
-1. In the **Group Policy Management** console, expand **Forest: contoso.com**, expand **Domains**, expand **contoso.com**, right-click or access the **context** menu for the **Seattle_Servers** OU, and then select **Create a GPO in this domain, and Link it here**.
+1. In the **Group Policy Management** console, expand **Forest: contoso.com**, expand **Domains**, expand **contoso.com**, right-click or access the **context** menu for the **Seattle_Servers (1)** OU, and then select **Create a GPO in this domain, and Link it here (2)**.
 
    ![](../Media/lab1-2-image1.png)
 

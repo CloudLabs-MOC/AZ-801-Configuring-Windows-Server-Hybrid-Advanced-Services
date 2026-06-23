@@ -201,7 +201,7 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
 
     ![](../media/az-l6-4.png)
 
-1. On the **Basic** tab of the **Create a Bastion** page, specify the following settings, and then select **Review + create**:
+1. On the **Basic** tab of the **Create a Bastion** page, specify the following settings, and then select **Review + create (8)**:
 
    | Setting | Value | 
    | --- | --- |
@@ -218,7 +218,7 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
 
       ![](../Media/L5E1T2S11-2.png)
 
-1. On the **Review + create (8)** tab of the **Create a Bastion** page, select **Create**.
+1. On the Review + create tab of the **Create a Bastion** page, select **Create**.
 
    ![](../Media/L6E1T2S11.png)
 
@@ -311,7 +311,7 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 
      ![](../Media/L6E1T3S8.png)
 
-1. On the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values).
+1. On the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values), select **Next: Advanced > (2)**.
 
    | Setting | Value |
    | --- | --- |
@@ -319,7 +319,7 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 
     ![](../Media/L6E1T3S9.png)
 
-1. Select **Next: Advanced > (2)**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and then select **Review + Create**.
+1. On the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and then select **Review + Create**.
 
     ![](../Media/L6E1T3S10.png)
 
@@ -359,12 +359,13 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
    ![](../Media/L6E1T4S6.png)
 
-1. On the Bastion page, provide the following credentials, and then select **Connect (3)**:
+1. On the Bastion page, provide the following credentials:
 
    | Setting | Value | 
    | --- | --- |
    | User Name |**Student (1)** |
    | Password |**Pa55w.rd1234 (2)** |
+   |Select **Connect (3)**|
 
     ![](../Media/L6E1T4S7.png)
 
@@ -372,11 +373,9 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
     >
     > ![](../Media/pop-up-blocked.png)
 
-1. Within the Remote Desktop session to **az801l06a-dc2**, select **Start (1)**.  
+1. Within the Remote Desktop session to **az801l06a-dc2**, select **Start (1)**, right-click **Windows PowerShell (2)**, do right-click again and choose **Run as administrator (3)**.  
 
      > **Note:** On the Network Pane, select **No**.
-
-1. Right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.  
    
     ![](../media/az-l6-9.png)
 
@@ -572,7 +571,7 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
 1. In the **Storage Migration Service** pane, scroll down to the bottom of the page and select **+ New job (1)**. Under the **New job** pane provide below details and click on **OK (4)**.
 
      | Job Name | **SVR1toSVR2 (2)** |
- 
+
      | Source devices | **Windows servers and clusters (3)** |
 
      ![](../media/az-l6-24.png)
@@ -681,7 +680,7 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
 
      ![](../media/az-l6-40.png)
 
-1. On the **Cut over to the new servers** tab, in the **Adjust cutover settings** pane, in the **Cutover timeout (minutes)** text box, enter **30 (!)**, in the **Enter AD credentials** section, leave the **Stored credentials (2)** option enabled, and then select **Next (3)**.
+1. On the **Cut over to the new servers** tab, in the **Adjust cutover settings** pane, in the **Cutover timeout (minutes)** text box, enter **30 (1)**, in the **Enter AD credentials** section, leave the **Stored credentials (2)** option enabled, and then select **Next (3)**.
 
      ![](../media/az-l6-41.png)
 
