@@ -45,7 +45,7 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
 
      >**Note**: If prompted for MFA, please refer to the steps provided on the Getting Started page.
 
-1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Log Analytics workspaces(1)**.
+1. On **SEA-SVR2**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for **Log Analytics workspaces (1)** and select **Log Analytics workspaces (2)**.
 
       ![](../media/azm2-4.png) 
 

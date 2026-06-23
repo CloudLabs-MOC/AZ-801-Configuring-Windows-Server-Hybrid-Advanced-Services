@@ -51,20 +51,22 @@ In this task, you will be installing the Failover Clustering feature and managem
    Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
    Install-WindowsFeature -ComputerName 'SEA-SVR1.contoso.com' -Name Failover-Clustering -IncludeManagementTools
    ```
+   >**Note**: Wait for the installation process to complete. The installation should take about 5 minutes.
 
     ![](../Media/az3l2.png)   
 
-     >**Note**: Wait for the installation process to complete. The installation should take about 5 minutes.
+     
 
 1. To install iSCSI Target server role service on **SEA-DC1**, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
    ```powershell
    Install-WindowsFeature -ComputerName 'SEA-DC1.contoso.com' -Name FS-iSCSITarget-Server -IncludeManagementTools
    ```
+   > **Note**: Wait for the installation process to complete. The installation should take about 1 minute.
 
     ![](../Media/az3l3.png)    
 
-     > **Note**: Wait for the installation process to complete. The installation should take about 1 minute.
+     
 
 1. **Minimize the Windows Powershell window**.
 

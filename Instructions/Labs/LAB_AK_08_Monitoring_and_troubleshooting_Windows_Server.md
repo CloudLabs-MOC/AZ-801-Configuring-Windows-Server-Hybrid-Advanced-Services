@@ -215,9 +215,9 @@ In this task, you will capture performance data while the server is under the ad
 
 1. On **SEA-SVR2**, switch to Performance Monitor.
 
-1. In Performance Monitor, expand **Data Collector Sets**, and select **User Defined**.
+1. In Performance Monitor, expand **Data Collector Sets**, and select **User Defined (1)**.
 
-1. In the results pane, right-click or access the context menu for **SEA-SVR2 Performance (1)**, and then select **Start (2)**.
+1. In the results pane, right-click or access the context menu for **SEA-SVR2 Performance (2)**, and then select **Start (3)**.
 
    ![](../Media/az-801-lab8-image25.png)
    
@@ -312,9 +312,7 @@ In this task, you will be configuring the prerequisites for event log forwarding
 
    ![](../Media/az-801-lab8-image30.png)
 
-1. In the **Active Directory Users and Computers** console, select the **Builtin** container under **contoso.com (1)**. 
-
-1. In the **Builtin (2)** container, select the **Event Log Readers (3)** group.
+1. In the **Active Directory Users and Computers** console, select the **Builtin** container under **contoso.com (1)**. In the **Builtin (2)** container, select the **Event Log Readers (3)** group.
 
     ![](../Media/az-801-lab8-image31.png)
 
@@ -380,9 +378,7 @@ In this task, you will create an event subscription to collect and forward criti
 
    ![](../Media/az-801-lab8-image43.png)
 
-1. In the **Logged** drop-down list, select **Last 24 hours (1)**.
-
-1. In the **Event level** dialog box, select the **Critical**, **Error**, **Warning**, and **Information** checkboxes **(2)**.
+1. In the **Logged** drop-down list, select **Last 24 hours (1)**. In the **Event level** dialog box, select the **Critical**, **Error**, **Warning**, and **Information** checkboxes **(2)**.
 
     ![](../media/az-8-18.png)
 

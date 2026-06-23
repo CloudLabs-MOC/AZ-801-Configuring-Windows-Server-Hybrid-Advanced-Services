@@ -565,7 +565,7 @@ In this task, you will perform a failover of the Hyper-V virtual machine.
 
      ![](../media/l5-12-64.png)
 
-1. After the test failover cleanup job completes, refresh the browser page displaying the **SEA-CORE1** replicated items page and note that you have the option to perform **planned and unplanned failover** (the latter is labeled as **Failover**).
+1. After the test failover cleanup job completes, refresh the browser page displaying the **SEA-CORE1** replicated items page and note that you have the option to perform **Planned Failover and Failover**.
 
      ![](../media/l5-12-65.png)
 
