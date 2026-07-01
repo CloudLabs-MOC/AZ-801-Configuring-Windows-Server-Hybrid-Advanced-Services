@@ -23,7 +23,7 @@ In this exercise, you will learn how to deploy Active Directory Domain Services 
 
 In this task, you will deploy a domain controller using an ARM template. You will edit the template to adjust settings such as OS version, disk caching, and network configuration. You will also deploy the VM in an availability set and validate the deployment.
 
-1. Select the **SEA-SVR2** from the top menu drop down.
+1. Select the **SEA-SVR2** from the top menu drop-down.
 
     ![](../media/azm2-1.png)
 
@@ -175,9 +175,9 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
 
     ![](../media/az-l6-3.png)
 
-1. Wait for PowerShell terminal to start.
+1. Wait for the PowerShell terminal to start.
 
-1. From the PowerShell session in the Cloud Shell pane, run the following commands to add a subnet named **AzureBastionSubnet** to the virtual network **az801l06a-vnet** you created earlier in this exercise: (Make sure to press `Enter` after the last commandd)
+1. From the PowerShell session in the Cloud Shell pane, run the following commands to add a subnet named **AzureBastionSubnet** to the virtual network **az801l06a-vnet** you created earlier in this exercise: (Make sure to press `Enter` after the last command)
 
    ```powershell
    $resourceGroupName = 'AZ801-L0601-RG'
@@ -222,13 +222,13 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
 
    ![](../Media/L6E1T2S11.png)
 
-   >**Note**: Wait for the deployment to complete before you proceed to the next task. The deployment might take about `5 - 10` minutes.
+   >**Note**: Wait for the deployment to complete before you proceed to the next task. The deployment might take about 5 - 10 minutes.
 
 ### Task 3: Deploy an Azure VM by using the Azure portal
 
 In this task, you will deploy a second VM using the Azure portal as an additional domain controller. You will configure the VM settings, attach a data disk, and complete the deployment.
 
-   >**Note:** You could fully automate the deployment of the second Azure VM and its setup as an additional domain controller in the same domain as the first one you provisioned in the first task of this exercise. However, the use of graphical interface in this case should provide additional guidance regarding differences between provisioning domain controllers in on-premises and Azure-based scenarios.
+   >**Note:** You could fully automate the deployment of the second Azure VM and its setup as an additional domain controller in the same domain as the first one you provisioned in the first task of this exercise. However, the use of a graphical interface in this case should provide additional guidance regarding differences between provisioning domain controllers in on-premises and Azure-based scenarios.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for **Virtual machines (1)** and select **Virtual machines (2)**. 
 
@@ -237,6 +237,10 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 1. On the **Compute infrastructure | Virtual machines** page, select **+ Create (1)**, and then, in the drop-down menu, select **Virtual machine (2)**.
 
    ![](../Media/az6l12.png)
+
+1. On the **Create a virtual machine** page, if you see a message "**This is a preview of the new Create-VM experience...."** click on the **Click here to access previous experience**.
+
+   ![](../Media/new-vm-0207.png)
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Then, select **Next: Disks > (12)**
 
