@@ -729,6 +729,23 @@ In this task, you will deploy and configure the Azure Migrate appliance on your 
    
    >**Note:** Please wait it might take some time to load **Appliance Configuration Manager** page.
 
+1. Open **Powershell ISE** in the appliance vm, copy the below commands and run which will install certificates required for this lab.
+
+    ```
+    $certPath = "$env:TEMP\MSCerts"
+    New-Item -ItemType Directory -Path $certPath -Force | Out-Null
+
+    Invoke-WebRequest -Uri "https://download.microsoft.com/download/2/4/8/248D8A62-FCCD-475C-85E7-6ED59520FC0F/MicrosoftRootCertificateAuthority2011.cer" -OutFile "$certPath\MicrosoftRootCertificateAuthority2011.cer"
+
+    Invoke-WebRequest -Uri "https://www.microsoft.com/pkiops/certs/MicCodSigPCA2011_2011-07-08.crt" -OutFile "$certPath\MicCodSigPCA2011_2011-07-08.crt"
+ 
+    Import-Certificate -FilePath "$certPath\MicrosoftRootCertificateAuthority2011.cer" -CertStoreLocation "Cert:\LocalMachine\TrustedPublisher"
+    
+    Import-Certificate -FilePath "$certPath\MicCodSigPCA2011_2011-07-08.crt" -CertStoreLocation "Cert:\LocalMachine\TrustedPublisher"
+    ```
+
+    ![](../media/cmd.png)
+
 1. On the **Appliance Configuration Manager** page, select the **I agree** button and wait for the setup prerequisites to be successfully verified. 
 
    ![](../media/azm7-95.png)
