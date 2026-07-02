@@ -25,6 +25,8 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
 1. Select the **SEA-SVR2** from the top menu drop-down.
 
+     >**NOTE:** The drop-down menu to select VMs takes time to appear, please wait for 2-3 minutes, refresh the lab page and check again.
+
     ![](../media/azm2-1.png)
 
 1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**
@@ -137,10 +139,11 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
     >**Note:** Please wait for the deployment to complete before you go ahead with the next task. This might take about 15 minutes. 
 
-  > **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com.
+> **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+
    <validation step="6f46a686-d299-4587-88f2-d9c0a9c4fd9f" />
 
 ### Task 2: Deploy Azure Bastion 
@@ -238,9 +241,9 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 
    ![](../Media/az6l12.png)
 
-1. On the **Create a virtual machine** page, if you see a message "**This is a preview of the new Create-VM experience...."** click on the **Click here to access previous experience**.
-
-   ![](../Media/new-vm-0207.png)
+   >**NOTE**: On the **Create a virtual machine** page, if you see a message "**This is a preview of the new Create-VM experience...."** click on the **Click here to access previous experience**.
+   >
+   > ![](../Media/new-vm-0207.png)
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Then, select **Next: Disks > (12)**
 
@@ -267,6 +270,8 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 1. To choose the **Windows Server 2022 Datacenter: Azure Edition - x64 Gen2** image, click **See all images** below. On the Select an image page, open the **Select dropdown** under Windows Server and choose the **specified image** from the list.
 
    ![](../Media/winvm36.png)
+
+   > **NOTE:** Make sure to click on **Select** under **Windows Server** only and avoid selecting any other marketplace offers. 
 
    ![](../Media/winvm34.png)
 
@@ -405,11 +410,14 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
         ![](../Media/L6E1T4S9-4.png)
 
-1. To configure the data disk, at the Windows PowerShell prompt, enter the following commands, and after entering each command, press Enter:
+1. To configure the data disk, at the Windows PowerShell prompt, enter the following commands one after another, and after entering each command, press **Enter**:
 
    ```powershell
    Get-Disk | Where PartitionStyle -eq 'RAW' |  Initialize-Disk -PartitionStyle MBR
    New-Partition -DiskNumber 2 -UseMaximumSize -AssignDriveLetter
+   ```
+
+   ```
    Format-Volume -DriveLetter F -FileSystem NTFS
    ```
 
@@ -461,7 +469,7 @@ In this task, you will manually promote a virtual machine (VM) to a domain contr
 
    > **Note:** The warning is expected because the static IP address is assigned on the platform level, rather than within the operating system.
 
-   > **Note:** The operating system will restart automatically to complete the promotion process. It may take a while.
+   > **Note:** The operating system will restart automatically to complete the promotion process. It may take a while. Wait for 5-10 minutes.
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, on the **az801l06a-dc2** page, select **Connect**, from the drop-down menu, select **Connect via Bastion**.  
 
@@ -696,6 +704,7 @@ In this task, you will use Windows Admin Center and the Storage Migration Servic
  
      ![](../media/az-l6-43.png)
 
+     > **NOTE:** The VM you are using **SEA-SVR2** will get restarted once or twice which is expected. Please wait for the VM to restart before proceeding to next task.
 
 ### Task 3: Validate migration outcome
 
