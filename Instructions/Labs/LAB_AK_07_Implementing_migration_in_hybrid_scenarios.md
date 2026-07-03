@@ -457,7 +457,7 @@ In this task, you create an Azure Migrate project by logging into the Azure port
     | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
     | Resource group | Select **AZ801-L0702-RG (2)** |
     | Migrate project | **az801l07a-migrate-project (3)** |
-    | Geography | **<inject key="Region" enableCopy="false"/>** **(4)** |
+    | Geography | **United States** **(4)** |
 
     ![](../media/lab6-june26-t1p44.png)
 
@@ -810,6 +810,10 @@ In this task, you will deploy and configure the Azure Migrate appliance on your 
    ![](../media/azm7-103.png)
 
     >**Note:** Copy the content in labguide, then select **Clipboard** at top of page in menu bar and from **Clipboard** list select **Type clipboard text** and then paste the content in required field.
+
+1. On **Step 2: Provide Hyper-V host/cluster details**, ensure the HTTPS enforcement toggle is disabled before adding the discovery source.
+
+    ![](../media/az801-l6-01.png)
 
 1. Within the browser window, on the **Appliance Configuration Manager** page, in the **Provide Hyper-V host/cluster details** section, select **Add discovery source**. On the **Add discovery source** pane.
 
