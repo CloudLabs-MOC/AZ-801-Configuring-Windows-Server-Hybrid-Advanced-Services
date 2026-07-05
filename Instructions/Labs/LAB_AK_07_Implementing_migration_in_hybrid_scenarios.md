@@ -587,7 +587,7 @@ In this task, you are implementing the target Azure environment by creating virt
     | Resource group | **AZ801-L0703-RG (2)** |
     | Storage account name | **str<inject key="DeploymentID" enableCopy="false"/>** **(3)** | 
     | Region | **<inject key="Region" enableCopy="false"/>** **(4)** |
-    | Primary Service | Select **Azure Blob Storage or Azure Data Lake Storage (5)**  from the dropdown|
+    | Preferred Storage type | Select **Azure Blob Storage or Azure Data Lake Storage (5)**  from the dropdown|
     | Performance | **Standard (6)** |
     | Redundancy | **Locally redundant storage (LRS) (7)** |
 
@@ -619,7 +619,7 @@ In this task, you will deploy and configure the Azure Migrate appliance on your 
 
 1. On the **Azure Migrate** page, from the left navigation pane, select **All projects (1)**, and then choose **az801l07a-migrate-project (2)**.
  
-    ![](../media/az-7-37.png)
+    ![](../media/H3E6S3.png)
 
 1. On the **az801l07a-migrate-project** page, select the down arrow next to **Start discovery (1)**, then choose **Using appliance (2)**, and select **For Azure (3)**.
 
@@ -746,7 +746,8 @@ In this task, you will deploy and configure the Azure Migrate appliance on your 
 
     ![](../media/cmd.png)
 
-1. On the **Appliance Configuration Manager** page, select the **I agree** button and wait for the setup prerequisites to be successfully verified. 
+
+1. Launch the **Appliance Configuration Manager** page, select the **I agree** button and wait for the setup prerequisites to be successfully verified. 
 
    ![](../media/azm7-95.png)
 
@@ -754,10 +755,35 @@ In this task, you will deploy and configure the Azure Migrate appliance on your 
 
    ![](../media/azm7-97.png)
    
-   >**Note:** You may not be able to copy and paste the content within nested VM session so kindly select **Clipboard** at top of page in menu bar and from **Clipboard** list select **Type clipboard text** to paste the content and follow the same to step to copy and paste the content
+    >**Note:** You may not be able to copy and paste the content within nested VM session so kindly select **Clipboard** at top of page in menu bar and from **Clipboard** list select **Type clipboard text** to paste the content and follow the same to step to copy and paste the content
+    >
+    > ![](../Media/lab7-2.png)
 
-    ![](../Media/lab7-2.png)
-   
+    > **Note:** If you get any error when the pre-requisites starts validating the key. Please follow the below steps:
+    >
+    > - Navigate to `Trusted Publisher > Certficates` **(1)** then on to the right wizard make sure the licenses are in place **(2)**.
+    >
+    >   ![](../media/E3T1S33.png)
+    > 
+    > - If you see licene `Microsoft Code Signing PCA 2011` is missing from the list, you can copy/move from **`Intermediate Certification Authorities > Certificates`**  to **`Trusted Publisher > Certficates`**.
+    >
+    > - Lets now check for **Certificates**. Serach in start menu with **Certificates (1)** and click on **Manage Computer Certificates (2)**.
+    >
+    >   ![](../media/E3T1S32.png)
+    >
+    > - From the **Start** menu search for **Registry Editor (1)** and click on it **(2)**.
+    >
+    >   ![](../media/E3T1S29.png)
+    >
+    > - Navigate to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AzureAppliance` **(1)** folder and locate **Auto Update** right click on it to modify the binary value from menu options click on **Modify (2)**.
+    >
+    >   ![](../media/E3T1S30.png)
+    >
+    > - Set the **Value data** to `0` **(1)** and click on **Ok (2)**. Then **restart** the Hyper-V machine to have the registry values updated.
+    >
+    >   ![](../media/E3T1S31.png)
+    > 
+       
 1. Once verification is completed, if **New update installed** window prompted, select **Refresh** then again click on **Verify**.
 
    >**Note:** Wait until verification process completes.
