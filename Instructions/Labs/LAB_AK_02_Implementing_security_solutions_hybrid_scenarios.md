@@ -25,7 +25,7 @@ In this task, you will create a Log Analytics workspace in Azure, which will ser
 
 1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
 
-     >**NOTE:** The drop-down menu to select VMs takes time to appear, please wait for 3-5 minutes, refresh the lab page and check again.
+     >**NOTE:** If you are unable to see drop-down menu to select VMs, please wait for 3-5 minutes, refresh the lab page and check again.
 
     ![](../media/azm2-1.png)
 

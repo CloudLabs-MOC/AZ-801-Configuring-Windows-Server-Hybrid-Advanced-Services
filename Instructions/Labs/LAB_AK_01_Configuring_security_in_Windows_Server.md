@@ -30,7 +30,7 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 
 1. Connect to **SEA-SVR2** and, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
-     >**NOTE:** The drop-down menu to select VMs takes time to appear, please wait for 3-5 minutes, refresh the lab page and check again.
+     >**NOTE:** If you are unable to see drop-down menu to select VMs, please wait for 3-5 minutes, refresh the lab page and check again.
 
     ![](../media/azm2-1.png)
 
