@@ -30,6 +30,10 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 
 1. Connect to **SEA-SVR2** and, if needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
+     >**NOTE:** The drop-down menu to select VMs takes time to appear, please wait for 3-5 minutes, refresh the lab page and check again.
+
+    ![](../media/azm2-1.png)
+
 1. In the **Type here to search** text box next to the **Start** button, enter **Group Policy Management (1)** in the list of results, select **Group Policy Management (2)**..
 
    ![](../Media/lab1-image15.png)

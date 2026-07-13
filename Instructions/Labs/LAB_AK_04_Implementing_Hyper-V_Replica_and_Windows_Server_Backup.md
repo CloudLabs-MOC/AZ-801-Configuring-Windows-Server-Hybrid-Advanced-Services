@@ -27,6 +27,8 @@ In this task, you will be installing and configuring Hyper-V Replica on SEA-SVR2
 
 1. Connect to **SEA-SVR2**, by selecting the **SEA-SVR2** from the top menu drop down.
 
+     >**NOTE:** The drop-down menu to select VMs takes time to appear, please wait for 3-5 minutes, refresh the lab page and check again.
+
     ![](../media/az801-lab3-01.png)
 
 1. If needed, sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
